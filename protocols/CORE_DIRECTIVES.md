@@ -124,21 +124,29 @@ d. **Completion:** Mark final ✅ only after demonstrating readiness
 
 **Objective:** Preserve session value whilst maintaining clean memento architecture.
 
+**Token Investment Philosophy:** Memento prioritises context quality over token efficiency. Substantial token investment in documentation, context setting, and knowledge structuring is expected and valuable - typically 40-60% of session tokens.
+
 **Protocol Steps:**
 
 a. **Session Learning Review:** Identify maximum 3 novel patterns or solutions discovered
    - Focus on genuinely reusable learnings
    - Prioritise patterns that prevent future issues
 
-b. **Selective Knowledge Graduation:** Propose valuable patterns for institutional memory
-   - Each proposal must justify long-term value
-   - Avoid session-specific implementation details
+b. **Knowledge Archive Review:** Before proposing any graduations, review existing `memory-prosthesis/institutional-memory/KNOWLEDGE_ARCHIVE.MD`:
+   - **Novelty Check**: Ensure proposed patterns are genuinely new or meaningfully extend existing ones
+   - **Structural Compliance**: Verify proposals follow documentation structure and patterns
+   - **Redundancy Prevention**: Avoid duplicating existing knowledge with minor variations
 
-c. **Working Context Reset:** Prepare clean CURRENT_FOCUS.MD for next session
+c. **Selective Knowledge Graduation:** Only after archive review, propose valuable patterns for institutional memory
+   - Each proposal must justify long-term value beyond existing knowledge
+   - Avoid session-specific implementation details
+   - Follow established documentation patterns and structure
+
+d. **Working Context Reset:** Prepare clean CURRENT_FOCUS.MD for next session
    - Include ONLY current task and immediate next actions
    - No technical debt or completed work details
 
-d. **User Approval Gate:** Present all updates for review before finalising
+e. **User Approval Gate:** Present all updates for review before finalising
 
 **Anti-Degradation:** Preserve attention-optimised architecture across unlimited sessions.
 
