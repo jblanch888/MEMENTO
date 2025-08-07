@@ -1,36 +1,25 @@
-# STATUS.MD - Current Session Progress
+# STATUS.MD - What Accomplished (Session Retrospective)
 
-**Session Date:** [Current date]
-**Session Duration:** [Start time - current time]
-**Focus:** [Reference to current CURRENT_FOCUS.MD task]
-
----
-
-## Progress This Session
-
-### Completed
-- [ ] [Task completed this session]
-- [ ] [Another completed task]
-
-### In Progress  
-- [ ] [Currently working on]
-- [ ] [Partially complete]
-
-### Next Up
-- [ ] [Next immediate task]
-- [ ] [Following task]
-
-## Session Notes
-
-**Key Discoveries:** [Any important findings this session]
-**Decisions Made:** [Any decisions affecting future work]
-**Blockers Encountered:** [Any issues that need resolution]
-
-## Handoff Context
-
-**For Next Session:** [Essential context for continuation]
-**Potential Knowledge Graduation:** [Patterns worth considering for institutional memory]
+**Session:** [Today's date]  
+**Focus:** [Reference to CURRENT_FOCUS.MD mission]
+**Duration:** [Session length]
 
 ---
 
-*This file provides session-scoped progress tracking. Delete or refresh for new sessions. Keep under 20 lines to maintain working context tier limits.*
+## This Session Achieved
+- [Concrete accomplishment 1]
+- [Concrete accomplishment 2]
+- [Concrete accomplishment 3]
+
+## Technical State Changes
+**Before:** [Starting technical reality]
+**After:** [Ending technical reality]  
+**Evidence:** [How to verify the changes]
+
+## For Next Session
+**Continue With:** [Next logical priority]
+**Watch Out For:** [Potential issues discovered]
+
+---
+
+*Temporal Role: Documents "what happened" vs CURRENT_FOCUS "what now". Refresh each session. Maximum 15 lines for cognitive efficiency.*

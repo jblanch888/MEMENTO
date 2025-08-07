@@ -12,8 +12,8 @@
 
 ## Contents
 
-- **CURRENT_FOCUS.MD**: Active task, constraints, success criteria, and immediate next actions
-- **STATUS.md**: Current session progress tracking (optional, when needed)
+- **CURRENT_FOCUS.MD**: "What Now" - Present-focused operational context (≤35 lines)
+- **STATUS.md**: "What Accomplished" - Session retrospective and handoff (≤15 lines)
 
 ---
 
@@ -29,10 +29,16 @@
 - Working context bloat destroys attention efficiency
 - When approaching limit, graduate content to active-knowledge tier
 
+### Temporal Differentiation
+- **CURRENT_FOCUS.MD**: Present-focused ("What now?")  
+- **STATUS.md**: Past-focused ("What happened?")
+- Clear role separation prevents redundancy
+
 ### Session Boundaries
-- Complete refresh each session
-- No accumulation of historical information
-- Clean slate for optimal focus
+- Both files refresh each session
+- STATUS documents achievements before refresh
+- CURRENT_FOCUS sets direction for new session  
+- No historical accumulation across sessions
 
 ---
 

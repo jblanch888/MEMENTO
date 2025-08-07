@@ -1,43 +1,29 @@
-# CURRENT_FOCUS.MD - Session Operational Context
+# CURRENT_FOCUS.MD - What Now (Present Focus)
 
-**Active Task:** [Your current primary objective]
-**Active Playbook:** [Which playbook guides current work - e.g., INCREMENTAL_EXECUTION_PLAYBOOK.MD]
-**Session Start:** [Date/time when this focus was set]
+**Mission:** [Your current primary objective]
+**Active Playbook:** [Which playbook guides this work]
+**Started:** [When this focus was set]
 
 ---
 
 ## Primary Task
-
-[Clear, specific description of what needs to be accomplished]
+[Clear, specific description of what needs accomplishing RIGHT NOW]
 
 ## Success Criteria
-
-- [ ] [Specific, measurable outcome 1]
-- [ ] [Specific, measurable outcome 2]
-- [ ] [Specific, measurable outcome 3]
-
-## Constraints & Guidelines
-
-**Technical Constraints:**
-- [Any technical limitations or requirements]
-- [Dependencies that must be respected]
-
-**Process Constraints:**  
-- [Any process requirements - e.g., testing, validation gates]
-- [Communication or approval requirements]
+- [ ] [Measurable outcome 1]
+- [ ] [Measurable outcome 2] 
+- [ ] [Measurable outcome 3]
 
 ## Next Immediate Actions
-
 1. [Very specific next step]
-2. [Following logical step]
-3. [Third step if known]
+2. [Following logical step]  
+3. [Third step if clear]
 
-## Context Notes
-
-**Current System State:** [Brief status of what you're working with]
-**Key Decisions Made:** [Any important decisions affecting this work]
-**Blockers/Dependencies:** [Anything waiting on external input]
+## Current Context
+**System State:** [Brief technical reality]
+**Key Constraints:** [What limits this work]
+**Blockers:** [What's waiting on external input]
 
 ---
 
-**Instructions for AI:** This file contains your primary operational context. Prioritise its contents above all other guidance except CORE_DIRECTIVES.MD. Refer to the specified Active Playbook for procedural guidance.
+**AI Instructions:** This is your primary operational context. Follow the Active Playbook for procedures. Maximum 35 lines to preserve attention efficiency.
