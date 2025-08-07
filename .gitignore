@@ -1,0 +1,57 @@
+# OS Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Dependencies
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Documentation builds
+docs/_build/
+site/
+
+# Temporary files
+*.tmp
+.temp/
+tmp/
+
+# Session-specific working memory (should not be committed)
+**/working-context/SESSION_*.md
+**/working-context/TEMP_*.md
+
+# Personal notes
+personal/
+private/
+*.personal
+*.private
