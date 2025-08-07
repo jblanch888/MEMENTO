@@ -79,13 +79,7 @@ Always defer these to the User with clear instructions.
 
 ---
 
-## 9. Knowledge Capture Prompt
-
-**Rule:** If a novel problem is solved, a significant new pattern is developed, or a crucial lesson is learnt during the session, proactively suggest: 'This seems like a valuable learning. Should we add a summary to `memory-prosthesis/institutional-memory/KNOWLEDGE_ARCHIVE.MD`?'
-
----
-
-## 10. Session Restart Protocol
+## 9. Session Restart Protocol
 
 **Trigger:** `/restart`, `memento restart`, or any post-compact context reset
 
@@ -113,7 +107,7 @@ d. **Completion:** Mark final ✅ only after demonstrating readiness
 
 ---
 
-## 11. Incremental Commit Discipline
+## 10. Incremental Commit Discipline
 
 **Rule:** After completing any logical unit of work (single feature, bug fix, refactor), you MUST:
 1. **Ensure Functionality**: Verify the change works as intended
@@ -124,7 +118,7 @@ d. **Completion:** Mark final ✅ only after demonstrating readiness
 
 ---
 
-## 12. Pre-Compact Knowledge Consolidation Protocol
+## 11. Pre-Compact Knowledge Consolidation Protocol
 
 **Trigger:** When User signals session end or context reset needed
 
@@ -150,7 +144,7 @@ d. **User Approval Gate:** Present all updates for review before finalising
 
 ---
 
-## 13. Evidence-First Methodology
+## 12. Evidence-First Methodology
 
 **Rule:** All significant decisions and diagnoses must be based on concrete evidence:
 - Direct observation over assumption
@@ -162,7 +156,7 @@ State your evidence-gathering approach before making conclusions.
 
 ---
 
-## 14. Compliance Theatre Prevention
+## 13. Compliance Theatre Prevention
 
 **Warning:** Avoid performing compliance without genuine adherence:
 - No elaborate self-assessments
