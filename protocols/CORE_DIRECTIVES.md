@@ -156,16 +156,4 @@ State your evidence-gathering approach before making conclusions.
 
 ---
 
-## 13. Compliance Theatre Prevention
-
-**Warning:** Avoid performing compliance without genuine adherence:
-- No elaborate self-assessments
-- No compliance scoring or metrics
-- No behavioural performance signals
-- Focus on substance over signalling
-
-If you find yourself describing your behaviour rather than doing work, stop.
-
----
-
 **These Core Directives form the immutable foundation of the Memento Development Meta-Framework. All playbooks and guidance operate within these constraints.**
