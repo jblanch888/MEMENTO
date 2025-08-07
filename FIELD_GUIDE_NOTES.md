@@ -17,11 +17,13 @@
 - Investment in documentation, context setting, knowledge structuring is valuable
 - Better to spend tokens on clarity than save tokens and lose context
 
-### Pyramid Architecture
-- **Working Context**: Must be TINY (≤50 lines total across all files)
-- **Active Knowledge**: Can be bigger, frequently referenced material
+### Attention Pyramid/Iceberg Architecture
+- **Working Context** (TOP): Must be TINY (≤50 lines total across all files)
+- **Active Knowledge**: Can be bigger, frequently referenced material  
 - **Institutional Memory**: Larger, searchable archive of proven patterns
-- **Evidence Archive**: Can grow quite big with project history
+- **Evidence Archive** (BOTTOM): Can grow quite big with project history
+
+**Mental Model**: Like an iceberg - you live at the tip (working context) and periodically descend to lower levels for more context, wisdom, or information. Not numbered/linear but depth-based access patterns.
 
 **Critical Rule**: Top 2 tiers MUST be kept svelte for attention efficiency
 
