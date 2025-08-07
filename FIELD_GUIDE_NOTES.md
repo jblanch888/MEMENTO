@@ -77,6 +77,25 @@
 - Validation gates prevent self-deception
 - British English standard throughout
 
+### Active-Knowledge Reality Check
+- Templates are intentionally sparse vs real implementations
+- Real active-knowledge files are rich, detailed, specific (Sky-KA: 159-828 lines per file)
+- Generic templates show structure; reference implementation shows depth needed
+- Mature Memento requires substantial content investment for effectiveness
+
+### ML-First Design Philosophy
+- Files optimised for AI consumption, not human browsing
+- Machine readability takes priority over human aesthetic preferences
+- Structure designed around AI attention patterns and cognitive load limits
+- Documentation serves AI context first, human reference second
+
+### AI Operations Guides
+- SYSTEM_OPERATIONS_GUIDE.md concept for rapid AI context acquisition
+- Designed for post-compact context restoration
+- Comprehensive operational procedures for AI assistants
+- Includes decision trees, troubleshooting, command references
+- Target: AI requiring system understanding for effective collaboration
+
 ---
 
 ## Detective Theme Elements
