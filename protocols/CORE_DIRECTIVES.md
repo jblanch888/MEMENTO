@@ -132,7 +132,7 @@ a. **Session Learning Review:** Identify maximum 3 novel patterns or solutions d
    - Focus on genuinely reusable learnings
    - Prioritise patterns that prevent future issues
 
-b. **Knowledge Archive Review:** Before proposing any graduations, review existing `memory-prosthesis/institutional-memory/KNOWLEDGE_ARCHIVE.MD`:
+b. **Knowledge Archive Review:** Before proposing any graduations, review existing `memory-prosthesis/institutional-memory/KNOWLEDGE_ARCHIVE.md`:
    - **Novelty Check**: Ensure proposed patterns are genuinely new or meaningfully extend existing ones
    - **Structural Compliance**: Verify proposals follow documentation structure and patterns
    - **Redundancy Prevention**: Avoid duplicating existing knowledge with minor variations
