@@ -103,6 +103,30 @@
 - Meta-patterns about AI collaboration emerge and get documented
 - Framework evolves with the project - not static boilerplate
 
+### Documentation as Memento's Learning Mechanism
+- DOCUMENTATION_PLAYBOOK is vital for self-healing and development
+- It's the metabolic process - how experiences become knowledge
+- Pattern capture prevents repeating mistakes
+- Knowledge graduation builds institutional wisdom
+- Without documentation, Memento is static; with it, it's a living system
+
+### Memento Housekeeping (Periodic Maintenance)
+- **Pruning**: Remove outdated patterns from KNOWLEDGE_ARCHIVE
+- **Graduating**: Move proven patterns from active-knowledge to institutional-memory
+- **Deduplicating**: Consolidate similar patterns that have emerged separately
+- **Link Maintenance**: Fix broken cross-references, update navigation paths
+- **Keeping Top Svelte**: Prevent working-context and active-knowledge bloat
+- **Quarantining**: Move failed methods to evidence-archive with deprecation reasons
+- **Reality Updates**: Adjust PROJECT_CONTEXT and ARCHITECTURE_PRINCIPLES as project evolves
+- **Archive Organisation**: Create subdirectories in evidence-archive as it grows
+- **Navigation Index Updates**: Keep KNOWLEDGE_ARCHIVE index current with content
+
+**Housekeeping Frequency**: 
+- Working context: Every session (automatic via refresh)
+- Active knowledge: Weekly/sprint boundaries
+- Institutional memory: Monthly or major milestones
+- Evidence archive: Quarterly or when searching becomes difficult
+
 ---
 
 ## Detective Theme Elements
