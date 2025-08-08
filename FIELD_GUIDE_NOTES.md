@@ -96,6 +96,13 @@
 - Includes decision trees, troubleshooting, command references
 - Target: AI requiring system understanding for effective collaboration
 
+### Memento as Part of Project Codebase
+- Memento becomes integrated into your project, not separate from it
+- KNOWLEDGE_ARCHIVE will contain project-specific patterns alongside Memento patterns
+- Some patterns (like Compliance Theatre) discovered through using Memento itself
+- Meta-patterns about AI collaboration emerge and get documented
+- Framework evolves with the project - not static boilerplate
+
 ---
 
 ## Detective Theme Elements
