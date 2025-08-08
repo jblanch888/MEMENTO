@@ -16,7 +16,6 @@
 - **DEBUGGING_PLAYBOOK.md** - Systematic crisis investigation and resolution
 
 ### Code Management  
-- **REFACTORING_PLAYBOOK.md** - Safe code restructuring without breaking functionality
 - **GIT_OPERATIONS_PLAYBOOK.md** - Version control procedures and commit discipline
 
 ### Knowledge Management
@@ -28,8 +27,7 @@
 
 **When to Use Which:**
 - **Starting new feature** → PLANNING then INCREMENTAL_EXECUTION
-- **System broken** → DEBUGGING (or CRISIS_MODE if severe)
-- **Code cleanup** → REFACTORING
+- **System broken** → DEBUGGING
 - **Documentation updates** → DOCUMENTATION
 - **Version control** → GIT_OPERATIONS
 
