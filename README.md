@@ -148,4 +148,4 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 MEMENTO emerged from the practical experience of orchestrating AI assistants across complex software projects. It represents accumulated wisdom about what actually works in AI-human collaboration, distilled into systematic practice.
 
-*"In a world of artificial intelligence, systematic memory becomes human superpower."*
+*"A structured approach to AI-assisted development."*
