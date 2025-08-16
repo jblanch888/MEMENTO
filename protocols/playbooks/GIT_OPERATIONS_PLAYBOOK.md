@@ -20,8 +20,8 @@ type(scope): description
 - Why it changed
 - Impact of change
 
-🤖 Generated with Claude Code
-Co-Authored-By: Claude <noreply@anthropic.com>
+🤖 AI-assisted development
+Co-Authored-By: AI Assistant
 ```
 
 ### Types

@@ -24,6 +24,7 @@
 - [User Validation Gates](#user-validation-gates)
 - [Pre-Compact Knowledge Consolidation](#pre-compact-knowledge-consolidation)
 - [Token Investment Strategy](#token-investment-strategy)
+- [AI Code Quality Assurance through Persona Testing](#ai-code-quality-persona-testing)
 
 ### [Anti-Patterns](#anti-patterns)
 - [Compliance Theatre](#compliance-theatre)
@@ -114,6 +115,28 @@
 **Prevention:** Focus on substance over signalling, user validation over self-reporting
 
 **Cross-References:** See [User Validation Gates](#user-validation-gates)
+
+---
+
+## Development Patterns
+
+### AI Code Quality Assurance through Persona Testing {#ai-code-quality-persona-testing}
+
+**Pattern:** Systematic testing using role-based personas to validate AI-generated code
+
+**Implementation:**
+- Adopt specific tester personas (picky tester, exploratory tester, security auditor)
+- Test from user perspective rather than developer assumptions
+- Focus on edge cases, integration points, and performance under load
+- Use persona-driven test scenarios to catch realistic usage issues
+
+**Prevention Value:** Catches integration bugs and performance issues human review misses
+
+**Example Application:** Organizational Intelligence Demo testing revealed search fallback bugs, entity deduplication issues, and performance characteristics through systematic persona-based testing
+
+**Cross-References:**
+- See: [Evidence-First Decision Making](#evidence-first-decision-making)
+- Related: [Crisis Investigation Protocol](#crisis-investigation-protocol)
 
 ---
 

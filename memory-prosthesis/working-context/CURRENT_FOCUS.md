@@ -1,29 +1,33 @@
-# CURRENT_FOCUS.MD - What Now (Present Focus)
+# CURRENT_FOCUS.md
 
-**Mission:** [Your current primary objective]
-**Active Playbook:** [Which playbook guides this work]
-**Started:** [When this focus was set]
+**Mission:** [Current primary objective]  
+**Active Playbook:** [Selected playbook from protocols/playbooks/]  
+**Started:** [Session start date]  
 
 ---
 
 ## Primary Task
-[Clear, specific description of what needs accomplishing RIGHT NOW]
+
+[Brief description of what you're trying to accomplish this session]
+
+## Immediate Next Actions
+
+1. [Specific next step]
+2. [Specific next step] 
+3. [Specific next step]
+
+## Active Constraints
+
+- [Any blocking issues or dependencies]
+- [Time constraints or deadlines]
+- [Resource limitations]
 
 ## Success Criteria
+
 - [ ] [Measurable outcome 1]
-- [ ] [Measurable outcome 2] 
+- [ ] [Measurable outcome 2]
 - [ ] [Measurable outcome 3]
-
-## Next Immediate Actions
-1. [Very specific next step]
-2. [Following logical step]  
-3. [Third step if clear]
-
-## Current Context
-**System State:** [Brief technical reality]
-**Key Constraints:** [What limits this work]
-**Blockers:** [What's waiting on external input]
 
 ---
 
-**AI Instructions:** This is your primary operational context. Follow the Active Playbook for procedures. Maximum 35 lines to preserve attention efficiency.
+**Note:** This file should be updated at the start of each session and kept under 50 lines total. It represents your current mental state and immediate focus, not long-term planning.

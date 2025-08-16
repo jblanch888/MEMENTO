@@ -75,8 +75,8 @@ feat/fix/docs: clear description of logical change
 - Why change was necessary  
 - How change improves system
 
-🤖 Generated with Claude Code
-Co-Authored-By: Claude <noreply@anthropic.com>
+🤖 AI-assisted development
+Co-Authored-By: AI Assistant
 ```
 
 ---

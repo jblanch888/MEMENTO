@@ -127,6 +127,13 @@
 - Institutional memory: Monthly or major milestones
 - Evidence archive: Quarterly or when searching becomes difficult
 
+### Environment Discipline & Risk Scaling
+- Environment discipline scales with risk tolerance and project context
+- Personal projects may accept "everything in prod" when balanced with disciplined commits and validation gates
+- Commercial contexts require additional safety layers (dev/test/prod workflows)
+- Risk management through systematic habits (unit commits, incremental validation) often more effective than heavyweight process
+- Memento's structured approach enables "fast + structured" development regardless of environment complexity
+
 ---
 
 ## Detective Theme Elements
