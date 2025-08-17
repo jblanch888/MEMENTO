@@ -17,12 +17,12 @@ Thank you for your interest in improving Memento! We welcome contributions from 
 4. Ensure all documentation uses British English
 5. Submit a pull request with clear description
 
-### Adding Casefiles
-We especially welcome new casefiles demonstrating Memento in action:
+### Sharing Examples
+We especially welcome examples demonstrating Memento in action:
 - Sanitise all personal/proprietary information
-- Follow the existing casefile structure
-- Include lessons learnt and patterns discovered
-- Write in the investigative narrative style
+- Document patterns discovered through usage
+- Include lessons learnt and anti-patterns encountered
+- Focus on operational insights and framework evolution
 
 ### Documentation Improvements
 - Maintain the detective/investigation theme
