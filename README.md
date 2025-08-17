@@ -96,8 +96,8 @@ git clone https://github.com/yourusername/memento-framework.git your-project-mem
 cd your-project-memento
 ```
 
-### 2. Initialise Your Project Context
-Edit `memory-prosthesis/active-knowledge/PROJECT_CONTEXT.md` with your domain, stakeholders, and constraints.
+### 2. Establish Your Principles
+Edit `memory-prosthesis/active-knowledge/ARCHITECTURE_PRINCIPLES.md` with your development discipline and decision-making frameworks.
 
 ### 3. Set Your Current Focus
 Update `memory-prosthesis/working-context/CURRENT_FOCUS.md` with your immediate objectives and active playbook.
