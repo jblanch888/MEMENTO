@@ -76,9 +76,9 @@ memento-framework/
 │   │   ├── CURRENT_FOCUS.md       # "What now?"
 │   │   └── STATUS.md              # "What accomplished?"
 │   ├── active-knowledge/           # Multi-session, frequently accessed
-│   │   ├── PROJECT_CONTEXT.md     # Domain and business knowledge
 │   │   ├── ARCHITECTURE_PRINCIPLES.md
-│   │   └── ACTIVE_BACKLOG.md
+│   │   ├── BACKLOG.md
+│   │   └── SYSTEM_OVERVIEW_TEMPLATE.md
 │   ├── institutional-memory/       # Long-term, searchable wisdom
 │   │   └── KNOWLEDGE_ARCHIVE.md   # Proven patterns and decisions
 │   └── evidence-archive/           # Historical artifacts and research
