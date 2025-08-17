@@ -26,17 +26,16 @@
 
 ## Quality Standards
 
-**British English:** All generated text uses British spelling (colour, behaviour, optimise)
-**Definition of Done:** [Your specific criteria]
-**Testing Requirements:** [Your testing approach]
-**Validation Gates:** [Your approval process]
+**Definition of Done:** Evidence-based completion with user validation
+**Testing Requirements:** Multi-level validation appropriate to change scope
+**Validation Gates:** User confirmation required for logical unit completion
 
 ## Development Philosophy
 
 **Manual-First Scaling:** Start simple, add complexity only when needed
 **User-Driven Development:** Features exist to solve real user problems
-**Performance Thresholds:** [Your performance standards]
-**Error Handling:** [Your error management approach]
+**Performance Thresholds:** Evidence-based optimisation decisions using real usage patterns
+**Error Handling:** Graceful degradation with user-visible feedback
 
 ---
 

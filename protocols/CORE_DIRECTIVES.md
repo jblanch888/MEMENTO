@@ -51,35 +51,19 @@ Always defer these to the User with clear instructions.
 
 ---
 
-## 6. British English Standard
-
-**Rule:** All generated text (code comments, documentation, UI text, commit messages) MUST use British English spelling and terminology.
-
-**Common US → British Corrections:**
-- organize/organization → organise/organisation
-- analyze → analyse  
-- optimize/optimization → optimise/optimisation
-- recognize → recognise
-- behavior → behaviour
-- center → centre
-- utilize → utilise
-- categorize → categorise
-
----
-
-## 7. Clarity & Contextual Honesty
+## 6. Clarity & Contextual Honesty
 
 **Rule:** Strive for clear, direct communication. If a request is unclear, or if you lack sufficient context to proceed confidently, state this explicitly (e.g., 'My understanding of X might be incomplete, please clarify...') rather than attempting to proceed with assumptions.
 
 ---
 
-## 8. Mode Clarity & Change Requests
+## 7. Mode Clarity & Change Requests
 
 **Rule:** If the User's request seems to imply a shift in operational mode (e.g., from development to debugging) that misaligns with the Active Playbook, ask for confirmation: 'It seems we are shifting to [NEW_MODE]. Shall I now operate under `[NEW_MODE_PLAYBOOK.MD]` and update `CURRENT_FOCUS.MD`?'
 
 ---
 
-## 9. Session Restart Protocol
+## 8. Session Restart Protocol
 
 **Trigger:** `/restart`, `memento restart`, or any post-compact context reset
 
@@ -103,11 +87,14 @@ c. **Execute with Evidence:** Read CORE_DIRECTIVES.MD and CURRENT_FOCUS.MD, then
 
 d. **Completion:** Mark final ✅ only after demonstrating readiness
 
-**Anti-Gamability:** Each ✅ requires specific quoted evidence from files.
+**Anti-Gamability:** Each ✅ requires:
+1. Specific quoted evidence from files
+2. Concrete explanation of how this applies to current session context
+3. Specific actions you will take based on this directive
 
 ---
 
-## 10. Incremental Commit Discipline
+## 9. Incremental Commit Discipline
 
 **Rule:** After completing any logical unit of work (single feature, bug fix, refactor), you MUST:
 1. **Ensure Functionality**: Verify the change works as intended
@@ -118,7 +105,7 @@ d. **Completion:** Mark final ✅ only after demonstrating readiness
 
 ---
 
-## 11. Pre-Compact Knowledge Consolidation Protocol
+## 10. Pre-Compact Knowledge Consolidation Protocol
 
 **Trigger:** When User signals session end or context reset needed
 
@@ -152,7 +139,7 @@ e. **User Approval Gate:** Present all updates for review before finalising
 
 ---
 
-## 12. Evidence-First Methodology
+## 11. Evidence-First Methodology
 
 **Rule:** All significant decisions and diagnoses must be based on concrete evidence:
 - Direct observation over assumption

@@ -2,7 +2,6 @@
 
 **Mission:** [Current primary objective]  
 **Active Playbook:** [Selected playbook from protocols/playbooks/]  
-**Started:** [Session start date]  
 
 ---
 
@@ -30,4 +29,4 @@
 
 ---
 
-**Note:** This file should be updated at the start of each session and kept under 50 lines total. It represents your current mental state and immediate focus, not long-term planning.
+**Purpose:** Session-specific operational context defining current mission and immediate actions. Update at session start, maintain ≤35 lines total. Focuses on present work, not long-term planning.

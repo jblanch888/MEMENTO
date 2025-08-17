@@ -109,4 +109,4 @@ Slice 5: Performance optimisation (enhancement)
 
 ---
 
-**This playbook ensures thorough planning with user alignment before complex implementation begins.**
+**This playbook improves the odds of thorough planning with user alignment before complex implementation begins.**

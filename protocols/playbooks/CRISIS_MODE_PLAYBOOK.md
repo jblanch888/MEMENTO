@@ -97,7 +97,7 @@ Recommend: [option] based on [evidence]. Awaiting your decision and execution."
 - Track recovery actions and outcomes
 
 **Post-Crisis Knowledge Capture:**
-"Crisis resolved. This incident provides valuable learning. Should we add a summary to `../../memory-prosthesis/institutional-memory/KNOWLEDGE_ARCHIVE.md#crisis-patterns` covering [key lessons]?"
+"Crisis resolved. This incident provides valuable learning. Should we add a summary to `../../memory-prosthesis/institutional-memory/KNOWLEDGE_ARCHIVE.md#crisis-investigation-protocol` covering [key lessons]?"
 
 ---
 
@@ -167,4 +167,4 @@ Recommend: [option] based on [evidence]. Awaiting your decision and execution."
 
 ---
 
-**This playbook ensures systematic crisis response with proper user oversight whilst building institutional wisdom for future crisis prevention.**
+**This playbook improves the odds of systematic crisis response with proper user oversight whilst building institutional wisdom for future crisis prevention.**

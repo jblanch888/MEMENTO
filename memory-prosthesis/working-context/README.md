@@ -20,7 +20,7 @@
 ## Critical Rules
 
 ### Attention Architecture
-- This tier is the AI's "current Polaroid" - what it sees first and refers to most
+- This tier is the AI's "surface view" - what it sees first and refers to most
 - Must contain ONLY session-critical information
 - Everything else belongs in higher tiers
 

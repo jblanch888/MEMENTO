@@ -13,7 +13,7 @@
 ## Core File: KNOWLEDGE_ARCHIVE.MD
 
 **Purpose:** Structured library of patterns, anti-patterns, debugging protocols, and institutional wisdom
-**Organization:** Hierarchical navigation with anchor-based cross-references
+**Organisation:** Hierarchical navigation with anchor-based cross-references
 **Size:** Can grow large (1,000+ lines) - this tier is designed for comprehensive knowledge storage
 
 ### Knowledge Categories
@@ -35,9 +35,9 @@ Example: `## Evidence-First Debugging {#evidence-first-debugging}`
 - Descriptive link text with specific anchor targets
 - Maintained link integrity during knowledge moves
 
-### Search Optimization
+### Search Optimisation
 - Pattern titles include searchable keywords
-- Grep/Ctrl+F friendly organization
+- Grep/Ctrl+F friendly organisation
 - Progressive disclosure from categories to specifics
 
 ---
@@ -55,6 +55,32 @@ Example: `## Evidence-First Debugging {#evidence-first-debugging}`
 - **Prevention Value:** Document what problems the pattern solves
 - **Battle-Tested:** Only patterns proven through actual usage
 - **Domain-Specific:** Tailored to your specific context and challenges
+
+---
+
+## Maintenance Disciplines
+
+### Critical Reality
+KNOWLEDGE_ARCHIVE.md is the **operational heart** of MEMENTO. Poor stewardship turns institutional memory into institutional confusion, making the entire framework counterproductive overhead.
+
+### Periodic Maintenance Requirements
+- **Content Gardening:** Remove session-specific contamination, resolve tier boundary violations
+- **Duplication Detection:** Eliminate competing sources of truth across tiers
+- **Link Integrity:** Repair broken cross-references and anchor inconsistencies
+- **Organisational Coherence:** Maintain logical categorisation and navigation flow
+- **Protocol Validation:** Ensure patterns conform to documentation standards
+
+### Stewardship Investment
+Expect to invest **entire sessions** (potentially 200k+ tokens) on systematic maintenance as session learnings accumulate. This is not overhead - it's the core process that prevents framework decay and preserves MEMENTO's systematic advantage.
+
+### Maintenance Triggers
+- Navigation index becomes unwieldy
+- Broken cross-references detected
+- Session-specific details contaminating patterns
+- Overlapping or contradictory guidance
+- Search efficiency degradation
+
+**Without disciplined stewardship, this tier degrades from institutional wisdom to cognitive noise, destroying MEMENTO's value proposition.**
 
 ---
 

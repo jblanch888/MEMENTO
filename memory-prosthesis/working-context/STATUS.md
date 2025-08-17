@@ -1,8 +1,6 @@
 # STATUS.MD - What Accomplished (Session Retrospective)
 
-**Session:** [Today's date]  
 **Focus:** [Reference to CURRENT_FOCUS.MD mission]
-**Duration:** [Session length]
 
 ---
 

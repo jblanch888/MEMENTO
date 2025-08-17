@@ -13,15 +13,15 @@
 ### Core Development
 - **INCREMENTAL_EXECUTION_PLAYBOOK.md** - Safe, incremental development with validation gates
 - **PLANNING_PLAYBOOK.md** - Structured analysis and user approval for complex work
-- **DEBUGGING_PLAYBOOK.md** - Systematic crisis investigation and resolution
-- **CRISIS_MODE_PLAYBOOK.md** - Emergency stabilisation when systems are failing
+- **DEBUGGING_PLAYBOOK.md** - Forensic investigation of specific problems with absolute evidence discipline
+- **CRISIS_MODE_PLAYBOOK.md** - Emergency stabilisation when multiple systems are failing
 - **REFACTORING_PLAYBOOK.md** - Safe code quality improvements with system coordination
 
 ### Code Management  
 - **GIT_OPERATIONS_PLAYBOOK.md** - Version control procedures and commit discipline
 
 ### Knowledge Management
-- **DOCUMENTATION_PLAYBOOK.md** - Creating and maintaining project documentation
+- **DOCUMENTATION_PLAYBOOK.md** - Maintaining MEMENTO framework documentation integrity and standards
 
 ---
 
@@ -32,7 +32,7 @@
 - **System broken** → DEBUGGING
 - **Everything is on fire** → CRISIS_MODE
 - **Code quality improvements** → REFACTORING
-- **Documentation updates** → DOCUMENTATION
+- **MEMENTO framework documentation** → DOCUMENTATION
 - **Version control** → GIT_OPERATIONS
 
 **Switching Playbooks:**

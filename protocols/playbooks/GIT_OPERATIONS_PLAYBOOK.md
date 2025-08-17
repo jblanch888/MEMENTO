@@ -2,6 +2,8 @@
 
 **Objective:** Version control procedures and commit discipline
 
+**Scope:** Based on solo development experience with AI assistance. Teams may need to adapt these practices to their existing workflows and conventions.
+
 ---
 
 ## Commit Discipline
@@ -75,4 +77,4 @@ git reset --hard HEAD~1  # Discard changes
 
 ---
 
-**This playbook ensures clean version history and safe rollback capabilities.**
+**This playbook improves the odds of clean version history and safe rollback capabilities.**

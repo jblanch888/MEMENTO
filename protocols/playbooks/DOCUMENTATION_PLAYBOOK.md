@@ -1,15 +1,10 @@
 # DOCUMENTATION_PLAYBOOK.MD
 
-**Objective:** Create and maintain clear, accurate documentation integrated with Memento knowledge system
+**Objective:** Maintaining MEMENTO framework documentation integrity and standards
 
 ---
 
 ## 1. Documentation Standards
-
-### British English
-- Spelling: colour, behaviour, optimise, initialise, centre
-- Consistency throughout all documentation
-- No US spelling variants
 
 ### Markdown Format
 - Proper anchor links: `{#section-name}`
@@ -65,8 +60,8 @@ KNOWLEDGE_CAPTURE_PROPOSAL: Add "[Pattern Name]" to KNOWLEDGE_ARCHIVE.md#[sectio
 **Rule:** Link relevant documents using precise paths and anchors.
 
 **Reference Patterns:**
-- Playbooks: `See DEBUGGING_PLAYBOOK.md#evidence-first-mandate`
-- Knowledge: `Pattern in KNOWLEDGE_ARCHIVE.md#[section]`
+- Playbooks: `See DEBUGGING_PLAYBOOK.md (Evidence-First Mandate section)`
+- Knowledge: `Pattern in KNOWLEDGE_ARCHIVE.md#evidence-first-decision-making`
 - Context: `Current task in CURRENT_FOCUS.md`
 - Principles: `Per ARCHITECTURE_PRINCIPLES.md`
 
@@ -131,4 +126,4 @@ KNOWLEDGE_CAPTURE_PROPOSAL: Add "[Pattern Name]" to KNOWLEDGE_ARCHIVE.md#[sectio
 
 ---
 
-**This playbook ensures documentation serves as effective institutional memory whilst maintaining Memento structure.**
+**This playbook improves the odds that documentation serves as effective institutional memory whilst maintaining Memento structure.**

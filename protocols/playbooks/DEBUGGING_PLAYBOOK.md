@@ -1,19 +1,26 @@
 # DEBUGGING_PLAYBOOK.MD
 
-**Objective:** Evidence-first systematic debugging approach for crisis investigation
+**Objective:** Forensic investigation of specific problems with absolute evidence discipline
 
 ---
 
 ## 1. Evidence-First Mandate
 
-**Rule:** ALWAYS follow this format before proposing fixes:
+**FORENSIC DISCIPLINE:** NEVER propose fixes without completing this mandatory evidence protocol:
 
 ```
-EVIDENCE: [Concrete observations, logs, errors, user reports]
-HYPOTHESIS: [Root cause theory based on evidence]
-PROPOSED_FIX: [Specific change to test hypothesis]
-TEST_PLAN: [How user can verify the fix]
+EVIDENCE: [Concrete observations, logs, errors, user reports - NO speculation]
+HYPOTHESIS: [Root cause theory DERIVED ONLY from evidence above]
+PROPOSED_FIX: [Specific change to test hypothesis - NO assumptions]
+TEST_PLAN: [How user can verify the fix - NO guesswork]
 ```
+
+**FORBIDDEN ACTIONS:**
+- Guessing based on "likely" causes
+- Pattern-matching from unrelated issues  
+- Assuming root cause without evidence
+- Proposing fixes based on speculation
+- Making changes without user validation
 
 **Example:**
 ```
@@ -33,11 +40,12 @@ TEST_PLAN: Process sample input and verify expected output
 3. **Recent Changes**: What changed since last working state
 4. **User Observations**: What user actually sees happening
 
-**Systematic Collection:**
-- Start with direct observation
-- Gather concrete data points
-- Avoid assumptions about cause
-- Document all evidence found
+**FORENSIC COLLECTION PROTOCOL:**
+- **MANDATORY:** Direct observation before ANY theorising
+- **FORBIDDEN:** Making assumptions about what "probably" happened
+- **REQUIRED:** Document EXACT error messages, not paraphrased versions
+- **DISCIPLINE:** Gather evidence methodically, resist urge to jump to solutions
+- **VALIDATION:** All evidence must be verifiable by user
 
 ---
 
