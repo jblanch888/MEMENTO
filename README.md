@@ -83,7 +83,6 @@ memento-framework/
 │   │   └── KNOWLEDGE_ARCHIVE.md   # Proven patterns and decisions
 │   └── evidence-archive/           # Historical artifacts and research
 │       └── README.md
-├── casefiles/                      # Real-world examples and templates
 └── assets/                        # Supporting materials and diagrams
 ```
 
