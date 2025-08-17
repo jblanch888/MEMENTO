@@ -8,6 +8,23 @@
 
 MEMENTO is a structured framework for AI-assisted development that solves the **contextual amnesia problem** - the challenge of maintaining knowledge and context across development sessions when working with AI assistants.
 
+## Live Demo
+
+Experience the frontend of a complete organisational intelligence system built in 13 days using MEMENTO:
+
+```bash
+docker run -p 8090:8090 jblanch888/heliovantage-demo
+```
+
+Visit http://localhost:8090 to explore the search and network visualization interface.
+
+**What this demonstrates:**
+- Complete AI system development in 13 days using MEMENTO's structured approach
+- Systematic AI collaboration enabling rapid delivery of sophisticated functionality
+- Evidence-first methodology producing professional, working systems
+
+*Note: This demo shows only the frontend interface. The complete system includes ML pipelines, intelligence layers, and analytics built during the same 13-day development cycle.*
+
 Unlike productivity hacks or simple documentation systems, MEMENTO provides a **living memory prosthesis** that evolves with your project, capturing patterns, preserving decisions, and enabling systematic collaboration between human expertise and artificial intelligence.
 
 ### The Problem MEMENTO Solves
