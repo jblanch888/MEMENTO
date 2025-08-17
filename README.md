@@ -1,4 +1,4 @@
-# MEMENTO
+![MEMENTO](assets/memento-logo.png)
 
 **AI-Native Development Framework for System Excellence**
 
