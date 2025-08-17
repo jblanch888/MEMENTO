@@ -1,9 +1,5 @@
 ![MEMENTO](assets/memento-logo.png)
 
-**AI-Native Development Framework for System Excellence**
-
-> *A detective's toolkit for orchestrating artificial intelligence in complex software projects*
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
