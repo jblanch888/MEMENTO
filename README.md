@@ -48,7 +48,7 @@ You live at the surface but dive deeper when you need wisdom, context, or eviden
 ```
 memento-framework/
 ├── protocols/
-│   ├── CORE_DIRECTIVES.md          # 12 immutable operational rules
+│   ├── CORE_DIRECTIVES.md          # 11 immutable operational rules
 │   └── playbooks/                  # Situational procedures
 │       ├── PLANNING_PLAYBOOK.md
 │       ├── DEBUGGING_PLAYBOOK.md
