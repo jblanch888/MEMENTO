@@ -18,6 +18,9 @@ docker run -p 8090:8090 jblanch888/heliovantage-demo
 
 Visit http://localhost:8090 to explore the search and network visualization interface.
 
+![HelioVantage Demo Interface](assets/heliovantage-demo-screenshot.png)
+*Organisational intelligence interface showing semantic search and network visualisation*
+
 **What this demonstrates:**
 - Complete AI system development in 13 days using MEMENTO's structured approach
 - Systematic AI collaboration enabling rapid delivery of sophisticated functionality
