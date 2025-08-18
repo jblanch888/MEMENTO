@@ -26,7 +26,8 @@ My contribution was to direct, to validate, to manage, and to persist. And I was
 
 It’s not magic. There is no "10x developer" button. It *is* a system for disciplined, repeatable progress despite the regular disruption of context resets, maddening hallucinations, and the occasional day where everything, without warning, goes backwards.
 
-*(A single screenshot collage would go here—showing the network graph, the roadmap maths, and the semantic search UI—labelled “**Built with Memento. Zero lines of code written by a human.**”)*
+![Organizational intelligence interface showing network visualization and semantic search](heliovantage-demo-screenshot.png)
+*Built with MEMENTO. Zero lines of code written by a human.*
 
 ---
 
