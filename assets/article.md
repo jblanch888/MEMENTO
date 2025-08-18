@@ -26,8 +26,8 @@ My contribution was to direct, to validate, to manage, and to persist. And I was
 
 It’s not magic. There is no "10x developer" button. It *is* a system for disciplined, repeatable progress despite the regular disruption of context resets, maddening hallucinations, and the occasional day where everything, without warning, goes backwards.
 
-![Organizational intelligence interface showing network visualization and semantic search](heliovantage-demo-screenshot.png)
-*Built with MEMENTO. Zero lines of code written by a human.*
+![HelioVantage Organisational Intelligence Network - A living knowledge graph visualisation showing organisational dynamics extracted from coaching conversations](heliovantage-demo-screenshot.png)
+*HelioVantage Organisational Intelligence represents a new category of organisational intelligence software - it's essentially a "conversation-to-insight engine" that builds a dynamic map of organisational reality. Unlike traditional org charts or static analytics dashboards, this system creates an organic, evolving visualisation of how organisations actually work based on real conversations with team members. Built in 13 Days using MEMENTO.*
 
 ---
 
@@ -54,7 +54,7 @@ A single incorrect field name in an AI-generated JSON response once cost me thre
 
 The model isn’t malicious. It just doesn’t know when it doesn’t know and prioritises "helpfulness" over absolute objectivity. It has no internal concept of "truth," only of "statistically probable sequences." Your most important job is to be the grounded, skeptical detective in a world the signal can be hard to distinguish from the noise.
 
-*(The Memento Gumshoe Logo would be placed here)*
+![Don't trust him](Don't%20trust%20him.png)
 
 This requires a shift in mindset. You are not a prompter; you are an investigator running on three simple rules:
 
