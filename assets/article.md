@@ -2,7 +2,7 @@
 
 ### **MEMENTO: A SURVIVAL GUIDE FOR BUILDING REAL SOFTWARE WITH A FORGETFUL GENIUS**
 
-![Leonard Shelby holding a Polaroid that reads "CLAUDE CODE - Don't trust him"]
+![Leonard Shelby holding a Polaroid that reads "CLAUDE CODE - Don't trust him"](Don't%20trust%20him.png)
 
 My primary development partner is a genius. It is also a profound amnesiac.
 
