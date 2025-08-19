@@ -12,11 +12,11 @@ MEMENTO is a structured framework for AI-assisted development that solves the **
 
 Experience the frontend of a complete organisational intelligence system built in 13 days using MEMENTO:
 
-```bash
-docker run -p 8090:8090 jblanch888/heliovantage-demo
-```
+1. Install Docker Desktop (free from docker.com)
+2. Run: `docker run -d -p 8090:8090 jblanch888/heliovantage-demo:latest`  
+3. Visit http://localhost:8090
 
-Visit http://localhost:8090 to explore the search and network visualization interface.
+Works on any modern Windows, Mac, or Linux machine.
 
 ![HelioVantage Demo Interface](assets/heliovantage-demo-screenshot.png)
 *Organisational intelligence interface with semantic search and network visualisation*
