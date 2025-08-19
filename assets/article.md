@@ -60,7 +60,7 @@ This requires a shift in mindset. You are not a prompter; you are an investigato
 
 1. Trust Nothing. My partner's memory is a leaky bucket. I start from the assumption that every response might be based on dropped context or a confident hallucination. Professional skepticism isn't a choice; it's the default setting.
 
-2. Demand Proof. I run on evidence, not promises. The AI can claim success all it wants, but I don't buy it until I see the proof: the console log, the database query, the artifact on my screen. These are my receipts, and my most powerful phrase is simply, "Show me."
+2. Demand Proof. I run on evidence, not promises. The AI can claim success all it wants, but I don't buy it until I see the proof: the console log, the database query, the artifact on my screen. These are my receipts, and my most powerful phrase is simply, "Prove it."
 
 3. Give the Final Sign-Off. The framework runs on rigid protocols designed for the AI, not for me. But it makes one crucial concession for human speed: I don't need to type coded commands. When I've seen the proof, a simple "ok" or "proceed" from me is the final validation gate. That's the signal for the system to immediately commit the work and create a safe rollback point. It’s a human shortcut in an otherwise machine-oriented process.
 
