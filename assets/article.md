@@ -152,4 +152,4 @@ I've open-sourced the entire system I used to build my tools. The complete Memen
 
 Everything you need to start is on GitHub.
 
-Link/Button: -> Start Building with Memento on GitHub
+[Start Building with MEMENTO on GitHub](https://github.com/jblanch888/MEMENTO)
