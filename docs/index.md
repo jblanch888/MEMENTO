@@ -29,6 +29,13 @@ It’s not magic. There is no "10x developer" button. It *is* a system for disci
 ![HelioVantage Organisational Intelligence Network - A living knowledge graph visualisation showing organisational dynamics extracted from coaching conversations](assets/heliovantage-demo-screenshot.png)
 *HelioVantage Organisational Intelligence represents a new category of organisational intelligence software - it's essentially a "conversation-to-insight engine" that builds a dynamic map of organisational reality. Unlike traditional org charts or static analytics dashboards, this system creates an organic, evolving visualisation of how organisations actually work based on real conversations with team members. Built in 13 Days using MEMENTO.*
 
+**Try it yourself:**
+1. Install Docker Desktop (free from docker.com)
+2. Run: `docker run -d -p 8090:8090 jblanch888/heliovantage-demo:latest`  
+3. Visit http://localhost:8090
+
+Works on any modern Windows, Mac, or Linux machine.
+
 ---
 
 ### The Frustration Tax (And Why I Pay It)
@@ -142,14 +149,7 @@ If you're looking for magic, want to build products to sell, or expect elegant s
 
 ### Ready to Tackle Your Problem?
 
-Try the live demo:
-1. Install Docker Desktop (free from docker.com)
-2. Run: `docker run -d -p 8090:8090 jblanch888/heliovantage-demo:latest`  
-3. Visit http://localhost:8090
-
-Works on any modern Windows, Mac, or Linux machine.
-
-I've open-sourced the entire system I used to build my tools. The complete Memento framework, including a brutally honest Field Guide, is available now. It's not a simple solution, but it is a complete system for building software tools that solve your very specific problems.
+I've open-sourced the entire system I used to build my tools. The complete MEMENTO framework, including a brutally honest Field Guide, is available now. It's not a simple solution, but it is a complete system for building software tools that solve your very specific problems.
 
 Everything you need to start is on GitHub.
 
