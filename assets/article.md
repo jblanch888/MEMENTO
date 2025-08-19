@@ -46,7 +46,7 @@ The point of MEMENTO isn't to build a perfect system that never fails. I still f
 
 > **Callout — A Day Going Backwards**
 >
-A single incorrect field name in an AI-generated JSON response once cost me three hours and 40% of my project's data. That failure forged the "Righteous Path Principle," which is my version of pulling the Andon cord. The rule is simple: when the pipeline breaks, you stop everything and fix the pipeline. You don't get sidetracked trying to clean up corrupted data; you restore the integrity of the value chain itself. It’s a mandate that operational integrity takes precedence over data perfection, because as the principle states, "No pipeline = no value" - a permanent part of MEMENTO's immune system. That day went backwards, but every day since has been a little safer because of it.
+A single incorrect field name in an AI-generated JSON response once cost me three hours and 40% of my project's data. That failure forged the "Righteous Path Principle". The rule is simple: when the pipeline breaks, you stop everything and fix the pipeline. You don't get sidetracked trying to clean up corrupted data; you restore the integrity of the value chain itself. It’s a mandate that operational integrity takes precedence over data perfection, because as the principle states, "No pipeline = no value" - a permanent part of MEMENTO's immune system. That day went backwards, but every day since has been a little safer because of it.
 
 ---
 
