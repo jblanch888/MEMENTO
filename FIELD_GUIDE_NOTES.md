@@ -139,7 +139,6 @@ Note: Knowledge graduation from sessions happens during pre-compact protocol, no
 
 ## Detective Theme Elements
 - Framework as detective's toolkit for AI orchestration
-- Casefiles for real-world examples
 - Investigation metaphors throughout
 - Evidence-based decision making
 - "Field Manual" rather than "User Guide"

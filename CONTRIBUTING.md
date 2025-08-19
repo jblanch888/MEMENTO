@@ -17,12 +17,6 @@ Thank you for your interest in improving Memento! We welcome contributions from 
 4. Ensure all documentation uses British English
 5. Submit a pull request with clear description
 
-### Sharing Examples
-We especially welcome examples demonstrating Memento in action:
-- Sanitise all personal/proprietary information
-- Document patterns discovered through usage
-- Include lessons learnt and anti-patterns encountered
-- Focus on operational insights and framework evolution
 
 ### Documentation Improvements
 - Maintain the detective/investigation theme

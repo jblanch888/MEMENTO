@@ -206,7 +206,7 @@ When you find a bug, you face a choice:
 
 Choose the righteous path. Fix the factory, not just the product.
 
-Progress with Memento doesn't always look the same. Depending on the task, you will shift between three distinct rhythms of work. Mastering both is key to success.
+Progress with Memento doesn't always look the same. Depending on the task, you will shift between three distinct rhythms of work. Mastering all 3 is key to success.
 
 #### **Rhythm 1: The Structured Build (for New Features)**
 
