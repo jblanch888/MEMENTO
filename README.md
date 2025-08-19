@@ -146,7 +146,8 @@ MEMENTO emerged from systematic experimentation with AI-assisted development acr
 
 ## Documentation
 
-- **[Field Guide](FIELD_GUIDE_NOTES.md)** - Comprehensive implementation guide
+- **[Field Guide](MEMENTO_FIELD_GUIDE.md)** - Comprehensive implementation guide
+- **[Article](docs/)** - Full story and practical guide (also available on GitHub Pages)
 - **[Contributing](CONTRIBUTING.md)** - How to contribute to MEMENTO development
 - **[Playbooks](protocols/playbooks/)** - Situation-specific procedures
 
