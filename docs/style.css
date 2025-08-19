@@ -1,0 +1,65 @@
+/* Dark theme for MEMENTO article */
+body {
+    background-color: #0d1117;
+    color: #e6edf3;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px;
+    max-width: 1012px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #f0f6fc;
+    border-bottom: 1px solid #21262d;
+    padding-bottom: 0.3em;
+}
+
+a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+code {
+    background-color: #161b22;
+    color: #f85149;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 85%;
+}
+
+pre {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 16px;
+    overflow: auto;
+}
+
+blockquote {
+    border-left: 4px solid #30363d;
+    margin: 0;
+    padding-left: 16px;
+    color: #8b949e;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #21262d;
+    margin: 24px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Callout boxes */
+blockquote > p:first-child > strong {
+    color: #f85149;
+}

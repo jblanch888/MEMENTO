@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="style.css">
+
 # **MEMENTO: A SURVIVAL GUIDE FOR BUILDING REAL SOFTWARE WITH A FORGETFUL GENIUS**
 
 ![Leonard Shelby holding a Polaroid that reads "CLAUDE CODE - Don't trust him"](assets/Don't%20trust%20him.png)
