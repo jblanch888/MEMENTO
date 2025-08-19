@@ -12,7 +12,7 @@ This reality forced me to adopt the survival strategy of Leonard Shelby, the pro
 
 He's the guy in the photo above. His inability to form new memories meant he had to build an external brain from Polaroids, notes, and even tattoos. The edited image you see isn't just a gimmick; it's my version of his system. It’s a hard-won piece of ground truth, a snapshot that says, "Here is a fact. Trust this, not the confident-sounding nonsense the amnesiac might tell you next."
 
-This is the story of that system. It's a framework, a philosophy, and a set of survival skills for building real software with a forgetful genius. I call it MEMENTO, and I've codified it in The MEMENTO Field Guide. [link to github]
+This is the story of that system. It's a framework, a philosophy, and a set of survival skills for building real software with a forgetful genius. I call it MEMENTO, and I've codified it in [The MEMENTO Field Guide](https://github.com/jblanch888/MEMENTO/blob/main/MEMENTO_FIELD_GUIDE.md).
 
 ---
 
@@ -141,7 +141,14 @@ If you're looking for magic, want to build products to sell, or expect elegant s
 
 ### Ready to Tackle Your Problem?
 
-I've open-sourced the entire system I used to build my tools. The complete Memento framework, including a brutally honest Field Guide, is available now. It’s not a simple solution, but it is a complete system for building software tools that solve your very specific problems.
+Try the live demo:
+1. Install Docker Desktop (free from docker.com)
+2. Run: `docker run -d -p 8090:8090 jblanch888/heliovantage-demo:latest`  
+3. Visit http://localhost:8090
+
+Works on any modern Windows, Mac, or Linux machine.
+
+I've open-sourced the entire system I used to build my tools. The complete Memento framework, including a brutally honest Field Guide, is available now. It's not a simple solution, but it is a complete system for building software tools that solve your very specific problems.
 
 Everything you need to start is on GitHub.
 
