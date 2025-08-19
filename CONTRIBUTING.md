@@ -1,6 +1,6 @@
-# Contributing to Memento
+# Contributing to MEMENTO
 
-Thank you for your interest in improving Memento! We welcome contributions from domain experts, developers, and anyone who has wrestled with the challenges of AI orchestration.
+Thank you for your interest in improving MEMENTO! We welcome contributions from domain experts, developers, and anyone who has wrestled with the challenges of AI orchestration.
 
 ## How to Contribute
 

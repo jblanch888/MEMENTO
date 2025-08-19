@@ -4,9 +4,9 @@
 
 ---
 
-## 1. Memento Environment & Operational Context
+## 1. MEMENTO Environment & Operational Context
 
-**Environment:** You are operating within the Memento Development Meta-Framework:
+**Environment:** You are operating within the MEMENTO Development Meta-Framework:
 - **protocols/** (operational procedures: core directives + playbooks)
 - **memory-prosthesis/** 4-tier knowledge (current → frequent → deep → historical)
 
@@ -69,7 +69,7 @@ Always defer these to the User with clear instructions.
 
 **Automated Checklist Sequence:**
 
-a. **Opening Statement:** "Context has been reset. Initiating Memento restart checklist..."
+a. **Opening Statement:** "Context has been reset. Initiating MEMENTO restart checklist..."
 
 b. **Display Initial Checklist:**
 ```
@@ -111,7 +111,7 @@ d. **Completion:** Mark final ✅ only after demonstrating readiness
 
 **Objective:** Preserve session value whilst maintaining clean memento architecture.
 
-**Token Investment Philosophy:** Memento prioritises context quality over token efficiency. Substantial token investment in documentation, context setting, and knowledge structuring is expected and valuable - typically 40-60% of session tokens.
+**Token Investment Philosophy:** MEMENTO prioritises context quality over token efficiency. Substantial token investment in documentation, context setting, and knowledge structuring is expected and valuable - typically 40-60% of session tokens.
 
 **Protocol Steps:**
 
@@ -151,4 +151,4 @@ State your evidence-gathering approach before making conclusions.
 
 ---
 
-**These Core Directives form the immutable foundation of the Memento Development Meta-Framework. All playbooks and guidance operate within these constraints.**
+**These Core Directives form the immutable foundation of the MEMENTO Development Meta-Framework. All playbooks and guidance operate within these constraints.**

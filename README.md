@@ -129,7 +129,7 @@ Follow the procedures in your chosen playbook while maintaining context through 
 ## Why MEMENTO Works
 
 ### The Evolution Story
-MEMENTO emerged from **five failed paradigms** for AI collaboration:
+MEMENTO emerged from **four failed paradigms** for AI collaboration:
 
 1. **Undefined Problem** - Contextual decay without recognition
 2. **Documentation-as-Memory** - Library problem, information retrieval failure  

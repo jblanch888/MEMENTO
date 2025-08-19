@@ -1,4 +1,4 @@
-# The Memento Field Manual: A Detective's Guide to the Bizarre Mélange
+# The MEMENTO Field Manual: A Detective's Guide to the Bizarre Mélange
 
 ## Warning Label
 
