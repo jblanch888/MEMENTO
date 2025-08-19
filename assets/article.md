@@ -52,7 +52,7 @@ A single incorrect field name in an AI-generated JSON response once cost me thre
 
 ### Working with a Brilliant Liar (Your Role as the Detective)
 
-The model isn’t malicious. It just doesn’t know when it doesn’t know and prioritises "helpfulness" over absolute objectivity. It has no internal concept of "truth," only of "statistically probable sequences." Your most important job is to be the grounded, skeptical detective in a world the signal can be hard to distinguish from the noise.
+The model isn’t malicious. It just doesn’t know when it doesn’t know and prioritises "helpfulness" over absolute objectivity. It has no internal concept of "truth," only of "statistically probable sequences." Your most important job is to be the grounded, skeptical detective in a world where the signal can be hard to distinguish from the noise.
 
 ![MEMENTO](memento-logo.png)
 
