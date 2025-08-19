@@ -136,7 +136,7 @@ You will still have days that go backwards.
 You will still get confident nonsense.
 You will still swear at least once per `/compact`.
 
-###Who shouldn't try this
+### Who shouldn't try this
 
 If you're looking for magic, want to build products to sell, or expect elegant solutions, this isn't for you. This is for people with specific problems, exceptional persistence, and some exposure to how software works.
 
