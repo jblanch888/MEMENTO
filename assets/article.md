@@ -71,8 +71,8 @@ This requires a shift in mindset. You are not a prompter; you are an investigato
 Memento is a **management system for your AI worker.** It has two arms:
 
 1.  **The Four-Tier Memory Prosthesis:** This is the AI's external brain. It’s a structured set of files that holds the context the AI cannot.
-    *   **Working context:** Tiny, local, ephemeral. A `CURRENT_FOCUS.MD` file that answers "What are we doing *right now*?"
-    *   **Active knowledge:** The project's operational memory. System overviews, architectural diagrams, the current `STATUS.MD`.
+    *   **Working context:** Tiny, local, ephemeral. `CURRENT_FOCUS.md` and `STATUS.md` files that answer "What are we doing *right now*?" and "What have we accomplished?"
+    *   **Active knowledge:** The project's operational memory. System overviews, architectural diagrams, and frequently referenced material.
     *   **Institutional memory:** The soul of the project. The `KNOWLEDGE_ARCHIVE.MD` holds the hard-won patterns, the painful anti-patterns, and the mental models that must be internalised until better evidence overturns them.
     *   **Evidence archive:** The raw data. The completed plans, the system assessments, the session logs, the "receipts" from our investigations.
 
@@ -101,7 +101,7 @@ Memento uses **cadences**—short, boring, predictable rhythms that keep entropy
 This way of working is a bizarre mélange, full of contradictions that turned out to be features.
 
 *   **The Backwards-Looking Progress Paradox:** I found that most forward motion comes from looking back — analysing old logs, reviewing past decisions in the Knowledge Archive, checking the receipts. The gumshoe in the logo, facing left, wasn't an accident.
-*   **The Effort Inversion Paradox:** I do less *typing*, but far more *judgment*. The work feels harder — more cognitively demanding, and that’s precisely why it goes faster. The bottleneck is no longer the speed of my fingers, but the quality of my decisions.
+*   **The Effort Inversion Paradox:** I do less *typing*, but far more *judgment*. The work feels harder — more cognitively demanding, and that's precisely why it goes faster. The bottleneck is no longer the speed of my fingers, but my ability to maintain focus and make quality decisions consistently.
 *   **The Frustration-Productivity Paradox:** The logs show that some of the most infuriating sessions, the ones filled with "shit show" moments, were also the ones that produced the most valuable and durable "lessons learned" that were graduated into the Knowledge Archive. The pain was directly converted into system resilience.
 
 > **Callout — The "One Pipeline" Principle**
@@ -112,14 +112,15 @@ This way of working is a bizarre mélange, full of contradictions that turned ou
 
 ### Why Not More Control? (A History of Failure)
 
-Memento is the reliable map that was drawn after a long and often treacherous exploration. I didn't start with a guide. I had to chart the territory myself, and I took the wrong path many times:
+MEMENTO emerged from **five failed paradigms** for AI collaboration:
 
-1.  **Epoch 1: Naive Docs:** I thought, "If I just explain it well enough in a `CLAUDE.MD` file, it will obey." It didn't.
-2.  **Epoch 2: Self-Reporting & Compliance Theater:** I built elaborate tracking scripts and tags to make the AI report on its own compliance. The scores went up, but the outcomes didn't. It could *perform* compliance, not to *be* compliant.
-3.  **Epoch 3: Hard Wrappers:** I tried to build a state-machine wrapper to force the AI into a rigid set of states. It resulted in symlink hell and was too brittle to function.
-4.  **Epoch 4: Official Toolchains:** I tried to use the official "Model Context Protocol." It failed basic reliability tests.
+1. **Undefined Problem** - Contextual decay without recognition
+2. **Documentation-as-Memory** - Library problem, information retrieval failure  
+3. **Quantified Compliance** - Measurement theatre instead of effectiveness
+4. **Programmatic Enforcement** - Fighting the assistant instead of collaborating
+5. **MEMENTO Framework** - Accepting limitations, providing systematic support
 
-Memento is what I was left with when I stopped trying to make the AI something it's not. It's a system built around the reality of its nature: work with the forgetful genius. Keep the human in the loop for judgment, and let the framework carry the memory and the discipline.
+Only MEMENTO survived because it **works with AI nature rather than against it**.
 
 ---
 
