@@ -93,7 +93,7 @@ Memento is **not** a code generator, an agent platform, or an attempt to "contro
 
 Memento uses **cadences**—short, boring, predictable rhythms that keep entropy from taking over.
 
-1.  **/compact → restart (The "5 minute" Pit Stop):** I work in bursts of about 200,000 tokens. When the context window is full, I don't write elaborate handoff notes. I approve the AI's auto-generated pre-compact suggestions, type `/compact`, wait 30 seconds, and then type "restart using the protocol you'll find in the core directives.md" But the AI is not yet ready for complex work. My first action is always the "Context Plunge" — directing it to re-read key documents from its Active Knowledge tier, like the architectural principles or a system overview. This re-establishes a rich operational context. The whole interruption takes a few minutes, and I do this 3-8 times a day.
+1.  **/compact → restart (The "5 minute" Pit Stop):** I work in bursts of about 200,000 tokens. When the context window is nearly full, I don't write elaborate handoff notes. I initiaite the pre-compact protocol, review and approve the AI's auto-generated suggestions, type `/compact`, wait 30 seconds, and then type "restart using the protocol you'll find in the core directives.md" But the AI is not yet ready for complex work. My first action after restart is always the "Context Plunge" — directing it to re-read key documents from its Active Knowledge tier, like the architectural principles or a system overview. This re-establishes a rich operational context. The whole interruption takes a few minutes, and I do this 3-8 times a day.
 2.  **Natural-language validation & commit:** If a logical unit is complete and I've seen the evidence, I say so in plain English. The system, as per its protocols, is designed to recognise this as a trigger to immediately commit the work.
 3.  **Knowledge Gardening:** Every few days, I dedicate an entire session (a single 200k token window) to housekeeping. I direct the AI to refactor the Knowledge Archive, consolidate patterns, shift material between tiers, and prune obsolete information. This isn't wasted time; it's sharpening the axe. It's what keeps the system ML-optimised and prevents the memory tiers from becoming a junkyard.
 
@@ -139,6 +139,7 @@ The cost of admission for me was $100/month Claude Max subscription - for all da
 
 The price is discipline. The discipline to follow the cadences, to do the knowledge gardening, to keep the different parts of your system cleanly separated, and to relentlessly demand evidence.
 
+Calude Code will still sometimes ignore a protocol or forget which playbook its using.
 You will still have days that go backwards.
 You will still get confident nonsense.
 You will still swear at least once per `/compact`.

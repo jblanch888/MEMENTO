@@ -76,17 +76,17 @@ memento-framework/
 │       └── ...
 ├── memory-prosthesis/
 │   ├── working-context/            # Session-specific, temporary
-│   │   ├── CURRENT_FOCUS.md       # "What now?"
-│   │   └── STATUS.md              # "What accomplished?"
+│   │   ├── CURRENT_FOCUS.md        # "What now?"
+│   │   └── STATUS.md               # "What accomplished?"
 │   ├── active-knowledge/           # Multi-session, frequently accessed
 │   │   ├── ARCHITECTURE_PRINCIPLES.md
 │   │   ├── BACKLOG.md
 │   │   └── SYSTEM_OVERVIEW_TEMPLATE.md
 │   ├── institutional-memory/       # Long-term, searchable wisdom
-│   │   └── KNOWLEDGE_ARCHIVE.md   # Proven patterns and decisions
+│   │   └── KNOWLEDGE_ARCHIVE.md    # Proven patterns and decisions
 │   └── evidence-archive/           # Historical artifacts and research
 │       └── README.md
-└── assets/                        # Supporting materials and diagrams
+└── assets/                         # Supporting materials and diagrams
 ```
 
 ---
@@ -147,7 +147,7 @@ MEMENTO emerged from systematic experimentation with AI-assisted development acr
 ## Documentation
 
 - **[Field Guide](MEMENTO_FIELD_GUIDE.md)** - Comprehensive implementation guide
-- **[Article](docs/)** - Full story and practical guide (also available on GitHub Pages)
+- **[Article](docs/index.md)** - Full story and practical guide (also available on GitHub Pages)
 - **[Contributing](CONTRIBUTING.md)** - How to contribute to MEMENTO development
 - **[Playbooks](protocols/playbooks/)** - Situation-specific procedures
 
