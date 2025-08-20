@@ -28,7 +28,7 @@ Then maybe you can navigate this bizarre mélange too.
 
 ## Part 1: Reality Check
 
-![Don't trust him](assets/Don't%20trust%20him.png)
+![Don't trust him](docs/assets/Don't%20trust%20him.png)
 
 ### Who You Need to Be
 

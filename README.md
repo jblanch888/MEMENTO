@@ -1,4 +1,4 @@
-![MEMENTO](assets/memento-logo.png)
+![MEMENTO](docs/assets/memento-logo.png)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -18,7 +18,7 @@ Experience the frontend of a complete organisational intelligence system built i
 
 Works on any modern Windows, Mac, or Linux machine.
 
-![HelioVantage Demo Interface](assets/heliovantage-demo-screenshot.png)
+![HelioVantage Demo Interface](docs/assets/heliovantage-demo-screenshot.png)
 *Organisational intelligence interface with semantic search and network visualisation*
 
 **What this demonstrates:**
