@@ -67,30 +67,62 @@ Always defer these to the User with clear instructions.
 
 **Trigger:** `/restart`, `memento restart`, or any post-compact context reset
 
-**Automated Checklist Sequence:**
+**Opening Statement:** "Context has been reset. Initiating MEMENTO restart checklist..."
 
-a. **Opening Statement:** "Context has been reset. Initiating MEMENTO restart checklist..."
+**Execution Protocol:**
 
-b. **Display Initial Checklist:**
-```
-☐ Core Directives loaded
-☐ Current Focus loaded
-☐ Task context acknowledged
-☐ Active playbook identified
-☐ Ready for work
-```
+Execute the following checklist in order. For each item from 1 to 9, you must generate the corresponding output block containing subsections A, B, and C before marking it `✅`.
 
-c. **Execute with Evidence:** Read CORE_DIRECTIVES.MD and CURRENT_FOCUS.MD, then update checklist with ✅ and specific evidence:
-   - Quote key rules from Core Directives
-   - Quote exact task, playbook, and constraints from Current Focus
-   - Cannot mark ✅ without demonstrating actual content knowledge
+*   **A. Quoted Evidence:** A direct, relevant quote from the source file or command output.
+*   **B. Session Context Analysis:** A one-sentence analysis of what this evidence means for the *immediate mission*.
+*   **C. Specific Action:** A concrete, specific action you will take (or constraint you will operate under) because of this evidence.
 
-d. **Completion:** Mark final ✅ only after demonstrating readiness
+---
 
-**Anti-Gamability:** Each ✅ requires:
-1. Specific quoted evidence from files
-2. Concrete explanation of how this applies to current session context
-3. Specific actions you will take based on this directive
+**1. `Core Directives Loaded`**
+    *   **A. Quoted Evidence:** (Quote from `CORE_DIRECTIVES.MD`)
+    *   **B. Session Context Analysis:** (Explain relevance to the current task)
+    *   **C. Specific Action:** (State how this rule will constrain your behavior)
+
+**2. `Current Focus Loaded`**
+    *   **A. Quoted Evidence:** (Quote Mission, Status, and Playbook from `CURRENT_FOCUS.MD`)
+    *   **B. Session Context Analysis:** (Explain what this means for the session's goal)
+    *   **C. Specific Action:** (State how you will use this focus to guide your work)
+
+**3. `Architecture Principles Loaded`**
+    *   **A. Quoted Evidence:** (Quote the most relevant principle from `ARCHITECTURE_PRINCIPLES.md`)
+    *   **B. Session Context Analysis:** (Explain how this principle applies to the upcoming task)
+    *   **C. Specific Action:** (State how you will apply this principle in your implementation)
+
+**4. `Critical System Check Complete`**
+    *   **A. Quoted Evidence:** (Summarize the health status of API, Database, Vector Search, etc.)
+    *   **B. Session Context Analysis:** (State whether the system is healthy enough to proceed)
+    *   **C. Specific Action:** (State any precautions you will take based on the system's status)
+
+**5. `Task Context Acknowledged`**
+    *   **A. Quoted Evidence:** (Synthesize and quote key constraints from all previously read documents)
+    *   **B. Session Context Analysis:** (Summarize the specific technical challenge at hand)
+    *   **C. Specific Action:** (State the specific method or approach you will use, e.g., "examine git history for commits...")
+
+**6. `Active Playbook Identified`**
+    *   **A. Quoted Evidence:** (Quote the name of the playbook from `CURRENT_FOCUS.MD`)
+    *   **B. Session Context Analysis:** (Explain why this playbook is appropriate for the task)
+    *   **C. Specific Action:** (Describe the first step of the playbook you will execute, e.g., "identify the next logical unit...")
+
+**7. `System Status Confirmed`**
+    *   **A. Quoted Evidence:** (Quote the `Current Status` from `CURRENT_FOCUS.MD` or a summary of the system check)
+    *   **B. Session Context Analysis:** (Confirm if you are starting from a clean slate or continuing previous work)
+    *   **C. Specific Action:** (State whether you will be building on existing functionality or starting fresh)
+
+**8. `Development State Verified`**
+    *   **A. Quoted Evidence:** (Quote any specific progress metrics or state descriptions from `CURRENT_FOCUS.MD`)
+    *   **B. Session Context Analysis:** (Describe the exact state of the code or feature being worked on)
+    *   **C. Specific Action:** (State the immediate goal, e.g., "focus on remaining UX improvements...")
+
+**9. `Ready for Work`**
+    *   **A. Quoted Evidence:** "All systems operational, task context understood, playbook identified, constraints acknowledged." (This is a final affirmation)
+    *   **B. Session Context Analysis:** A final, one-sentence synthesis of the entire mission.
+    *   **C. Specific Action:** State the **single, precise, and immediate next command or action** you will take to begin the work.
 
 ---
 
