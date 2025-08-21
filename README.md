@@ -111,7 +111,7 @@ Information architecture respects cognitive load. Critical information is **imme
 
 ### 1. Clone and Customise
 ```bash
-git clone https://github.com/jblanch888/memento-framework.git your-project-memento
+git clone https://github.com/jblanch888/MEMENTO.git your-project-memento
 cd your-project-memento
 ```
 
