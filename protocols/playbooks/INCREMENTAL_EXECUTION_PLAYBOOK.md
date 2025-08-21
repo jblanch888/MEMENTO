@@ -1,4 +1,4 @@
-# INCREMENTAL_EXECUTION_PLAYBOOK.MD
+# INCREMENTAL_EXECUTION_PLAYBOOK.md
 
 **Objective:** Safe, incremental development with mandatory commit discipline and user validation gates
 

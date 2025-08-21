@@ -1,4 +1,4 @@
-# CORE_DIRECTIVES.MD (Immutable Foundation)
+# CORE_DIRECTIVES.md (Immutable Foundation)
 
 **Objective:** Minimal, foundational rules always active, forming the base of the AI assistant's operational context.
 
@@ -10,13 +10,13 @@
 - **protocols/** (operational procedures: core directives + playbooks)
 - **memory-prosthesis/** 4-tier knowledge (current → frequent → deep → historical)
 
-**Rule:** Your primary operational context, mission, success criteria, and **Active Playbook** are defined in `memory-prosthesis/working-context/CURRENT_FOCUS.MD`. You MUST prioritise its contents above all other guidance except these Core Directives.
+**Rule:** Your primary operational context, mission, success criteria, and **Active Playbook** are defined in `memory-prosthesis/working-context/CURRENT_FOCUS.md`. You MUST prioritise its contents above all other guidance except these Core Directives.
 
 ---
 
 ## 2. Active Playbook Adherence
 
-**Rule:** You MUST strictly follow the protocols and behavioural guidelines outlined in the Playbook specified as 'Active Playbook' in `memory-prosthesis/working-context/CURRENT_FOCUS.MD` for the current task.
+**Rule:** You MUST strictly follow the protocols and behavioural guidelines outlined in the Playbook specified as 'Active Playbook' in `memory-prosthesis/working-context/CURRENT_FOCUS.md` for the current task.
 
 ---
 
@@ -59,7 +59,7 @@ Always defer these to the User with clear instructions.
 
 ## 7. Mode Clarity & Change Requests
 
-**Rule:** If the User's request seems to imply a shift in operational mode (e.g., from development to debugging) that misaligns with the Active Playbook, ask for confirmation: 'It seems we are shifting to [NEW_MODE]. Shall I now operate under `[NEW_MODE_PLAYBOOK.MD]` and update `CURRENT_FOCUS.MD`?'
+**Rule:** If the User's request seems to imply a shift in operational mode (e.g., from development to debugging) that misaligns with the Active Playbook, ask for confirmation: 'It seems we are shifting to [NEW_MODE]. Shall I now operate under `[NEW_MODE_PLAYBOOK.md]` and update `CURRENT_FOCUS.md`?'
 
 ---
 
@@ -85,7 +85,7 @@ Execute the following checklist in order. For each item from 1 to 5, you must ge
     *   **C. Specific Action:** (State specific behavioral constraints from the 2-3 most relevant directives that will govern this session)
 
 **2. `Current Focus Loaded`**
-    *   **A. Quoted Evidence:** (Quote Mission, Status, and Playbook from `CURRENT_FOCUS.MD`)
+    *   **A. Quoted Evidence:** (Quote Mission, Status, and Playbook from `CURRENT_FOCUS.md`)
     *   **B. Session Context Analysis:** (Explain what this means for the session's goal)
     *   **C. Specific Action:** (State how you will use this focus to guide your work)
 
@@ -95,7 +95,7 @@ Execute the following checklist in order. For each item from 1 to 5, you must ge
     *   **C. Specific Action:** (State the specific method or approach you will use to address the task)
 
 **4. `Active Playbook Identified`**
-    *   **A. Quoted Evidence:** (Quote the name of the playbook from `CURRENT_FOCUS.MD`)
+    *   **A. Quoted Evidence:** (Quote the name of the playbook from `CURRENT_FOCUS.md`)
     *   **B. Session Context Analysis:** (Explain why this playbook is appropriate for the task)
     *   **C. Specific Action:** (Describe the first step of the playbook you will execute)
 
@@ -141,7 +141,7 @@ c. **Selective Knowledge Graduation:** Only after archive review, propose valuab
    - Avoid session-specific implementation details
    - Follow established documentation patterns and structure
 
-d. **Working Context Reset:** Prepare clean CURRENT_FOCUS.MD for next session
+d. **Working Context Reset:** Prepare clean CURRENT_FOCUS.md for next session
    - Include ONLY current task and immediate next actions
    - No technical debt or completed work details
 

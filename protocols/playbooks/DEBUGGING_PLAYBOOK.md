@@ -1,4 +1,4 @@
-# DEBUGGING_PLAYBOOK.MD
+# DEBUGGING_PLAYBOOK.md
 
 **Objective:** Forensic investigation of specific problems with absolute evidence discipline
 

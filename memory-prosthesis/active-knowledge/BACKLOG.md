@@ -1,4 +1,4 @@
-# BACKLOG.MD
+# BACKLOG.md
 
 **Purpose:** Evidence-based priority management with workflow states and user validation
 

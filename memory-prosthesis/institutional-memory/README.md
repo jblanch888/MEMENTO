@@ -10,7 +10,7 @@
 
 ---
 
-## Core File: KNOWLEDGE_ARCHIVE.MD
+## Core File: KNOWLEDGE_ARCHIVE.md
 
 **Purpose:** Structured library of patterns, anti-patterns, debugging protocols, and institutional wisdom
 **Organisation:** Hierarchical navigation with anchor-based cross-references
@@ -31,7 +31,7 @@ All major sections use: `{#kebab-case-format}` for reliable cross-referencing
 Example: `## Evidence-First Debugging {#evidence-first-debugging}`
 
 ### Cross-Reference Patterns
-- `[Pattern Name](../institutional-memory/KNOWLEDGE_ARCHIVE.MD#anchor-id)`
+- `[Pattern Name](../institutional-memory/KNOWLEDGE_ARCHIVE.md#anchor-id)`
 - Descriptive link text with specific anchor targets
 - Maintained link integrity during knowledge moves
 

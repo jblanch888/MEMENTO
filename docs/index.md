@@ -80,7 +80,7 @@ Memento is a **management system for your AI worker.** It has two arms:
 1.  **The Four-Tier Memory Prosthesis:** This is the AI's external brain. It’s a structured set of files that holds the context the AI cannot.
     *   **Working context:** Tiny, local, ephemeral. `CURRENT_FOCUS.md` and `STATUS.md` files that answer "What are we doing *right now*?" and "What have we accomplished?"
     *   **Active knowledge:** The project's operational memory. System overviews, architectural diagrams, and frequently referenced material.
-    *   **Institutional memory:** The soul of the project. The `KNOWLEDGE_ARCHIVE.MD` holds the hard-won patterns, the painful anti-patterns, and the mental models that must be internalised until better evidence overturns them.
+    *   **Institutional memory:** The soul of the project. The `KNOWLEDGE_ARCHIVE.md` holds the hard-won patterns, the painful anti-patterns, and the mental models that must be internalised until better evidence overturns them.
     *   **Evidence archive:** The raw data. The completed plans, the system assessments, the session logs, the "receipts" from our investigations.
 
 2.  **The Protocols (Playbooks):** These are the Standard Operating Procedures for the collaboration. They are cadences for how we plan, debug, refactor, `/compact`, restart, and, crucially, how we "garden" the knowledge in the memory prosthesis.
@@ -139,7 +139,7 @@ The cost of admission for me was $100/month Claude Max subscription - for all da
 
 The price is discipline. The discipline to follow the cadences, to do the knowledge gardening, to keep the different parts of your system cleanly separated, and to relentlessly demand evidence.
 
-Calude Code will still sometimes ignore a protocol or forget which playbook its using.
+Claude Code will still sometimes ignore a protocol or forget which playbook its using.
 You will still have days that go backwards.
 You will still get confident nonsense.
 You will still swear at least once per `/compact`.

@@ -1,4 +1,4 @@
-# ARCHITECTURE_PRINCIPLES.MD
+# ARCHITECTURE_PRINCIPLES.md
 
 **Purpose:** Evidence-first development discipline and core architectural decisions
 

@@ -1,4 +1,4 @@
-# DOCUMENTATION_PLAYBOOK.MD
+# DOCUMENTATION_PLAYBOOK.md
 
 **Objective:** Maintaining MEMENTO framework documentation integrity and standards
 
@@ -81,9 +81,9 @@ KNOWLEDGE_CAPTURE_PROPOSAL: Add "[Pattern Name]" to KNOWLEDGE_ARCHIVE.md#[sectio
 - Refresh each session
 
 ### Active Knowledge (Multi-Session)
-- PROJECT_CONTEXT.md - Mission and philosophy
-- ARCHITECTURE_PRINCIPLES.md - Core decisions
-- ACTIVE_BACKLOG.md - Priorities
+- ARCHITECTURE_PRINCIPLES.md - Core decisions and development discipline
+- BACKLOG.md - Priorities and task management
+- SYSTEM_OVERVIEW_TEMPLATE.md - Rapid context acquisition template
 - Update as needed
 
 ### Institutional Memory (Long-Term)

@@ -2,7 +2,7 @@
 
 **Purpose:** Immediate operational focus for AI collaboration (≤50 lines for optimal ML attention patterns)
 
-**Core File:** `CURRENT_FOCUS.MD` - Primary operational context defining current mission, constraints, and next actions
+**Core File:** `CURRENT_FOCUS.md` - Primary operational context defining current mission, constraints, and next actions
 
 **Update Frequency:** Every session or major task transition
 
@@ -12,7 +12,7 @@
 
 ## Contents
 
-- **CURRENT_FOCUS.MD**: "What Now" - Present-focused operational context (≤35 lines)
+- **CURRENT_FOCUS.md**: "What Now" - Present-focused operational context (≤35 lines)
 - **STATUS.md**: "What Accomplished" - Session retrospective and handoff (≤15 lines)
 
 ---
@@ -30,7 +30,7 @@
 - When approaching limit, graduate content to active-knowledge tier
 
 ### Temporal Differentiation
-- **CURRENT_FOCUS.MD**: Present-focused ("What now?")  
+- **CURRENT_FOCUS.md**: Present-focused ("What now?")  
 - **STATUS.md**: Past-focused ("What happened?")
 - Clear role separation prevents redundancy
 

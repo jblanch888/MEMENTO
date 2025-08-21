@@ -1,6 +1,6 @@
-# STATUS.MD - What Accomplished (Session Retrospective)
+# STATUS.md - What Accomplished (Session Retrospective)
 
-**Focus:** [Reference to CURRENT_FOCUS.MD mission]
+**Focus:** [Reference to CURRENT_FOCUS.md mission]
 
 ---
 

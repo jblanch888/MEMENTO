@@ -8,7 +8,7 @@
 
 ## Structure
 
-### CORE_DIRECTIVES.MD
+### CORE_DIRECTIVES.md
 **The Immutable Foundation**
 - 11 fundamental rules that never change
 - Always active, always followed

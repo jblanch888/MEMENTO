@@ -1,4 +1,4 @@
-# GIT_OPERATIONS_PLAYBOOK.MD
+# GIT_OPERATIONS_PLAYBOOK.md
 
 **Objective:** Version control procedures and commit discipline
 

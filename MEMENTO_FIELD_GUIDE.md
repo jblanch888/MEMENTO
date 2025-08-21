@@ -323,10 +323,10 @@ This accumulation IS the value. Each project gets smarter as you find wisdom tha
 - Can be "good enough"
 
 **Expect:**
-- A steep learing curve
+- A steep learning curve
 - You'll restart from scratch at least once
 - If you have the vision, the technical implementation will emerge from the process
-- It willeventually work but probably be brittle
+- It will eventually work but probably be brittle
 
 ### Building Your Practice
 

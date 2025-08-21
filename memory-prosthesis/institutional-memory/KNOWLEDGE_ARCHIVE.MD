@@ -1,4 +1,4 @@
-# KNOWLEDGE_ARCHIVE.MD
+# KNOWLEDGE_ARCHIVE.md
 
 **Purpose:** Institutional memory library - proven patterns, anti-patterns, and crisis protocols
 

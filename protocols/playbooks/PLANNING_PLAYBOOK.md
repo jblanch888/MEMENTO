@@ -1,4 +1,4 @@
-# PLANNING_PLAYBOOK.MD
+# PLANNING_PLAYBOOK.md
 
 **Objective:** Structured analysis and user approval gates for complex work
 
