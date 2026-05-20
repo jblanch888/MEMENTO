@@ -97,7 +97,7 @@ memento-framework/
 Rather than fighting AI amnesia, MEMENTO embraces it. The framework provides **external memory** that survives session boundaries and enables **systematic knowledge accumulation**.
 
 ### 2. Evidence-First Methodology  
-Every pattern, decision, and approach must be **evidenced**. MEMENTO prevents self-deception through validation gates and reality checks.
+Every pattern, decision, and approach must be **evidenced**. MEMENTO reduces self-deception through validation gates and reality checks.
 
 ### 3. Systematic Evolution
 The framework grows with your project. Patterns emerge from real work, get captured in memory, and evolve into institutional knowledge.
@@ -129,7 +129,7 @@ Follow the procedures in your chosen playbook while maintaining context through 
 ## Why MEMENTO Works
 
 ### The Evolution Story
-MEMENTO emerged from **four failed paradigms** for AI collaboration:
+MEMENTO emerged through **five evolutionary epochs** of AI collaboration:
 
 1. **Undefined Problem** - Contextual decay without recognition
 2. **Documentation-as-Memory** - Library problem, information retrieval failure  
