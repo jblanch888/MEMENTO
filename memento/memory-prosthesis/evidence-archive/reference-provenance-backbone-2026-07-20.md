@@ -7,7 +7,7 @@ status: approved
 
 # reference-provenance-backbone-2026-07-20
 
-**Status: PROPOSED** — subject to CD #13's epistemic contract and the User's approval before any canon use (plan, Slice D). Verdict matrix and per-cell receipts: `finding-lineage-verdicts-2026-07-20.md`. Registry: `reference-organ-registry-2026-07-20.md` (frozen; origin amendments proposed below, not applied).
+**Status: APPROVED** (the User, 2026-07-20, Slice D gate) — CD #13's epistemic contract governs its canon use; §2's open question subsequently resolved by archaeology (see ERRATUM there). Verdict matrix and per-cell receipts: `finding-lineage-verdicts-2026-07-20.md`. Registry: `reference-organ-registry-2026-07-20.md` (frozen; origin amendments proposed below, not applied).
 
 ## 1. Corrected origin assignments (post-verdict)
 
@@ -20,6 +20,8 @@ status: approved
 ## 2. The transplant timeline (receipted arc)
 
 2025-05-28 product repo init → **2025-06-24/27 framework organs live in the working substrate** (`17052c1`, `63c1edb`) → **2025-08-08 the public canon is created by extracting and sanitising the substrate's playbooks** (canon commit `5aed223`, which names its predecessor project) → 2025-08-17..22 open-source release → **dormancy (~7 months)** → 2026-05-08 revival wave in trv3 (reorg `b80d161`; first hook 05-10 opens the mechanised era) → 06-02..06-22 mechanisation burst (safety charter, telemetry, trial suite, restart-diff, ledger, routing law, spine, guardian charter) → **2026-06-27 rooms founding week** (whole discipline set transplanted in days; graduation path written into the founding text) → 06-29..07-01 rooms charters + blast-radius model → **2026-07-04 planning law rewritten** (trv3) → **2026-07-06 cartographer founded** (day-one estate; adversarial review crystallised; lint constitution) → 2026-07-10 trv3 deep-health audit (stranded injector found and removed) → **2026-07-20 this estate founded; audit run**.
+
+> **ERRATUM 2026-07-20:** the question below was resolved the same day by first-hand archaeology — see `finding-substrate-genealogy-2026-07-20.md`. The origin is the roadmap tool's v2 repo, the same git lineage as trv3-temporal (shared initial commit); the canon was extracted from three implementations, the client-programme assistant primary. The paragraph below is preserved as written.
 
 **The substrate question (OPEN — the User can settle it from memory):** trv3's framework lineage predates the canon, and the canon's extraction commit names a predecessor project whose name also appears in trv3's own history (`927eda3` 2026-05-12, `b81709c` 2026-05-13, `3f025f7` 2026-06-16). Whether trv3 *is* the continuation of that predecessor, or its sibling in the same programme family, determines how the canon states its birth: "extracted from the repo that later became trv3" vs "extracted from a sibling of the oldest surviving estate".
 

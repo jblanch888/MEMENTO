@@ -34,7 +34,7 @@ Pushes to origin (publication) · running `/compact` (pre-compact protocol first
 
 ## Named pivot points (from the founding plan)
 
-- **P1** — after evidence seeding: canon rewrite proceeds doc-by-doc supersession vs clean-narrative-first. The User decides on the seeded evidence.
+- **P1** — **RESOLVED 2026-07-20 (the User):** B-architecture with transplant-first sourcing — new canon designed from the provenance backbone, Aug 2025 canon archived wholesale as an era exhibit, contents transplanted where a field-hardened 2026 form exists, fresh where none does. Public naming stays generic. Receipt: `../evidence-archive/finding-substrate-genealogy-2026-07-20.md`.
 - **P2** — whether this estate itself is published as part of the artefact. One-way door; deferred.
 - **P3** — tooling earned by trigger, not installed up front (`TOOLING_TRIGGERS.md`).
 
