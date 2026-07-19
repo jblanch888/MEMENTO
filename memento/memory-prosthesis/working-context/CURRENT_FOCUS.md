@@ -13,21 +13,19 @@ Produce the **mid-2026 open-source version of Memento** in this repository: supe
 
 ## Active Playbook
 
-`../protocols/playbooks/PLANNING_PLAYBOOK.md` (the ESTATE's playbook — not the same-named canon file at repo root) — the endeavour is in its founding/planning phase.
+`../protocols/playbooks/PLANNING_PLAYBOOK.md` (the ESTATE's playbook — not the same-named canon file at repo root).
 
 ## Current task
 
-**Slice 1 — estate completion.** Drafted and adversarially reviewed; awaiting the User's gate (which doubles as CD #4e import clearance for the four reconnaissance memos): CHARTER, four de-identified `reference-recon-*` memos, tracked `.claude/settings.json` + pre-compact gate hook (teeth UNVERIFIED — see TOOLING_TRIGGERS), TOOLING_TRIGGERS, tier READMEs, this working-context replacement. Nothing committed until the User approves.
+**Lineage audit (3B investigation)** — plan committed (`5b34180`); **registry FROZEN at the User's gate** (32 organs, full coverage; 20/26 separate; deposit lifecycle excluded). **Slice B in flight:** smart-tier evidence scouts fanned out per estate (absence-proving embedded in every sweep); primary verdicts every organ first-hand before CONFIRMED — scout-only support never yields CONFIRMED. Then Slice C rooms re-grounding (first-hand), Slice D synthesis.
+
+## Open decisions with the User
+
+- **Pivot P1** (charter): canon rewrite approach — doc-by-doc supersession vs clean-narrative-first. Audit is deliberately P1-independent; Slice D feeds the P1 decision.
 
 ## Constraints
 
-- **The seam:** repo root = canon (the product); `memento/` = this live estate. Never blur (CD #1); commits declare their side (CD #10).
+- **The seam:** repo root = canon; `memento/` = estate. Never blur (CD #1); commits declare their side (CD #10).
 - **Public repo:** any push is publication — User-only (CD #4a).
-- **Imports from deployment estates:** read-free, import-gated — de-identification pass + the User's clearance (CD #4e).
-- **British English** (CD #5). Relative sizing only in plans (PLANNING §2.5).
-
-## Immediate next actions
-
-1. The User's Slice 1 gate → scoped `feat(estate)` commit.
-2. **Pivot P1** (charter): with evidence seeded, the User chooses the canon-rewrite approach — doc-by-doc supersession vs clean-narrative-first.
-3. Slice 2+: corpus-mining undertakings, each planned per genre — 3B lineage audit (incl. re-grounding the rooms posture-vs-practice contradiction), 3D canon synthesis, 3C design decisions (epoch numbering, adoption ladder, shipped tooling).
+- **Audit exposure model:** reading source estates is free; anything WRITTEN into this repo passes the two-lane sweep at publication depth (plan, access + exposure model).
+- **British English** (CD #5). Relative sizing only (PLANNING §2.5).
