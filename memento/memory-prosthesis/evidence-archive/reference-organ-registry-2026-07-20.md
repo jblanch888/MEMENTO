@@ -59,4 +59,8 @@ Legend: origin = hypothesised origin estate/era, unverified · CLB = proposed ca
 
 The pivot fired (32 > ~25); the User ruled **full coverage**. Editorial rulings: organs 20/26 kept separate (case in the Status line above); deposit-lifecycle borderline resolved as **excluded, host-product-level**. CLB marks retained as informational only — all 32 are in Slice B scope.
 
+## Origin amendment (User-authorised at the Slice D gate, 2026-07-20)
+
+The origin column above records Slice A hypotheses. The audited origins — including five corrections and the OPEN substrate-era group — are in `reference-provenance-backbone-2026-07-20.md` §1, which supersedes this table's origin column. Organ set unchanged; the freeze stands. Authorising act: the User's approval of the backbone memo (the freeze rule governs additions and was silent on column corrections; this note records the approved pathway).
+
 **Provenance:** Slice A of `plan-lineage-audit-2026-07-20`; extraction and mapping performed in main per the plan's reworked denominator method; no source estate consulted beyond the already-banked recon memos and this estate's own documents.

@@ -3,10 +3,12 @@ description: plan — 3B investigation: audit the lineage's organs across the th
 type: plan
 date: 2026-07-20
 governs: []
-status: awaiting-approval
+status: complete
 ---
 
 # plan-lineage-audit-2026-07-20
+
+> **CLOSED COMPLETE 2026-07-20 (the User's Slice D gate).** All four slices delivered. Deviations ratified at gates: verdicts banked as one consolidated memo; Slice C folded into Slice B's evidence pass. Deliverables: `reference-organ-registry-2026-07-20.md` (frozen, origins amended) · `finding-lineage-verdicts-2026-07-20.md` (82C/8X/6D) · `reference-provenance-backbone-2026-07-20.md` (proposed backbone). Open successors: pivot P1; the substrate question.
 
 ## Pattern Search Results
 

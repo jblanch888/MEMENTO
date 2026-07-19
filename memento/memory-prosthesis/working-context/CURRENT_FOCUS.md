@@ -17,11 +17,13 @@ Produce the **mid-2026 open-source version of Memento** in this repository: supe
 
 ## Current task
 
-**Lineage audit (3B investigation)** — plan committed (`5b34180`); **registry FROZEN at the User's gate** (32 organs, full coverage; 20/26 separate; deposit lifecycle excluded). **Slice B in flight:** smart-tier evidence scouts fanned out per estate (absence-proving embedded in every sweep); primary verdicts every organ first-hand before CONFIRMED — scout-only support never yields CONFIRMED. Then Slice C rooms re-grounding (first-hand), Slice D synthesis.
+**Lineage audit (3B investigation) — ALL FOUR SLICES DELIVERED.** Verdicts banked (`bc3e98d`): 82C/8X/6D over 96 cells. **Slice D at the User's gate:** `../evidence-archive/reference-provenance-backbone-2026-07-20.md` — corrected origins (incl. five origin proposals), receipted transplant timeline (substrate era 2025-06-24 pre-dating the canon), eight-item killed-mechanism roll, P1 decision context. Reviewed (6 findings dispositioned, incl. a wrong-hash catch and a settled-vs-OPEN honesty fix); two-lane sweep zero hits.
 
-## Open decisions with the User
+## Open decisions with the User (the Slice D gate)
 
-- **Pivot P1** (charter): canon rewrite approach — doc-by-doc supersession vs clean-narrative-first. Audit is deliberately P1-independent; Slice D feeds the P1 decision.
+1. Approve the backbone memo (= authorise the registry origin-amendment pathway; close the audit plan as COMPLETE).
+2. **Pivot P1:** doc-by-doc supersession vs clean-narrative-first vs hybrid (options neutral; primary's assessment labelled in §4).
+3. **Substrate question** (only the User's memory can settle it): is trv3 the continuation of the predecessor project named in the canon's extraction commit, or its sibling?
 
 ## Constraints
 
