@@ -9,7 +9,7 @@ status: live
 
 ## Mission
 
-Produce the **mid-2026 open-source version of Memento** in this repository: supersede the Aug 2025 canon with what the deployment lineage (trv3-temporal, cartographer, rooms) has learned, honestly labelled and receipted. Public framing: continuity across hundreds of agent sessions, not autonomy within one (the User's LinkedIn arc, July 2026).
+Produce the **mid-2026 open-source version of Memento** in this repository: supersede the Aug 2025 canon with what the deployment lineage (trv3-temporal, cartographer, rooms) has learned, honestly labelled and receipted. Public framing: continuity across hundreds of agent sessions, not autonomy within one (the User's LinkedIn arc, July 2026). Charter: `../active-knowledge/CHARTER.md`.
 
 ## Active Playbook
 
@@ -17,17 +17,17 @@ Produce the **mid-2026 open-source version of Memento** in this repository: supe
 
 ## Current task
 
-**Founding Slice 0** — estate instantiation. Drafted; adversarial review complete (15 findings, all dispositioned, accepted fixes applied); awaiting the User's gate: CORE_DIRECTIVES, RESOURCE_ROUTING, PLANNING_PLAYBOOK, KNOWLEDGE_ARCHIVE stub, this working context, the founding plan. Nothing committed until the User approves.
+**Slice 1 — estate completion.** Drafted and adversarially reviewed; awaiting the User's gate (which doubles as CD #4e import clearance for the four reconnaissance memos): CHARTER, four de-identified `reference-recon-*` memos, tracked `.claude/settings.json` + pre-compact gate hook (teeth UNVERIFIED — see TOOLING_TRIGGERS), TOOLING_TRIGGERS, tier READMEs, this working-context replacement. Nothing committed until the User approves.
 
 ## Constraints
 
-- **The seam:** repo root = canon (the product); `memento/` = this live estate. Never blur (CD #1).
+- **The seam:** repo root = canon (the product); `memento/` = this live estate. Never blur (CD #1); commits declare their side (CD #10).
 - **Public repo:** any push is publication — User-only (CD #4a).
-- **Imports from deployment estates:** read-free, import-gated — de-identification pass + the User's clearance (CD #4e). rooms and cartographer contain client-confidential material.
+- **Imports from deployment estates:** read-free, import-gated — de-identification pass + the User's clearance (CD #4e).
 - **British English** (CD #5). Relative sizing only in plans (PLANNING §2.5).
 
 ## Immediate next actions
 
-1. The User's verdict on the Slice 0 drafts → scoped commit of the estate skeleton.
-2. Slice 1: endeavour charter; evidence-archive seeding (the four reconnaissance reports, de-identified); `.claude/settings.json` wiring (pre-compact gate hook); tooling-earning triggers recorded.
-3. Slice 2+: corpus-mining undertakings, each planned per genre (directional only — see founding plan).
+1. The User's Slice 1 gate → scoped `feat(estate)` commit.
+2. **Pivot P1** (charter): with evidence seeded, the User chooses the canon-rewrite approach — doc-by-doc supersession vs clean-narrative-first.
+3. Slice 2+: corpus-mining undertakings, each planned per genre — 3B lineage audit (incl. re-grounding the rooms posture-vs-practice contradiction), 3D canon synthesis, 3C design decisions (epoch numbering, adoption ladder, shipped tooling).

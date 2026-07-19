@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/memento/tools/pre-compact-gate.sh\""
+          }
+        ]
+      }
+    ]
+  }
+}
