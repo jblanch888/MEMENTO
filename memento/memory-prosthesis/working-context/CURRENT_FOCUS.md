@@ -27,5 +27,5 @@ The mid-2026 canon is complete on this machine: README, story/ (4 docs), framewo
 
 ## Open with the User
 
-- **The push.** P2 is RESOLVED: posture (i), estate publishes with the canon on main (ruling recorded: CHARTER, R0 memo; receipts: `../evidence-archive/finding-publication-readiness-2026-07-20.md`). Tree and unpushed history swept clean; one 2025 client identifier redacted visibly in the archive. Two eyeball items flagged at the gate: the precursor framework name in the genealogy memo, and the `trv4` branch name in the recon memo (both kept as the User's own internal names). `git push origin main` is the User's act alone (CD #4a).
-- **Post-push:** visual check of the Pages stylesheet on the live URL (R6 review finding, risk accepted on the 2025 precedent).
+- **PUBLISHED 2026-07-20** (`803bca5` on origin/main, pushed on the User's explicit instruction; receipts: `../evidence-archive/finding-publication-readiness-2026-07-20.md`). Remaining: visual check of the Pages stylesheet on the live URL (R6 review finding). Eyeball items from the publication pass (precursor framework name; `trv4` branch name) were flagged pre-push and stand as KEEP unless the User says otherwise.
+- Estate writes are public at each future push; the publication-depth sweep is standing discipline (CHARTER).

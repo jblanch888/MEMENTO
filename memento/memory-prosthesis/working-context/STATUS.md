@@ -25,7 +25,9 @@ Canon: R3 `cbcfe6f`, R4 `813d0dc`, R5 `5fc953b`, R6 `1a845e1` all committed. Est
 
 - **P2 RESOLVED (the User): posture (i)** — estate publishes with canon; codenames and private hashes cleared, client identifiers banned absolutely. Publication-readiness verification banked (`finding-publication-readiness-2026-07-20.md`): tree swept (one 2025 "Sky-KA" survivor redacted visibly in the archive), 25 unpushed commits' diffs clean, hostile-outsider review run and dispositioned (room-count specificity genericised; two own-name eyeball items flagged).
 
+- **PUBLISHED 2026-07-20, on the User's instruction:** `2ac9a43..803bca5` pushed to origin/main. En route, a benign divergence surfaced (two Aug 2025 web-UI edits on origin); merged with current-tree files resolving to the rewrite (`803bca5`); the archive already matched the final published 2025 state, so no truing was needed.
+
 ## Waiting on the User
 
-- **The push** (`git push origin main`) — everything committed and swept; the User's act alone.
-- Direction for the next undertaking, if any; no plan is active.
+- Pages stylesheet visual check once the site rebuilds (post-push item, R6).
+- Direction for the next undertaking, if any; no plan is active. Estate writes now accumulate locally between the User's pushes.
