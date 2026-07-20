@@ -13,11 +13,11 @@ Produce the **mid-2026 open-source version of Memento** in this repository, supe
 
 ## Active Playbook
 
-`../protocols/playbooks/PLANNING_PLAYBOOK.md`, executing `../evidence-archive/plan-canon-rewrite-2026-07-20.md` (R0 ✅ R1 ✅ R2a ✅ R2b ✅ R3 ✅ R4 ✅).
+`../protocols/playbooks/PLANNING_PLAYBOOK.md`, executing `../evidence-archive/plan-canon-rewrite-2026-07-20.md` (R0 ✅ R1 ✅ R2a ✅ R2b ✅ R3 ✅ R4 ✅ R5 ✅).
 
 ## Current task
 
-**R5 — adoption + framework-of-record notes.** Author `adoption/` (GRADUATION_LADDER with the multi-person workstream exhibit; GETTING_STARTED), the honest enforcement-surface note, the earned-tooling stance with a triggers-register template, and a fresh small CONTRIBUTING. Note: the adoption ladder was listed under R2 in the plan but only the story documents landed there; it is delivered here with the adoption directory (stated at the gate, not silent). π2 lands at this slice's gate: how the canon describes the estate (mention only; contents stay behind P2).
+**R6 — the site (final slice).** Rebuild `docs/` (GitHub Pages) on the new narrative: index refreshed to the mid-2026 canon (thesis, epochs, ladder, links into story/framework/adoption); logo kept, homage image and demo screenshot archived per R0; style refreshed only as needed. Detail was directional in the plan and is earned now from the live docs/ contents.
 
 ## Constraints
 

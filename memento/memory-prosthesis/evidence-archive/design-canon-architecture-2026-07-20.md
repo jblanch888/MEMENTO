@@ -10,6 +10,8 @@ status: approved
 > **APPROVED 2026-07-20 (the User's R0 gate).** Rulings: π1 = **option (a), six epochs 0-indexed** (archive banner carries the renumbering note) · tone = **option (i), professional lead with light noir accents** (logo kept; homage image archived; amnesiac-genius kept as one framing device) · demo product + the User's handle = **keep**. P2 posture remains flagged, decision deferred to pre-push.
 >
 > **AMENDMENT 2026-07-20 (the User's R3 gate, π3 pivot on receipt):** the disposition row carrying DEBUGGING / CRISIS_MODE / REFACTORING into `framework/` as annotated 2025 forms is **overruled**. The User ruled them vestiges: unused across the lineage this year, pointless to carry. They are NOT part of the 2026 framework and remain only in the era exhibit (`archive/canon-2025/`). The R5 successor-path note stands for debugging's living form (the harness skill in the oldest deployment).
+>
+> **π2 RESOLVED 2026-07-20 (the User's R5 gate):** the canon describes the estate by **mention with honest status only**: the README's repo-map row and the enforcement-surface note's closing section, which names the estate's register status without publishing contents. Estate contents stay behind the P2 pre-push posture decision.
 
 **R0 of `plan-canon-rewrite-2026-07-20`.** Inventory taken first-hand this session (38 files, canon side only). Decisions marked **[USER]** are for the gate; everything else is proposed disposition under the ruled P1.
 

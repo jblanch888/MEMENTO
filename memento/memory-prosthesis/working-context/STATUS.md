@@ -14,14 +14,15 @@ status: live
 - **The User's R3 gate rulings:** the three 2025 playbook carries dropped as vestiges (amendment on the R0 memo, π3 pivot on receipt); his quoted routing law kept verbatim; CD #11's lineage title kept.
 
 - **R4 — memory-prosthesis templates, COMMITTED** `813d0dc` (canon): nine tier files + spine vocabulary fix + README map. Adversarial review's HIGH catch (mature-example attribution) corrected to cite the story.
+- **R5 — adoption + framework-of-record notes, COMMITTED** `5fc953b` (canon): ladder, getting-started, enforcement surface, earned-tooling template, CONTRIBUTING; kill-roll footer trued. Rooms recon OPEN question resolved first-hand (RESOLUTION on the memo); ten review findings dispositioned. **π2 RESOLVED at the gate:** estate described by mention with honest status only (amendment on R0 memo).
 
 ## In progress
 
-**R5 — adoption + framework-of-record notes** (see CURRENT_FOCUS): `adoption/` including the graduation ladder deferred from R2, enforcement-surface note, earned-tooling register template, CONTRIBUTING. π2 (estate description) decided at this slice's gate.
+**R6 — the site** (final slice; see CURRENT_FOCUS): docs/ rebuilt on the new narrative.
 
 ## Tree state
 
-Canon: `framework/` fully committed (R3 `cbcfe6f`, R4 `813d0dc`). Estate: working-context in this commit. `.claude/settings.local.json` dirty (the User's personal file, never staged).
+Canon: R3 `cbcfe6f`, R4 `813d0dc`, R5 `5fc953b`. Estate: recon resolution + working-context in this commit. `.claude/settings.local.json` dirty (the User's personal file, never staged).
 
 ## Waiting on the User
 
