@@ -17,7 +17,3 @@ status: live
 
 The sweep runs last, on the final tree (a per-artefact sweep misses what later artefacts add) · explicit-pathspec commits take working-tree state and silently reverse staged deletions · committed working context cannot assert push state.
 
-## Waiting on the User
-
-- The next push (carries these fixes; the pre-push hook makes its first live run on it).
-- Repo topics retry in the GitHub UI.
