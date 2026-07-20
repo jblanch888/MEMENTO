@@ -45,4 +45,4 @@ A forensic audit of one estate's directives found a token-budget trigger configu
 3. **Deliver verdicts on a clock, not on suspicion.** The ledger row's date arrives whether or not you feel like judging.
 4. **Document the death.** The lesson is the durable asset. The mechanism was only ever its container.
 
-The auditing estate that produced this canon runs under the same rule. Its first wired mechanism (a compaction gate) carries an "enforcement unverified" label until its first live test, because the rule applies most of all to the people writing it down.
+The auditing estate that produced this canon runs under the same rule. Its first wired mechanism (a compaction gate) was wired under an "enforcement unverified" label, was witnessed running at its first live compaction, and carries its blocking arm as unverified on the estate's register until an incident or a deliberate test witnesses it, because the rule applies most of all to the people writing it down.

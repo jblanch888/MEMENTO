@@ -18,5 +18,5 @@ On install, files take their conventional estate names and locations: `CORE_DIRE
 |---|---|
 | [`directives/`](directives/) | The 14-form core-directive template |
 | [`playbooks/`](playbooks/) | Planning, git operations, incremental execution, knowledge gardening, documentation |
-| [`conventions/`](conventions/) | The routing law and the estate spine (frontmatter, naming, derived indexes) |
+| [`conventions/`](conventions/) | The routing law, the estate spine (frontmatter, naming, derived indexes), and the earned-tooling register template |
 | [`memory-prosthesis/`](memory-prosthesis/) | The four-tier architecture: tier READMEs, working-context templates, knowledge-archive template and mature example, evidence-archive conventions |
