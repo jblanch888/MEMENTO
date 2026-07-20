@@ -55,7 +55,7 @@ f. API spend beyond an explicitly agreed envelope. (Default engine: in-session o
 
 ## 5. British English & the User's Writing Rules
 
-**Rule:** All text (estate documents, canon drafts, code comments, commit messages) uses British English. The User's standing writing rules also apply to prose: **no em dashes unless absolutely necessary** (use commas, full stops, parentheses, or colons) and avoid "not X but Y" contrast framing. *(Em-dash rule directed by the User at the R2a gate, 2026-07-20; both rules receipted in the lineage as the User's standing rules. En dashes in numeric ranges are fine. Banked evidence-archive memos are immutable and are not retro-edited; the rules bind all new text from this date and all living documents at their next revision.)*
+**Rule:** All text (estate documents, canon drafts, code comments, commit messages) uses British English. The User's standing writing rules also apply to prose: **no em dashes unless absolutely necessary** (use commas, full stops, parentheses, or colons) and **no contrast framing in any of its forms**: the ban covers the whole antithesis pattern ("not X but Y", "X, never Y", "one that cannot X…; one that can…", balanced semicolon seesaws), not just the literal string. Reviewer sweeps must hunt the pattern, not the phrase. (The User enforced the broad reading at the R2b gate, 2026-07-20.) *(Em-dash rule directed by the User at the R2a gate, 2026-07-20; both rules receipted in the lineage as the User's standing rules. En dashes in numeric ranges are fine. Banked evidence-archive memos are immutable and are not retro-edited; the rules bind all new text from this date and all living documents at their next revision.)*
 
 ---
 

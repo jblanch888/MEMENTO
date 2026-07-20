@@ -26,10 +26,11 @@ Born **2026-06-27** (~196 commits in 24 days). Self-described as a **sibling pat
 - **Deposit lifecycle with an errored state** — failed items park for human routing, never auto-retry (structurally stronger than the spend-budget mechanism it superseded, which was explicitly HELD rather than built).
 - **Blast-radius-proportionate confidentiality** — a deliberate re-weighting from cost-no-object to proportionate fencing, signed off and documented, with a periodic cold-path sweep.
 - Witness harnesses (~14, zero-spend fixtures) all green at last reconnaissance; playbooks hardened by folding in deviations from every live deployment.
-- **Multi-person threshold pending:** onboarding of the first external collaborator is staged — the framework's first non-founder participant anywhere in the lineage.
+- **Multi-person threshold pending:** onboarding of the first external collaborator is staged — the first non-founder participant *within the 2026 estates*.
+  > **ERRATUM 2026-07-20 (the User, at the R2b gate):** this bullet originally claimed "the framework's first non-founder participant anywhere in the lineage". Wrong: the client-programme assistant (2025) was used by multiple people and steered roughly a year of a team's work. This estate's distinction is that shared team memory is its PRODUCT; multi-person *use* of the framework predates it by a year.
 
 ## Significance for the canon
 
-The framework's first generalisation **beyond software development** and **beyond a single person** — the strongest portability evidence in the lineage — and the origin of the graduation-ladder *candidate* for the adoption model — one of the options charter stance 5 deliberately holds open, pending resolution of the posture-vs-practice question above.
+The framework's first host whose product is itself multi-person workstream memory (per the 2026-07-20 ERRATUM above, NOT the first multi-person use — the client-programme assistant served a team from 2025) — strong portability evidence — and the origin of the graduation-ladder *candidate* for the adoption model — one of the options charter stance 5 deliberately holds open, pending resolution of the posture-vs-practice question above.
 
 **Provenance:** banked Slice 1 from the founding session's reconnaissance of the rooms repository (read-only).
