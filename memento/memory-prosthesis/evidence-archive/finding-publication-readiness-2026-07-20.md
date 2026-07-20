@@ -7,13 +7,15 @@ status: approved
 
 # finding-publication-readiness-2026-07-20
 
-**Context:** the User ruled P2 = **posture (i)** (estate publishes with the canon on main) with the confidentiality bar restated: deployment codenames (trv3-temporal, cartographer, rooms) and private commit hashes are **cleared** for publication; **actual client identifiers are banned absolutely, anywhere** ("just can't have any actual client names like sky for example anywhere"). This memo banks the verification run at that ruling. Method note: grep exit codes were read from the grep itself, with counts, never from a downstream pipe (lineage grep-pitfall lesson applied).
+> **DE-IDENTIFICATION NOTE 2026-07-21:** this memo's own text originally printed the identifier it reports redacting (twice here, once in STATUS), caught by the external re-review. The literals are removed in place; they persist in the pushed history of 2026-07-20/21, alongside the identifier's pre-2026 public history. The lesson is mechanised: the confidentiality sweep now runs on the FINAL tree via a pre-push hook (register row).
+
+**Context:** the User ruled P2 = **posture (i)** (estate publishes with the canon on main) with the confidentiality bar restated: deployment codenames (trv3-temporal, cartographer, rooms) and private commit hashes are **cleared** for publication; **actual client identifiers are banned absolutely, anywhere** (the User's ruling, quoted with its example identifier elided from this public copy). This memo banks the verification run at that ruling. Method note: grep exit codes were read from the grep itself, with counts, never from a downstream pipe (lineage grep-pitfall lesson applied).
 
 ## Sweep 1 — full working tree, client-identifier lane
 
-Pattern: the client token list minus the cleared codenames; case-insensitive; short tokens (mam, cam, fgf) word-bounded separately. Scope: entire repo including `memento/`, `archive/`, `.claude/`, tools.
+Pattern: the client token list minus the cleared codenames; case-insensitive; the three short tokens word-bounded separately (their literals elided here per the de-identification note; the list itself lives outside the repo). Scope: entire repo including `memento/`, `archive/`, `.claude/`, tools.
 
-**Result: one hit.** `archive/canon-2025/memory-prosthesis/active-knowledge/SYSTEM_OVERVIEW_TEMPLATE.md:52` — "Sky-KA", a client identifier that survived the August 2025 sanitisation and has been **publicly visible on origin/main since then** (verified: `git grep -in "sky" origin/main` returns the same line in the live public repo). Every other client token: zero hits.
+**Result: one hit.** `archive/canon-2025/memory-prosthesis/active-knowledge/SYSTEM_OVERVIEW_TEMPLATE.md:52` — a client identifier (elided here; the de-identification note above governs) that survived the August 2025 sanitisation and has been **publicly visible on origin/main since then** (verified by git-grepping origin/main for the identifier: the same line appears in the live public repo). Every other client token: zero hits.
 
 **Disposition (executed under the User's "anywhere" ruling):** redacted in place with a visible dated marker; the archive banner README gains a redaction note so the exhibit's "verbatim" claim stays honest (verbatim, minus one marked redaction). The token remains in origin's pre-existing public history, which no posture short of history-rewriting (ruled out) can retract; the redaction stops the current tree repeating it.
 

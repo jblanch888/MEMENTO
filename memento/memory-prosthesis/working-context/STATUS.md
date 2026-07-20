@@ -1,37 +1,23 @@
 ---
 description: current-session state snapshot for the MEMENTO estate — session-scoped only, replaced coherently per CD #11
 type: working-context
-date: 2026-07-20
+date: 2026-07-21
 status: live
 ---
 
-# STATUS — sessions of 2026-07-20/21 (publication + truth-and-presentation pass)
+# STATUS — session of 2026-07-21 (external re-review fixes)
 
 ## What this session did (commit ledger)
 
-- **Restart protocol (CD #8) run clean;** pre-compact hook's first live-run verdict recorded in TOOLING_TRIGGERS (runs verified, block arm unverified): `bafe3a3`.
-- **R3 — the transplants, COMMITTED** `cbcfe6f` (canon): ten files under `framework/`. Sources re-read first-hand from the deployment repos; two-lane sweep clean twice; adversarial review (11 findings) dispositioned; private commit hashes withheld from canon text.
-- **The User's R3 gate rulings:** the three 2025 playbook carries dropped as vestiges (amendment on the R0 memo, π3 pivot on receipt); his quoted routing law kept verbatim; CD #11's lineage title kept.
+- **Truth-and-presentation pass** executed and pushed per its plan (`4ad0183` canon, `a2eb174` estate): gate v2, statuses trued, spirit one-pager, evidentiary boundary, site metadata.
+- **External re-review round 2, all five findings verdicted first-hand:** THREE CONFIRMED and fixed: the banned identifier's literals removed from the memo and this file (the memo carries a dated de-identification note; the literals persist in pushed history); `settings.local.json` untracked for real (`21902df`; the first attempt's staged deletion was silently reversed by explicit-pathspec commit semantics, which commit working-tree state); working context redesigned to derive publication state from git rather than assert it. ONE closed as bookkeeping (this plan's status now complete). ONE REFUTED with receipt (the live site serves a single h1; curl receipt).
+- **New mechanism, trigger fired by the incident:** confidentiality sweep over the tracked tree with the token list held outside the repo, wired as a pre-push hook; register row carries falsifier and witness plan.
 
-- **R4 — memory-prosthesis templates, COMMITTED** `813d0dc` (canon): nine tier files + spine vocabulary fix + README map. Adversarial review's HIGH catch (mature-example attribution) corrected to cite the story.
-- **R5 — adoption + framework-of-record notes, COMMITTED** `5fc953b` (canon): ladder, getting-started, enforcement surface, earned-tooling template, CONTRIBUTING; kill-roll footer trued. Rooms recon OPEN question resolved first-hand (RESOLUTION on the memo); ten review findings dispositioned. **π2 RESOLVED at the gate:** estate described by mention with honest status only (amendment on R0 memo).
+## Graduation candidates for the next pre-compact (CD #9)
 
-- **R6 — the site, COMMITTED** `1a845e1` (canon): docs/index.md + style.css on the new narrative; ten links verified; stylesheet mechanism risk-accepted on the 2025 precedent.
-- **Plan CLOSED COMPLETE** at the User's R6 gate: closure note with the full slice ledger on `plan-canon-rewrite-2026-07-20.md`. The mid-2026 canon is complete on this machine.
-
-## Tree state
-
-Canon: R3 `cbcfe6f`, R4 `813d0dc`, R5 `5fc953b`, R6 `1a845e1` all committed. Estate: plan closure + working-context in this commit. `.claude/settings.local.json` dirty (the User's personal file, never staged).
-
-- **P2 RESOLVED (the User): posture (i)** — estate publishes with canon; codenames and private hashes cleared, client identifiers banned absolutely. Publication-readiness verification banked (`finding-publication-readiness-2026-07-20.md`): tree swept (one 2025 "Sky-KA" survivor redacted visibly in the archive), 25 unpushed commits' diffs clean, hostile-outsider review run and dispositioned (room-count specificity genericised; two own-name eyeball items flagged).
-
-- **PUBLISHED 2026-07-20, on the User's instruction:** `2ac9a43..803bca5` pushed to origin/main. En route, a benign divergence surfaced (two Aug 2025 web-UI edits on origin); merged with current-tree files resolving to the rewrite (`803bca5`); the archive already matched the final published 2025 state, so no truing was needed.
-
-- **Pages verified live 2026-07-20** (index 200, new content, stylesheet and logo 200); only a human glance remains outstanding.
-- **Truth-and-presentation pass EXECUTED 2026-07-21** per `plan-truth-and-presentation-2026-07-21.md` (the User's approval: "approve, bank the plan and run it"): gate script v2 (repo-scoped, consume-on-use; bench-tested; both live arms re-armed UNVERIFIED on the register) · statuses trued + archive status semantics stated both seam sides · README assembly note removed + evidentiary-boundary paragraph · `settings.local.json` untracked + gitignored · `docs/_config.yml` · `adoption/THE_SPIRIT.md` one-pager linked from getting-started and the ladder. Sweeps clean; reviewer's six findings dispositioned (five accepted and fixed, one by-design).
+The sweep runs last, on the final tree (a per-artefact sweep misses what later artefacts add) · explicit-pathspec commits take working-tree state and silently reverse staged deletions · committed working context cannot assert push state.
 
 ## Waiting on the User
 
-- **The push** of the pass (also publishes the corrected working context, closing external finding 2).
-- **Repo description / homepage / topics** — the User's GitHub-UI task (no `gh` CLI on this machine).
-- Direction for the next undertaking; no plan is active after this pass closes.
+- The next push (carries these fixes; the pre-push hook makes its first live run on it).
+- Repo topics retry in the GitHub UI.

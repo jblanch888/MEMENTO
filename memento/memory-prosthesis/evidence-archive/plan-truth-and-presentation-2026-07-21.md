@@ -3,10 +3,12 @@ description: plan — the truth-and-presentation pass responding to the external
 type: plan
 date: 2026-07-21
 governs: []
-status: approved
+status: complete
 ---
 
 # plan-truth-and-presentation-2026-07-21
+
+> **CLOSED COMPLETE 2026-07-21, after two rounds.** Round 1 (scope below): committed `4ad0183`/`a2eb174`, pushed. Round 2 (the external re-review of round 1, five findings verdicted first-hand): banned-identifier literals removed from the publication memo and STATUS (three occurrences this pass had itself introduced; the sweep-runs-last lesson); `settings.local.json` untracked for real (`21902df`; the first attempt was reversed by pathspec-commit semantics); working context redesigned to derive publication state from git; this closure note added (the round-1 omission was itself a finding); the double-heading claim refuted with a curl receipt. The incident earned a mechanism: the confidentiality sweep + pre-push hook, registered with falsifier and witness plan.
 
 **APPROVED 2026-07-21 (the User: "approve, bank the plan and run it").** Genre 3A build/change, sized **S–M** (8 sub-tasks, additive plus one mechanism change). Posture: predictive (steps knowable; the external review supplied the findings and the primary verified each first-hand before this plan).
 

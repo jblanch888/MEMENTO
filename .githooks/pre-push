@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Pre-push gate: the confidentiality sweep runs on the final tracked tree
+# before anything leaves the machine. Activate per clone:
+#   git config core.hooksPath .githooks
+exec bash "$(git rev-parse --show-toplevel)/memento/tools/confidentiality-sweep.sh"
