@@ -49,7 +49,7 @@
 
 ## Real-World Example
 
-For reference, see how this pattern was implemented in Sky-KA's ML pipeline context:
+For reference, see how this pattern was implemented in [a client-programme knowledge assistant's — identifier redacted 2026-07-20] ML pipeline context:
 - Complex 6-stage ML processing pipeline
 - Multiple technologies (LLM processing, vector search, knowledge graphs)
 - Domain-specific operational procedures

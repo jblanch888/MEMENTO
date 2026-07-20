@@ -6,4 +6,6 @@ It is kept intact deliberately. Memento's central claim is that continuity acros
 
 **Numbering note:** the documents here describe "five evolutionary epochs", numbered 1–5. The 2026 canon renumbers them 0–4 and adds **Epoch 5: Falsifiable Governance**. So "5. MEMENTO Framework" in these pages corresponds to Epoch 4 in the current canon.
 
+**Redaction note (2026-07-20):** one client identifier that survived the 2025 sanitisation has been redacted in place, marked visibly at the site (`memory-prosthesis/active-knowledge/SYSTEM_OVERVIEW_TEMPLATE.md`). It is the only edit ever made to this archive, and it is recorded here so the "verbatim" claim above stays honest: verbatim, minus one marked redaction.
+
 Nothing in this directory is maintained. For the living framework, start at the repository root `README.md`.
