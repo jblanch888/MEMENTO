@@ -16,17 +16,17 @@ status: template
 ```yaml
 ---
 description: one line — what this file is and does
-type: governing | plan | design | finding | assessment | discovery | reference | status | handover
+type: governing | plan | design | finding | assessment | discovery | reference | status | handover | working-context
 date: YYYY-MM-DD          # creation date
 governs: [domain, ...]     # governing docs only
 last_verified: YYYY-MM-DD  # bumped when content is re-checked against reality
-status: governing | awaiting-approval | approved | decided | hypothesis | superseded | historical | template
+status: governing | awaiting-approval | approved | decided | hypothesis | superseded | historical | template | live
 ---
 ```
 
 - `last_verified` is a freshness claim: content asserting live state that has not been re-checked goes visibly stale.
 - `status: hypothesis` marks imported-but-unproven artefacts, honest from the moment of import.
-- `status: template` marks a canon-distributed form awaiting fitting; it becomes `governing` on install.
+- `status: template` marks a canon-distributed form awaiting fitting; it becomes `governing` on install (`live` for working-context files, which are the one tier whose status is the session's, with `type: working-context`).
 - `status: superseded` files gain a banner pointing at their successor: banner-and-archive over deletion for governing text (CD #4).
 
 ## Naming

@@ -1,6 +1,6 @@
 # The framework
 
-This directory is what an adopter installs: the operational-protocol arm (directives and playbooks) plus the conventions that keep the memory-prosthesis arm navigable. The memory-prosthesis tier templates themselves land in `memory-prosthesis/` in a later slice, per the assembly note in the root README.
+This directory is what an adopter installs: the operational-protocol arm (directives and playbooks), the memory-prosthesis tier templates, and the conventions that hold both together.
 
 **A note on paths:** relative paths inside these documents (`../../memory-prosthesis/…`, `../CORE_DIRECTIVES.md`) are written for the documents' installed locations in an estate (`memento/protocols/`, `memento/protocols/playbooks/`), not for their position in this directory. Install first, then follow the links.
 
@@ -19,4 +19,4 @@ On install, files take their conventional estate names and locations: `CORE_DIRE
 | [`directives/`](directives/) | The 14-form core-directive template |
 | [`playbooks/`](playbooks/) | Planning, git operations, incremental execution, knowledge gardening, documentation |
 | [`conventions/`](conventions/) | The routing law and the estate spine (frontmatter, naming, derived indexes) |
-| `memory-prosthesis/` | Tier templates (later slice) |
+| [`memory-prosthesis/`](memory-prosthesis/) | The four-tier architecture: tier READMEs, working-context templates, knowledge-archive template and mature example, evidence-archive conventions |
