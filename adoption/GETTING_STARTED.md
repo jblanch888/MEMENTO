@@ -4,16 +4,7 @@ You do not adopt all of this on day one; the framework itself didn't. Pick your 
 
 ## Day one: the spirit
 
-Write one page inside your repo stating the disciplines you are adopting:
-
-1. **The human is sovereign.** Nothing is done, complete or fixed until they confirm it.
-2. **Claims need receipts.** Agent output, scout reports and your own first pass are claims until checked against reality.
-3. **Plans precede consequential work,** and a skipped plan is claimed aloud, never silent.
-4. **Work lands in small validated increments** with a commit after each confirmed change.
-5. **Working state is replaced coherently,** never appended to.
-6. **Anything you intend to trust carries a pre-registered falsifier:** the result that would prove it worthless, written down before you rely on it.
-
-That page is a working Memento adoption. Run it for a while before adding anything.
+Copy [`THE_SPIRIT.md`](THE_SPIRIT.md) into your repo as `SPIRIT.md`, fit its bracketed slots, and run it: the human sovereign over done, claims needing receipts, plans before consequential work, small validated increments, coherent replacement of working state, pre-registered falsifiers, and your one-way doors named. That one page is a working Memento adoption. Run it for a while before adding anything.
 
 ## When a trigger fires: found the estate
 

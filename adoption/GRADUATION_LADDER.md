@@ -4,7 +4,7 @@ How to adopt a governance framework without being crushed by it: start with the 
 
 ## Rung 1 — the spirit
 
-Adopt the disciplines in a page or two inside the project itself, with none of the apparatus: problem-first framing, a human gate on completion (nothing is done until the human says so), pre-registered falsifiers for anything you intend to trust, evidence grading (a claim is a claim until receipted), shadow-run before displacing anything that works, and coherent replacement of working state.
+Adopt the disciplines in a page or two inside the project itself, with none of the apparatus: problem-first framing, a human gate on completion (nothing is done until the human says so), pre-registered falsifiers for anything you intend to trust, evidence grading (a claim is a claim until receipted), shadow-run before displacing anything that works, and coherent replacement of working state. A ready-to-copy page is provided: [`THE_SPIRIT.md`](THE_SPIRIT.md).
 
 This rung is a real operating mode with a dated exhibit. One 2026 endeavour (a multi-person workstream memory system) began under an explicit ruling: the disciplines adopted in-directory, the apparatus declined by name (no tiers, no memo archive, no hooks), and the graduation path written down the same day, on the theory that the thin thing grows into the structured thing only when its own weight demands it.
 

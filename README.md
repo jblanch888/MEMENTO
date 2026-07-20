@@ -23,6 +23,8 @@ Memento was not designed on a whiteboard. It crystallised in June 2025 inside th
 
 This repository is the mid-2026 form of the framework, rebuilt from a receipted audit of that whole lineage. The August 2025 canon is preserved verbatim in [`archive/canon-2025/`](archive/canon-2025/): the framework's own continuity discipline, applied to itself.
 
+One boundary stated plainly: the receipts trace to the deployments' private histories. The claims are genuinely receipted for the author, and an outside reader cannot independently reproduce them; what is published in full is the audit's method, its verdicts, and what it corrected.
+
 ## The repository
 
 | Where | What |
@@ -32,8 +34,6 @@ This repository is the mid-2026 form of the framework, rebuilt from a receipted 
 | [`adoption/`](adoption/) | How to start, including the graduation ladder: begin with the spirit, earn the apparatus |
 | [`archive/canon-2025/`](archive/canon-2025/) | The Epoch 4 exhibit: the 2025 framework, preserved verbatim |
 | `memento/` | The live governance estate that produced this rewrite: the framework governing work on itself |
-
-*Assembly note: the mid-2026 rebuild lands slice by slice under the estate's gates; `story/`, `framework/` and `adoption/` entries above go live as their slices complete.*
 
 ## The shape of the framework
 

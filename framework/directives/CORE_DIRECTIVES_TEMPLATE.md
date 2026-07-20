@@ -94,7 +94,7 @@ b. **Selective graduation:** propose additions to institutional memory only wher
 c. **Working-context reset:** draft a clean CURRENT_FOCUS.md: current task, constraints, immediate next actions only.
 d. **Status finalisation:** STATUS.md carries current-session scope only; no historical accumulation.
 e. **Approval gate:** present all drafts for the User's review before any write.
-f. **Gate marker convention:** touch a marker file (e.g. `/tmp/<estate>-precompact-done`) after approval and writes; a PreCompact hook that checks it is earned tooling. The User runs `/compact`.
+f. **Gate marker convention:** touch a marker file after approval and writes; a PreCompact hook that checks it is earned tooling. Scope the marker to the repository (e.g. a path derived from the project directory) and have the hook consume it on use, so one approval authorises exactly one compaction and no sibling checkout shares it (a fixed shared path was a reviewed-and-corrected fault in this canon's own estate). The User runs `/compact`.
 
 ---
 
