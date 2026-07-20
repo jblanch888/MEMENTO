@@ -13,13 +13,15 @@ status: live
 - **R3 — the transplants, COMMITTED** `cbcfe6f` (canon): ten files under `framework/`. Sources re-read first-hand from the deployment repos; two-lane sweep clean twice; adversarial review (11 findings) dispositioned; private commit hashes withheld from canon text.
 - **The User's R3 gate rulings:** the three 2025 playbook carries dropped as vestiges (amendment on the R0 memo, π3 pivot on receipt); his quoted routing law kept verbatim; CD #11's lineage title kept.
 
+- **R4 — memory-prosthesis templates, COMMITTED** `813d0dc` (canon): nine tier files + spine vocabulary fix + README map. Adversarial review's HIGH catch (mature-example attribution) corrected to cite the story.
+
 ## In progress
 
-**R4 — memory-prosthesis templates** (per the canon-rewrite plan and R0): tier structure and templates in `framework/memory-prosthesis/`, every tier README including evidence-archive, spine frontmatter, coherent-replacement rule, pre-compact protocol with gate-marker convention, restart v2 behavioural; mature-archive example refreshed with a de-identified 2026 exemplar.
+**R5 — adoption + framework-of-record notes** (see CURRENT_FOCUS): `adoption/` including the graduation ladder deferred from R2, enforcement-surface note, earned-tooling register template, CONTRIBUTING. π2 (estate description) decided at this slice's gate.
 
 ## Tree state
 
-Canon: `framework/` committed. Estate: R0 amendment + working-context in this commit. `.claude/settings.local.json` dirty (the User's personal file, never staged).
+Canon: `framework/` fully committed (R3 `cbcfe6f`, R4 `813d0dc`). Estate: working-context in this commit. `.claude/settings.local.json` dirty (the User's personal file, never staged).
 
 ## Waiting on the User
 

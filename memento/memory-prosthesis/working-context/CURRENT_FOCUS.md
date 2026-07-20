@@ -13,19 +13,20 @@ Produce the **mid-2026 open-source version of Memento** in this repository, supe
 
 ## Active Playbook
 
-`../protocols/playbooks/PLANNING_PLAYBOOK.md`, executing `../evidence-archive/plan-canon-rewrite-2026-07-20.md` (R0 ✅ R1 ✅ R2a ✅ R2b ✅).
+`../protocols/playbooks/PLANNING_PLAYBOOK.md`, executing `../evidence-archive/plan-canon-rewrite-2026-07-20.md` (R0 ✅ R1 ✅ R2a ✅ R2b ✅ R3 ✅ R4 ✅).
 
 ## Current task
 
-**R3 — the transplants.** Import the field-hardened 2026 forms into `framework/`: planning law, routing law, git operations, knowledge gardening, incremental execution, and the 14-form directive template. Each import: provenance header (source estate + date + fitting changes), publication-depth de-identification, two-lane sweep, adversarial review, the User's gate. The 2025-form carries were DROPPED at the User's R3 gate (vestige ruling, amendment on the R0 memo); the archive exhibit is their only home.
+**R5 — adoption + framework-of-record notes.** Author `adoption/` (GRADUATION_LADDER with the multi-person workstream exhibit; GETTING_STARTED), the honest enforcement-surface note, the earned-tooling stance with a triggers-register template, and a fresh small CONTRIBUTING. Note: the adoption ladder was listed under R2 in the plan but only the story documents landed there; it is delivered here with the adoption directory (stated at the gate, not silent). π2 lands at this slice's gate: how the canon describes the estate (mention only; contents stay behind P2).
 
 ## Constraints
 
 - **Seam:** root = canon, `memento/` = estate; commits declare their side (CD #10); pushes User-only (CD #4a).
-- **Writing rules (CD #5):** no em dashes; no contrast framing in ANY form; reviewers hunt the pattern.
-- **Canon self-claims are claims:** re-ground with the User (KA `{#published-receipts-can-be-inflated}`); superlatives especially (KA `{#superlative-claims-highest-risk}`).
-- Generic naming per R0 §6; extended banned-token sweep on every canon artefact.
+- **Writing rules (CD #5):** no em dashes in prose; no contrast framing in ANY form; reviewers hunt the pattern.
+- **Canon self-claims are claims:** re-ground with the User; superlatives and absence claims especially (KA anchors).
+- Generic naming per R0 §6; extended banned-token sweep on every canon artefact; private commit hashes stay out of canon text (R3 review ruling).
 
 ## Open with the User
 
-- **P2 pre-push posture** (R0 §5: publish estate / clean branch / strip history) — blocks only the eventual push.
+- **P2 pre-push posture** (R0 §5) — blocks only the eventual push.
+- **π2 estate description** — decided at the R5 gate.
