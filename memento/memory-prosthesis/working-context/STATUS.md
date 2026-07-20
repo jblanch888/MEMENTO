@@ -16,14 +16,14 @@ status: live
 - **R4 — memory-prosthesis templates, COMMITTED** `813d0dc` (canon): nine tier files + spine vocabulary fix + README map. Adversarial review's HIGH catch (mature-example attribution) corrected to cite the story.
 - **R5 — adoption + framework-of-record notes, COMMITTED** `5fc953b` (canon): ladder, getting-started, enforcement surface, earned-tooling template, CONTRIBUTING; kill-roll footer trued. Rooms recon OPEN question resolved first-hand (RESOLUTION on the memo); ten review findings dispositioned. **π2 RESOLVED at the gate:** estate described by mention with honest status only (amendment on R0 memo).
 
-## In progress
-
-**R6 — the site** (final slice; see CURRENT_FOCUS): docs/ rebuilt on the new narrative.
+- **R6 — the site, COMMITTED** `1a845e1` (canon): docs/index.md + style.css on the new narrative; ten links verified; stylesheet mechanism risk-accepted on the 2025 precedent.
+- **Plan CLOSED COMPLETE** at the User's R6 gate: closure note with the full slice ledger on `plan-canon-rewrite-2026-07-20.md`. The mid-2026 canon is complete on this machine.
 
 ## Tree state
 
-Canon: R3 `cbcfe6f`, R4 `813d0dc`, R5 `5fc953b`. Estate: recon resolution + working-context in this commit. `.claude/settings.local.json` dirty (the User's personal file, never staged).
+Canon: R3 `cbcfe6f`, R4 `813d0dc`, R5 `5fc953b`, R6 `1a845e1` all committed. Estate: plan closure + working-context in this commit. `.claude/settings.local.json` dirty (the User's personal file, never staged).
 
 ## Waiting on the User
 
-- P2 posture before any push. Nothing blocks R4.
+- **P2 posture** — the only decision before publication; pushes are the User's alone.
+- Direction for the next undertaking, if any; no plan is active.

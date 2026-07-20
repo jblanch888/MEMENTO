@@ -3,10 +3,12 @@ description: plan — the mid-2026 canon rewrite: B-architecture with transplant
 type: plan
 date: 2026-07-20
 governs: []
-status: awaiting-approval
+status: complete
 ---
 
 # plan-canon-rewrite-2026-07-20
+
+> **CLOSED COMPLETE 2026-07-20 (the User's R6 gate).** All slices delivered under per-slice gates: R0 `12cf763` · R1 `636cd33` · R2a `7328a43`/`4e34477` · R2b `b38fdef`/`4b4e7b0` · R3 `cbcfe6f`/`cb94de2` (carries dropped by the User's vestige ruling, amendment on the R0 memo) · R4 `813d0dc` · R5 `5fc953b`/`4e6b950` (π2 resolved: estate described by mention with honest status) · R6 `1a845e1`. Consciously-out stayed out: P2 and any push remain the User's. The adoption ladder moved from R2 to R5 delivery, stated at the gate.
 
 ## Pattern Search Results
 
