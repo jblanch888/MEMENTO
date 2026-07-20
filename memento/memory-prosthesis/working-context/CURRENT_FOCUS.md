@@ -17,7 +17,7 @@ Produce the **mid-2026 open-source version of Memento** in this repository, supe
 
 ## Current task
 
-**R3 — the transplants.** Import the field-hardened 2026 forms into `framework/`: planning law, routing law, git operations, knowledge gardening, incremental execution, and the 14-form directive template. Each import: provenance header (source estate + date + fitting changes), publication-depth de-identification, two-lane sweep, adversarial review, the User's gate. The 2025-form carries (debugging, crisis, refactoring) get honest banners per R0.
+**R3 — the transplants.** Import the field-hardened 2026 forms into `framework/`: planning law, routing law, git operations, knowledge gardening, incremental execution, and the 14-form directive template. Each import: provenance header (source estate + date + fitting changes), publication-depth de-identification, two-lane sweep, adversarial review, the User's gate. The 2025-form carries were DROPPED at the User's R3 gate (vestige ruling, amendment on the R0 memo); the archive exhibit is their only home.
 
 ## Constraints
 

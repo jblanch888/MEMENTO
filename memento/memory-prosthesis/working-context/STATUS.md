@@ -5,20 +5,22 @@ date: 2026-07-20
 status: live
 ---
 
-# STATUS — session of 2026-07-20 (founding marathon, closed by pre-compact)
+# STATUS — session of 2026-07-20 (post-compact continuation)
 
 ## What this session did (commit ledger)
 
-- **Estate founded:** Slice 0 `ab74551`, Slice 1 `eddd261` (directives, routing, planning law, charter, recon memos, pre-compact hook).
-- **Lineage audit COMPLETE:** registry frozen `1c41971`; 96 verdicts (82C/8X/6D) `bc3e98d`; provenance backbone `41f482d`.
-- **Genealogy resolved + rulings recorded** `aff0888`: framework born in the origin repo lineage 2025-06; P1 = B-architecture with transplant sourcing; public naming generic.
-- **Canon rewrite:** plan `7a71a71`; R0 spec `12cf763`; R1 archive move `636cd33`; R2a `7328a43`+`4e34477`; R2b `b38fdef`+`4b4e7b0`.
-- **Six User corrections** at the R2 gates (two arms; writing rules; variability; walking skeleton; multi-person since 2025; restart-v1 full story). Three lessons graduated to KA this pre-compact.
+- **Restart protocol (CD #8) run clean;** pre-compact hook's first live-run verdict recorded in TOOLING_TRIGGERS (runs verified, block arm unverified): `bafe3a3`.
+- **R3 — the transplants, COMMITTED** `cbcfe6f` (canon): ten files under `framework/`. Sources re-read first-hand from the deployment repos; two-lane sweep clean twice; adversarial review (11 findings) dispositioned; private commit hashes withheld from canon text.
+- **The User's R3 gate rulings:** the three 2025 playbook carries dropped as vestiges (amendment on the R0 memo, π3 pivot on receipt); his quoted routing law kept verbatim; CD #11's lineage title kept.
 
-## Tree state at handover
+## In progress
 
-Canon: README, story/ (4 docs), archive/canon-2025/ all committed. Estate: all committed after the pre-compact batch. `.claude/settings.local.json` dirty (the User's personal file, never staged).
+**R4 — memory-prosthesis templates** (per the canon-rewrite plan and R0): tier structure and templates in `framework/memory-prosthesis/`, every tier README including evidence-archive, spine frontmatter, coherent-replacement rule, pre-compact protocol with gate-marker convention, restart v2 behavioural; mature-archive example refreshed with a de-identified 2026 exemplar.
+
+## Tree state
+
+Canon: `framework/` committed. Estate: R0 amendment + working-context in this commit. `.claude/settings.local.json` dirty (the User's personal file, never staged).
 
 ## Waiting on the User
 
-- P2 posture before any push. Nothing else blocks R3.
+- P2 posture before any push. Nothing blocks R4.
