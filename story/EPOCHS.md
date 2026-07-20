@@ -38,4 +38,4 @@ The honest status: **early days.** The enforcement surface still mostly resists 
 
 ---
 
-*The full receipted narrative of how the framework moved through these epochs, including the year the canon stood still while the field moved, is `THE_STORY.md` (landing later in this rebuild).*
+*The full receipted narrative of how the framework moved through these epochs, including the months the canon stood still while the field moved, is [`THE_STORY.md`](THE_STORY.md).*
