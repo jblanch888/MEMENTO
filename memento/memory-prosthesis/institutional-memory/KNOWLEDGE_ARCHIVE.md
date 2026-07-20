@@ -22,3 +22,19 @@ Entries graduate through the pre-compact consolidation gate (CD #9), maximum thr
 ### A kill's value scales with the quality of the failed design {#kill-value-scales-with-design-quality}
 
 *(Graduated 2026-07-20.)* The restart-v1 kill was first retold as naive recital; the User's correction revealed a thoughtful three-layer design (checklist with evidence, quote-as-proof, situational synthesis gate) that still failed its evidence test. A well-designed mechanism dying teaches far more than a silly one. Tell the strongest version of what died, with its receipts.
+
+## Publication discipline
+
+### The sweep runs last, on the final tree {#the-sweep-runs-last}
+
+*(Graduated 2026-07-21.)* A confidentiality check is a property of the final tracked tree, so it runs as the last act before exposure. Receipted the hard way: the publication-readiness memo introduced banned literals AFTER the full-tree sweep had run, and the fix of the first leak introduced a second, caught only at bench by the mechanised sweep. Now enforced by the pre-push hook; the discipline is to trust nothing swept earlier than the final state.
+
+### Committed working context cannot assert publication state {#working-context-cannot-assert-push-state}
+
+*(Graduated 2026-07-21.)* A claim about a push cannot survive the push that publishes it: the public copy is false precisely when it matters. Receipted twice in one day, including a fix that reasserted remote state in the same sentence as the rule banning it. Remote state is derived from git at read time; working context carries decisions and history only. Now in the canon's working-context template.
+
+## Git craft
+
+### Pathspec commits take working-tree state {#pathspec-commits-take-worktree-state}
+
+*(Graduated 2026-07-21.)* `git commit -- <path>` commits the working-tree content of the named paths, silently reversing a staged deletion of a file that still exists on disk. Receipted: the settings untrack failed invisibly and republished the file with broader content. For index-only operations, commit with the file absent from the worktree, or commit a controlled index without pathspec. Sharpens CD #10's pathspec rule with its one sharp edge.

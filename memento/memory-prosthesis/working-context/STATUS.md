@@ -5,19 +5,20 @@ date: 2026-07-21
 status: live
 ---
 
-# STATUS — session of 2026-07-21 (external re-review fixes)
+# STATUS — sessions of 2026-07-20/21, closed by pre-compact
 
-## What this session did (commit ledger)
+## Closed arcs (receipts in the evidence archive and git)
 
-- **Truth-and-presentation pass** executed and pushed per its plan (`4ad0183` canon, `a2eb174` estate): gate v2, statuses trued, spirit one-pager, evidentiary boundary, site metadata.
-- **External re-review round 2, all five findings verdicted first-hand:** THREE CONFIRMED and fixed: the banned identifier's literals removed from the memo and this file (the memo carries a dated de-identification note; the literals persist in pushed history); `settings.local.json` untracked for real (`21902df`; the first attempt's staged deletion was silently reversed by explicit-pathspec commit semantics, which commit working-tree state); working context redesigned to derive publication state from git rather than assert it. ONE closed as bookkeeping (this plan's status now complete). ONE REFUTED with receipt (the live site serves a single h1; curl receipt).
-- **New mechanism, trigger fired by the incident:** confidentiality sweep over the tracked tree with the token list held outside the repo, wired as a pre-push hook; register row carries falsifier and witness plan.
+- **Canon rewrite R0–R6 COMPLETE and the repo PUBLISHED** under the User's gates and instructions (plans closed with ledgers; P2 ruled posture (i); publication-readiness memo carries the sweep receipts and the archive redaction).
+- **External review round 1 → truth-and-presentation pass** (closed plan `plan-truth-and-presentation-2026-07-21.md`): gate v2, spirit one-pager, evidentiary boundary, statuses trued, site metadata, settings untrack attempt.
+- **External re-review round 2:** identifier literals de-identified in place (history retains them; the User's standing recommendation is leave); settings untracked for real; working context redesigned to derive publication state from git; three lessons graduated to the knowledge archive this pre-compact.
+- **Two mechanisms live, earned by incident:** compact gate v2 and the pre-push confidentiality sweep (token list outside the repo). Register carries all arm statuses.
 
-## Graduation candidates for the next pre-compact (CD #9)
+## Unwitnessed arms (the register is the source of truth)
 
-The sweep runs last, on the final tree (a per-artefact sweep misses what later artefacts add) · explicit-pathspec commits take working-tree state and silently reverse staged deletions · committed working context cannot assert push state.
+Compact-gate v2 allow-and-consume · compact-gate v2 block · sweep block-on-hit (live; bench-proven). The next `/compact` witnesses the first.
 
 ## Waiting on the User
 
-- The next push (carries these fixes; the pre-push hook makes its first live run on it).
-- Repo topics retry in the GitHub UI.
+- Repo topics retry in the GitHub UI (separator characters caused the earlier error).
+- Direction for the next undertaking; no plan is active.
