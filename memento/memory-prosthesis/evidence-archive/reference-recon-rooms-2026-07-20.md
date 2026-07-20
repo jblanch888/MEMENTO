@@ -11,7 +11,7 @@ status: banked
 
 ## Host product
 
-"Rooms": a shared, always-current synthesised record for **multi-person business workstreams** — living workstream memory that absorbs new material continuously and produces decision-ready outputs without person-dependent reconstruction. Bash + Python pipeline (ingest → synthesise → verify → promote → sweep) driving CLI model calls; two canonical markdown records per room; sensitive source material held off-repo. **Five live rooms** at the client organisation (a pilot plus four stood up subsequently), all hand-run — scheduled watchers deliberately disarmed; every ingestion human-triggered.
+"Rooms": a shared, always-current synthesised record for **multi-person business workstreams** — living workstream memory that absorbs new material continuously and produces decision-ready outputs without person-dependent reconstruction. Bash + Python pipeline (ingest → synthesise → verify → promote → sweep) driving CLI model calls; two canonical markdown records per room; sensitive source material held off-repo. **Several live rooms** at the client organisation, all hand-run — scheduled watchers deliberately disarmed; every ingestion human-triggered. *(De-identification deepened 2026-07-20 pre-publication under the P2 posture-(i) ruling: the operational count and stand-up sequence generalised — reviewer finding, publication-readiness pass.)*
 
 ## Memento here: the sibling posture — and a tension worth mining
 

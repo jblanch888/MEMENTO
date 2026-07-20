@@ -12,6 +12,8 @@ status: approved
 > **AMENDMENT 2026-07-20 (the User's R3 gate, π3 pivot on receipt):** the disposition row carrying DEBUGGING / CRISIS_MODE / REFACTORING into `framework/` as annotated 2025 forms is **overruled**. The User ruled them vestiges: unused across the lineage this year, pointless to carry. They are NOT part of the 2026 framework and remain only in the era exhibit (`archive/canon-2025/`). The R5 successor-path note stands for debugging's living form (the harness skill in the oldest deployment).
 >
 > **π2 RESOLVED 2026-07-20 (the User's R5 gate):** the canon describes the estate by **mention with honest status only**: the README's repo-map row and the enforcement-surface note's closing section, which names the estate's register status without publishing contents. Estate contents stay behind the P2 pre-push posture decision.
+>
+> **P2 RESOLVED 2026-07-20 (the User, post-plan):** §5's flag closes on **posture (i)**: the estate publishes with the canon on main. The User cleared the deployment codenames and private commit hashes for publication; actual client identifiers are banned absolutely, everywhere. Publication-readiness sweep run at this ruling (tree + unpushed history); its one finding, a client identifier surviving in the already-public 2025 canon since August 2025, redacted visibly in the archive with a banner note. Receipt: `finding-publication-readiness-2026-07-20.md`.
 
 **R0 of `plan-canon-rewrite-2026-07-20`.** Inventory taken first-hand this session (38 files, canon side only). Decisions marked **[USER]** are for the gate; everything else is proposed disposition under the ruled P1.
 

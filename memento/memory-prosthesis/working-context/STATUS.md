@@ -23,7 +23,9 @@ status: live
 
 Canon: R3 `cbcfe6f`, R4 `813d0dc`, R5 `5fc953b`, R6 `1a845e1` all committed. Estate: plan closure + working-context in this commit. `.claude/settings.local.json` dirty (the User's personal file, never staged).
 
+- **P2 RESOLVED (the User): posture (i)** — estate publishes with canon; codenames and private hashes cleared, client identifiers banned absolutely. Publication-readiness verification banked (`finding-publication-readiness-2026-07-20.md`): tree swept (one 2025 "Sky-KA" survivor redacted visibly in the archive), 25 unpushed commits' diffs clean, hostile-outsider review run and dispositioned (room-count specificity genericised; two own-name eyeball items flagged).
+
 ## Waiting on the User
 
-- **P2 posture** — the only decision before publication; pushes are the User's alone.
+- **The push** (`git push origin main`) — everything committed and swept; the User's act alone.
 - Direction for the next undertaking, if any; no plan is active.

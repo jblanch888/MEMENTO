@@ -19,14 +19,14 @@ Produce the **mid-2026 open-source version of Memento** in this repository: supe
 2. **The lineage is the story.** The three deployment estates are one deliberately cross-pollinated evolutionary line expressed in three heterogeneous hosts. The claim that supports is **portability across radically different domains** — not independent rediscovery. Transplant provenance is part of the artefact.
 3. **Early-days honesty.** The mechanised-governance era is a genuinely new epoch and it is early days: the programmatic-enforcement paradigm predates real controls, hooks only became possible well into 2026, and the enforcement surface still mostly resists high-level behavioural control. The canon claims the mapping of that surface — with receipts — not its conquest.
 4. **Falsifiable or dead.** What distinguishes the new epoch from the failed enforcement era is that every mechanism carries a pre-registered way to kill it, and killed mechanisms are shown, not buried. The estate applies this to itself (teeth are earned by incident; unverified enforcement is labelled unverified).
-5. **The adoption question stays open until mined.** The lineage exhibits at least three adoption postures (spirit-first, day-one greenfield estate, full mechanised testbed) and one estate whose own posture-vs-practice is contradictory in the reconnaissance. Whether the canon presents a graduation ladder, a single form, or something else is a 3C design decision prepared for the User — not a foregone conclusion.
+5. **The adoption question stays open until mined.** The lineage exhibits at least three adoption postures (spirit-first, day-one greenfield estate, full mechanised testbed) and one estate whose own posture-vs-practice is contradictory in the reconnaissance. Whether the canon presents a graduation ladder, a single form, or something else is a 3C design decision prepared for the User — not a foregone conclusion. *(RESOLVED 2026-07-20: the graduation ladder, approved and shipped at R5; the posture-vs-practice contradiction resolved first-hand, RESOLUTION on the rooms recon memo.)*
 
 ## The seam (doctrine)
 
 - **Repo root = canon** — the published product of this endeavour. **`memento/` = estate** — the live instance governing the sessions that produce it. They must never blur (CD #1).
 - Canon is edited only under a plan and the User's approval; every commit declares its seam side; a commit mixing sides needs explicit approval (CD #10).
 - Reading the deployment estates is free; **importing is gated** — de-identification pass + the User's clearance (CD #4e). Two of the three source estates contain client-confidential material; imports are de-identified by construction and say so in their provenance.
-- This estate contains no client material by construction, so it **could** one day be published as part of the artefact — a live instance in the framework's own repo, its evidence archive the receipted story of the modernisation. That is a one-way door (pivot P2), deliberately deferred, the User's gate alone.
+- This estate contains no client material by construction, and the User has ruled it **publishes with the canon** (P2, posture (i), 2026-07-20): a live instance in the framework's own repo, its evidence archive the receipted story of the modernisation. Consequence: **every estate document is public at the next push, permanently.** Deployment codenames (trv3-temporal, cartographer, rooms) and private commit hashes are cleared for publication by the User's ruling; actual client identifiers are banned absolutely, everywhere, forever. The publication-depth sweep is now standing discipline for every estate write. The push itself remains the User's alone.
 
 ## Gates (restated from CD #4)
 
@@ -35,7 +35,7 @@ Pushes to origin (publication) · running `/compact` (pre-compact protocol first
 ## Named pivot points (from the founding plan)
 
 - **P1** — **RESOLVED 2026-07-20 (the User):** B-architecture with transplant-first sourcing — new canon designed from the provenance backbone, Aug 2025 canon archived wholesale as an era exhibit, contents transplanted where a field-hardened 2026 form exists, fresh where none does. Public naming stays generic. Receipt: `../evidence-archive/finding-substrate-genealogy-2026-07-20.md`.
-- **P2** — whether this estate itself is published as part of the artefact. One-way door; deferred.
+- **P2** — **RESOLVED 2026-07-20 (the User):** posture (i), the estate publishes with the canon on main. Codenames and private hashes cleared; client identifiers banned absolutely (one surviving 2025 identifier redacted visibly in the archive, noted in its banner). Receipt: `../evidence-archive/finding-publication-readiness-2026-07-20.md`.
 - **P3** — tooling earned by trigger, not installed up front (`TOOLING_TRIGGERS.md`).
 
 ---
