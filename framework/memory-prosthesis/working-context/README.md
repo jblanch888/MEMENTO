@@ -11,3 +11,4 @@ The surface tier: what the agent reads first, every session. Two files, with a t
 - **Session-scoped only.** Completed work graduates or moves to the evidence archive; history does not accumulate here.
 - **Smallest tier by design.** If content needs to persist across sessions, it belongs a tier down.
 - **Ownership.** Where multiple threads share one repository, name which thread owns these files; the other thread keeps its state in its own session or its own estate. (Incident-receipted in the lineage: two editable copies of working context become two divergent truths.)
+- **Publication state is derived, never asserted.** Working context must not claim "pushed" or "awaiting push": a committed claim about a push cannot survive the push that publishes it, so the published copy is false the moment it matters. Derive remote state live from git (`git status -sb`, `git log @{u}..`) at restart. (Twice incident-receipted in the estate that produced this canon.)
