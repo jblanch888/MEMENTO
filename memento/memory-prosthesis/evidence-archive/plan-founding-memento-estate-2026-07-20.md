@@ -3,10 +3,12 @@ description: founding plan — instantiate a modern Memento estate in the MEMENT
 type: plan
 date: 2026-07-20
 governs: []
-status: awaiting-approval
+status: complete
 ---
 
 # plan-founding-memento-estate-2026-07-20
+
+> **CLOSED COMPLETE (status trued 2026-07-21, external-review finding 3).** Approved and executed 2026-07-20: Slice 0 `ab74551`, Slice 1 `eddd261`; the estate it founded then governed the lineage audit and the full canon rewrite (successor plans in this archive).
 
 ## Pattern Search Results
 

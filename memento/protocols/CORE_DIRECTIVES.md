@@ -93,7 +93,7 @@ b. **Selective graduation:** propose additions to institutional memory only wher
 c. **Working-context reset:** draft a clean CURRENT_FOCUS.md — current task, constraints, immediate next actions only.
 d. **Status finalisation:** STATUS.md carries current-session scope only; no historical accumulation.
 e. **Approval gate:** present all drafts for the User's review before any write.
-f. **Gate marker convention:** `/tmp/memento-estate-precompact-done` after approval and writes; the PreCompact hook that enforces it is Slice 1 tooling — until wired, the discipline is behavioural. The User runs `/compact`.
+f. **Gate marker convention (v2, 2026-07-21):** the marker is repo-scoped and consumed on use: one approval authorises one compaction. The hook computes the path (a hash of the project directory) and prints it when blocking; touch that path after approval and writes. The User runs `/compact`. *(v1's fixed shared path corrected on an external review finding; register row carries the receipts.)*
 
 ---
 

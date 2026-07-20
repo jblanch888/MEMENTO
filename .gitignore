@@ -55,3 +55,5 @@ personal/
 private/
 *.personal
 *.private
+# Claude Code personal settings (local-only by design)
+.claude/settings.local.json

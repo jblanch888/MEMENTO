@@ -5,7 +5,7 @@ date: 2026-07-20
 status: live
 ---
 
-# STATUS — session of 2026-07-20 (post-compact continuation)
+# STATUS — sessions of 2026-07-20/21 (publication + truth-and-presentation pass)
 
 ## What this session did (commit ledger)
 
@@ -27,7 +27,11 @@ Canon: R3 `cbcfe6f`, R4 `813d0dc`, R5 `5fc953b`, R6 `1a845e1` all committed. Est
 
 - **PUBLISHED 2026-07-20, on the User's instruction:** `2ac9a43..803bca5` pushed to origin/main. En route, a benign divergence surfaced (two Aug 2025 web-UI edits on origin); merged with current-tree files resolving to the rewrite (`803bca5`); the archive already matched the final published 2025 state, so no truing was needed.
 
+- **Pages verified live 2026-07-20** (index 200, new content, stylesheet and logo 200); only a human glance remains outstanding.
+- **Truth-and-presentation pass EXECUTED 2026-07-21** per `plan-truth-and-presentation-2026-07-21.md` (the User's approval: "approve, bank the plan and run it"): gate script v2 (repo-scoped, consume-on-use; bench-tested; both live arms re-armed UNVERIFIED on the register) · statuses trued + archive status semantics stated both seam sides · README assembly note removed + evidentiary-boundary paragraph · `settings.local.json` untracked + gitignored · `docs/_config.yml` · `adoption/THE_SPIRIT.md` one-pager linked from getting-started and the ladder. Sweeps clean; reviewer's six findings dispositioned (five accepted and fixed, one by-design).
+
 ## Waiting on the User
 
-- Pages stylesheet visual check once the site rebuilds (post-push item, R6).
-- Direction for the next undertaking, if any; no plan is active. Estate writes now accumulate locally between the User's pushes.
+- **The push** of the pass (also publishes the corrected working context, closing external finding 2).
+- **Repo description / homepage / topics** — the User's GitHub-UI task (no `gh` CLI on this machine).
+- Direction for the next undertaking; no plan is active after this pass closes.

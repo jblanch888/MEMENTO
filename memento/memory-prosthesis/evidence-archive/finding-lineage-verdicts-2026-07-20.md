@@ -2,7 +2,7 @@
 description: lineage audit Slice B+C verdicts — 96 organ×estate cells verdicted by the primary against scout evidence and first-hand receipt checks; includes the Slice C rooms resolution and four origin corrections
 type: finding
 date: 2026-07-20
-status: awaiting-review
+status: approved
 ---
 
 # finding-lineage-verdicts-2026-07-20

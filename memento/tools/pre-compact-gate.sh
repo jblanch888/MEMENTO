@@ -5,14 +5,23 @@ set -euo pipefail
 # working-context coherently reset, STATUS session-scoped).
 #
 # Blocking convention imported from the lineage's live-proven hook (founding
-# review finding 2): a JSON block decision on stdout, exit 0. Teeth remain
-# UNVERIFIED in THIS estate until witnessed at the first live /compact —
-# record the verdict in TOOLING_TRIGGERS.md.
+# review finding 2): a JSON block decision on stdout, exit 0.
+#
+# v2 (2026-07-21, external-review finding 1): the marker is repo-scoped (a
+# hash of the project directory, so clones and sibling estates cannot share
+# an approval) and consumed on use (one approval authorises exactly one
+# compaction). Falsifier, witness plan and arm-by-arm teeth status live on
+# the TOOLING_TRIGGERS register row.
 
-MARKER=/tmp/memento-estate-precompact-done
+# CLAUDE_PROJECT_DIR is set by the harness; the $PWD fallback exists only for
+# bench-testing outside it, where the computed path follows the shell's cwd.
+PROJECT_DIR="${CLAUDE_PROJECT_DIR:-$PWD}"
+SCOPE=$(printf '%s' "$PROJECT_DIR" | shasum | cut -c1-12)
+MARKER="/tmp/memento-precompact-${SCOPE}"
 MAX_AGE_MINUTES=30
 
 if [ -f "$MARKER" ] && [ -n "$(find "$MARKER" -mmin -"$MAX_AGE_MINUTES" 2>/dev/null)" ]; then
+  rm -f "$MARKER"
   exit 0
 fi
 

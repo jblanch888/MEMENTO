@@ -27,5 +27,6 @@ The mid-2026 canon is complete on this machine: README, story/ (4 docs), framewo
 
 ## Open with the User
 
-- **PUBLISHED 2026-07-20** (`803bca5` on origin/main, pushed on the User's explicit instruction; receipts: `../evidence-archive/finding-publication-readiness-2026-07-20.md`). Remaining: visual check of the Pages stylesheet on the live URL (R6 review finding). Eyeball items from the publication pass (precursor framework name; `trv4` branch name) were flagged pre-push and stand as KEEP unless the User says otherwise.
-- Estate writes are public at each future push; the publication-depth sweep is standing discipline (CHARTER).
+- **Push the truth-and-presentation pass** (executed 2026-07-21 per the approved plan; STATUS carries the ledger). The push also publishes this corrected working context.
+- **Repo description / homepage / topics** in the GitHub UI (external review finding 4; the User's task).
+- Estate writes are public at each push; the publication-depth sweep is standing discipline (CHARTER). Prior eyeball items (precursor framework name; `trv4` branch name) stand as KEEP.
