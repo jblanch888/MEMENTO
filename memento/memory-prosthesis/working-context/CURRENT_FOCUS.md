@@ -29,4 +29,3 @@ Produce the **mid-2026 open-source version of Memento** in this repository, supe
 ## Open with the User
 
 - **P2 pre-push posture** (R0 §5: publish estate / clean branch / strip history) — blocks only the eventual push.
-- **Pre-compact hook verdict:** this session's compaction was its first live run; record what happened in `TOOLING_TRIGGERS.md` (post-compact session, first action).
