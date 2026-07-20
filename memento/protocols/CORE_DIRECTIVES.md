@@ -53,9 +53,9 @@ f. API spend beyond an explicitly agreed envelope. (Default engine: in-session o
 
 ---
 
-## 5. British English
+## 5. British English & the User's Writing Rules
 
-**Rule:** All text — estate documents, canon drafts, code comments, commit messages — uses British English. If the User rules differently for any published canon surface, that ruling is recorded here.
+**Rule:** All text (estate documents, canon drafts, code comments, commit messages) uses British English. The User's standing writing rules also apply to prose: **no em dashes unless absolutely necessary** (use commas, full stops, parentheses, or colons) and avoid "not X but Y" contrast framing. *(Em-dash rule directed by the User at the R2a gate, 2026-07-20; both rules receipted in the lineage as the User's standing rules. En dashes in numeric ranges are fine. Banked evidence-archive memos are immutable and are not retro-edited; the rules bind all new text from this date and all living documents at their next revision.)*
 
 ---
 
