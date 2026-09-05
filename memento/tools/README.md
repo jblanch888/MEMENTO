@@ -25,7 +25,11 @@ its copies against this canon.
   - `generate_agents.py` — derives `.claude/agents/<name>.md` frontmatter (model = ladder[rank],
     effort per role, tools) from the map; the charter body is preserved, or seeded from
     `framework/conventions/agents/<name>.md`. `--check` exits 1 on drift (doctor use).
-  - `agent-tier-gate-witness.sh` — 78 cases across both matchers, the map and the generator, plus
+  - `tier-map-check.py` — the release-cadence detectors: model identifiers in the machine-wide Loki
+    telemetry whose family matches no ladder alias (fails open with a WARN if Loki is down); the
+    interactive CLI version against the binding's `verified_against`; the map's age. OWED lines for
+    John; nothing re-tiers on its own. Prints the LogQL for a dashboard panel.
+  - `agent-tier-gate-witness.sh` — 82 cases across both matchers, the map, the generator and the detectors, the map and the generator, plus
     three mutants that must be killed. Run before any swap; commit only on exit 0.
 
 **Shape of the map (schema 2).** `policy` is agent-agnostic: ranks, frontier ranks, the

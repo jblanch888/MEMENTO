@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # agent-tier-gate-witness.sh: proves memento/tools/agent-tier-gate.py allows and denies for the RIGHT
 # reasons on both matchers (Agent, Workflow), that the generator derives definitions the gate then
-# honours, and that the witness itself can go red (three mutants). Exit 0 = every case passes and
+# honours, that the release-cadence detectors flag what they should, and that the witness itself can go red (three mutants). Exit 0 = every case passes and
 # every mutant is killed. Run from anywhere; uses a scratch tier map, never the live one.
 set -u
 HERE="$(cd "$(dirname "$0")" && pwd)"
@@ -141,6 +141,15 @@ if python3 "$GEN" --map "$TIER_MAP" --out "$OUT" --bodies "$BODIES" --check >/de
 sed -i.bak 's/^model: haiku$/model: opus/' "$OUT/memento-scout.md"
 if python3 "$GEN" --map "$TIER_MAP" --out "$OUT" --bodies "$BODIES" --check >/dev/null; then FAIL=$((FAIL+1)); echo "FAIL  G3-check-misses-hand-edit"; else PASS=$((PASS+1)); echo "PASS  G3-check-catches-hand-edited-model"; fi
 if grep -q "You are a Memento scout" "$OUT/memento-scout.md"; then PASS=$((PASS+1)); echo "PASS  G4-canon-body-carried"; else FAIL=$((FAIL+1)); echo "FAIL  G4-canon-body-missing"; fi
+
+echo "== Release-cadence detectors (tier-map-check.py) =="
+CHK="$HERE/tier-map-check.py"
+if python3 "$CHK" --map "$TIER_MAP" --models "claude-sonnet-5,claude-haiku-4-5,claude-opus-5,claude-fable-5-1" --cli-version "$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["bindings"]["claude-code"]["verified_against"])' "$TIER_MAP")" >/dev/null; then PASS=$((PASS+1)); echo "PASS  T1-all-mapped-and-harness-matches -> exit 0"; else FAIL=$((FAIL+1)); echo "FAIL  T1-clean-input-flagged"; fi
+if python3 "$CHK" --map "$TIER_MAP" --models "claude-sonnet-5,claude-titan-1" --cli-version "2.1.261" | grep -q "OWED (John): model 'claude-titan-1'"; then PASS=$((PASS+1)); echo "PASS  T2-new-family-flagged"; else FAIL=$((FAIL+1)); echo "FAIL  T2-new-family-not-flagged"; fi
+if python3 "$CHK" --map "$TIER_MAP" --models "claude-sonnet-5" --cli-version "9.9.9" | grep -q "OWED (agent, then John): interactive CLI is 9.9.9"; then PASS=$((PASS+1)); echo "PASS  T3-harness-drift-flagged"; else FAIL=$((FAIL+1)); echo "FAIL  T3-harness-drift-not-flagged"; fi
+python3 -c 'import json,sys; p=sys.argv[1]; m=json.load(open(p)); m["policy"]["last_verified"]="2020-01-01"; json.dump(m,open(p,"w"))' "$TIER_MAP"
+if python3 "$CHK" --map "$TIER_MAP" --models "claude-sonnet-5" --cli-version "2.1.261" | grep -q "OWED (John): tier map last verified 2020-01-01"; then PASS=$((PASS+1)); echo "PASS  T4-stale-map-flagged"; else FAIL=$((FAIL+1)); echo "FAIL  T4-stale-map-not-flagged"; fi
+cp "$CANON_MAP" "$TIER_MAP"
 
 echo "== Log =="
 n="$(grep -c '' "$AGENT_TIER_LOG")"

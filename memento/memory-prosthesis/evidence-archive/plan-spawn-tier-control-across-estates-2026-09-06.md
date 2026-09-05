@@ -4,7 +4,7 @@ type: plan
 date: 2026-09-06
 genre: build (3A) with a 3B probe as slice 0
 size: M (five slices, each S; slice 3 touches a live hook estate in a shared worktree)
-status: APPROVED (John, 2026-09-06); replicated variant for the framework; slices 1 and 4 LANDED here (canon tools; canon wording for John's eyeball); slice 5 detectors next
+status: APPROVED (John, 2026-09-06); slices 1, 4, 5 COMPLETE in the canon; plan DONE bar Proportion's owed items and John's eyeball passes (see §15)
 related: [CORE_DIRECTIVES, ARCHITECTURE_PRINCIPLES, SAFETY_CHARTER, cli-upgrade-runbook, handover-state-layer-first-day-2026-09-05]
 ---
 
@@ -340,3 +340,30 @@ clock starts at the first Proportion session, not today.
 - `framework/conventions/RESOURCE_ROUTING.md` rule 1: the mechanism pointer (tier map, gate,
   generator, hash-checked copies), with the decision loop left as discipline.
 Nothing in the kill record was softened or removed; every addition is dated.
+
+## 14. Slice 5 record (2026-09-06)
+
+**COMPLETE.** The three detectors, none of which re-tiers anything:
+1. **Unknown alias at the gate**: an `(unknown)` deny in `.claude/agent-tier.log`; doctor CHECK 9
+   surfaces the last one as OWED (landed in slice 2).
+2. **Unmapped model family in telemetry**: `memento/tools/tier-map-check.py` queries the machine-wide
+   Loki for every model identifier seen in the last seven days and flags any whose family name
+   matches no alias on the binding's ladder (a new family above or between the rungs is exactly
+   what a rank-pinned map cannot see on its own). Fails OPEN with a WARN if Loki is unreachable, so
+   the doctor never depends on the telemetry stack. Prints the LogQL for a dashboard panel:
+   `sum by (model) (count_over_time({service_name="claude-code"} |= "api_request" [7d]))`.
+3. **Harness and age**: the interactive CLI version against the binding's `verified_against` (drift
+   means the hook contract is unproven on the running harness until the live-dispatch witness is
+   re-run), and the policy's `last_verified` against a ninety-day limit.
+Live result today: six identifiers in seven days, all mapped; CLI 2.1.261 matches; map 0 days old.
+Witness cases T1 to T4 (clean input passes; new family, harness drift and stale map each flagged);
+witness now 82 cases, 3 mutants. Copies in Rooms (wired into CHECK 9) and Proportion (run owed at its
+first session; added to its wake-up item). The dashboard panel itself is John's to add.
+
+## 15. Plan disposition (2026-09-06)
+
+Slices 0, 1, 2, 4 and 5 COMPLETE; slice 3 WIRED with four items owed at Proportion's first session
+(live-dispatch witness, control-map row, hash check plus detectors, falsifier clock). John's eyeball
+owed on: the tier map's role efforts, CD #6's pointer text (Rooms), the three canon passages (slice
+4), RESOURCE_ROUTING's new paragraph (Proportion), and the register row. The plan's own falsifier for
+Proportion stays open until its window closes. Nothing else outstanding.
