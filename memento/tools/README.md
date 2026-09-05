@@ -25,9 +25,19 @@ its copies against this canon.
   - `generate_agents.py` — derives `.claude/agents/<name>.md` frontmatter (model = ladder[rank],
     effort per role, tools) from the map; the charter body is preserved, or seeded from
     `framework/conventions/agents/<name>.md`. `--check` exits 1 on drift (doctor use).
-  - `agent-tier-gate-witness.sh` — 72 cases across both matchers, the map and the generator, plus
+  - `agent-tier-gate-witness.sh` — 78 cases across both matchers, the map and the generator, plus
     three mutants that must be killed. Run before any swap; commit only on exit 0.
 
-The gate reads `tool_input.model` on the Agent tool, a field the hooks documentation does not list;
-it is proven by the witness on the harness version named in the map. If it vanishes, the witness
-goes red and the gate denies everything, which is the intended failure direction.
+**Shape of the map (schema 2).** `policy` is agent-agnostic: ranks, frontier ranks, the
+justification rule, roles (rank + effort), and named agents with their role, description and
+`guarantees` split into `enforced` (by tool scope) and `behavioural` (compliance, not a boundary).
+`bindings.<runtime>` holds what one agent runtime needs: the alias ladder, what inherits, effort
+level names, hook field names, and per-agent tool lists. The gate and generator select a binding by
+`$TIER_BINDING` (default `claude-code`); a second runtime gets a second binding, not a second map.
+
+**An honest limit.** The gate reads `tool_input.model` on the Agent tool, a field the hooks
+documentation does not list. The witness builds its own hook payloads, so it proves the gate's
+logic, not the runtime's delivery of that field. If the harness stopped sending it, the synthetic
+witness would stay green while every real spawn was denied as "no model". A live-dispatch witness
+(one real Agent call on haiku whose log line must appear) is the check that catches that, and it is
+owed in each estate that wires the gate.

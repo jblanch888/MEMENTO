@@ -271,6 +271,20 @@ quote desynchronised the masker (fixed, unterminated literals deny) and a value 
 (W17 to W42). What no reviewer could verify: the Workflow runtime's exact semantics for escaped
 identifiers and extra arguments; the gate denies both regardless, which is the safe direction.
 
+**John's review (2026-09-06), four findings, all accepted and landed.** (1) The map mixed shared
+policy with Claude implementation: now schema 2, `policy` (ranks, roles, named agents, justification
+rule, guarantees) plus `bindings.claude-code` (alias ladder, inherits, effort level names, hook
+fields, tool lists); a second runtime gets a second binding. (2) A named agent whose role moved to a
+frontier rank passed without justification on both paths, reproduced; the gate now resolves a named
+agent to its alias and applies the frontier check like any spawn (witness M6 to M8). (3) The claim
+that a vanished runtime field would turn the witness red was too strong: the witness builds its own
+payloads and cannot see the runtime stop delivering `tool_input.model`; the claim is corrected in the
+map and README, and a live-dispatch witness is owed per wired estate (added to slice 2 and 3). (4)
+"Read-only reviewer" and "never commits" are behavioural where the agent holds a shell: each named
+agent now carries `guarantees.enforced` and `guarantees.behavioural`, and the generator writes both
+into the definition. The review also noted that this control says nothing about unannounced
+compaction; agreed, and out of this plan's scope. Witness after the review: 78 cases, 3 mutants.
+
 **Not done in this slice, by design:** nothing is wired anywhere. The live Rooms hook is still v1.
 Slice 2 swaps Rooms to v2 atomically with the Agent|Workflow matcher, adds the estate copy of the
-map, the generated agents, and the doctor's hash and drift checks.
+map, the generated agents, the doctor's hash and drift checks, and the live-dispatch witness.

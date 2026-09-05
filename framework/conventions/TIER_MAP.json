@@ -1,40 +1,58 @@
 {
-  "_about": "Memento tier map: the ladder of Claude Code model aliases and the roles pinned to RANKS on it. Owned by the framework canon; each instance carries a byte-identical copy that its doctor hash-checks. Human-edited, John-verified. Read by memento/tools/agent-tier-gate.py (the spawn gate) and memento/tools/generate_agents.py (agent definitions). Nothing outside the ladder is ever allowed. See plan-spawn-tier-control-across-estates-2026-09-06.",
-  "schema": 1,
-  "last_verified": "2026-09-06",
-  "verified_against": {
-    "claude_code": "2.1.261",
-    "hook_fields": "Agent: tool_input.model, tool_input.subagent_type, tool_input.prompt. Workflow: tool_input.script | scriptPath | name. tool_input.model on Agent is undocumented in hooks.md and proven by the witness; if it vanishes the witness goes red.",
-    "aliases_source": "Claude Code model-config.md: aliases point to the recommended version for the provider and update over time"
-  },
-  "ladder": ["fable", "opus", "sonnet", "haiku"],
-  "frontier_ranks": [0, 1],
-  "inherits": ["fork"],
-  "justification": { "marker": "TIER-JUSTIFICATION:", "min_chars": 40 },
-  "roles": {
-    "judgement": { "rank": 0, "effort": null, "note": "the main thread; a spawn at this rank needs a justification line" },
-    "review":    { "rank": 2, "effort": "medium" },
-    "build":     { "rank": 2, "effort": "medium" },
-    "recon":     { "rank": 3, "effort": "low" }
-  },
-  "agents": {
-    "memento-scout": {
-      "role": "recon",
-      "description": "Read-only evidence gatherer for Memento-governed work. Use for multi-file recon, large log/test-output scanning, repo pattern searches, and doc/capability extraction. Returns concise cited findings; never edits, never decides.",
-      "tools": ["Read", "Grep", "Glob", "WebFetch"],
-      "extra": { "memory": "local" }
+  "_about": "Memento tier map. `policy` is the agent-agnostic contract: ranks, roles, named agents and the justification rule. `bindings` hold what each agent runtime needs to enforce it (today: claude-code). Owned by the framework canon; each instance carries a byte-identical copy that its doctor hash-checks. Human-edited, John-verified. Read by memento/tools/agent-tier-gate.py and memento/tools/generate_agents.py. Nothing outside a binding's ladder is ever allowed. See plan-spawn-tier-control-across-estates-2026-09-06.",
+  "schema": 2,
+  "policy": {
+    "last_verified": "2026-09-06",
+    "ladder_depth": 4,
+    "frontier_ranks": [0, 1],
+    "justification": { "marker": "TIER-JUSTIFICATION:", "min_chars": 40 },
+    "roles": {
+      "judgement": { "rank": 0, "effort": null, "note": "the main thread; any spawn resolving to a frontier rank, named agent or not, needs a justification line" },
+      "review":    { "rank": 2, "effort": "medium" },
+      "build":     { "rank": 2, "effort": "medium" },
+      "recon":     { "rank": 3, "effort": "low" }
     },
-    "memento-implementer": {
-      "role": "build",
-      "description": "Bounded implementer for Memento-governed work. Use ONLY with a settled spec (files, exact changes, verification steps). Makes the specified changes, verifies, reports a contract; never expands scope, never makes design decisions, never commits.",
-      "tools": ["Read", "Edit", "Write", "Bash", "Grep", "Glob"],
-      "extra": { "memory": "local" }
-    },
-    "memento-reviewer": {
-      "role": "review",
-      "description": "Adversarial reviewer for Memento-governed work. Use before presenting an artefact or diff to John. Isolated context, assumes failure, demands forensic evidence; reviews against spec and Memento principles; read-only; PASS/NEEDS-CHANGES verdict with evidence.",
-      "tools": ["Read", "Grep", "Glob", "Bash"],
-      "extra": { "memory": "local" }
+    "agents": {
+      "memento-scout": {
+        "role": "recon",
+        "description": "Read-only evidence gatherer for Memento-governed work. Use for multi-file recon, large log/test-output scanning, repo pattern searches, and doc/capability extraction. Returns concise cited findings; never edits, never decides.",
+        "guarantees": {
+          "enforced": ["no edit or write tools", "no shell"],
+          "behavioural": ["never decides; returns evidence and declines verdicts"]
+        }
+      },
+      "memento-implementer": {
+        "role": "build",
+        "description": "Bounded implementer for Memento-governed work. Use ONLY with a settled spec (files, exact changes, verification steps). Makes the specified changes, verifies, reports a contract; never expands scope, never makes design decisions, never commits.",
+        "guarantees": {
+          "enforced": [],
+          "behavioural": ["never commits or pushes (it has a shell; this is compliance, not a boundary)", "never touches working-context", "never expands scope"]
+        }
+      },
+      "memento-reviewer": {
+        "role": "review",
+        "description": "Adversarial reviewer for Memento-governed work. Use before presenting an artefact or diff to John. Isolated context, assumes failure, demands forensic evidence; reviews against spec and Memento principles; PASS/NEEDS-CHANGES verdict with evidence.",
+        "guarantees": {
+          "enforced": ["no edit or write tools"],
+          "behavioural": ["read-only via the shell (it has Bash to run witnesses and tests; a shell can write, so this is compliance, not a boundary)", "never a fork of the presenting session (the spawner's discipline; the gate treats forks as inherits)"]
+        }
+      }
+    }
+  },
+  "bindings": {
+    "claude-code": {
+      "verified_against": "2.1.261",
+      "ladder": ["fable", "opus", "sonnet", "haiku"],
+      "inherits": ["fork"],
+      "effort_levels": ["low", "medium", "high", "xhigh", "max"],
+      "hook_fields": "PreToolUse. Agent: tool_input.model, tool_input.subagent_type, tool_input.prompt. Workflow: tool_input.script | scriptPath | name.",
+      "runtime_dependency": "tool_input.model on the Agent tool is not listed in hooks.md. The synthetic witness builds its own payloads and CANNOT detect the live runtime ceasing to deliver the field; that needs a separate live-dispatch witness (a real Agent call with model=haiku whose log line must appear). Until one exists, this dependency is unverified at runtime after any harness upgrade.",
+      "aliases_source": "model-config.md: aliases point to the recommended version for the provider and update over time",
+      "agents": {
+        "memento-scout":       { "tools": ["Read", "Grep", "Glob", "WebFetch"],                  "extra": { "memory": "local" } },
+        "memento-implementer": { "tools": ["Read", "Edit", "Write", "Bash", "Grep", "Glob"],     "extra": { "memory": "local" } },
+        "memento-reviewer":    { "tools": ["Read", "Grep", "Glob", "Bash"],                      "extra": { "memory": "local" } }
+      }
     }
   }
 }

@@ -110,12 +110,28 @@ got="$(TIER_MAP="$TMP/absent.json" bash -c "printf '%s' '$(ag '{"model":"sonnet"
 if [ "$got" = "deny" ]; then PASS=$((PASS+1)); echo "PASS  M2-missing-map-denies -> deny"; else FAIL=$((FAIL+1)); echo "FAIL  M2-missing-map-denies -> $got"; fi
 # new alias honoured with no script change: insert "titan" above fable as rank 0 frontier; fable becomes rank 1 (still frontier)
 python3 - "$TIER_MAP" <<'EOF'
-import json,sys; p=sys.argv[1]; m=json.load(open(p)); m["ladder"]=["titan"]+m["ladder"]; m["frontier_ranks"]=[0,1]
-m["roles"]={k:dict(v, rank=v["rank"]+1) for k,v in m["roles"].items()}; json.dump(m,open(p,"w"))
+import json,sys; p=sys.argv[1]; m=json.load(open(p)); b=m["bindings"]["claude-code"]; b["ladder"]=["titan"]+b["ladder"]
+m["policy"]["ladder_depth"]+=1; m["policy"]["frontier_ranks"]=[0,1]
+m["policy"]["roles"]={k:dict(v, rank=v["rank"]+1) for k,v in m["policy"]["roles"].items()}; json.dump(m,open(p,"w"))
 EOF
 case_ M3-new-alias-frontier  deny  "$(ag '{"model":"titan","description":"x","prompt":"p"}')"
 case_ M4-new-alias-justified allow "$(agm titan "$J40")"
 case_ M5-sonnet-now-rank-3   allow "$(ag '{"model":"sonnet","description":"x","prompt":"p"}')"
+cp "$CANON_MAP" "$TIER_MAP"
+# a named agent whose ROLE moves to a frontier rank must need justification on both paths (review finding 2, 2026-09-06)
+python3 -c 'import json,sys; p=sys.argv[1]; m=json.load(open(p)); m["policy"]["roles"]["review"]["rank"]=0; json.dump(m,open(p,"w"))' "$TIER_MAP"
+case_ M6-named-agent-frontier-role-agent    deny  "$(ag '{"subagent_type":"memento-reviewer","description":"x","prompt":"p"}')"
+case_ M7-named-agent-frontier-role-justified allow "$(printf '{"tool_name":"Agent","tool_input":{"subagent_type":"memento-reviewer","description":"x","prompt":"%s"}}' "$J40")"
+case_ M8-named-agent-frontier-role-workflow deny  "$(wf 'await agent("x", {agentType: "memento-reviewer"})')"
+cp "$CANON_MAP" "$TIER_MAP"
+# malformed maps deny: schema 1 shape, unknown binding, ladder depth mismatch
+printf '{"schema":1,"ladder":["fable","opus","sonnet","haiku"]}' > "$TIER_MAP"
+case_ M9-schema1-map-denies  deny  "$(ag '{"model":"sonnet","description":"x","prompt":"p"}')"
+cp "$CANON_MAP" "$TIER_MAP"
+got="$(TIER_BINDING=codex bash -c "printf '%s' '$(ag '{"model":"sonnet","description":"x","prompt":"p"}')' | python3 '$GATE'" | python3 -c 'import sys,json; print(json.load(sys.stdin)["hookSpecificOutput"]["permissionDecision"])')"
+if [ "$got" = "deny" ]; then PASS=$((PASS+1)); echo "PASS  M10-unknown-binding-denies -> deny"; else FAIL=$((FAIL+1)); echo "FAIL  M10-unknown-binding-denies -> $got"; fi
+python3 -c 'import json,sys; p=sys.argv[1]; m=json.load(open(p)); m["policy"]["ladder_depth"]=9; json.dump(m,open(p,"w"))' "$TIER_MAP"
+case_ M11-ladder-depth-mismatch deny "$(ag '{"model":"sonnet","description":"x","prompt":"p"}')"
 cp "$CANON_MAP" "$TIER_MAP"
 # generator: definitions derive from the map and the gate honours them; --check detects drift
 OUT="$TMP/agents"; python3 "$GEN" --map "$TIER_MAP" --out "$OUT" --bodies "$HERE/../../framework/conventions/agents" >/dev/null
@@ -127,7 +143,7 @@ if grep -q "You are a Memento scout" "$OUT/memento-scout.md"; then PASS=$((PASS+
 
 echo "== Log =="
 n="$(grep -c '' "$AGENT_TIER_LOG")"
-if [ "$n" -eq 62 ]; then PASS=$((PASS+1)); echo "PASS  L1-log-exactly-62-rows (16 Agent + 42 Workflow + 4 map cases; A16 logs nothing)"; else FAIL=$((FAIL+1)); echo "FAIL  L1-log-rows ($n)"; fi
+if [ "$n" -eq 68 ]; then PASS=$((PASS+1)); echo "PASS  L1-log-exactly-68-rows (16 Agent + 42 Workflow + 10 map cases; A16 logs nothing)"; else FAIL=$((FAIL+1)); echo "FAIL  L1-log-rows ($n)"; fi
 if grep -q '^[0-9T:Z-]* | deny | (unparseable) | -$' "$AGENT_TIER_LOG"; then PASS=$((PASS+1)); echo "PASS  L2-unparseable-logged"; else FAIL=$((FAIL+1)); echo "FAIL  L2-unparseable-not-logged"; fi
 
 echo "== Mutants =="

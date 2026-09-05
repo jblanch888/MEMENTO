@@ -7,7 +7,8 @@ the hooks contract. Anything unparseable is DENIED (fail closed).
 
 Decision table, Agent tool:
   subagent_type in map.inherits (fork)      -> needs a justification line in the prompt
-  model missing, subagent_type is a map agent -> ALLOW (pinned by its generated definition)
+  model missing, subagent_type is a map agent -> resolve to its role's alias; frontier rank needs
+                                                justification, otherwise ALLOW
   model missing otherwise                    -> DENY (would inherit the parent model)
   model in ladder, rank in frontier_ranks    -> needs a justification line in the prompt
   model in ladder, other rank                -> ALLOW
@@ -24,7 +25,8 @@ Decision table, Workflow tool (scripts spawn agents outside the Agent tool):
   any frontier-rank model needs one justification line anywhere in the script
   no agent() calls                           -> ALLOW (nothing spawned)
 
-Map location: $TIER_MAP, else <repo>/memento/TIER_MAP.json (the estate copy). Missing map -> DENY.
+Map location: $TIER_MAP, else <repo>/memento/TIER_MAP.json (the estate copy); schema 2 = policy + bindings,
+binding chosen by $TIER_BINDING (default claude-code). Missing or malformed map -> DENY.
 Log: $AGENT_TIER_LOG, else <repo>/.claude/agent-tier.log, one line per decision:
   ts | decision | tier | tool: description
 """
@@ -59,15 +61,26 @@ def allow(tier, desc, reason):
     log("allow", tier, desc); emit("allow", "agent-tier-gate: " + reason)
 
 
+BINDING = os.environ.get("TIER_BINDING", "claude-code")
+
+
 def load_map():
+    """Flatten schema-2 map (policy + one binding) into the shape the decision code reads."""
     with open(MAP_PATH) as f:
-        m = json.load(f)
-    ladder = m["ladder"]; assert isinstance(ladder, list) and ladder
-    m.setdefault("frontier_ranks", [0]); m.setdefault("inherits", ["fork"])
-    m.setdefault("justification", {}).setdefault("marker", "TIER-JUSTIFICATION:")
-    m["justification"].setdefault("min_chars", 40)
-    m.setdefault("roles", {}); m.setdefault("agents", {})
-    return m
+        raw = json.load(f)
+    if raw.get("schema") != 2 or "policy" not in raw or "bindings" not in raw:
+        raise ValueError("tier map is not schema 2 (policy + bindings)")
+    pol = raw["policy"]; b = raw["bindings"][BINDING]          # KeyError -> deny (unknown binding)
+    ladder = b["ladder"]; assert isinstance(ladder, list) and ladder
+    if len(ladder) != pol.get("ladder_depth", len(ladder)):
+        raise ValueError(f"binding ladder has {len(ladder)} rungs, policy says {pol.get('ladder_depth')}")
+    agents = {}
+    for name, a in pol.get("agents", {}).items():
+        agents[name] = dict(a, **b.get("agents", {}).get(name, {}))
+    return {"ladder": ladder, "frontier_ranks": pol.get("frontier_ranks", [0]), "inherits": b.get("inherits", ["fork"]),
+            "justification": {"marker": pol.get("justification", {}).get("marker", "TIER-JUSTIFICATION:"),
+                              "min_chars": pol.get("justification", {}).get("min_chars", 40)},
+            "roles": pol.get("roles", {}), "agents": agents, "binding": BINDING}
 
 
 def justified(text, m):
@@ -111,8 +124,13 @@ def decide_agent(m, ti):
                     f"A {stype} always runs on the parent model. It needs a '{m['justification']['marker']}' line stating why the sub-task needs the whole conversation context. " + howto(m))
     if not model:
         pinned = agent_alias(m, stype)
-        if pinned: return allow(f"{pinned}(pinned by {stype})", desc, f"named agent {stype} pinned to {pinned} by the tier map")
-        return deny("(none)", desc, "No explicit model on this Agent call; the default inherits the parent model. " + howto(m))
+        if not pinned:
+            return deny("(none)", desc, "No explicit model on this Agent call; the default inherits the parent model. " + howto(m))
+        if m["ladder"].index(pinned) in m["frontier_ranks"]:          # a named agent whose role sits at a frontier rank
+            j = justified(prompt, m)
+            if j: return allow(f"{pinned}(pinned by {stype}, justified)", desc, f"named agent {stype} resolves to frontier tier {pinned}; justified: {j}")
+            return deny(f"{pinned}(pinned by {stype}, unjustified)", desc, f"Named agent '{stype}' resolves to frontier tier '{pinned}' in the tier map; it needs a '{m['justification']['marker']}' line like any frontier spawn. " + howto(m))
+        return allow(f"{pinned}(pinned by {stype})", desc, f"named agent {stype} pinned to {pinned} by the tier map")
     if model in m["ladder"]:
         rank = m["ladder"].index(model)
         if rank in m["frontier_ranks"]:
@@ -282,7 +300,8 @@ def decide_workflow(m, ti):
             elif m["ladder"].index(model) in m["frontier_ranks"]:
                 frontier.append(f"line {line}: {model}")
         elif atype and agent_alias(m, atype):
-            pass
+            if m["ladder"].index(agent_alias(m, atype)) in m["frontier_ranks"]:
+                frontier.append(f"line {line}: {atype} resolves to {agent_alias(m, atype)}")
         else:
             problems.append(f"line {line}: agent() has no string-literal model on the ladder and no agentType from the tier map at the top level of a plain options object (it would inherit the main-loop model)")
     if problems:
