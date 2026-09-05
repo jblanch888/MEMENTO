@@ -1,0 +1,40 @@
+{
+  "_about": "Memento tier map: the ladder of Claude Code model aliases and the roles pinned to RANKS on it. Owned by the framework canon; each instance carries a byte-identical copy that its doctor hash-checks. Human-edited, John-verified. Read by memento/tools/agent-tier-gate.py (the spawn gate) and memento/tools/generate_agents.py (agent definitions). Nothing outside the ladder is ever allowed. See plan-spawn-tier-control-across-estates-2026-09-06.",
+  "schema": 1,
+  "last_verified": "2026-09-06",
+  "verified_against": {
+    "claude_code": "2.1.261",
+    "hook_fields": "Agent: tool_input.model, tool_input.subagent_type, tool_input.prompt. Workflow: tool_input.script | scriptPath | name. tool_input.model on Agent is undocumented in hooks.md and proven by the witness; if it vanishes the witness goes red.",
+    "aliases_source": "Claude Code model-config.md: aliases point to the recommended version for the provider and update over time"
+  },
+  "ladder": ["fable", "opus", "sonnet", "haiku"],
+  "frontier_ranks": [0, 1],
+  "inherits": ["fork"],
+  "justification": { "marker": "TIER-JUSTIFICATION:", "min_chars": 40 },
+  "roles": {
+    "judgement": { "rank": 0, "effort": null, "note": "the main thread; a spawn at this rank needs a justification line" },
+    "review":    { "rank": 2, "effort": "medium" },
+    "build":     { "rank": 2, "effort": "medium" },
+    "recon":     { "rank": 3, "effort": "low" }
+  },
+  "agents": {
+    "memento-scout": {
+      "role": "recon",
+      "description": "Read-only evidence gatherer for Memento-governed work. Use for multi-file recon, large log/test-output scanning, repo pattern searches, and doc/capability extraction. Returns concise cited findings; never edits, never decides.",
+      "tools": ["Read", "Grep", "Glob", "WebFetch"],
+      "extra": { "memory": "local" }
+    },
+    "memento-implementer": {
+      "role": "build",
+      "description": "Bounded implementer for Memento-governed work. Use ONLY with a settled spec (files, exact changes, verification steps). Makes the specified changes, verifies, reports a contract; never expands scope, never makes design decisions, never commits.",
+      "tools": ["Read", "Edit", "Write", "Bash", "Grep", "Glob"],
+      "extra": { "memory": "local" }
+    },
+    "memento-reviewer": {
+      "role": "review",
+      "description": "Adversarial reviewer for Memento-governed work. Use before presenting an artefact or diff to John. Isolated context, assumes failure, demands forensic evidence; reviews against spec and Memento principles; read-only; PASS/NEEDS-CHANGES verdict with evidence.",
+      "tools": ["Read", "Grep", "Glob", "Bash"],
+      "extra": { "memory": "local" }
+    }
+  }
+}
