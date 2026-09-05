@@ -18,7 +18,7 @@ The first restart protocol was a thoughtful design with three layers: a checklis
 
 ## 4. The routing-enforcement hook
 
-An attempt to mechanise the routing law by counting the main agent's tool calls at the end of each turn. It metered call counts when the discipline is about fit; it fired without enforcing; it was blind to half the failure modes it existed to catch. **Removed as net-negative, 2026.** The routing loop remains agent discipline, run because it is right. *Lesson: judgement-shaped rules resist mechanisation; a bad meter is worse than no meter, and some disciplines must stay prose until a mechanism can pass its own falsifier.*
+An attempt to mechanise the routing law by counting the main agent's tool calls at the end of each turn. It metered call counts when the discipline is about fit; it fired without enforcing; it was blind to half the failure modes it existed to catch. **Removed as net-negative, 2026.** The routing loop remains agent discipline, run because it is right. *Lesson: judgement-shaped rules resist mechanisation; a bad meter is worse than no meter, and some disciplines must stay prose until a mechanism can pass its own falsifier.* **A distinction, added 2026-09, so this grave is not read as a ban:** what died here was a meter of FIT. A later mechanism, the spawn-tier pin check, gates the PRESENCE of a tier on every sub-agent spawn and never judges fit; it passed adversarial review and carries a pre-registered kill condition of its own. For a season this grave marker was read across the lineage as "no hooks on routing", and one estate went three months with the pin unenforced in prose while the sibling estate's telemetry recorded the cost. The allocation test (judgement rule or detectable rule) is what separates the two; run it before honouring a kill by analogy.
 
 ## 5. The working-context edit gate
 
@@ -30,7 +30,7 @@ A daily budget backstop for model spend, designed and then deliberately never bu
 
 ## 7. The cross-estate refusal
 
-The clearest sign the lineage learns as one organism: a newly founded estate's backlog records a mechanical routing-enforcement hook as deliberately not imported, because a sibling estate had already disproved it. The death happened once; the lesson priced in everywhere. *Lesson: a killed mechanism's grave marker is portable, and honouring another estate's kill is cheaper than re-running the funeral.*
+The clearest sign the lineage learns as one organism: a newly founded estate's backlog records a mechanical routing-enforcement hook as deliberately not imported, because a sibling estate had already disproved it. The death happened once; the lesson priced in everywhere. *Lesson: a killed mechanism's grave marker is portable, and honouring another estate's kill is cheaper than re-running the funeral.* *Corollary, learned 2026-09: a grave marker travels with its cause of death attached, or it is over-honoured. The refusal above was right for the fit-meter and was later read as covering a pin check it never tested (§4). Import the kill together with the allocation test that explains it.*
 
 ## 8. The orphaned parameters
 

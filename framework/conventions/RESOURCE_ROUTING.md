@@ -40,7 +40,7 @@ status: template
 
 ## Operating rules (condensed from the lineage's delegation refinements)
 
-1. **Pin model + tools in every spawn.** No inheritance, ever.
+1. **Pin model + tools in every spawn.** No inheritance, ever. Since 2026-09 this rule has a mechanism: the tier map (`framework/conventions/TIER_MAP.json`, roles pinned to ranks on a ladder of aliases, agent-agnostic policy plus a per-runtime binding) and the spawn gate (`memento/tools/agent-tier-gate.py`, a hook on the spawn tools that refuses any unpinned spawn and requires a justification for a frontier rank or a fork; workflow scripts inspected call by call). Agent definitions are generated from the map (`memento/tools/generate_agents.py`). Each instance carries byte-identical copies and hash-checks them against this canon. The decision loop above stays discipline; only the pin is gated.
 2. **Spec-in, contract-out.** Output contract for all agents: files/findings with paths, verification evidence, assumptions, risks. Load-bearing outputs are preserved as artefacts, not just folded into conversation.
 3. **Subagent work must be verified before it is relied on:** verification evidence includes raw output verbatim; the main agent independently reproduces at least one verification step before relying on it. Delegated output is a claim until re-grounded (CD #6). Scout prompts ask for evidence plus an explicit "not found" rather than a verdict: judgement stays with the primary, honoured in the prompt itself.
 4. **Disagreement routes to sovereignty:** a reviewer NEEDS-CHANGES blocks by default; the primary may override only with the User's explicit approval, logged.

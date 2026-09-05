@@ -9,6 +9,7 @@ GATE="$HERE/agent-tier-gate.py"
 GEN="$HERE/generate_agents.py"
 CANON_MAP="$HERE/../../framework/conventions/TIER_MAP.json"
 [ -f "$CANON_MAP" ] || CANON_MAP="$HERE/../TIER_MAP.json"   # estate copy when run inside an instance
+BODIES="$HERE/../../framework/conventions/agents"; [ -d "$BODIES" ] || BODIES="$HERE/../agents"   # estate copy of the charters
 TMP="$(mktemp -d)"; trap 'rm -rf "$TMP"' EXIT
 export AGENT_TIER_LOG="$TMP/gate.log"
 export TIER_MAP="$TMP/TIER_MAP.json"; cp "$CANON_MAP" "$TIER_MAP"
@@ -134,11 +135,11 @@ python3 -c 'import json,sys; p=sys.argv[1]; m=json.load(open(p)); m["policy"]["l
 case_ M11-ladder-depth-mismatch deny "$(ag '{"model":"sonnet","description":"x","prompt":"p"}')"
 cp "$CANON_MAP" "$TIER_MAP"
 # generator: definitions derive from the map and the gate honours them; --check detects drift
-OUT="$TMP/agents"; python3 "$GEN" --map "$TIER_MAP" --out "$OUT" --bodies "$HERE/../../framework/conventions/agents" >/dev/null
+OUT="$TMP/agents"; python3 "$GEN" --map "$TIER_MAP" --out "$OUT" --bodies "$BODIES" >/dev/null
 if grep -q '^model: haiku$' "$OUT/memento-scout.md" && grep -q '^effort: low$' "$OUT/memento-scout.md" && grep -q '^model: sonnet$' "$OUT/memento-reviewer.md" && grep -q '^effort: medium$' "$OUT/memento-reviewer.md"; then PASS=$((PASS+1)); echo "PASS  G1-generated-frontmatter-from-map"; else FAIL=$((FAIL+1)); echo "FAIL  G1-generated-frontmatter"; cat "$OUT/memento-scout.md" | head -8; fi
-if python3 "$GEN" --map "$TIER_MAP" --out "$OUT" --bodies "$HERE/../../framework/conventions/agents" --check >/dev/null; then PASS=$((PASS+1)); echo "PASS  G2-check-clean-after-generate"; else FAIL=$((FAIL+1)); echo "FAIL  G2-check-clean"; fi
+if python3 "$GEN" --map "$TIER_MAP" --out "$OUT" --bodies "$BODIES" --check >/dev/null; then PASS=$((PASS+1)); echo "PASS  G2-check-clean-after-generate"; else FAIL=$((FAIL+1)); echo "FAIL  G2-check-clean"; fi
 sed -i.bak 's/^model: haiku$/model: opus/' "$OUT/memento-scout.md"
-if python3 "$GEN" --map "$TIER_MAP" --out "$OUT" --bodies "$HERE/../../framework/conventions/agents" --check >/dev/null; then FAIL=$((FAIL+1)); echo "FAIL  G3-check-misses-hand-edit"; else PASS=$((PASS+1)); echo "PASS  G3-check-catches-hand-edited-model"; fi
+if python3 "$GEN" --map "$TIER_MAP" --out "$OUT" --bodies "$BODIES" --check >/dev/null; then FAIL=$((FAIL+1)); echo "FAIL  G3-check-misses-hand-edit"; else PASS=$((PASS+1)); echo "PASS  G3-check-catches-hand-edited-model"; fi
 if grep -q "You are a Memento scout" "$OUT/memento-scout.md"; then PASS=$((PASS+1)); echo "PASS  G4-canon-body-carried"; else FAIL=$((FAIL+1)); echo "FAIL  G4-canon-body-missing"; fi
 
 echo "== Log =="

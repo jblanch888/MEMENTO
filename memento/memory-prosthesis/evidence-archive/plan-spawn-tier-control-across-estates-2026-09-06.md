@@ -4,7 +4,7 @@ type: plan
 date: 2026-09-06
 genre: build (3A) with a 3B probe as slice 0
 size: M (five slices, each S; slice 3 touches a live hook estate in a shared worktree)
-status: APPROVED (John, 2026-09-06); replicated variant for the framework; slice 1 COMPLETE here (canon tools banked, witness 72/3); slice 4 (canon wording) pending John's eyeball
+status: APPROVED (John, 2026-09-06); replicated variant for the framework; slices 1 and 4 LANDED here (canon tools; canon wording for John's eyeball); slice 5 detectors next
 related: [CORE_DIRECTIVES, ARCHITECTURE_PRINCIPLES, SAFETY_CHARTER, cli-upgrade-runbook, handover-state-layer-first-day-2026-09-05]
 ---
 
@@ -288,3 +288,55 @@ compaction; agreed, and out of this plan's scope. Witness after the review: 78 c
 **Not done in this slice, by design:** nothing is wired anywhere. The live Rooms hook is still v1.
 Slice 2 swaps Rooms to v2 atomically with the Agent|Workflow matcher, adds the estate copy of the
 map, the generated agents, the doctor's hash and drift checks, and the live-dispatch witness.
+
+## 11. Slice 2 record (2026-09-06)
+
+**COMPLETE in Rooms.** Canon copied in byte-identical (`memento/TIER_MAP.json`, the three tools,
+charter bodies under `memento/agents/` with the routing citation re-pointed to CORE_DIRECTIVES #6);
+`.claude/agents/` generated (scout haiku low, implementer and reviewer sonnet medium); witness run in
+place, 78/0, 3 mutants; doctor CHECK 9 added (byte-identity to canon, generated-definition drift,
+hook wiring, the unknown-alias OWED detector, the live-dispatch OWED) and shown to FAIL for the right
+reason before the swap; the hook registration swapped atomically to `Agent|Workflow` ->
+`agent-tier-gate.py`; a real haiku spawn then logged in the v2 format without a session restart, so
+the live-dispatch witness is on record. Gate v1 (bash) and its 16-case witness retired; the lab path
+`lab/agent-tier-gate/witness.sh` now runs the canon witness. CD #6's pointer, the tools README,
+CURRENT_FOCUS and STATUS updated (CD #6 wording is for John's eyeball). One observation: named agent
+types register at session start, so `memento-scout` was not selectable in the session that generated
+it; the gate still honoured the built-in type on haiku. Nothing changed in Proportion or the canon.
+
+## 12. Slice 3 record (2026-09-06)
+
+**WIRED in Proportion, on John's word while the estate is paused** ("its fine, proportion is paused
+on dev rn but i will return eventually"). The dirty-tree precondition was waived by John: six
+unrelated modifications and three untracked snapshots were left untouched, and the commit used
+explicit pathspecs (the estate's own lesson on shared worktrees). Delivered: canon copied in
+byte-identical (`memento/TIER_MAP.json`, the three tools, charter bodies under `memento/agents/`);
+`.claude/agents/` regenerated from the map (bodies preserved verbatim; frontmatter gains `effort` and
+the guarantees lines); witness run in place, 78/0, 3 mutants; a Proportion-local wrapper
+`.claude/hooks/agent-tier-gate.sh` that self-reports every fire to Loki through `hook-telemetry.sh`
+with the decision as outcome (proven: allow, deny and garbage all pass through unchanged and write
+receipts); the hook registered on `Agent|Workflow` in `.claude/settings.json`; RESOURCE_ROUTING's
+"Not a hook's job" paragraph followed by "What IS a hook's job", with the kill condition
+pre-registered.
+
+**Owed when Proportion wakes:** (a) the live-dispatch witness (one real haiku spawn described
+'live-dispatch witness' in a Proportion session; the log line must appear in `.claude/agent-tier.log`
+and the receipt in Loki); (b) the control map regeneration so the new hook has a row (the generated
+file was already dirty, so it was not touched); (c) a doctor or `npm run memento:*` check that
+hash-compares the copies against the canon, the equivalent of Rooms' CHECK 9; (d) the falsifier
+clock starts at the first Proportion session, not today.
+
+## 13. Slice 4 record (2026-09-06)
+
+**LANDED in the canon, for John's eyeball** (all three are canon prose; reversible by one revert).
+- `adoption/THE_ENFORCEMENT_SURFACE.md`: a fourth item under "what mechanisation has earned", "Pin
+  checks on delegation", with the incident, the workflow path and the kill condition; a paragraph
+  stating the allocation test (fit versus presence) as the line between this item and the dead
+  routing hook; a parenthesis on the "per-turn routing" prose item saying the LOOP stays prose and
+  the PIN is now gated.
+- `story/KILLED_MECHANISMS.md` §4: a distinction appended so the grave is not read as a ban, naming
+  the season in which it was, and the cost. §7 (the cross-estate refusal): a corollary that a grave
+  marker travels with its cause of death attached or it is over-honoured.
+- `framework/conventions/RESOURCE_ROUTING.md` rule 1: the mechanism pointer (tier map, gate,
+  generator, hash-checked copies), with the decision loop left as discipline.
+Nothing in the kill record was softened or removed; every addition is dated.
