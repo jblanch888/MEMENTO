@@ -41,7 +41,7 @@
   },
   "bindings": {
     "claude-code": {
-      "verified_against": "2.1.261",
+      "verified_against": "2.1.270",
       "ladder": ["fable", "opus", "sonnet", "haiku"],
       "inherits": ["fork"],
       "effort_levels": ["low", "medium", "high", "xhigh", "max"],
