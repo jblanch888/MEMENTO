@@ -23,8 +23,8 @@ status: live
 
 ## Next
 
-1. The User confirms the plan closed, or names what remains.
-2. On the User's push: tell build-protocols the canon commits are public so it can re-sync the explainer page.
+1. The User closed the plan ("finalised"), approved the note to build-protocols, and directed the STATUS.md reconciliation with origin and the push.
+2. Tell build-protocols on its thread once the commits are public, so it can re-sync the explainer page.
 
 ## Unwitnessed arms (the register is the source of truth)
 

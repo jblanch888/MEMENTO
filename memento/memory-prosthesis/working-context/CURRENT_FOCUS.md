@@ -13,7 +13,7 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 
 ## Active Playbook and plan
 
-PLANNING governs. **Plan:** `../evidence-archive/plan-canon-plain-language-2026-10-01.md`, the plain-language pass on the canon. All slices (0 to 4) are ruled by the User sentence by sentence and committed; the close-out record is written. **The plan closes on the User's confirmation (CD #2).** No other undertaking is active.
+None active. The plain-language pass (`../evidence-archive/plan-canon-plain-language-2026-10-01.md`) is CLOSED COMPLETE (the User, 2026-10-01). PLANNING governs the next undertaking when one begins.
 
 ## Current state
 
@@ -31,10 +31,8 @@ PLANNING governs. **Plan:** `../evidence-archive/plan-canon-plain-language-2026-
 
 ## Open with the User
 
-- **Confirm the plain-language plan closed**, or name what remains.
-- **The push.** It publishes the plain-language commits and the six September canon commits together, and must reconcile the User's web edit to STATUS.md on origin (`ca22cb8`). Build-protocols re-syncs the explainer page's quotes once the commits are public.
+- **Build-protocols** re-syncs the explainer page's quotes from the canon commits once they are public (derive publication from git).
 - **Six inherited adoption gaps** (plan, slice 4 record): SPIRIT.md's links after copying, pointing the agent at SPIRIT.md, STATUS in set-up step 3, the advance-build exception, the founding plan's timing, a link to the writing rules. Not taken up.
-- **GitHub repository description:** the plain version proposed in slice 1, for the User to set in the GitHub UI.
 - **Tier-map harness drift:** `tier-map-check.py --map framework/conventions/TIER_MAP.json` reported the CLI at 2.1.280 against a binding verified at 2.1.271; the live-dispatch witness is owed, then a canon edit of `verified_against`. The script's default `--map` path does not resolve in this repository.
 - **Spawn-tier eyeball items** (that plan's §15): the tier map's role efforts, the slice-4 canon passages, the register row.
 - **Untracked `framework/conventions/TIER_MAP.json.bak-20260919`:** redundant with history; deletion is his call.

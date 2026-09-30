@@ -4,11 +4,13 @@ type: plan
 date: 2026-10-01
 genre: build/change (3A) with a design/decision step (3C) as slice 0
 size: L (five slices; slice 3 splits in two)
-status: APPROVED (the User, 2026-10-01); all slices ruled and committed; close-out done; awaiting the User's confirmation to close
+status: COMPLETE (the User, 2026-10-01: "finalised")
 related: [CORE_DIRECTIVES, PLANNING_PLAYBOOK, KNOWLEDGE_ARCHIVE, plan-canon-rewrite-2026-07-20, plan-truth-and-presentation-2026-07-21]
 ---
 
 # Plan: a plain-language pass on the canon
+
+**CLOSED COMPLETE 2026-10-01** (the User: "finalised"). The User approved the note to build-protocols, directed the STATUS.md reconciliation and the push, and asked for the GitHub repository description to be set.
 
 **APPROVED 2026-10-01** (the User: "d1 yes d2 yes d3 yes d4 ok d5 yes. approve plan"). All five decisions ruled as proposed; see § Decisions for the User.
 
