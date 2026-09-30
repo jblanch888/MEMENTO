@@ -1,24 +1,24 @@
 ---
-description: current-session state snapshot for the MEMENTO estate — session-scoped only, replaced coherently per CD #11
+description: current-session state snapshot for the MEMENTO estate: session-scoped only, replaced coherently per CD #11
 type: working-context
-date: 2026-07-21
+date: 2026-10-01
 status: live
 ---
 
-# STATUS — sessions of 2026-07-20/21, closed by pre-compact
+# STATUS: session of 2026-10-01
 
-## Closed arcs (receipts in the evidence archive and git)
+## This session
 
-- **Canon rewrite R0–R6 COMPLETE and the repo PUBLISHED** under the User's gates and instructions (plans closed with ledgers; P2 ruled posture (i); publication-readiness memo carries the sweep receipts and the archive redaction).
-- **External review round 1 → truth-and-presentation pass** (closed plan `plan-truth-and-presentation-2026-07-21.md`): gate v2, spirit one-pager, evidentiary boundary, statuses trued, site metadata, settings untrack attempt.
-- **External re-review round 2:** identifier literals de-identified in place (history retains them; the User's standing recommendation is leave); settings untracked for real; working context redesigned to derive publication state from git; three lessons graduated to the knowledge archive this pre-compact.
-- **Two mechanisms live, earned by incident:** compact gate v2 and the pre-push confidentiality sweep (token list outside the repo). Register carries all arm statuses.
+- **Restart (CD #8)** run on the User's word. Working context found stale since 2026-07-21: the September spawn-tier commits never reached it, and the repo-topics item was already done (topics are set on GitHub). Both files replaced.
+- **Messaging role:** this session holds `memento/dev`. The build-protocols session (`build-protocols/agent`) sent the plain-language brief (thread `t-20261001-070811-b7cc82`); it re-syncs the explainer page's quotes once the User settles wording, and waits on a push for its links.
+- **Plan approved:** `plan-canon-plain-language-2026-10-01.md`, committed `57b8e01`. Slice 0 term table proposed in the plan.
+
+## Next
+
+1. Astra reviews the slice 0 term table (a new message, in a turn the User starts).
+2. Dispositions on Astra's findings; the User rules each row.
+3. Slice 1: README.md and docs/index.md, plus a proposed plain repo description for the User to set in the GitHub UI.
 
 ## Unwitnessed arms (the register is the source of truth)
 
-Compact-gate v2 allow-and-consume · compact-gate v2 block · sweep block-on-hit (live; bench-proven). The next `/compact` witnesses the first.
-
-## Waiting on the User
-
-- Repo topics retry in the GitHub UI (separator characters caused the earlier error).
-- Direction for the next undertaking; no plan is active.
+Compact-gate v2 allow-and-consume · compact-gate v2 block · sweep block-on-hit (live; bench-proven).
