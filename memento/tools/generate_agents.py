@@ -11,9 +11,18 @@ Usage:
                                            [--bodies memento/agents] [--check]
 --check writes nothing and exits 1 if any target differs from what would be generated (doctor use).
 """
-import argparse, json, os, sys
+import argparse, json, os, re, sys
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
+
+
+def confined(path):
+    """Resolve a path and refuse it unless it lies inside this repository (path-traversal guard)."""
+    real = os.path.realpath(path)
+    base = os.path.realpath(ROOT)
+    if real != base and not real.startswith(base + os.sep):
+        sys.exit(f"refusing a path outside the repository: {path}")
+    return real
 
 
 def split_frontmatter(text):
@@ -45,6 +54,7 @@ def main():
     ap.add_argument("--bodies", default=os.path.join(ROOT, "memento", "agents"))
     ap.add_argument("--check", action="store_true")
     a = ap.parse_args()
+    a.map, a.out, a.bodies = confined(a.map), confined(a.out), confined(a.bodies)
     with open(a.map) as f: raw = json.load(f)
     if raw.get("schema") != 2: sys.exit("tier map is not schema 2 (policy + bindings)")
     binding = os.environ.get("TIER_BINDING", "claude-code"); pol = raw["policy"]; b = raw["bindings"][binding]
@@ -55,11 +65,12 @@ def main():
         if eff and eff not in b.get("effort_levels", [eff]): sys.exit(f"role effort '{eff}' is not a level the {binding} binding knows")
     drift = 0
     for name, spec in m.get("agents", {}).items():
-        target = os.path.join(a.out, name + ".md")
+        if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", name): sys.exit(f"agent name is not a plain file name: {name!r}")
+        target = confined(os.path.join(a.out, name + ".md"))
         existing = open(target).read() if os.path.exists(target) else ""
         _, body = split_frontmatter(existing) if existing else ("", "")
         if not body.strip():
-            canon = os.path.join(a.bodies, name + ".md")
+            canon = confined(os.path.join(a.bodies, name + ".md"))
             body = split_frontmatter(open(canon).read())[1] if os.path.exists(canon) else f"You are {name}. (No charter body found; add one under {a.bodies}/{name}.md.)\n"
         out = render(name, spec, m, body)
         if out != existing:

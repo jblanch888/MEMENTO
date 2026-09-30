@@ -20,6 +20,15 @@ Test hooks: --models "a,b" replaces the Loki query; --cli-version replaces `clau
 import argparse, datetime as dt, json, os, re, subprocess, sys, time, urllib.parse, urllib.request
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
+
+
+def confined(path):
+    """Resolve a path and refuse it unless it lies inside this repository (path-traversal guard)."""
+    real = os.path.realpath(path)
+    base = os.path.realpath(ROOT)
+    if real != base and not real.startswith(base + os.sep):
+        sys.exit(f"refusing a path outside the repository: {path}")
+    return real
 LOKI = os.environ.get("MEMENTO_LOKI", "http://localhost:3100")
 
 
@@ -53,7 +62,8 @@ def main():
     ap.add_argument("--models", default=None, help="test hook: comma-separated model ids instead of Loki")
     ap.add_argument("--cli-version", default=None, help="test hook: version string instead of `claude --version`")
     a = ap.parse_args()
-    raw = json.load(open(a.map)); pol = raw["policy"]; b = raw["bindings"][a.binding]
+    with open(confined(a.map)) as f: raw = json.load(f)
+    pol = raw["policy"]; b = raw["bindings"][a.binding]
     ladder = b["ladder"]; owed = 0
 
     # 1. telemetry: unmapped families
