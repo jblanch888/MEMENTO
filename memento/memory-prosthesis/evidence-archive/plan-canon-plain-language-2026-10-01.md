@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-01
 genre: build/change (3A) with a design/decision step (3C) as slice 0
 size: L (five slices; slice 3 splits in two)
-status: APPROVED (the User, 2026-10-01); slices 0 to 2 and 3a closed; slice 3b next
+status: APPROVED (the User, 2026-10-01); slices 0 to 3 closed; slice 4 next
 related: [CORE_DIRECTIVES, PLANNING_PLAYBOOK, KNOWLEDGE_ARCHIVE, plan-canon-rewrite-2026-07-20, plan-truth-and-presentation-2026-07-21]
 ---
 
@@ -271,3 +271,15 @@ artefact; killed, kill; "earned its keep"; commit. CONFIRMED, with Astra's note:
 **Dispositions:** ACCEPTED: 1, 2, 4, 5, 6, 7, 8, 9, 10; inherited: the "thirteen days" quote corrected to the 2025 original's wording ("a complete organisational intelligence system built in 13 days", archive/canon-2025/README-2025.md:13); "the one permitted change" narrowed to "the one permitted addition to the body"; "the lasting tiers" narrowed to "active knowledge and institutional memory". REFUTED WITH EVIDENCE: 3 ("likely to span sessions" is the playbook's own definition of long-horizon, framework/playbooks/PLANNING_PLAYBOOK.md:23). NOTED, no change: upstream-ref freshness; `{#anchor}` renderer support.
 
 **Ruling:** RULED 2026-10-01, all 18 rows accepted as drafted, including the refutation of finding 3 (the User: "accept all").
+
+### Slice 3b: playbooks and conventions (RULED 2026-10-01: all rows accepted as drafted)
+
+**Files (9):** framework/playbooks/ README, PLANNING, GIT_OPERATIONS, INCREMENTAL_EXECUTION, KNOWLEDGE_GARDENING, DOCUMENTATION; framework/conventions/ TOOLING_TRIGGERS, ESTATE_SPINE, RESOURCE_ROUTING. Astra page items 22, 23, 25, 38. Old registry part names aligned (slice 2 debt paid within framework/; GRADUATION_LADDER's "Witness harness" is slice 4). Frontmatter keys unchanged; the ESTATE_SPINE YAML example's description line reworded (em dash; kept valid YAML).
+
+**Census (lines, before → after):** estate 45→4, receipt 16→0, earned 13→1, lineage 15→0, posture 17→1, teeth 5→0, bank 5→0, witness 7→1, spine 8→1. Remaining: ESTATE_SPINE names, frontmatter keys (`push-posture`, `earned-tooling`), "undertaking" in PLANNING (its defined term).
+
+**Review:** Astra, thread `t-20261001-085354-eccc84`, message `m-20261001-085553-69140c`. 9 findings, 2 optional points; judgement calls a to j answered, frontmatter checked in all nine files, no internal references to the renamed heading anchors found. Astra withdrew slice 3a finding 3 on the PLANNING §0 definition.
+
+**Dispositions:** ACCEPTED: 2 (my "as well as being summarised" had added a requirement; the source said "not just folded into conversation"), 3, 4 (the "on their own" loophole closed), 5, 6, 7, 8, 9 (source: "aliases hard-coded"); optional: public push "Publication, whose disclosure cannot reliably be reversed"; the inherited "commit messages move with the code" corrected. ACCEPTED IN PART: 1 (Astra's gloss taken, with "keep routine high-volume work off it" restored so the gloss carries the mandate's "not exhaust"). **For the User:** the routing law is kept as his verbatim mandate, contrast framing included; the plain-words gloss sits beneath it.
+
+**Ruling:** RULED 2026-10-01, all 13 rows accepted as drafted, the routing law kept verbatim with its plain-words gloss (the User: "approve all").
