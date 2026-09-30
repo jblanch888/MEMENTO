@@ -1,15 +1,15 @@
 # Playbooks
 
-Task-specific operating procedures. The core directives are always active; a playbook activates when its kind of work begins, usually named as the Active Playbook in the estate's working context.
+Steps to follow for particular kinds of work. The core directives always apply; a playbook applies when its kind of work begins, and the project's working context usually names it as the Active Playbook.
 
-| Playbook | One line |
+| Playbook | What it helps with |
 |---|---|
-| [`PLANNING_PLAYBOOK.md`](PLANNING_PLAYBOOK.md) | When a plan is required, what every plan carries, and the four genre annexes |
-| [`GIT_OPERATIONS_PLAYBOOK.md`](GIT_OPERATIONS_PLAYBOOK.md) | Branch discipline, push posture by repo class, commit standards, user-executed merges |
-| [`INCREMENTAL_EXECUTION_PLAYBOOK.md`](INCREMENTAL_EXECUTION_PLAYBOOK.md) | One logical change at a time, validation gates, the adversarial-review step, mandatory restore points |
-| [`KNOWLEDGE_GARDENING_PLAYBOOK.md`](KNOWLEDGE_GARDENING_PLAYBOOK.md) | Keeping the estate useful: tier boundaries, gardening triggers and actions, anti-patterns |
-| [`DOCUMENTATION_PLAYBOOK.md`](DOCUMENTATION_PLAYBOOK.md) | Documentation that integrates with the memory prosthesis; the frozen-memo convention |
+| [`PLANNING_PLAYBOOK.md`](PLANNING_PLAYBOOK.md) | **Planning:** when to write a plan, and what to include |
+| [`GIT_OPERATIONS_PLAYBOOK.md`](GIT_OPERATIONS_PLAYBOOK.md) | **Git operations:** use branches and commits, follow the push rule for each branch, and prepare merges for the User to carry out |
+| [`INCREMENTAL_EXECUTION_PLAYBOOK.md`](INCREMENTAL_EXECUTION_PLAYBOOK.md) | **Small implementation steps:** make one change, check it, get the required review and approval, then commit a version you can return to |
+| [`KNOWLEDGE_GARDENING_PLAYBOOK.md`](KNOWLEDGE_GARDENING_PLAYBOOK.md) | **Maintaining project knowledge:** keep the project's notes useful by removing stale information and organising lessons and evidence |
+| [`DOCUMENTATION_PLAYBOOK.md`](DOCUMENTATION_PLAYBOOK.md) | **Documentation:** write documents that fit the project's notes, and keep completed records unchanged, adding a dated correction when one is needed |
 
-All five are **2026 transplants**: field-hardened forms imported from live deployments, each with a provenance note recording source, date and fitting changes.
+All five are **2026 transplants**: forms tested in real projects and imported from them, each with a note recording its source, its date and the changes made to fit it.
 
-The 2025 canon carried three further playbooks (debugging, crisis mode, refactoring). No deployment used them this year, and the User ruled them vestiges at the 2026 rewrite: they are not part of the framework, and they remain only in the era exhibit at [`archive/canon-2025/`](../../archive/canon-2025/). Where their job still exists it moved form: evidence-first debugging lives on in the oldest deployment as a harness skill invoked from the incremental-execution law, and this framework treats that migration as the honest successor path.
+The 2025 version carried three further playbooks (debugging, crisis mode, refactoring). No project used them this year, and the User ruled them out of date at the 2026 rewrite: they are no longer part of the framework, and they remain only in the preserved [2025 version](../../archive/canon-2025/). Where their job still exists, it has changed form: evidence-first debugging continues in the original project as a skill in the harness, called from the incremental-execution playbook, and this framework treats that move as the honest successor.

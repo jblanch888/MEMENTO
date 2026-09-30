@@ -1,5 +1,5 @@
 ---
-description: governs documentation authoring and its integration with the memory prosthesis, including the frozen-memo convention (the pattern its origin estate calls its most-exercised)
+description: governs writing documentation and fitting it into the memory prosthesis, including the frozen-memo convention (the pattern the original project reports using most)
 type: governing
 date: 2026-07-20
 governs: [documentation, evidence-memos, cross-references]
@@ -9,75 +9,75 @@ status: template
 
 # DOCUMENTATION_PLAYBOOK.md
 
-> **Provenance:** the origin estate's 2026-07-04 form (a team-capacity roadmapping tool), whose §8 discovery-memo convention that estate calls its most-exercised pattern. Commit-level receipts live in the deployments' private histories. Fitting changes on this import: the discovery-memo convention generalised to the frozen-memo convention covering all substantive memo types; host product examples removed; the pre-compact section reduced to a pointer (CD #9 owns it); phrasing fitted to the canon's writing rules.
+> **Where this comes from:** the original project's 2026-07-04 form (a roadmapping tool for team capacity), whose §8 convention for discovery records is, by that project's account, the pattern it uses most. The commit-level evidence is in the projects' private histories. Changes on this import: the discovery-record convention widened into the frozen-memo convention, which covers every substantial kind of record; examples from the project's own product removed; the pre-compact section cut to a pointer (CD #9 owns it); phrasing fitted to this repository's writing rules.
 
-**Objective:** Create and update clear, accurate documentation that integrates with the Memento knowledge system.
+**Objective:** create and update clear, accurate documentation that fits into the project's Memento files.
 
 ---
 
 ## 1. Style Adherence
 
-**Rule:** Follow [your language standard and the User's writing rules] (CD #5) and the estate's formatting standards: markdown with anchor links (`{#section-name}`), code examples with language specification, consistent emphasis (**bold** for importance, *italic* for terms).
+**Rule:** Follow [your language standard and the User's writing rules] (CD #5) and the project's formatting standards: Markdown with anchor links (`{#section-name}`), code examples that name their language, consistent emphasis (**bold** for importance, *italic* for terms).
 
 ---
 
 ## 2. Purposeful Updates
 
-**Rule:** State `DOC_PURPOSE: [e.g. update STATUS with slice completion]` at the beginning of documentation work. Categories: progress update · knowledge capture · process documentation · architecture documentation.
+**Rule:** State `DOC_PURPOSE: [e.g. update STATUS with slice completion]` at the start of documentation work. Categories: progress update · knowledge capture · process documentation · architecture documentation.
 
 ---
 
 ## 3. Knowledge Capture Integration
 
-**Rule:** If documenting new patterns or lessons, propose graduation explicitly: `KNOWLEDGE_CAPTURE_PROPOSAL: Add [summary] to institutional-memory/KNOWLEDGE_ARCHIVE.md#[section]`. Triggers: novel problem solutions · new development patterns · architectural decisions · anti-patterns identified · debugging procedures refined.
+**Rule:** When documenting new patterns or lessons, propose adding them to institutional memory explicitly: `KNOWLEDGE_CAPTURE_PROPOSAL: Add [summary] to institutional-memory/KNOWLEDGE_ARCHIVE.md#[section]`. Triggers: solutions to new problems · new development patterns · architectural decisions · anti-patterns identified · debugging procedures refined.
 
 ---
 
 ## 4. Cross-Referencing
 
-**Rule:** Link to relevant estate documents and sections: playbooks by name and anchor, the knowledge archive for durable patterns, working context for the current task, the evidence archive for history. Maintain navigation paths across memory tiers. Avoid hard-coding implementation file paths and line numbers in estate docs; those belong in code comments or commit messages, where they move with the code.
+**Rule:** Link to the relevant Memento documents and sections: playbooks by name and anchor, the knowledge archive for lasting patterns, the working context for the current task, the evidence archive for history. Keep the paths between memory tiers navigable. Avoid hard-coding paths and line numbers for implementation files (code, prompts, configuration, schemas) in Memento documents; those belong in code comments, which move with the code, or in commit messages, which record them at that point in history.
 
 ---
 
 ## 5. Pre-Compact Documentation
 
-**Rule:** Pre-compact consolidation (learnings review, working-context reset, status finalisation) is owned by CD #9; this playbook adds only that all pre-compact drafts are presented for the User's review before any write.
+**Rule:** CD #9 owns pre-compact consolidation (reviewing the session's lessons, resetting the working context, finalising the status). This playbook adds one thing: all pre-compact drafts are presented for the User's review before any write.
 
 ---
 
-## 6. Estate Hygiene Compliance
+## 6. Keeping the Memento Files Tidy
 
-All documentation work respects the estate's attention architecture. These rules prevent the bloat and stale-state problems that degrade agent effectiveness over time.
+All documentation work respects how the Memento files are arranged to fit in the assistant's limited context. These rules prevent the bloat and stale state that make agents less effective over time.
 
-- **Working context updates:** session-focused only. No implementation history, no completed-slice detail, no accumulating lists of past work. If it's done, move it out.
-- **Knowledge graduation:** abstract patterns only. Extract the reusable principle, discard the session specifics.
-- **Status documentation:** current state and next actions only. STATUS.md tells an agent what is true *now*.
-- **Cross-reference integrity:** maintain navigation paths during any content moves. Moving a file without updating its inbound links creates a silent failure.
+- **Working context updates:** this session only. No implementation history, no detail of finished slices, no growing lists of past work. If it is done, move it out.
+- **Lessons for institutional memory:** general patterns only. Extract the reusable principle, and leave the session's specifics behind.
+- **Status documentation:** the current state and next actions only. STATUS.md tells an agent what is true *now*.
+- **Links kept intact:** keep the paths between documents working whenever content moves. Moving a file without updating the links to it creates a silent failure.
 
 ## 7. Documentation Quality Standards
 
-Use as a checklist when creating or reviewing estate documentation:
+Use this as a checklist when creating or reviewing Memento documents:
 
-- **Behavioural requirements:** does the document specify what to do and when? Clear triggers ("do X when Y") outperform vague guidance ("consider X").
-- **Decision points:** are triggers and choice criteria explicit? An agent should know when a rule applies without interpreting ambiguous conditions.
-- **Cognitive load:** is the document scannable? Progressive disclosure beats wall-of-text. If an agent needs 80 lines to find the current task, the document is too long.
-- **Tier separation:** procedural guidance in protocols, evidence in the archive, current state in working-context.
+- **Behavioural requirements:** does the document say what to do and when? Clear triggers ("do X when Y") work better than vague guidance ("consider X").
+- **Decision points:** are the triggers and the criteria for choosing explicit? An agent should know when a rule applies without having to interpret ambiguous conditions.
+- **Load on the reader:** can the document be scanned? Summary first, detail below, works better than a wall of text. If an agent needs 80 lines to find the current task, the document is too long.
+- **Tier separation:** procedures in the protocols, evidence in the archive, the current state in the working context.
 
 ## 8. The Frozen-Memo Convention {#frozen-memo-convention}
 
-**Rule:** Every session of substance — a discovery, an investigation, a design decision, a completed slice — banks a dated memo in `../../memory-prosthesis/evidence-archive/{type}-{topic}-{YYYY-MM-DD}.md`. Durable insights graduate from the memo into the appropriate active-knowledge or institutional-memory document. **The memo itself stays frozen** as evidence of how the insight was reached; it is never rewritten as understanding matures. New sessions produce new memos that reference earlier ones.
+**Rule:** Every substantial session (a discovery, an investigation, a design decision, a completed slice) saves a dated record in `../../memory-prosthesis/evidence-archive/{type}-{topic}-{YYYY-MM-DD}.md`. Lasting insights are proposed for the right active-knowledge or institutional-memory document, following the selection and approval rules for that tier. **The record itself stays as written**, as evidence of how the insight was reached, and it is left unrewritten as understanding changes. New sessions produce new records that refer to earlier ones.
 
-**Why this exists:** insights that emerge mid-conversation (reframings, corrections, market evidence, decision rationale) evaporate on context compaction if not captured. The convention was established in the origin estate in May 2026 when a discovery session surfaced three insights that materially reshaped product direction, and it became that estate's most-exercised pattern.
+**Why this exists:** insights that emerge in the middle of a conversation (reframings, corrections, market evidence, the reasons for decisions) are lost at compaction unless they are written down. The convention began in the original project in May 2026, when a discovery session produced three insights that substantially changed the product's direction, and it became the pattern that project uses most.
 
-**Memo spine** (fit to the memo's type): header (date, mode, active playbooks) · the question and the prior held coming in · approach and why · what emerged · options considered and rejected · the decision and reasoning · evidence anchors · open questions and next steps · status (open / converged / superseded).
+**Sections of a record** (fitted to its type): header (date, mode, active playbooks) · the question, and the view held going in · the approach, and why · what emerged · the options considered and rejected · the decision and the reasoning · pointers to the evidence · open questions and next steps · status (open / converged / superseded).
 
-**Graduation rule:** durable insights → active knowledge · time-bound facts → working context · derived work items → the backlog, cross-referenced to the memo. An ERRATUM note may be ADDED to a frozen memo when a claim in it is later disproven (so the error cannot be re-inherited); that is the one permitted touch.
+**Where insights go:** lasting insights → active knowledge · facts tied to the current moment → working context · work items that follow from it → the backlog, cross-referenced to the record. An ERRATUM note may be ADDED to a saved record when a claim in it is later disproved (so no one inherits the error); that is the one permitted addition to the body.
 
 ---
 
 ## Additional Guidelines
 
-- **Current-focus integration:** documentation work aligns with the current task and success criteria.
-- **User validation:** significant documentation changes are presented for review: "Documentation updated for [X]. Please review and confirm accuracy."
-- **Version control:** documentation follows the same commit standards as code (`docs(scope): …`), with related changes grouped.
-- **Maintenance:** keep documentation current with reality; remove outdated information promptly; update cross-references when structure changes.
+- **Current focus:** documentation work supports the current task and its success criteria.
+- **User check:** significant documentation changes are presented for review: "Documentation updated for [X]. Please review and confirm accuracy."
+- **Version control:** documentation follows the same commit standards as code (`docs(scope): …`), with related changes grouped together.
+- **Maintenance:** keep documentation in line with reality; remove outdated information promptly; update cross-references when the structure changes.
