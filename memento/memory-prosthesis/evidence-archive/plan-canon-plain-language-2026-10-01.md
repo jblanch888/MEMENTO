@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-01
 genre: build/change (3A) with a design/decision step (3C) as slice 0
 size: L (five slices; slice 3 splits in two)
-status: APPROVED (the User, 2026-10-01); slices 0 to 2 closed; slice 3 next
+status: APPROVED (the User, 2026-10-01); slices 0 to 2 and 3a closed; slice 3b next
 related: [CORE_DIRECTIVES, PLANNING_PLAYBOOK, KNOWLEDGE_ARCHIVE, plan-canon-rewrite-2026-07-20, plan-truth-and-presentation-2026-07-21]
 ---
 
@@ -259,3 +259,15 @@ artefact; killed, kill; "earned its keep"; commit. CONFIRMED, with Astra's note:
 - Superlatives ("clearest statement", "matured fastest", "most valuable teaching material") kept as the author's own judgements, as Astra noted.
 
 **Ruling:** RULED 2026-10-01, all 15 rows accepted as drafted (the User: "approve all").
+
+### Slice 3a: the framework templates (RULED 2026-10-01: all rows accepted as drafted)
+
+**Files (11):** framework/README.md (above the glossary), directives/CORE_DIRECTIVES_TEMPLATE.md, memory-prosthesis/README.md, the four tier READMEs, CURRENT_FOCUS_TEMPLATE, STATUS_TEMPLATE, KNOWLEDGE_ARCHIVE_TEMPLATE, KNOWLEDGE_ARCHIVE_MATURE_EXAMPLE. Astra page items 9, 10, 19 to 21. D2 applied: every formal directive heading unchanged, with an "*In plain words: ...*" line beneath. Frontmatter keys and tool-read values unchanged; knowledge-archive anchors unchanged.
+
+**Census (lines, before → after, all 11 files):** estate 25→5, receipt 15→1, earned 11→0, graduat- 18→1, canon 10→1, lineage 11→0, bank 9→0, spine 6→2, svelte 2→0, extant 2→0, recital 2→0. Remaining hits: file names (ESTATE_SPINE.md), the formal heading "User Sovereignty & Validation" and its `governs:` key, glossary names, one anchor.
+
+**Review:** Astra, thread `t-20261001-084359-4f5965`, message `m-20261001-084545-6050b2`. 10 sentence findings, 5 inherited points; judgement calls a to j all confirmed, including byte-for-byte heading and frontmatter checks.
+
+**Dispositions:** ACCEPTED: 1, 2, 4, 5, 6, 7, 8, 9, 10; inherited: the "thirteen days" quote corrected to the 2025 original's wording ("a complete organisational intelligence system built in 13 days", archive/canon-2025/README-2025.md:13); "the one permitted change" narrowed to "the one permitted addition to the body"; "the lasting tiers" narrowed to "active knowledge and institutional memory". REFUTED WITH EVIDENCE: 3 ("likely to span sessions" is the playbook's own definition of long-horizon, framework/playbooks/PLANNING_PLAYBOOK.md:23). NOTED, no change: upstream-ref freshness; `{#anchor}` renderer support.
+
+**Ruling:** RULED 2026-10-01, all 18 rows accepted as drafted, including the refutation of finding 3 (the User: "accept all").
