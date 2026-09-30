@@ -35,4 +35,5 @@ None active. The plain-language pass (`../evidence-archive/plan-canon-plain-lang
 - **Six inherited adoption gaps** (plan, slice 4 record): SPIRIT.md's links after copying, pointing the agent at SPIRIT.md, STATUS in set-up step 3, the advance-build exception, the founding plan's timing, a link to the writing rules. Not taken up.
 - **Tier-map harness drift:** `tier-map-check.py --map framework/conventions/TIER_MAP.json` reported the CLI at 2.1.280 against a binding verified at 2.1.271; the live-dispatch witness is owed, then a canon edit of `verified_against`. The script's default `--map` path does not resolve in this repository.
 - **Spawn-tier eyeball items** (that plan's §15): the tier map's role efforts, the slice-4 canon passages, the register row.
-- **Untracked `framework/conventions/TIER_MAP.json.bak-20260919`:** redundant with history; deletion is his call.
+- **Tool copies in Rooms and Proportion:** `generate_agents.py` and `tier-map-check.py` changed here (`1addabb`); the copies there need refreshing.
+- **Untracked leftovers:** `.tmp-agents-after/` and `framework/conventions/TIER_MAP.json.bak-20260919`; deletion is his call.
