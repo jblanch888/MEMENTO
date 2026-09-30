@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-01
 genre: build/change (3A) with a design/decision step (3C) as slice 0
 size: L (five slices; slice 3 splits in two)
-status: APPROVED (the User, 2026-10-01); slice 0 closed (term table ruled); slice 1 in progress
+status: APPROVED (the User, 2026-10-01); slices 0 and 1 closed; slice 2 next
 related: [CORE_DIRECTIVES, PLANNING_PLAYBOOK, KNOWLEDGE_ARCHIVE, plan-canon-rewrite-2026-07-20, plan-truth-and-presentation-2026-07-21]
 ---
 
@@ -228,3 +228,21 @@ artefact; killed, kill; "earned its keep"; commit. CONFIRMED, with Astra's note:
 #### The User's ruling
 
 **RULED 2026-10-01: all 43 rows accepted as revised** (the User: "accept all"). Slice 0 CLOSED. Slice 1 opens.
+
+### Slice 1: the front door (RULED 2026-10-01: all rows accepted as drafted)
+
+**Files:** README.md, docs/index.md, docs/_config.yml (site description), framework/README.md (the D4 glossary section only; the rest of that file is slice 3). The glossary landed in this slice so the front door's links resolve.
+
+**Review:** Astra, thread `t-20261001-075225-100f13`, message `m-20261001-080839-20d49a`. 15 sentence findings (S1-01 to S1-15), 3 inherited issues, glossary polish. Sources checked first-hand: CORE_DIRECTIVES_TEMPLATE.md:48 (private backup pushes may be free) and the CD numbering (sovereignty is CD #2), THE_ENFORCEMENT_SURFACE.md:26 and :30, THE_STORY.md:33 (the audit covered the three living projects), GETTING_STARTED.md (no time promise). All support the findings. S1-10 caught a balanced antithesis this session's own CD #5 check had missed.
+
+**Dispositions:** ACCEPTED: S1-02, 03, 05, 07, 08, 10, 11, 12, 13, 14, 15; inherited "in an afternoon"; glossary CD #8 label, undertaking row, clickable links. ACCEPTED IN PART:
+- S1-01: Astra's two-sentence opening taken; "consistently across months and hundreds of sessions" kept, since it carries the framework's thesis.
+- S1-04: the false condition removed and Astra's first sentence taken; the second sentence keeps the old point that conduct matters ("a well-kept record of careless work still leaves the project damaged"), because Astra's "works with those records" narrows the protocols to record-keeping.
+- S1-06: scoped to "the three projects still using it", per THE_STORY.md:33; linked to the story's audit section.
+- S1-09: "does not reliably carry memory from one session to the next" keeps the design reason Astra's wording dropped, without the universal claim.
+- Inherited "Nobody has watched one develop a product for eight months": recast as "AI agents can now work on their own for hours. Building a real product takes months…", keeping the hours-to-months hook without the unsupported universal. **Flagged to the User as a taste call:** it is his public thesis line.
+- Inherited closing metaphor: Astra's "whose new memories fade" set aside (it changes the metaphor); "cannot form new long-term memories and whose performance varies from day to day" removes the contrast frame instead.
+
+**Census (in-scope terms, lines before and after):** README estate 2→0, receipt 7→0, lineage 1→0, epoch 3→0, witness 1→0, sovereign 2→0, apparatus 1→0, in the field 1→0, meta-framework 1→0; docs/index the same pattern. Remaining hits are names (memory prosthesis, falsifiable governance, organ registry, graduation ladder) and file paths (`archive/canon-2025/`, `EPOCHS.md`).
+
+**Ruling:** RULED 2026-10-01, all 22 rows accepted as drafted, including row 2 (the hours-to-months opening). The User: "review-memento-slice-1-2026-10-01.md - accept all", then, asked whether that meant Astra's wording verbatim or the table with its partial acceptances, chose the table as drafted.
