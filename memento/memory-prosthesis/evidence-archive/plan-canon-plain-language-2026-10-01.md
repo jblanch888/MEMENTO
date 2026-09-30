@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-01
 genre: build/change (3A) with a design/decision step (3C) as slice 0
 size: L (five slices; slice 3 splits in two)
-status: APPROVED (the User, 2026-10-01); slices 0 and 1 closed; slice 2 next
+status: APPROVED (the User, 2026-10-01); slices 0 to 2 closed; slice 3 next
 related: [CORE_DIRECTIVES, PLANNING_PLAYBOOK, KNOWLEDGE_ARCHIVE, plan-canon-rewrite-2026-07-20, plan-truth-and-presentation-2026-07-21]
 ---
 
@@ -246,3 +246,16 @@ artefact; killed, kill; "earned its keep"; commit. CONFIRMED, with Astra's note:
 **Census (in-scope terms, lines before and after):** README estate 2→0, receipt 7→0, lineage 1→0, epoch 3→0, witness 1→0, sovereign 2→0, apparatus 1→0, in the field 1→0, meta-framework 1→0; docs/index the same pattern. Remaining hits are names (memory prosthesis, falsifiable governance, organ registry, graduation ladder) and file paths (`archive/canon-2025/`, `EPOCHS.md`).
 
 **Ruling:** RULED 2026-10-01, all 22 rows accepted as drafted, including row 2 (the hours-to-months opening). The User: "review-memento-slice-1-2026-10-01.md - accept all", then, asked whether that meant Astra's wording verbatim or the table with its partial acceptances, chose the table as drafted.
+
+### Slice 2: the story (RULED 2026-10-01: all rows accepted as drafted)
+
+**Files:** story/THE_STORY.md, EPOCHS.md, KILLED_MECHANISMS.md, ORGAN_REGISTRY.md. Astra page items 26 and 34 to 39. Every killed-mechanism entry now leads with its facts; lessons are case-specific; old entry names kept in italics for traceability. Eight registry part names made plain; "Evidence constitution" and "Doctor health checks" kept (directive and tool names). **Owed to slice 3:** align the framework files that use the old part names (DOCUMENTATION_PLAYBOOK "Knowledge graduation", GRADUATION_LADDER "Witness harness", TOOLING_TRIGGERS and others "Earned-tooling").
+
+**Review:** Astra, thread `t-20261001-083418-365aa7`, message `m-20261001-083551-ddc1cf` (the messaging server was disconnected mid-slice and reconnected by the User). 16 sentence findings, 5 coverage notes. Checked against the old text: "gates the PRESENCE" is enforcement (finding 8); "git state" covers uncommitted changes (6, 11); the old workstream claim named business workstreams (14).
+
+**Dispositions:** ACCEPTED: 1, 3, 4, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16; coverage notes on EPOCHS:3, KILLED:37 (narrowed to "at least one other project"), THE_STORY:17 (sentence deleted), glossary cross-link in the registry. ACCEPTED IN PART:
+- 2: Astra's "Governance measures need to be checked against what happens in the work" shifts the lesson; kept closer to the source as "a measure of governance is no substitute for governance".
+- 5 and 9: the lesson now requires recording whether each control ran *and did its job*, every time, and checking that each expected run happened. Astra's "independent check" and "a record outside the control itself" are set aside: the sources require an unconditional record and do not require independence.
+- Superlatives ("clearest statement", "matured fastest", "most valuable teaching material") kept as the author's own judgements, as Astra noted.
+
+**Ruling:** RULED 2026-10-01, all 15 rows accepted as drafted (the User: "approve all").
