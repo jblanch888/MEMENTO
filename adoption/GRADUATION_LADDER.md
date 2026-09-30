@@ -1,30 +1,30 @@
 # The Graduation Ladder
 
-How to adopt a governance framework without being crushed by it: start with the spirit, earn the apparatus, and let each rung be demanded by real weight before it is installed. A working complex system grows from a working simpler one (Gall's Law); the lineage applied that law to the framework itself, and then watched the ladder demonstrate itself in the field.
+How to adopt a governance framework without being crushed by it: start with the core practices, add the full set of files, procedures and tools as the work needs them, and take each step only when the real weight of the work demands it. A working complex system grows from a working simpler one (Gall's Law). The projects where Memento developed applied that law to the framework itself, and then watched the ladder play out in practice.
 
-## Rung 1 — the spirit
+## Rung 1: the core practices (the spirit)
 
-Adopt the disciplines in a page or two inside the project itself, with none of the apparatus: problem-first framing, a human gate on completion (nothing is done until the human says so), pre-registered falsifiers for anything you intend to trust, evidence grading (a claim is a claim until receipted), shadow-run before displacing anything that works, and coherent replacement of working state. A ready-to-copy page is provided: [`THE_SPIRIT.md`](THE_SPIRIT.md).
+Adopt the practices in a page or two inside the project itself, without the full set of files, procedures and tools: framing the work around the problem, the human's approval on completion (nothing is done until the human says so), a failure criterion written down in advance for anything you intend to rely on, grading evidence (a claim stays a claim until evidence supports it), running a new approach in test mode alongside anything that works before replacing it, and rewriting the working notes as a whole. A page ready to copy is provided: [`THE_SPIRIT.md`](THE_SPIRIT.md).
 
-This rung is a real operating mode with a dated exhibit. One 2026 endeavour (a multi-person workstream memory system) began under an explicit ruling: the disciplines adopted in-directory, the apparatus declined by name (no tiers, no memo archive, no hooks), and the graduation path written down the same day, on the theory that the thin thing grows into the structured thing only when its own weight demands it.
+This step is a real way of working, with a dated example. One project started in 2026 (a shared memory system for a team's business workstreams) began under an explicit decision: the practices adopted inside its own directory, the fuller structure declined by name (no tiers, no archive of records, no hooks), and the path to the next steps written down the same day, on the view that the light version grows into the structured one only when its own weight demands it.
 
-## Rung 2 — the estate
+## Rung 2: the full Memento files (the estate)
 
-Found `memento/` inside the repo: the directive set fitted from the 14-form template, the four memory-prosthesis tiers, spine frontmatter from birth, playbooks activated by kind of work, dated frozen memos as the evidence trail, and the pre-compact and restart protocols in behavioural form.
+Set up `memento/` inside the repository: core directives fitted from the 14-directive template, the four memory-prosthesis tiers, frontmatter on every file from the start, playbooks that apply by kind of work, dated records kept as written as the trail of evidence, and the pre-compact and restart protocols followed by discipline.
 
-Exhibits, each a different honest path onto this rung:
+Examples, each a different honest route onto this step:
 
-- The spirit-first endeavour above **earned this rung in five days.** The "spirit, not structure" ruling is dated 2026-06-22, during its discovery phase; on 2026-06-27 the endeavour founded a full estate in a day. The honest record, told in [the story](../story/THE_STORY.md), is that the graduation-path text and the apparatus entered the repository together in its first commit, the text carrying the days-earlier decision that the apparatus would be earned. Prediction and fulfilment arrived hand in hand.
-- A second deployment (an organisational cartography instrument) founded at this rung **on day one by deliberate choice**, importing a sibling estate's fitted forms with provenance notes, with health tooling installed at founding by its owner's explicit revision.
-- The estate governing this repository was founded at this rung and runs it as written: gates, frozen memos, earned tooling.
+- The practices-first project above **reached this step in five days.** Its "spirit, not structure" decision is dated 2026-06-22, during its discovery phase; on 2026-06-27 it set up its full Memento files in a single day. The honest record, told in [the story](../story/THE_STORY.md), is that the text describing the gradual path and the fuller structure entered the repository together, in its first commit, with the text carrying the decision, made days earlier, that the fuller structure would be added only as needed. Prediction and fulfilment arrived together.
+- A second project (a tool for mapping an organisation) started on this step **on its first day, by deliberate choice**, importing another project's fitted documents with notes on where each came from, and with health-check tools installed at the start because its owner explicitly revised the plan to include them.
+- The Memento files governing this repository were set up on this step and run it as written: approval steps, dated records kept as written, and tools added on evidence.
 
-## Rung 3 — mechanised governance
+## Rung 3: automated checks (mechanised governance)
 
-Hooks, gates, telemetry, witness harnesses, a validation ledger. The rung with teeth, and the rung whose price of admission is the kill discipline: every mechanism carries a pre-registered falsifier, an unconditional witness that it actually runs, and a documented death if it fails. The oldest deployment lives here, with a hook suite, fire logs, dashboards, and a ledger of honest verdicts; the killed-mechanism roll this canon publishes is largely its produce.
+Hooks, approval checks, logs of what runs, test harnesses, a validation ledger. This step adds automated enforcement, and the price of entry is the practice of removing what fails: every tool carries a failure criterion written down in advance, a record of every run, whatever the outcome, and a recorded removal, with the reason, if it fails. The original project works at this step, with a set of hooks, logs of every run, dashboards and a ledger of honest verdicts; most of the [killed mechanisms](../story/KILLED_MECHANISMS.md) this repository publishes come from it.
 
 ## Rules of the ladder
 
-- **Weight earns the climb.** Named triggers, observed in the field: state lost at a context reset that mattered; the same lesson relearned twice; an unreviewed claim relied on; concurrent threads contaminating each other's state. When a trigger fires, take the next rung; until then, stay put.
-- **The ladder runs both ways.** Mechanisms descend to prose when they fail their falsifiers; the [killed-mechanism roll](../story/KILLED_MECHANISMS.md) is the record of descents, and it holds some of the lineage's most valuable lessons.
-- **Skipping rungs buys theatre.** The lineage's ledger shows what happens to mechanisms installed without a felt need: an approval gate approved 154 times out of 154, an injector that never fired live in its whole life. Both are in the roll.
-- **Each rung seeds the next.** The spirit page becomes the founding directive set; the estate's registered tooling triggers become the mechanisation plan. Nothing is thrown away by climbing.
+- **The weight of the work decides when to climb.** Triggers seen in real projects: state lost at a context reset that mattered; the same lesson learned twice; a claim relied on without review; parallel threads of work getting into each other's state. When a trigger occurs, take the next step; until then, stay where you are.
+- **The ladder runs both ways.** Automated controls go back to written guidance when they meet their failure criteria; the list of [killed mechanisms](../story/KILLED_MECHANISMS.md) records those steps down, and holds some of the most valuable lessons from the projects.
+- **Add controls when evidence shows they are needed, and check what protection they provide.** The projects' ledger shows controls installed without a demonstrated need: an approval prompt approved 154 times out of 154, and a tool that never delivered anything in its whole life. Both are in the list of killed mechanisms.
+- **Each step prepares the next.** The one-page practices become the founding core directives; the recorded tool triggers of the full Memento files become the plan for automation. Nothing is thrown away by climbing.
