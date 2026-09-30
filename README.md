@@ -1,52 +1,58 @@
 # MEMENTO
 
-**A meta-framework for long-running AI-assisted development. It lives inside the repository of the product it governs, and it has always had two arms: a memory prosthesis, which carries truth between sessions, and operational protocols, which govern conduct within them.**
+**Memento keeps project notes, evidence and working rules in your repository. They help an AI assistant continue work consistently across months and hundreds of sessions.**
 
-An AI agent working autonomously for eight hours is impressive. Nobody has watched one develop a product for eight months. Once real work stretches across months and hundreds of separate agent sessions, a different set of problems takes over:
+It has two parts: the *memory prosthesis*, saved notes and evidence the assistant reads to pick up where earlier sessions left off, and the *operational protocols*, rules for how the assistant works during each session.
 
-- Which source represents the current truth?
+AI agents can now work on their own for hours. Building a real product takes months and hundreds of separate sessions, and work at that length brings a different set of problems:
+
+- Which account of the project's current state can we rely on?
 - Which earlier decisions still stand, and why did the architecture change?
 - What has already been tried and rejected?
-- What did the user actually validate, and what merely *looks* finished?
-- What happens when a confident agent inherits only part of that history?
+- What did you actually check and accept, and what only *looks* finished?
+- What happens when a confident assistant inherits only part of that history?
 
-Individual sessions can each feel like progress while the product quietly loses coherence between them. Memento is the system around the agents, and its two arms divide the work:
+Each session can feel productive while the project drifts: earlier decisions are forgotten, parts stop fitting together, and solved problems return. Memento gives the assistant two kinds of support:
 
-- **The memory prosthesis** carries current state and accumulated evidence between sessions, preserves the reasons behind decisions, and recovers safely after context loss: tiered externalised memory for a collaborator that cannot form its own.
-- **The protocols** govern how each session behaves while it runs: the human's sovereignty over what counts as done, evidence before claims, structured planning before consequential work, incremental execution with validation gates, investigation separated from implementation, and hard limits on what an agent may change without approval.
+- **The memory prosthesis** records the current project state, the reasons behind decisions and the supporting evidence, so the assistant can use them when a session starts or its conversation context is lost. It is organised in four tiers, from short notes on the current task to an archive of dated records.
+- **The operational protocols** set out how the assistant works. You decide the scope and the quality, and work counts as finished when you confirm it. Claims come with evidence. Work that is large, likely to span sessions, has a complicated sequence of steps or has consequential effects starts with a saved plan, which you approve before implementation. Changes happen in small steps, each checked before the next. Investigating a problem stays separate from changing the code. Some actions need your approval first.
 
-Continuity is the headline problem, but conduct is half the answer: a perfectly remembered session that behaved badly is preserved damage. The goal is not autonomy for its own sake. The goal is that **each bounded session adds something useful without damaging what the previous hundred sessions established.**
+Records of earlier decisions, results and mistakes help the assistant continue the project. Memento also sets rules for how the assistant works, because a well-kept record of careless work still leaves the project damaged. The goal: **each session adds something useful while preserving what the previous hundred sessions established.**
 
-## Born in the field, receipted
+Memento's own terms, such as *memory prosthesis* and *working context*, are explained in [Words used here](framework/README.md#words-used-here).
 
-Memento was not designed on a whiteboard. It crystallised in June 2025 inside the repository of a working product (a team-capacity roadmapping tool) and by that August was running in three production implementations, including a client-programme knowledge assistant that became its most mature early deployment. The public canon was abstracted from those three that same month. Then the field kept moving while the canon stood still: the original repository (still running the framework today) and two further estates founded in 2026 (a multi-person workstream memory system and an organisational cartography instrument) carried the framework into a genuinely new era: **falsifiable governance**. Enforcement mechanisms that carry pre-registered kill conditions, telemetry that witnesses whether they actually fire, and a documented roll of the mechanisms that died.
+## Developed in real projects
 
-This repository is the mid-2026 form of the framework, rebuilt from a receipted audit of that whole lineage. The August 2025 canon is preserved verbatim in [`archive/canon-2025/`](archive/canon-2025/): the framework's own continuity discipline, applied to itself.
+Memento took shape in June 2025 inside the repository of a working product (a roadmapping tool for team capacity). By August it was in use in three production projects, including a knowledge assistant for a client programme, which became its most mature early use. The first published version was drawn from those three projects that same month.
 
-One boundary stated plainly: the receipts trace to the deployments' private histories. The claims are genuinely receipted for the author, and an outside reader cannot independently reproduce them; what is published in full is the audit's method, its verdicts, and what it corrected.
+That published version then stayed almost unchanged for roughly nine months while the projects kept developing. The original repository, which still uses Memento today, and two further projects started in 2026 (a shared memory system for a team's business workstreams, and a tool for mapping an organisation) developed the approach the history calls **falsifiable governance**. It requires a failure criterion and a review date for each control, evidence of whether the control runs and works as intended, and a recorded reason when a control is removed.
+
+This repository holds the mid-2026 version, rebuilt from an audit that traced Memento's 32 parts through the three projects still using it ([how the audit worked](story/THE_STORY.md#the-rewrite-you-are-reading)). The 2025 version is preserved unchanged in [`archive/canon-2025/`](archive/canon-2025/): Memento keeps its own history the way it asks a project to keep one.
+
+One limit, stated plainly: the historical account draws on records in the projects' private repositories, which readers cannot inspect here. [The story](story/THE_STORY.md) and the [organ registry](story/ORGAN_REGISTRY.md) set out the audit's method, its conclusions and the claims it corrected.
 
 ## The repository
 
 | Where | What |
 |---|---|
-| [`story/`](story/) | The receipted narrative: the six epochs, the organ registry (32 traced mechanisms), and the killed-mechanism roll |
-| [`framework/`](framework/) | What an adopter installs: the directive template, playbooks, memory-prosthesis templates, conventions |
-| [`adoption/`](adoption/) | How to start, including the graduation ladder: begin with the spirit, earn the apparatus |
-| [`archive/canon-2025/`](archive/canon-2025/) | The Epoch 4 exhibit: the 2025 framework, preserved verbatim |
-| `memento/` | The live governance estate that produced this rewrite: the framework governing work on itself |
+| [`story/`](story/) | **History and lessons:** how Memento developed in six stages, a catalogue of its 32 parts and where each came from, and the controls that were tried and removed |
+| [`framework/`](framework/) | **Use it in a project:** templates for the rules, the playbooks, the four tiers of project notes, and the conventions that connect them |
+| [`adoption/`](adoption/) | **How to start:** begin with a few practices and add structure as the project needs it |
+| [`archive/canon-2025/`](archive/canon-2025/) | **The original 2025 version,** preserved unchanged |
+| `memento/` | **Memento's own project notes:** the rules and records used to maintain this repository, including this rewrite |
 
 ## The shape of the framework
 
-- **A memory prosthesis.** Four tiers of externalised memory, from a working context measured in lines to an immutable evidence archive of dated, receipted memos. The agent is treated as what it is: amnesiac between sessions, and never the same collaborator twice within them (sometimes a savant, sometimes a journeyman, sometimes a narrowly focused apprentice). The prosthesis handles the amnesia; the protocols handle the variability.
-- **Core directives.** A minimal set of always-active rules; the human's sovereignty over "done" is the first of them.
-- **Playbooks.** Situational procedure, selected per task through the working context.
-- **Gates and receipts.** Irreversible operations belong to the human; claims trace to evidence; delegated work is a claim until verified.
-- **Falsifiable governance.** The new epoch's rule: a mechanism that cannot show receipts of working is retired, and its death is documented. See `story/KILLED_MECHANISMS.md`.
+- **The memory prosthesis.** Four tiers of saved notes, from short working-context files for the current task to an evidence archive of dated records whose bodies are kept as written. The assistant does not reliably carry memory from one session to the next, and its performance can vary between tasks; together, the notes and the working rules help it continue the project consistently.
+- **Core directives.** A short set of rules that always apply, including your authority to decide what counts as done.
+- **Playbooks.** Steps for particular kinds of work, such as planning, committing or maintaining the project notes. The working context names the playbook for the current task.
+- **Approval and evidence.** Actions that publish or deploy the project need your approval; claims come with evidence; work handed to another agent is checked before anyone relies on it.
+- **Falsifiable governance.** The rule of the current stage: before relying on a control, record the result that would show it is failing its purpose and when it will be checked; retire the control when that result occurs, and record the lesson. See [`story/KILLED_MECHANISMS.md`](story/KILLED_MECHANISMS.md).
 
-Start with `adoption/GETTING_STARTED.md`. You do not adopt all of this on day one; the framework itself didn't. That's the graduation ladder (`adoption/GRADUATION_LADDER.md`).
+Start with [`adoption/GETTING_STARTED.md`](adoption/GETTING_STARTED.md). You do not need all of this on day one; Memento itself grew into it. The [graduation ladder](adoption/GRADUATION_LADDER.md) sets out the steps.
 
 ---
 
-*The working metaphor since the beginning: collaborating with a gifted colleague who cannot form new long-term memories, and who is not the same colleague every day (savant one day, journeyman the next, narrowly focused apprentice the day after). The framework is the system of notes, protocols and gates that makes that collaboration compound instead of decay. It is named accordingly.*
+*The working picture since the beginning: collaborating with a gifted colleague who cannot form new long-term memories and whose performance varies from day to day (sometimes a savant, sometimes a journeyman, sometimes a narrowly focused apprentice). Memento is the system of notes, rules and approval steps that lets that collaboration build on itself over time. The name comes from the film* Memento, *whose hero cannot form new memories and works from the notes he leaves himself.*
 
 **Licence:** MIT.

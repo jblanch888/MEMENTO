@@ -1,7 +1,7 @@
 title: MEMENTO
 description: >-
-  A meta-framework for long-running AI-assisted development: continuity across
-  hundreds of agent sessions, governed by evidence, gates and falsifiable
-  mechanisms. Born in the field in 2025, rebuilt from a receipted audit of its
-  live deployments in 2026.
+  Memento keeps an AI assistant's project knowledge and working rules inside
+  your repository, to help work that runs across months and hundreds of
+  sessions stay consistent. Developed in real projects from 2025; rebuilt in
+  2026 from an audit of those projects.
 lang: en-GB
