@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-01
 genre: build/change (3A) with a design/decision step (3C) as slice 0
 size: L (five slices; slice 3 splits in two)
-status: APPROVED (the User, 2026-10-01); slice 0 in progress
+status: APPROVED (the User, 2026-10-01); slice 0 closed (term table ruled); slice 1 in progress
 related: [CORE_DIRECTIVES, PLANNING_PLAYBOOK, KNOWLEDGE_ARCHIVE, plan-canon-rewrite-2026-07-20, plan-truth-and-presentation-2026-07-21]
 ---
 
@@ -57,7 +57,7 @@ WIP of one; each slice closes on the User's wording gate and its commit before t
 
 ### Slice 0: vocabulary ruling and working context (S, 3C)
 
-1. Draft a term table from the census: every internal term with a proposed disposition.
+1. Draft a term table from the census: every term the vocabulary search finds, with a proposed disposition. Terms the search misses surface in each slice's prose review. File paths, field keys and tokens a tool reads stay verbatim and are counted separately.
    - **KEEP AS NAME:** a real concept or a folder name. It stays and gets a plain explanation where it first appears in each entry-point file (for example working context, playbook, the four tier names, core directives).
    - **REPLACE:** a plain word chosen in context (for example estate, receipted, banked, graduated, apparatus, surface set). Starting point: the brief's glossary.
    - **KEEP:** already plain in its uses.
@@ -150,63 +150,81 @@ L overall. Slice 0: S (additive table plus housekeeping). Slice 1: M (two files,
 
 ## Approval gate
 
-Awaiting user approval of this plan before detailed design or implementation.
+Awaiting user approval of this plan before detailed design or implementation. **Satisfied 2026-10-01** (the User's approval is quoted under the title).
 
 ## Slice records
 
-### Slice 0: the term table (PROPOSED 2026-10-01, awaiting Astra's review and the User's ruling)
+### Slice 0: the term table (RULED 2026-10-01: all rows accepted)
 
-Drawn from the census and a usage sample of every term across the 34 in-scope files. The plain wording is picked for each sentence in context; the "usually becomes" column is a starting point for that choice. A search-and-replace is off the table. **Entry-point files** (where a KEEP AS NAME term gets its first-use explanation): README.md, docs/index.md, framework/README.md, story/THE_STORY.md, adoption/GETTING_STARTED.md; the D4 glossary in framework/README.md holds them all in one place.
+**Review:** Astra, thread `t-20261001-072651-ce74d1`, message `m-20261001-072853-2a95f8` (held as C7, released by the User). 21 rows questioned, 9 missing terms, 3 coverage notes. Every cited source line was checked first-hand: THE_SPIRIT.md:12, KILLED_MECHANISMS.md:43, CORE_DIRECTIVES_TEMPLATE.md:90-96 and :135, the evidence-archive README:8, CURRENT_FOCUS_TEMPLATE.md:24, TOOLING_TRIGGERS.md:29, PLANNING_PLAYBOOK.md:112, ESTATE_SPINE.md's naming and index sections. All support the findings. Astra did not reproduce the census counts; they stand as this session's own.
 
-**KEEP AS NAME** (a real concept, a file or folder name, or a defined term; stays, explained where first used)
+**Dispositions:** ACCEPTED (Astra's wording adopted, trimmed where marked); ACCEPTED IN PART (the part set aside is named, with its reason); CONFIRMED (Astra agreed the row as drafted). No finding was refuted outright.
 
-| term | plain explanation on first use |
-|---|---|
-| memory prosthesis (folder `memory-prosthesis/`) | the project's saved notes and evidence, which the assistant reads to pick up where earlier sessions left off |
-| working context | the short notes on the current goal, task, status and open questions; read first in every session |
-| active knowledge | project rules and reference material used across tasks |
-| institutional memory | lessons from past work, selected because they will help future work |
-| evidence archive | dated records of plans, findings, decisions and handovers, with their supporting evidence |
-| core directives (and "CD #n") | the short set of rules that applies throughout the work; "CD #8" is core directive 8, given its plain label on first use |
-| playbook | steps for a particular kind of work, such as planning or committing |
-| compaction | the harness shortening a long conversation to free space; some detail is lost, and the saved notes remain |
-| falsifiable governance, falsifier | each control comes with evidence, set in advance, that would show it is failing to help; when that evidence appears, the control is removed and the lesson recorded |
-| epoch | one of the six stages of Memento's history (story/ only) |
-| organ registry (file `ORGAN_REGISTRY.md`) | the catalogue of Memento's 32 parts and where each came from; "organ" in running prose becomes "part" |
-| killed mechanisms (file `KILLED_MECHANISMS.md`) | controls that were tried and removed, with the reason each was removed |
-| graduation ladder (file `GRADUATION_LADDER.md`) | the steps for adopting Memento gradually, adding structure as a project needs it |
-| estate spine (file `ESTATE_SPINE.md`) | the standard layout and metadata for a project's Memento files |
-| adversarial review | a second reviewer asked to look for faults in the work before it is presented |
-| undertaking (PLANNING_PLAYBOOK only, where it is defined) | a piece of work of any kind; elsewhere it becomes "piece of work" |
-| the User (templates only) | the person in charge of the project; prose for a reader uses "you" or "the person in charge" |
+**How the table is used:** wording is chosen per sentence in context, starting from the column below. Search-and-replace is off the table. File paths, frontmatter keys and status tokens a tool reads stay verbatim. Every in-scope file explains a named term where the file first uses it, with a short inline gloss and a link to the D4 glossary in `framework/README.md` (Astra's coverage note 1, accepted in part: the link keeps the glosses short).
 
-**REPLACE** (house vocabulary; the plain wording is chosen in context)
+#### KEEP AS NAME (stays; explained where each file first uses it)
 
-| term | lines, files | usually becomes |
-|---|---|---|
-| estate | 124, 29 | a project using Memento; the project's Memento files; this repository's own Memento files (when it means this one) |
-| canon | 50, 23 | the published framework; this repository; "the 2025 version" for the 2025 canon |
-| lineage | 48, 19 | the earlier projects; Memento's history |
-| receipt, receipted | 63, 24 | evidence; supporting records; the source; "supported by evidence". "refuted with a receipt" becomes "rejected, with the evidence" |
-| bank, banked | 17, 10 | save, saved, record |
-| graduate (a lesson) | 41, 20 | move a lesson up a tier; select and keep a lesson. The template field "Graduated YYYY-MM-DD" becomes "Added YYYY-MM-DD" |
-| earned, earn the apparatus | 43, 24 | added once real use showed it was needed. "Earned its keep" is an ordinary idiom and stays |
-| teeth (enforcement) | in sample | automated enforcement |
-| witness (noun or verb) | 22, 12 | a record that the control ran; "witness plan" becomes "how we confirm it runs" |
-| posture | 20, 7 | approach. "Assume-failure posture": the reviewer starts by assuming the work is wrong. "Push posture by repo class": when to push, by type of repository |
-| theatre | 11, 9 | a check that looks like protection and changes nothing (said concretely for each case) |
-| apparatus | 9, 6 | the full set of files, procedures and tools |
-| sovereignty, sovereign, sole arbiter | 15, 12 | you decide (reader prose); "the User decides the scope, whether the work is acceptable, and when it is finished" (templates) |
-| seam | 2, 2 | the boundary between the published framework and a repository's own Memento files |
-| recital | 4, 3 | having the assistant repeat the rules back |
-| surface set | 1, 1 | the rules, current task and status files |
-| extant artefact, extant plan | 4, 4 | a saved plan file (the MUST stays) |
-| governance charter | 1, 1 | a set of governance instructions |
-| host knowledge | 1, 1 | project-specific knowledge |
-| in the field, born in the field | 6, 5 | in real projects; "developed in real projects" |
-| meta-framework | 3, 3 | said as what it does (the opening definition in slice 1) |
-| spine (outside the file name) | about 15 | the sections every plan carries (PLANNING); the standard metadata (governing docs) |
+| # | term | first-use explanation | disposition |
+|---|---|---|---|
+| 1 | memory prosthesis | the project's saved notes and evidence, organised into four tiers by how often the assistant needs them, so work can continue across sessions | ACCEPTED |
+| 2 | working context | two short files, CURRENT_FOCUS.md and STATUS.md, holding the current task, constraints, next actions, session progress and questions awaiting the User; read at the start of every session | ACCEPTED |
+| 3 | active knowledge | project rules and reference material used across tasks | CONFIRMED |
+| 4 | institutional memory | lessons from past work, selected because they will help future work | CONFIRMED |
+| 5 | evidence archive | dated records of plans, findings, decisions and handovers, with their supporting evidence | CONFIRMED |
+| 6 | core directives, CD #n | the short set of rules that applies throughout the work; "CD #8" is core directive 8, given its plain label on first use | CONFIRMED |
+| 7 | playbook | steps for a particular kind of work, such as planning or committing | CONFIRMED |
+| 8 | operational protocols (new) | rules for how the assistant works: the core directives, which always apply, and the playbooks, for particular tasks | ACCEPTED |
+| 9 | harness (new) | the application that runs the assistant and its tools | ACCEPTED |
+| 10 | compaction | the AI application condensing the conversation to free space; details can be lost, and notes saved in project files remain available | ACCEPTED |
+| 11 | falsifiable governance | kept as the name of the current era (headings, story/). Running prose explains it: before relying on a control, write down the result that would show it is failing its purpose and when you will check; retire the control when that result appears, and record the lesson | ACCEPTED |
+| 12 | falsifier (in running prose) | becomes "failure criterion": the result, set in advance, that would show a control is failing its purpose | ACCEPTED |
+| 13 | adversarial review | an independent reviewer starts by assuming the work has faults and tests its claims against evidence before the work is presented to the User. The operative rule keeps the main agent's explicit disposition of each finding | ACCEPTED |
+| 14 | undertaking (PLANNING only) | a piece of work; a saved plan is required when it is large, likely to span sessions, has a complicated sequence of steps, or has consequential or hard-to-reverse effects. Elsewhere it becomes "piece of work" | ACCEPTED |
+| 15 | epoch; organ registry; killed mechanisms; graduation ladder; estate spine | as drafted (epoch: one of the six stages of Memento's history; organ registry: the catalogue of Memento's 32 parts and where each came from, with "organ" in running prose becoming "part"; killed mechanisms: controls tried and removed, with the reason; graduation ladder: the steps for adopting Memento gradually; estate spine: see row 33). The counts (six, 32) are re-checked against their sources when their text changes | CONFIRMED |
+| 16 | the User (templates only) | the person in charge of the project; prose for a reader uses "you" | CONFIRMED |
+| 17 | frontmatter (moved from KEEP) | the structured fields at the start of a file | ACCEPTED |
+| 18 | hook (moved from KEEP) | code the AI application runs at a specified event | ACCEPTED |
+| 19 | governing document (new) | a document that sets rules for work on the project | ACCEPTED |
+| 20 | knowledge gardening (new; playbook title) | maintaining project notes and rules when evidence shows they are becoming hard to use; the procedure states its approval requirements | ACCEPTED |
+| 21 | routing (new; RESOURCE_ROUTING) | the rule for choosing who or what performs each part of the work. The model tiers (frontier, smart, recon) are explained separately as capability and cost categories, with their assignment rules kept | ACCEPTED |
 
-**KEEP** (ordinary English in its uses): artefact; killed, kill; "earned its keep"; frontmatter, commit, hook (standard software terms, per Astra's reader profile).
+#### REPLACE (house vocabulary; plain wording chosen in context)
 
-**Also in scope of slice 1, outside the repository:** the GitHub repo description ("A meta-framework for long-running AI-assisted development: continuity across hundreds of agent sessions, governed by evidence, gates and falsifiable mechanisms.") carries the same opening problem. A plain version will be proposed with slice 1 for the User to set in the GitHub UI (repository settings are his), alongside `docs/_config.yml`'s description.
+| # | term | lines, files | usually becomes | disposition |
+|---|---|---|---|---|
+| 22 | estate | 124, 29 | a project using Memento; the project's Memento files; this repository's own Memento files (when it means this one) | CONFIRMED |
+| 23 | canon | 50, 23 | the Memento framework and its documentation; "published" only where publication is established; "the preserved 2025 version" for `archive/canon-2025/`; "this repository" only when the sentence means the whole repository | ACCEPTED IN PART: Astra's "shared" dropped as vague |
+| 24 | lineage | 48, 19 | the projects where Memento developed; the history of this rule and its adaptations; Memento's history | ACCEPTED |
+| 25 | receipt, receipted | 63, 24 | supporting record, source reference or test evidence, saying what it supports. Reviewer findings: "shown to be incorrect, with supporting evidence" | ACCEPTED |
+| 26 | bank, banked | 17, 10 | save, saved, record | CONFIRMED |
+| 27 | graduate (a lesson) | 41, 20 | add a supported, reusable lesson to institutional memory once the User approves it. Template field: "Added to institutional memory YYYY-MM-DD". Other movements name their destination | ACCEPTED |
+| 28 | earned, earn | 43, 24 | tooling: add the tool when its recorded trigger occurs; history: name the incident or scale threshold that justified it; planning: specify later steps as earlier work supplies the information. Stated founding exceptions stay. "Earned its keep" stays | ACCEPTED |
+| 29 | teeth | in sample | automated checks or blocking controls; each status stated separately (installed, observed running, blocking behaviour unverified) as the evidence supports; status tokens a tool reads stay | ACCEPTED |
+| 30 | witness | 22, 12 | execution: a record showing whether the control ran; behaviour: a test and its recorded result; witness plan: how execution and the required behaviour will be checked and recorded. The unconditional-observation requirement and every unverified status stay | ACCEPTED |
+| 31 | theatre | 11, 9 | the observed failure, as the evidence permits: a check whose claimed protection was unsupported; an approval step accepted on every recorded occasion; a mechanism that ran only in test mode | ACCEPTED |
+| 32 | sovereignty, sovereign, sole arbiter | 15, 12 | templates: "The User alone decides the task's scope and quality and confirms when it is complete. The assistant describes work as done, complete or fixed only after the User explicitly confirms it. Any clear affirmative counts." Reader prose: "you decide the scope and the quality, and work counts as finished when you confirm it" | ACCEPTED IN PART: Astra's wording taken for templates; reader prose keeps the second person with the completion gate intact |
+| 33 | spine | about 15 | PLANNING: the required plan sections; ESTATE_SPINE: file metadata, naming rules and generated indexes | ACCEPTED |
+| 34 | seam | 2, 2 | the specific boundary in each use: "the boundary between shared framework files and this project's own Memento files", or "the boundary of this task's authorised changes" | ACCEPTED |
+| 35 | surface set | 1, 1 | CORE_DIRECTIVES.md, CURRENT_FOCUS.md and STATUS.md: the rules, current task and session status | ACCEPTED |
+| 36 | extant artefact, extant plan | 4, 4 | a plan saved as `plan-*.md` in the evidence archive before work begins; the operative rule keeps the User's explicit approval before implementation | ACCEPTED |
+| 37 | governance charter | 1, 1 | instructions for how the assistant must work on the project | ACCEPTED |
+| 38 | gate (new) | new | a condition that must be met before work proceeds, naming the condition and who or what checks it | ACCEPTED |
+| 39 | one-way door (new) | new | an action that is irreversible or costly to undo, with the actual action named | ACCEPTED |
+| 40 | shadow mode, shadow-run (new) | new | running the mechanism in test mode, recording what it would do while live work stays unaffected; each historical use checked against the actual mechanism | ACCEPTED |
+| 41 | frozen memo (new) | new | a dated record whose body is kept as written; its status field is updated when its status changes | ACCEPTED |
+| 42 | validation ledger; kill condition (new) | new | ledger: a record of each control's planned test, review date, evidence and verdict; kill condition: the result, set in advance, that requires a control to be retired | ACCEPTED |
+| 43 | posture; apparatus; recital; host knowledge; in the field; meta-framework | as drafted | posture: approach; apparatus: the full set of files, procedures and tools; recital: having the assistant repeat the rules back; host knowledge: project-specific knowledge; in the field: in real projects; meta-framework: said as what it does, in slice 1's opening | CONFIRMED |
+
+#### KEEP (ordinary English in its uses)
+
+artefact; killed, kill; "earned its keep"; commit. CONFIRMED, with Astra's note: the surrounding sentence names the item created, the mechanism removed or the value measured.
+
+#### Coverage notes
+
+1. First-use explanations in every in-scope file: ACCEPTED IN PART (see "How the table is used").
+2. The census demonstrates the vocabulary search only: ACCEPTED. Slice 0 step 1 reworded; each slice's prose review catches what the search misses.
+3. The approval gate sentence read as open after approval: ACCEPTED. Marked satisfied.
+
+#### The User's ruling
+
+**RULED 2026-10-01: all 43 rows accepted as revised** (the User: "accept all"). Slice 0 CLOSED. Slice 1 opens.
