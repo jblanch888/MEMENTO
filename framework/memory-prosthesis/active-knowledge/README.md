@@ -1,17 +1,17 @@
 # Active Knowledge
 
-Frequent-reference material spanning sessions: the estate's governing documents and current principles. An agent descends here from working context when a decision needs grounding.
+Project rules and reference material used across tasks: the project's governing documents and current principles. After the working context, the assistant checks here before making a decision that needs grounding.
 
-## Typical contents (from the live deployments)
+## Typical contents (from the projects using Memento)
 
-- **CHARTER.md** — what the endeavour is, its stances, its open pivots.
-- **RESOURCE_ROUTING.md** — the routing law (template in `framework/conventions/`).
-- **ESTATE_SPINE.md** — frontmatter and naming convention (template in `framework/conventions/`).
-- **BACKLOG.md** — prioritised work and the NOTE_FOR_LATER collection.
-- **Principles and system-context files** — architecture principles, domain overviews.
+- **CHARTER.md**: what the work is for, its standing positions, and the changes of direction still open.
+- **RESOURCE_ROUTING.md**: the routing rule, for choosing who or what does each part of the work (template in `framework/conventions/`).
+- **ESTATE_SPINE.md**: the file metadata and naming conventions (template in `framework/conventions/`).
+- **BACKLOG.md**: prioritised work, and the NOTE_FOR_LATER collection.
+- **Principles and system-context files**: architecture principles and overviews of the domain.
 
 ## Disciplines
 
-- **Svelte.** Larger than working context, and every file still scannable in one read. When a file grows past that, graduate the durable pattern down a tier and cut.
-- **Governing docs carry spine frontmatter** with `governs:` and `last_verified:` fields, so staleness is visible and a governance map can be generated when tooling is earned.
-- **The context-plunge pattern.** Where a host system is complex enough that post-compact sessions fumble, write a rapid-context file for that domain: system purpose in a sentence, core architecture scannable, key operations with concrete examples. The cost of one page here repays itself every restart.
+- **Compact.** Larger than the working context, with every file still readable in one pass. When a file grows too large to scan, propose its reusable lessons for institutional memory through CD #9, and shorten the file while preserving the rules and evidence the project still needs.
+- **Governing documents carry the standard metadata**, including `governs:` and `last_verified:` fields, so staleness is visible and a governance map can be generated when a recorded need justifies building the tool.
+- **The context-plunge pattern.** Where a system is complex enough that sessions after a compaction struggle with it, write a quick-context file for that area: the system's purpose in a sentence, the core architecture in a readable outline, and the key operations with concrete examples. One page here pays for itself at every restart.

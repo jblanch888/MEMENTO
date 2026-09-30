@@ -1,17 +1,17 @@
 # Institutional Memory
 
-The durable-lesson tier: patterns that earned graduation and will be reused. One core file, `KNOWLEDGE_ARCHIVE.md`, searchable and anchor-navigated.
+The tier for lasting lessons: patterns selected from past work because they will be reused. One core file, `KNOWLEDGE_ARCHIVE.md`, searchable and navigated by anchors.
 
-## Graduation (the only way in)
+## Selection (the only way in)
 
-Entries arrive through the pre-compact consolidation gate (CD #9): **at most three per session**, each justifying long-term reuse, presented for the User's review before writing. Session detail stays out; the entry carries the reusable principle and the receipt that earned it.
+Entries arrive through the pre-compact step (CD #9): **at most three per session**, each justified by its long-term reuse and presented for the User's review before it is written. Session detail stays out; the entry carries the reusable principle and the evidence behind it.
 
 ## Conventions
 
 - **Anchors:** every entry gets `{#kebab-case}` so other documents can cite it precisely (`KNOWLEDGE_ARCHIVE.md#anchor-name`).
-- **Entry shape:** a dated headline claim, the evidence that earned it, and what it changes about future behaviour. See [`KNOWLEDGE_ARCHIVE_TEMPLATE.md`](KNOWLEDGE_ARCHIVE_TEMPLATE.md) and [`KNOWLEDGE_ARCHIVE_MATURE_EXAMPLE.md`](KNOWLEDGE_ARCHIVE_MATURE_EXAMPLE.md).
-- **Categories emerge; they are not pre-built.** Start flat, add headings when a cluster is real.
+- **Entry shape:** a dated headline claim, the evidence behind it, and what it changes about future behaviour. See [`KNOWLEDGE_ARCHIVE_TEMPLATE.md`](KNOWLEDGE_ARCHIVE_TEMPLATE.md) and [`KNOWLEDGE_ARCHIVE_MATURE_EXAMPLE.md`](KNOWLEDGE_ARCHIVE_MATURE_EXAMPLE.md).
+- **Let categories emerge.** Start flat, and add headings when a real cluster appears.
 
 ## Stewardship
 
-This file is the estate's distilled judgement; poor stewardship turns it into noise. Gardening triggers (KNOWLEDGE_GARDENING_PLAYBOOK): session-specific contamination in entries, duplicated or contradicting guidance, broken anchors, degraded search. Prune to the principle, repair the links, and never let an entry's claim outlive its receipt.
+This file holds the project's distilled judgement, and poor upkeep turns it into noise. Triggers for tidying it (KNOWLEDGE_GARDENING_PLAYBOOK): session-specific detail creeping into entries, duplicated or contradictory guidance, broken anchors, search getting worse. Cut each entry back to its principle, repair the links, and never let an entry's claim outlive its evidence.

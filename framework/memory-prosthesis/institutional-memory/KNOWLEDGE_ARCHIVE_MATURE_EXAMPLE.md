@@ -1,23 +1,23 @@
-# KNOWLEDGE_ARCHIVE — mature example
+# KNOWLEDGE_ARCHIVE: mature example
 
-A de-identified excerpt showing the entry form in use. These four entries are real lessons from the lineage, retold generically. Full receipts live in the deployments' private estates; the first three are summarised in this canon's killed-mechanism roll, and the fourth is receipted in the canon's own story (the archived 2025 claim and its correction in `story/THE_STORY.md` and `story/EPOCHS.md`).
+An excerpt, with identifying details removed, showing the entry form in use. These four entries are real lessons from the projects where Memento developed, retold in general terms. The full evidence is in the projects' private Memento files. The first three are summarised on this repository's [Killed mechanisms](../../../story/KILLED_MECHANISMS.md) page; the fourth is backed by this repository's own story (the archived 2025 claim and its correction, in `story/THE_STORY.md` and `story/EPOCHS.md`).
 
 ## Governance mechanisms
 
 ### Silence is not health {#silence-is-not-health}
 
-*(Graduated 2026-07.)* A charter-injection mechanism ran in shadow mode its entire life: roughly 450 shadow firings, zero live injections, behind an environment flag never set anywhere. Nothing noticed, because nothing was watching for its absence. Every mechanism needs an unconditional witness that it actually runs; a dead mechanism looks identical to a quiet one. Sharpens the earned-tooling register: every wired mechanism carries a witness plan.
+*(Added to institutional memory 2026-07.)* A tool meant to add governance instructions to sessions ran in test mode (shadow mode) its entire life: roughly 450 test runs and no real deliveries, because the setting that enabled delivery was never switched on anywhere. Nothing noticed, because nothing was checking that it delivered. Record whether each control ran and did its job, every time; a control that has stopped working otherwise looks exactly like one with nothing to report. Sharpens the register of tools added on evidence: every wired control carries a plan for how its running will be checked and recorded.
 
-### An always-approved gate governs nothing {#always-approved-gate}
+### Question an approval prompt that is never refused {#always-approved-gate}
 
-*(Graduated 2026-07.)* A commit-approval ask fired 154 times over thirty days and was approved 154 times. One hundred per cent approval means the gate is friction wearing the costume of enforcement; the deterministic checks beneath it were the real protective layer. Measure the refusal rate of any approval gate before crediting it with governance.
+*(Added to institutional memory 2026-07.)* A commit-approval prompt asked 154 times over thirty days and was approved all 154 times: it never blocked a commit. The automated checks beneath it were the real protection. Measure how often an approval prompt is refused before crediting it with governance.
 
-### Judgement-shaped rules resist mechanisation {#judgement-rules-resist-mechanisation}
+### Rules that need judgement are hard to automate {#judgement-rules-resist-mechanisation}
 
-*(Graduated 2026-06.)* Two independent attempts to mechanise judgement disciplines failed honestly: a per-turn routing meter counted tool calls when the discipline is about fit, and a working-context coherence check could not classify staleness, which is content-aware. Keep such rules as prose discipline with a human backstop, and let machines enforce only what machines can actually decide. A bad meter is worse than no meter.
+*(Added to institutional memory 2026-06.)* Two separate attempts to automate rules that need judgement failed, and were recorded honestly. A per-turn routing check counted tool calls, and a count cannot show whether the right worker handled each part. A working-context check could not decide what was stale, which needs an understanding of the content. Keep such rules as written discipline with a human as the backstop, and let machines enforce only what machines can actually decide. A misleading measure is worse than none.
 
 ## Evidence discipline
 
-### Published receipts can be inflated claims {#published-receipts-can-be-inflated}
+### A published claim can itself be inflated {#published-receipts-can-be-inflated}
 
-*(Graduated 2026-07.)* A canon's own past claim ("a production system in thirteen days") turned out to be promotional prose for what its author honestly recalls as a walking skeleton. A receipt that is itself marketing proves only that the claim was made. When quoting any published past claim, re-ground it with the human who was there before republishing.
+*(Added to institutional memory 2026-07.)* The 2025 version's own claim ("a complete organisational intelligence system built in 13 days") turned out to be promotional wording for what its author honestly recalls as a walking skeleton (a basic system working end to end, with most of the work still to do). A source that is itself marketing proves only that the claim was made. Before republishing any published past claim, check it with the person who was there.

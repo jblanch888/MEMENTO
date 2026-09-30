@@ -1,25 +1,25 @@
 ---
-description: current-session state snapshot — session-scoped only, replaced coherently per CD #11
+description: current-session snapshot; this session only, rewritten as a whole per CD #11
 type: working-context
 date: YYYY-MM-DD
 status: template   # becomes `live` on install
 ---
 
-# STATUS — session of [date]
+# STATUS: session of [date]
 
-## What this session did (commit ledger)
+## What this session did (commit record)
 
 - [Concrete outcome, with its commit hash where committed.]
-- [Rulings the User made this session, so the next session inherits them as facts.]
+- [Decisions the User made this session, so the next session inherits them as facts.]
 
 ## In progress
 
 [The live sub-task and its next step, if a task spans the session boundary.]
 
-## Tree state
+## Working tree state
 
-[What is committed, what is deliberately dirty, anything inherited that must not be touched.]
+[What is committed, what is deliberately left uncommitted, and anything inherited that must not be touched.]
 
 ## Waiting on the User
 
-- [Gates and decisions that block, and what each blocks.]
+- [Approvals and decisions that block work, and what each one blocks.]

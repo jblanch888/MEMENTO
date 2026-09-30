@@ -1,5 +1,5 @@
 ---
-description: active mission and task — working context, replaced coherently per CD #11
+description: active mission and task; working context, rewritten as a whole per CD #11
 type: working-context
 date: YYYY-MM-DD
 status: template   # becomes `live` on install
@@ -9,21 +9,21 @@ status: template   # becomes `live` on install
 
 ## Mission
 
-[The endeavour's standing objective, one short paragraph. Point at the charter or governing doc that owns the full statement.]
+[The work's standing objective, in one short paragraph. Point to the charter or governing document that holds the full statement.]
 
 ## Active Playbook
 
-[`../../protocols/playbooks/<PLAYBOOK>.md`, and the extant plan being executed: `../evidence-archive/plan-<topic>-<date>.md` (slice progress noted here).]
+[`../../protocols/playbooks/<PLAYBOOK>.md`, and the saved plan being carried out: `../evidence-archive/plan-<topic>-<date>.md` (note slice progress here).]
 
 ## Current task
 
-[The one thing in progress now: what it is, what done looks like, which gate it ends at. WIP of one.]
+[The one thing in progress now: what it is, what done looks like, and the required check or approval at its end. One task at a time.]
 
 ## Constraints
 
-- [The rules that bind this task specifically: seam or thread declarations, confidentiality gates, writing rules, sizing rules.]
-- [Keep only constraints an agent could otherwise miss; the directives do not need restating.]
+- [The rules that bind this task in particular: which boundary or thread the work may touch, confidentiality checks, writing rules, sizing rules.]
+- [Keep only constraints an agent could otherwise miss; the directives need no restating.]
 
 ## Open with the User
 
-- [Decisions awaiting the User, each with where its context lives.]
+- [Decisions awaiting the User, each with a pointer to where its context lives.]

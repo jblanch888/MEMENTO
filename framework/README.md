@@ -1,25 +1,25 @@
 # The framework
 
-This directory is what an adopter installs: the operational-protocol arm (directives and playbooks), the memory-prosthesis tier templates, and the conventions that hold both together.
+This directory holds what you install in a project: the operational protocols (core directives and playbooks), the templates for the four memory tiers, and the conventions that connect them. Memento's own terms are explained in [Words used here](#words-used-here) at the end of this page.
 
-**A note on paths:** relative paths inside these documents (`../../memory-prosthesis/…`, `../CORE_DIRECTIVES.md`) are written for the documents' installed locations in an estate (`memento/protocols/`, `memento/protocols/playbooks/`), not for their position in this directory. Install first, then follow the links.
+**A note on paths:** relative paths inside these documents (`../../memory-prosthesis/…`, `../CORE_DIRECTIVES.md`) are written for where the documents sit once installed in a project (`memento/protocols/`, `memento/protocols/playbooks/`), which differs from their place in this directory. Install first, then follow the links.
 
-Everything here is a **2026 transplant**: a field-hardened form imported from the framework's live deployments, carrying a provenance note that records the source estate (named generically), the source date, and the fitting changes made on import. These are the forms that survived a year of field evolution and the lineage's kill discipline. The 2025 canon documents that did not survive it were ruled vestiges and live only in the era exhibit at [`archive/canon-2025/`](../archive/canon-2025/).
+Everything here is a **2026 transplant**: a form tested in real projects and imported from them, with a note recording where it came from (the source project, named generically), the source date, and the changes made to fit it on import. These are the forms that survived a year of use in the projects and their practice of removing what fails. The 2025 documents that did not survive were ruled out of date and remain only in the preserved [2025 version](../archive/canon-2025/).
 
 ## Fitting
 
-Every deployment in the lineage fitted these documents to its host: renamed the referents, dropped inapplicable sections, and recorded the changes. The provenance notes on these files are worked examples of that practice. Copy the form, fit it to your product, and write your own fitting note; the note is what makes the next fitting auditable.
+Every project fitted these documents to itself: renamed the things they refer to, dropped the sections that did not apply, and recorded the changes. The notes on where each file came from are worked examples of that practice. Copy the form, fit it to your product, and write your own fitting note; the note is what lets the next person check how the document was fitted.
 
-On install, files take their conventional estate names and locations: `CORE_DIRECTIVES_TEMPLATE.md` becomes `memento/protocols/CORE_DIRECTIVES.md`, playbooks go to `memento/protocols/playbooks/`, and the conventions files usually live in `memento/memory-prosthesis/active-knowledge/`. The documents' internal cross-references assume those installed names.
+On install, files take their usual names and locations in a project: `CORE_DIRECTIVES_TEMPLATE.md` becomes `memento/protocols/CORE_DIRECTIVES.md`, playbooks go to `memento/protocols/playbooks/`, and the conventions files usually live in `memento/memory-prosthesis/active-knowledge/`. The documents' internal cross-references assume those installed names.
 
 ## Layout
 
 | Path | Contents |
 |---|---|
-| [`directives/`](directives/) | The 14-form core-directive template |
-| [`playbooks/`](playbooks/) | Planning, git operations, incremental execution, knowledge gardening, documentation |
-| [`conventions/`](conventions/) | The routing law, the estate spine (frontmatter, naming, derived indexes), and the earned-tooling register template |
-| [`memory-prosthesis/`](memory-prosthesis/) | The four-tier architecture: tier READMEs, working-context templates, knowledge-archive template and mature example, evidence-archive conventions |
+| [`directives/`](directives/) | The 14-directive core directives template |
+| [`playbooks/`](playbooks/) | Planning, git operations, small implementation steps (incremental execution), maintaining project notes (knowledge gardening), documentation |
+| [`conventions/`](conventions/) | The routing rule, the estate spine (file metadata, naming rules and generated indexes), and a template for the register of tools to add on evidence |
+| [`memory-prosthesis/`](memory-prosthesis/) | The four tiers: a README for each, working-context templates, a knowledge-archive template with a mature example, and the evidence-archive conventions |
 
 ## Words used here
 
