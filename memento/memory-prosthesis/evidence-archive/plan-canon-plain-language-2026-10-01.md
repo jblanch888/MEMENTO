@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-01
 genre: build/change (3A) with a design/decision step (3C) as slice 0
 size: L (five slices; slice 3 splits in two)
-status: APPROVED (the User, 2026-10-01); slices 0 to 3 closed; slice 4 next
+status: APPROVED (the User, 2026-10-01); all slices ruled and committed; close-out done; awaiting the User's confirmation to close
 related: [CORE_DIRECTIVES, PLANNING_PLAYBOOK, KNOWLEDGE_ARCHIVE, plan-canon-rewrite-2026-07-20, plan-truth-and-presentation-2026-07-21]
 ---
 
@@ -283,3 +283,29 @@ artefact; killed, kill; "earned its keep"; commit. CONFIRMED, with Astra's note:
 **Dispositions:** ACCEPTED: 2 (my "as well as being summarised" had added a requirement; the source said "not just folded into conversation"), 3, 4 (the "on their own" loophole closed), 5, 6, 7, 8, 9 (source: "aliases hard-coded"); optional: public push "Publication, whose disclosure cannot reliably be reversed"; the inherited "commit messages move with the code" corrected. ACCEPTED IN PART: 1 (Astra's gloss taken, with "keep routine high-volume work off it" restored so the gloss carries the mandate's "not exhaust"). **For the User:** the routing law is kept as his verbatim mandate, contrast framing included; the plain-words gloss sits beneath it.
 
 **Ruling:** RULED 2026-10-01, all 13 rows accepted as drafted, the routing law kept verbatim with its plain-words gloss (the User: "approve all").
+
+### Slice 4: the adoption path (RULED 2026-10-01: all rows accepted as drafted)
+
+**Files (5):** adoption/GETTING_STARTED, THE_SPIRIT, GRADUATION_LADDER, THE_ENFORCEMENT_SURFACE; CONTRIBUTING.md. Rung headings keep their old names in brackets. THE_SPIRIT's rules keep their force (Astra confirmed rules 1, 5, 6). Wording reused from rulings: sovereignty (row 32), failure criterion, the EPOCHS honest-status sentences, the slice-2 killed-mechanism examples. "In an afternoon" removed (no source).
+
+**Census (lines, before → after):** estate 12→2, receipt 12→0, earned 8→0, canon 5→0, lineage 8→0, witness 5→0, falsifi- 6→0, theatre 3→0, apparatus 5→0, sovereign 2→0. Remaining: names (graduation ladder, killed mechanisms, "(the estate)", estate spine).
+
+**Review:** Astra, thread `t-20261001-085957-038ecb`, message `m-20261001-090125-63de2e`. 8 findings, 6 inherited newcomer gaps; all relative file links in the five files resolve.
+
+**Dispositions:** ACCEPTED: 1 to 8 (4 removed an invented speed relationship, "as work speeds up"; 7 removed a blanket claim that contradicted the day-one Rung 2 example; 2 and 5 restore that the tier check blocks a launch). **Inherited gaps held for the User as follow-ups outside this pass** (they add content, beyond plain wording): THE_SPIRIT's relative links break once the page is copied alone; GETTING_STARTED does not tell the adopter to point the agent at SPIRIT.md; step 3 names CURRENT_FOCUS without STATUS; "build nothing until one occurs" omits the User-approved advance-build exception; the founding plan is described after installation; CONTRIBUTING names the writing rules without linking them.
+
+**Ruling:** RULED 2026-10-01, all 12 rows accepted as drafted (the User: "accept all"). The six inherited gaps stay open as follow-ups; the User has not taken them up.
+
+## Close-out (2026-10-01)
+
+**Canon commits (every sentence ruled by the User):** slice 1 `30d6e07` (README, docs/index, site description, glossary) · slice 2 `4e7065b` (story/) · slice 3a `65cae23` (framework templates) · slice 3b `c2f908d` (playbooks and conventions) · slice 4 `4064d19` (adoption/, CONTRIBUTING). Estate records: `57b8e01`, `fa07e7a`, `8495515`, `cfcea1a`, `71d1416`, `8f3fb6d`, `5cc47a2`, and this close-out.
+
+**Final census (34 in-scope files, lines, baseline `3d12138` → now):** estate 123→14, receipt 63→1, earned 39→3, graduat- 41→11, canon 50→8, lineage 48→0, prosthesis 29→28, epoch 27→18, witness 22→1, posture 20→1, falsifi- 20→6, artefact 19→4, bank 17→0, organ 17→19, sovereign 13→3, undertaking 12→9, theatre 11→2, apparatus 9→0.
+
+**Every remaining hit has a ruled disposition:** file and folder paths (`archive/canon-2025/`, `ESTATE_SPINE.md`, `memory-prosthesis/`); KEEP AS NAME terms (memory prosthesis, epoch, organ registry, graduation ladder, estate spine, falsifiable governance, undertaking in PLANNING); frontmatter keys a tool reads (`governs: [... sovereignty ...]`, `push-posture`, `earned-tooling`); the formal directive heading "User Sovereignty & Validation" (D2); the User's routing law, kept verbatim (slice 3b row 1); one knowledge-archive anchor; a tool file name (`agent-tier-gate-witness.sh`); and `framework/conventions/agents/*.md`, out of scope by plan. "Artefact" and "organ" in running text are KEEP rows.
+
+**Review record:** six Astra review rounds (slices 0, 1, 2, 3a, 3b and 4), every finding dispositioned in the slice records; one refutation with evidence (slice 3a finding 3, which Astra withdrew in slice 3b). Two lessons for the knowledge archive, proposed at the next pre-compact: (1) a plain-language pass is where overclaims enter, so a fidelity reviewer is worth more than a style reviewer; (2) the session's own contrast-frame check missed balanced antitheses the reviewer caught, so the check needs a second reader.
+
+**Process note:** the slice 3a canon commit's file list came from `git diff --name-only`, a list derived from working-tree state, against CD #10. The commit held exactly the slice's eleven files; later commits used explicit lists.
+
+**Open, for the User:** (a) the six inherited adoption gaps (slice 4 record), not taken up; (b) the push, which publishes these commits together with the six September canon commits and must reconcile the User's web edit `ca22cb8` to STATUS.md; (c) build-protocols re-syncs the explainer page's quotes once the commits are public; (d) the GitHub repository description, proposed in slice 1, set by the User in the GitHub UI.

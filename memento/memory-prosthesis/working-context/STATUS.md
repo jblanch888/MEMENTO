@@ -9,15 +9,22 @@ status: live
 
 ## This session
 
-- **Restart (CD #8)** run on the User's word. Working context found stale since 2026-07-21: the September spawn-tier commits never reached it, and the repo-topics item was already done (topics are set on GitHub). Both files replaced.
-- **Messaging role:** this session holds `memento/dev`. The build-protocols session (`build-protocols/agent`) sent the plain-language brief (thread `t-20261001-070811-b7cc82`); it re-syncs the explainer page's quotes once the User settles wording, and waits on a push for its links.
-- **Plan approved:** `plan-canon-plain-language-2026-10-01.md`, committed `57b8e01`. Slice 0 term table proposed in the plan.
+- **Restart (CD #8)** on the User's word; working context caught up with the September spawn-tier work.
+- **Messaging:** this session holds `memento/dev`. Build-protocols (`build-protocols/agent`) sent the brief that started the plain-language pass; Astra (`agent-messaging/astra-reviewer`) reviewed every slice. The messaging server disconnected once mid-slice and the User reconnected it.
+- **Plain-language pass, all slices ruled and committed:**
+  - slice 0, term table: `8495515` (estate);
+  - slice 1, front door: `30d6e07`;
+  - slice 2, story/: `4e7065b`;
+  - slice 3a, framework templates: `65cae23`;
+  - slice 3b, playbooks and conventions: `c2f908d`;
+  - slice 4, adoption/ and CONTRIBUTING: `4064d19`;
+  - slice records `cfcea1a`, `71d1416`, `8f3fb6d`, `5cc47a2`; plan `57b8e01`; close-out with this working-context update.
+- **Rulings the next session inherits as facts:** D1 to D5 as proposed; the 43-row term table; the routing law kept verbatim with a plain gloss; directive headings unchanged with a plain-words line beneath; registry parts renamed plainly (eight), "Evidence constitution" and "Doctor health checks" kept.
 
 ## Next
 
-1. Astra reviews the slice 0 term table (a new message, in a turn the User starts).
-2. Dispositions on Astra's findings; the User rules each row.
-3. Slice 1: README.md and docs/index.md, plus a proposed plain repo description for the User to set in the GitHub UI.
+1. The User confirms the plan closed, or names what remains.
+2. On the User's push: tell build-protocols the canon commits are public so it can re-sync the explainer page.
 
 ## Unwitnessed arms (the register is the source of truth)
 
