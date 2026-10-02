@@ -1,32 +1,22 @@
 ---
 description: current-session state snapshot for the MEMENTO estate: session-scoped only, replaced coherently per CD #11
 type: working-context
-date: 2026-10-01
+date: 2026-10-03
 status: live
 ---
 
-# STATUS: session of 2026-10-01
+# STATUS: session of 2026-10-03
 
 ## This session
 
-- **Restart (CD #8)** on the User's word; working context caught up with the September spawn-tier work.
-- **Messaging:** this session holds `memento/dev`. Build-protocols (`build-protocols/agent`) sent the brief that started the plain-language pass; Astra (`agent-messaging/astra-reviewer`) reviewed every slice. The messaging server disconnected once mid-slice and the User reconnected it.
-- **Plain-language pass, all slices ruled and committed:**
-  - slice 0, term table: `8495515` (estate);
-  - slice 1, front door: `30d6e07`;
-  - slice 2, story/: `4e7065b`;
-  - slice 3a, framework templates: `65cae23`;
-  - slice 3b, playbooks and conventions: `c2f908d`;
-  - slice 4, adoption/ and CONTRIBUTING: `4064d19`;
-  - slice records `cfcea1a`, `71d1416`, `8f3fb6d`, `5cc47a2`; plan `57b8e01`; close-out with this working-context update.
-- **Rulings the next session inherits as facts:** D1 to D5 as proposed; the 43-row term table; the routing law kept verbatim with a plain gloss; directive headings unchanged with a plain-words line beneath; registry parts renamed plainly (eight), "Evidence constitution" and "Doctor health checks" kept.
-
-- **After the plan closed (on the User's instructions):** the User's web edit to STATUS.md merged (`9e12a2e`); the GitHub repository description set to plain wording; SonarCloud's quality gate, failed by the first publication of the September tier-map tools, fixed with a path guard in `generate_agents.py` and `tier-map-check.py` (`1addabb`, output verified identical, gate passing). Build-protocols has the commit list and publication status on its thread; the stale held note was refused by the User.
+- **Restart (CD #8)** run on the User's prompting, after the session first took the role without it. Live state adopted: Claude Code 2.1.286 (the working context said 2.1.280); `main` level with `origin/main`.
+- **Messaging:** this session holds `memento/dev`. Three messages waited: two from rooms/dev (tier-map version; Rooms behind on two tools) and one from build-protocols (the Bitter Lesson audit sort). All three are recorded under Open with the User in CURRENT_FOCUS.
+- **Posture (i) reaffirmed** by the User, with a standing instruction to guard against confidential material from other instances reaching the public repository.
+- **Leak-hardening plan** drafted, reviewed adversarially in two rounds (16 and 8 findings, all accepted, load-bearing ones re-checked first-hand) and approved at r3. Slice 1a started.
 
 ## Next
 
-1. Rooms' and Proportion's copies of the two tools now differ from this repository's; their hash checks will flag it until the copies are refreshed.
-2. Untracked leftovers for the User to delete: `.tmp-agents-after/` (test output from verifying the fix) and `framework/conventions/TIER_MAP.json.bak-20260919`.
+1. Slice 1a: the push gate and its test suite, the mutation check, the real-data runs, the review; then the User's eyeball before the hook is trusted.
 
 ## Unwitnessed arms (the register is the source of truth)
 
