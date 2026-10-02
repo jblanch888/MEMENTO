@@ -1,0 +1,6 @@
+# Binary or non-UTF-8 files reviewed by eye and cleared for publication.
+# One repository path per line. The confidentiality sweep cannot read these,
+# so each entry records a human judgement. Entries are paths only.
+archive/canon-2025/docs/assets/Don't trust him.png
+archive/canon-2025/docs/assets/heliovantage-demo-screenshot.png
+docs/assets/memento-logo.png
