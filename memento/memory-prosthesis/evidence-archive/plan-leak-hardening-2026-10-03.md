@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-03
 genre: build/change (3A) with a design/decision step (3C) for the directive
 size: L (four slices: 1a, 1b, 1c, 2)
-status: APPROVED 2026-10-03; slice 1a in progress
+status: APPROVED 2026-10-03; slice 1a complete (validated by the User 2026-10-03); slice 1b next
 related: [CORE_DIRECTIVES, PLANNING_PLAYBOOK, TOOLING_TRIGGERS, KNOWLEDGE_ARCHIVE, CURRENT_FOCUS, finding-publication-readiness-2026-07-20, handover-publication-and-hardening-2026-07-21, plan-truth-and-presentation-2026-07-21]
 ---
 
@@ -179,6 +179,31 @@ Mostly predictive: the tool and the gaps are known. Two feedback points:
 ## Seam
 
 Estate only: `memento/tools/`, `memento/protocols/`, `memento/memory-prosthesis/`, and `.githooks/`. `.githooks/` sits at the repository root, which CD #1 assigns to the canon. It is treated as estate tooling on the precedent of `126ca36`, which committed it as `fix(estate)`. No canon content changes. Commits are `fix(estate)` or `docs(estate)` with explicit pathspecs.
+
+## Implementation record
+
+**Slice 1a pivots (recorded at the time, 2026-10-03):**
+- **Published set read from the remote itself.** The hook takes the outgoing commits as those unreachable from any ref the remote holds, read with `git ls-remote <url>` (git's second hook argument), in place of local remote-tracking refs plus `remote_sha`. A stale tracking ref can no longer hide an unpublished commit, a URL push needs no name lookup, and a failed `ls-remote` exits 2. Commits the remote holds that are absent locally cannot be excluded, so they are swept again (fail-safe).
+- **The hook passes its arguments in slice 1a**, moved forward from 1c: the rebuilt script refuses to run without a mode, so the old hook would have blocked every push.
+- **Unexpected-failure handling** is an exit handler in place of an ERR trap: an ERR trap inherited into command substitutions turned grep's ordinary "no match" into a failure (found at the first smoke run).
+- **Positive control, run 2026-10-03 over all published history:** recall 9 of 9 known commits. Eight extras, each traced: five are later versions of a file already carrying a known hit (ancestry confirmed), three are the 2025 images at their original paths before they moved under `archive/` and `docs/`.
+
+**Slice 1a review, round 1 (smart tier, adversarial):** 17 findings, all accepted; the gate was rebuilt around them.
+- Blockers, each reproduced to exit 0 by the reviewer and accepted: a failure inside the scan read as "no hit" (errexit is suspended under `if`); invalid UTF-8 hid a following token from grep, in text fields and in some blobs `iconv` accepts; a pushed ref at a blob, a tree or a tag chain swept nothing; replace refs made the sweep read a different history from the one sent.
+- Majors: a list BOM disabled its first pattern; awk echoed list bytes on invalid UTF-8; commit headers beyond author and committer went unswept; `i18n.logOutputEncoding` changed what was swept; malformed or unterminated push lines read as clean; about 40 processes per file; 40 surviving one-line mutants and several weak cases.
+- Minors: newline paths defeated the seen-set and allow list; binary dedupe hid a disallowed path; `bash -x` echoed patterns; the locale name was macOS-only; control bytes in displayed paths; five CD #5 items.
+- The rebuild reads raw objects with `git cat-file`, judges validity with grep itself (and `iconv`), treats invalid text as a hit and invalid blobs as binary, follows tag chains to commits, trees and blobs, sets `GIT_NO_REPLACE_OBJECTS`, strips a BOM, validates push lines, checks binaries at every path with an exact allow-list match, and handles every failure explicitly.
+
+**Slice 1a review, round 2:** 14 of 17 fixed, 3 partly, and two new holes, both accepted and fixed:
+- `cut` under a UTF-8 locale dropped lines holding certain invalid bytes, so a text field with those bytes still read as clean. `cut` now runs byte-wise, and grep's output goes down a pipe, so matched lines never touch disk.
+- A NUL byte in a commit object hid the rest of its line from awk. A NUL in a commit or tag object is now a hit.
+- Signature lines are swept like any other header. A character rule cannot tell base64 from a word, and the round-2 test showed a token-only continuation line passing. The control over real signed history showed no false positive.
+- Accepted as design: a tag on a tree sweeps the whole tree (fail-safe); empty push stdin exits 0; a text blob is written to `$WORK` while it is checked (it is repository content already on disk).
+- Known limit: about 50 ms per file (1,500 files in 77 s, down from 122 s); a first push of thousands of files is slow. Batching the git reads is a later improvement.
+
+**Slice 1a validated** by the User, 2026-10-03 ("commit ad push").
+
+**Slice 1a evidence at hand-over to the User:** suite 167 of 167, verified first-hand; 26 mutants, each killed; positive control over all published history recalls the 9 known commits, with 11 extras traced (later versions of a file already carrying a known hit, and the 2025 images at earlier paths); a simulated pre-push against the real remote is clean.
 
 ## Review record (draft r1, 2026-10-03)
 

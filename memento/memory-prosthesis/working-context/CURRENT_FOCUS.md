@@ -13,7 +13,7 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 
 ## Active Playbook and plan
 
-**Plan: leak hardening** (`../evidence-archive/plan-leak-hardening-2026-10-03.md`), APPROVED 2026-10-03, slice 1a (the push gate and its tests) in progress. PLANNING governs; slices run WIP of one, each to the User's eyeball.
+**Plan: leak hardening** (`../evidence-archive/plan-leak-hardening-2026-10-03.md`), APPROVED 2026-10-03. Slice 1a (the push gate and its tests) complete and validated; slice 1b (commit-time sweeps, the sweep of what is published, the redacted view) next. PLANNING governs; slices run WIP of one, each to the User's eyeball.
 
 ## Current state
 
@@ -27,7 +27,7 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 - **Seam:** root = canon, `memento/` = estate; commits declare their side (CD #10); pushes User-only (CD #4a). Commits use explicit file lists written out from the work's own files.
 - **Writing rules (CD #5):** no em dashes in prose; no contrast framing in any form; reviewers hunt the pattern.
 - **Canon wording:** new canon text follows the ruled term table and the glossary. Astra (`agent-messaging/astra-reviewer`) reviews wording changes; the User rules final wording.
-- **The confidentiality sweep runs LAST, on the final tracked tree, before any ready-to-push claim** (`memento/tools/confidentiality-sweep.sh`, pre-push hook; token list outside the repo). It covers the working copy of tracked files only until slice 1a lands; new untracked files get a direct grep. Never print a matched token or pattern into the session; report counts, paths and hashes.
+- **The confidentiality sweep runs LAST, on the final tracked tree, before any ready-to-push claim** (`memento/tools/confidentiality-sweep.sh`, pre-push hook; token list outside the repo). Since slice 1a it sweeps everything a push publishes (outgoing blobs, paths, commit and tag objects, ref names) and fails closed; it reads commits, so uncommitted and untracked files get a direct grep. Never print a matched token or pattern into the session; report counts, paths and hashes.
 - **Material from other instances** (agent-messaging, relayed lessons, tool copies) is an import under CD #4e: de-identified and cleared by the User before it reaches any tracked file. Slice 2 of the active plan writes this into the directive.
 - **Text published through `gh`** is swept by hand first (plan decision D3, until a guard exists).
 - Canon self-claims re-ground with the User; generic naming; private hashes stay out of canon text, and hashes of published residue stay out of every tracked file.
