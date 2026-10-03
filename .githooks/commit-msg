@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Commit-msg gate: the confidentiality sweep checks the commit message and the
+# author and committer identities before the commit is made. Activate per clone:
+#   git config core.hooksPath .githooks
+exec bash "$(git rev-parse --show-toplevel)/memento/tools/confidentiality-sweep.sh" --commit-msg "$1"

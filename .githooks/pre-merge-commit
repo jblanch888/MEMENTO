@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Pre-merge-commit gate: the confidentiality sweep checks the staged merge
+# result before git makes a merge commit. Activate per clone:
+#   git config core.hooksPath .githooks
+exec bash "$(git rev-parse --show-toplevel)/memento/tools/confidentiality-sweep.sh" --pre-commit

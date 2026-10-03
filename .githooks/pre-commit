@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Pre-commit gate: the confidentiality sweep checks the staged changes (file
+# content and path names) before git commit makes a commit. Merges are checked
+# by pre-merge-commit. Cherry-pick, revert and rebase run no blocking hook, so
+# the pre-push sweep is what checks the commits they make. Activate per clone:
+#   git config core.hooksPath .githooks
+exec bash "$(git rev-parse --show-toplevel)/memento/tools/confidentiality-sweep.sh" --pre-commit

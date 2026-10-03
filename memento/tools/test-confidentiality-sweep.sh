@@ -54,6 +54,11 @@ case "${HOOK:-}" in
   *) HOOK=$PWD/$HOOK ;;
 esac
 SWEEP_BASH=${SWEEP_BASH:-bash}
+# The real commit-time hook files, copied into the scratch repository by the
+# cases that run a real git commit or merge.
+HOOK_PRE_COMMIT=${HOOK_PRE_COMMIT:-$HERE/../../.githooks/pre-commit}
+HOOK_COMMIT_MSG=${HOOK_COMMIT_MSG:-$HERE/../../.githooks/commit-msg}
+HOOK_PRE_MERGE_COMMIT=${HOOK_PRE_MERGE_COMMIT:-$HERE/../../.githooks/pre-merge-commit}
 
 if [ ! -f "$SWEEP" ]; then
   echo "harness: script under test not found: $SWEEP" >&2
@@ -157,6 +162,7 @@ mkcase() {
   FAKEPATH=0
   XTRACE=0
   SWEEP_FLAGS=""
+  BASELINE=$C/baseline.txt
   OUTMATCH=""
   EXTRA_BAD=""
   RC=""
@@ -193,6 +199,7 @@ mkcase() {
 apply_env() {   # inside a subshell: set the sweep's environment for this case
   if [ -n "$L_CI" ]; then export MEMENTO_BANNED_TOKENS=$L_CI; else unset MEMENTO_BANNED_TOKENS; fi
   if [ -n "$L_CS" ]; then export MEMENTO_BANNED_TOKENS_CS=$L_CS; else unset MEMENTO_BANNED_TOKENS_CS; fi
+  export MEMENTO_SWEEP_BASELINE=${BASELINE:-$C/baseline.txt}
   if [ "$NOCS" = 1 ]; then export MEMENTO_NO_CS_LIST=1; else unset MEMENTO_NO_CS_LIST; fi
   if [ "$FAKEPATH" = 1 ]; then export PATH="$C/fake:$PATH"; fi
 }
@@ -1695,6 +1702,602 @@ t_header_gpgsig_continuation_with_token_block() {
   OUTMATCH="commit $FORGED header"
   run_sweep --pre-push origin "$R"
   finish 1 "$FORGED"
+}
+
+# ------------------------------------------------ slice 1b: modes and modifier
+
+# The real commit-time hook files are copied in only inside the cases that run a
+# real git commit or merge, so ordinary setup commits never trigger them.
+install_real_hook() {   # hook name
+  local src
+  case "$1" in
+    pre-commit) src=$HOOK_PRE_COMMIT ;;
+    commit-msg) src=$HOOK_COMMIT_MSG ;;
+    pre-merge-commit) src=$HOOK_PRE_MERGE_COMMIT ;;
+  esac
+  mkdir -p "$W/.githooks"
+  cp -p "$src" "$W/.githooks/$1" 2>/dev/null
+}
+hcommit() {   # a real git commit, which runs the installed commit-time hooks
+  ( cd "$W" && apply_env && exec git commit "$@" ) </dev/null >"$OUT" 2>&1
+  RC=$?
+}
+note_bad() {   # record the first extra failure only
+  [ -n "$EXTRA_BAD" ] || EXTRA_BAD=$1
+}
+check_no_echo() {   # the same echo assertion as finish, for a run that is not the last one
+  if grep -q -i -F -f "$FORBID" "$OUT"; then note_bad "output echoed a throwaway token or pattern"; fi
+}
+no_line_text() {   # no "  line N: text" output line may be present
+  if grep -q -E '^ +line [0-9]+:' "$OUT"; then note_bad "line text was printed without --show-redacted"; fi
+}
+
+# ------------------------------------------------------------- pre-commit
+
+t_precommit_clean_allow() {
+  put docs/a.txt "alpha beta"
+  OUTMATCH='[0-9]+ case-insensitive and [0-9]+ case-sensitive patterns loaded'
+  run_sweep --pre-commit
+  finish 0
+}
+t_precommit_staged_token_block() {
+  put leak.txt "this line holds zorblax"
+  OUTMATCH='staged path leak.txt line\(s\) 1'
+  run_sweep --pre-commit
+  finish 1
+}
+t_precommit_unstaged_token_allow() {
+  cf a.txt "clean"
+  printf 'zorblax added in the working tree only\n' >>"$W/a.txt"
+  printf 'zorblax in an untracked file\n' >"$W/untracked.txt"
+  run_sweep --pre-commit
+  finish 0
+}
+t_precommit_staged_edit_keeps_token_on_unchanged_line_block() {
+  put f.txt $'line one\nzorblax unchanged line\nline three'
+  cm "add f"
+  put f.txt $'line ONE\nzorblax unchanged line\nline three'
+  run_sweep --pre-commit
+  finish 1
+}
+t_precommit_staged_token_unstaged_cleanup_block() {
+  # The index is what gets committed, so a working-copy edit that removes the
+  # token without staging it does not make the commit clean.
+  put leak.txt "this line holds zorblax"
+  printf 'clean now\n' >"$W/leak.txt"
+  run_sweep --pre-commit
+  finish 1
+}
+t_precommit_staged_deletion_of_token_file_allow() {
+  cf old.txt "zorblax committed earlier"
+  g rm -q old.txt
+  run_sweep --pre-commit
+  finish 0
+}
+t_precommit_staged_token_path_block() {
+  put docs/zorblax-notes.txt "clean content"
+  OUTMATCH='staged path#[0-9]+'
+  run_sweep --pre-commit
+  finish 1
+}
+t_precommit_staged_binary_not_allow_listed_block() {
+  putf assets/other.bin 'PK\000\001\002binary\000data'
+  run_sweep --pre-commit
+  finish 1
+}
+t_precommit_staged_binary_allow_listed_allow() {
+  putf assets/known.bin 'PK\000\001\002binary\000data'
+  run_sweep --pre-commit
+  finish 0
+}
+t_precommit_first_commit_in_empty_repo_token_block() {
+  fresh_repo empty
+  put leak.txt "this line holds zorblax"
+  run_sweep --pre-commit
+  finish 1
+}
+t_precommit_first_commit_in_empty_repo_clean_allow() {
+  fresh_repo empty
+  put docs/a.txt "clean"
+  run_sweep --pre-commit
+  finish 0
+}
+t_precommit_real_commit_refused() {
+  install_real_hook pre-commit
+  put leak.txt "this line holds zorblax"
+  hcommit -q -m "tidy"
+  [ "$(H)" = "$BASE" ] || EXTRA_BAD="the refused commit moved HEAD"
+  finish N
+}
+t_precommit_real_commit_clean_allow() {
+  install_real_hook pre-commit
+  put docs/a.txt "clean"
+  hcommit -q -m "tidy"
+  [ "$(H)" != "$BASE" ] || EXTRA_BAD="the clean commit did not move HEAD"
+  finish 0
+}
+
+# ------------------------------------------------------------- commit-msg
+
+MSG_FILE() { echo "$C/COMMIT_EDITMSG"; }
+
+t_commitmsg_clean_allow() {
+  printf 'subject\n\nclean body\n' >"$(MSG_FILE)"
+  run_sweep --commit-msg "$(MSG_FILE)"
+  finish 0
+}
+t_commitmsg_token_in_message_block() {
+  printf 'subject\n\nthe body holds zorblax\n' >"$(MSG_FILE)"
+  OUTMATCH='commit message line\(s\) 3'
+  run_sweep --commit-msg "$(MSG_FILE)"
+  finish 1
+}
+t_commitmsg_token_in_comment_line_block() {
+  printf 'subject\n\n# a comment line holding zorblax\n' >"$(MSG_FILE)"
+  OUTMATCH='commit message line\(s\) 3'
+  run_sweep --commit-msg "$(MSG_FILE)"
+  finish 1
+}
+t_commitmsg_token_in_author_name_block() {
+  printf 'subject\n' >"$(MSG_FILE)"
+  OUTMATCH='commit identity'
+  GIT_AUTHOR_NAME="Zorblax Person" run_sweep --commit-msg "$(MSG_FILE)"
+  finish 1
+}
+t_commitmsg_token_in_committer_email_block() {
+  printf 'subject\n' >"$(MSG_FILE)"
+  OUTMATCH='commit identity'
+  GIT_COMMITTER_EMAIL="quuxwidget@example.invalid" run_sweep --commit-msg "$(MSG_FILE)"
+  finish 1
+}
+t_commitmsg_missing_file_exit2() {
+  run_sweep --commit-msg "$C/no-such-message-file"
+  finish 2
+}
+t_commitmsg_missing_argument_exit2() {
+  run_sweep --commit-msg
+  finish 2
+}
+t_commitmsg_invalid_utf8_message_block() {
+  printf 'subject a\377 only\n' >"$(MSG_FILE)"
+  run_sweep --commit-msg "$(MSG_FILE)"
+  finish 1
+}
+t_commitmsg_nul_in_message_block() {
+  printf 'clean\000 zorblax\n' >"$(MSG_FILE)"
+  run_sweep --commit-msg "$(MSG_FILE)"
+  finish 1
+}
+t_commitmsg_real_commit_refused() {
+  install_real_hook commit-msg
+  put docs/a.txt "clean"
+  hcommit -q -m "this subject mentions zorblax"
+  [ "$(H)" = "$BASE" ] || EXTRA_BAD="the refused commit moved HEAD"
+  finish N
+}
+t_commitmsg_real_commit_clean_allow() {
+  install_real_hook commit-msg
+  put docs/a.txt "clean"
+  hcommit -q -m "a clean subject"
+  [ "$(H)" != "$BASE" ] || EXTRA_BAD="the clean commit did not move HEAD"
+  finish 0
+}
+
+# -------------------------------------------------------------- published
+
+t_published_no_baseline_residue_exit1() {
+  local x
+  cf leak.txt "residue: zorblax"
+  x=$(H)
+  OUTMATCH='no baseline'
+  run_sweep --published HEAD
+  finish 1 "$x"
+}
+t_published_clean_history_no_baseline_allow() {
+  cf docs/a.txt "clean"
+  run_sweep --published HEAD
+  finish 0
+}
+t_published_clean_history_empty_baseline_allow() {
+  : >"$BASELINE"
+  cf docs/a.txt "clean"
+  run_sweep --published HEAD
+  finish 0
+}
+t_published_update_baseline_then_known_allow() {
+  cf leak.txt "residue: zorblax"
+  run_sweep --published --update-baseline HEAD
+  [ "$RC" -eq 0 ] || note_bad "--update-baseline exited $RC, expected 0"
+  [ -f "$BASELINE" ] || note_bad "--update-baseline wrote no baseline file"
+  check_no_echo
+  run_sweep --published HEAD
+  OUTMATCH='[0-9]+ known hits, 0 new'
+  finish 0
+}
+t_published_new_hit_after_baseline_prints_only_new() {
+  local c1 c2
+  cf leak.txt "residue: zorblax"
+  c1=$(H)
+  run_sweep --published --update-baseline HEAD
+  [ "$RC" -eq 0 ] || note_bad "--update-baseline exited $RC, expected 0"
+  cf leak2.txt "fresh: quuxwidget"
+  c2=$(H)
+  run_sweep --published HEAD
+  if grep -q -F "$c1" "$OUT"; then note_bad "the known commit was printed"; fi
+  OUTMATCH='[0-9]+ known hits, 1 new'
+  finish 1 "$c2"
+}
+t_published_baseline_file_holds_hashes_only() {
+  local bad n
+  cf leak.txt "residue: zorblax"
+  cf docs/zorblax-notes.txt "clean content"
+  put a.txt "clean"
+  cm "message with quuxwidget residue"
+  run_sweep --published --update-baseline HEAD
+  [ "$RC" -eq 0 ] || note_bad "--update-baseline exited $RC, expected 0"
+  if [ -f "$BASELINE" ]; then
+    bad=$(grep -v -c -E '^[0-9a-f]{64}$' "$BASELINE")
+    n=$(grep -c -E '^[0-9a-f]{64}$' "$BASELINE")
+    [ "$bad" = 0 ] || note_bad "the baseline holds a line that is not a 64-hex hash"
+    [ "$n" -ge 3 ] || note_bad "the baseline holds fewer hashes than hits"
+    if grep -q -i -F -f "$FORBID" "$BASELINE"; then note_bad "the baseline holds token text"; fi
+  else
+    note_bad "no baseline file was written"
+  fi
+  finish 0
+}
+t_published_update_baseline_replaces_existing_file() {
+  local junk
+  junk=$(printf '%064d' 0)
+  printf '%s\n' "$junk" >"$BASELINE"
+  cf leak.txt "residue: zorblax"
+  run_sweep --published --update-baseline HEAD
+  if grep -q -F "$junk" "$BASELINE"; then note_bad "the old baseline entry survived the update"; fi
+  [ "$(grep -c -E '^[0-9a-f]{64}$' "$BASELINE")" = 1 ] || note_bad "the baseline does not hold exactly the one current hit"
+  finish 0
+}
+t_published_update_baseline_clean_history_empty_file() {
+  printf '%064d\n' 0 >"$BASELINE"
+  cf docs/a.txt "clean"
+  run_sweep --published --update-baseline HEAD
+  [ -f "$BASELINE" ] || note_bad "no baseline file was written"
+  [ "$(grep -c . "$BASELINE")" = 0 ] || note_bad "the baseline still holds entries for a clean history"
+  finish 0
+}
+
+# -------------------------------------------------------- show-redacted
+
+t_redacted_blob_line_masks_both_case_variants() {
+  cf a.txt "x zorblax y ZORBLAX"
+  OUTMATCH='line 1: x #+ y #+'
+  run_sweep --show-redacted --range origin/main..HEAD
+  finish 1
+}
+t_redacted_blob_token_at_line_start_and_end() {
+  cf a.txt $'zorblax starts the line\nthe line ends with ZORBLAX\nZORBLAX'
+  OUTMATCH='line 3:'
+  run_sweep --show-redacted --range origin/main..HEAD
+  finish 1
+}
+t_redacted_overlapping_patterns_mask_the_union() {
+  printf '%s\n' zorblax blaxwidget >"$L_CI"
+  forbid blaxwidget
+  forbid widget
+  cf a.txt "zorblaxwidget"
+  OUTMATCH='line 1: #+$'
+  run_sweep --show-redacted --range origin/main..HEAD
+  finish 1
+}
+t_redacted_case_sensitive_list_span_masked() {
+  cf a.txt "a Wibblefrotz b"
+  OUTMATCH='line 1: a #+ b'
+  run_sweep --show-redacted --range origin/main..HEAD
+  finish 1
+}
+t_redacted_message_line() {
+  put a.txt "clean"
+  cmm 'subject\n\nthe zorblax here\n'
+  OUTMATCH='line 3: the #+ here'
+  run_sweep --show-redacted --range origin/main..HEAD
+  finish 1
+}
+t_redacted_path() {
+  cf docs/zorblax-notes.txt "clean content"
+  OUTMATCH='line [0-9]+: '
+  run_sweep --show-redacted --range origin/main..HEAD
+  finish 1
+}
+t_redacted_header_author_name() {
+  forge_commit "" 'clean message' "Zorblax Person"
+  OUTMATCH='line [0-9]+: '
+  run_sweep --show-redacted --range origin/main..forged
+  finish 1
+}
+t_redacted_tag_object() {
+  local t
+  t=$(mk_tag_object 'note zorblax here')
+  sl refs/tags/v1 "$t" refs/tags/v1 "$ZERO40"
+  OUTMATCH='line [0-9]+: '
+  run_sweep --show-redacted --pre-push origin "$R"
+  finish 1
+}
+t_redacted_invalid_utf8_line_not_shown() {
+  forge_commit "" 'a\377 zorblax'
+  OUTMATCH='line 1: \(not valid UTF-8; not shown\)'
+  run_sweep --show-redacted --range origin/main..forged
+  finish 1
+}
+t_redacted_token_invalid_byte_token_line_withheld() {
+  # A blob with such a line counts as binary, so no line text exists for it;
+  # the output must still hold neither the token nor the raw bytes.
+  local x
+  putf a.txt 'zorblax \364\220\200\200 zorblax\n'
+  cm "line with an invalid byte between two tokens"
+  x=$(H)
+  printf '\364\220\200\200\n' >>"$FORBID"
+  run_sweep --show-redacted --range HEAD
+  finish 1 "$x"
+}
+t_redacted_message_token_invalid_byte_token_line_withheld() {
+  # In a commit message the line reaches the line printer: it must be withheld
+  # whole, because grep cannot see the second token past the invalid byte.
+  forge_commit "" 'zorblax \364\220\200\200 zorblax'
+  printf '\364\220\200\200\n' >>"$FORBID"
+  OUTMATCH='line 1: \(not valid UTF-8; not shown\)'
+  run_sweep --show-redacted --range origin/main..forged
+  finish 1 "$FORGED"
+}
+t_redacted_no_hits_prints_summary_only() {
+  cf docs/a.txt "clean"
+  OUTMATCH='clean'
+  run_sweep --show-redacted --range origin/main..HEAD
+  no_line_text
+  finish 0
+}
+t_redacted_cannot_run_exit2() {
+  run_sweep --show-redacted --range nosuchref..HEAD
+  finish 2
+}
+t_redacted_default_mode_prints_no_line_text() {
+  cf a.txt "x zorblax y"
+  run_sweep --range origin/main..HEAD
+  no_line_text
+  finish 1
+}
+
+# ----------------------------------- review 1b extension: hooks, merge, more
+
+hook_file_check() {   # file, required exec line: exists, executable, holds the line
+  RC=0
+  : >"$OUT"
+  [ -f "$1" ] || note_bad "hook file is missing: $1"
+  [ -x "$1" ] || note_bad "hook file is not executable: $1"
+  grep -q -F -x -- "$2" "$1" 2>/dev/null || note_bad "hook file lacks the contract exec line"
+  finish 0
+}
+t_hook_file_pre_commit_contract() {
+  hook_file_check "$HOOK_PRE_COMMIT" 'exec bash "$(git rev-parse --show-toplevel)/memento/tools/confidentiality-sweep.sh" --pre-commit'
+}
+t_hook_file_pre_merge_commit_contract() {
+  hook_file_check "$HOOK_PRE_MERGE_COMMIT" 'exec bash "$(git rev-parse --show-toplevel)/memento/tools/confidentiality-sweep.sh" --pre-commit'
+}
+t_hook_file_commit_msg_contract() {
+  hook_file_check "$HOOK_COMMIT_MSG" 'exec bash "$(git rev-parse --show-toplevel)/memento/tools/confidentiality-sweep.sh" --commit-msg "$1"'
+}
+
+hmerge() {   # a real git merge, which runs the pre-merge-commit hook
+  ( cd "$W" && apply_env && exec git merge "$@" ) </dev/null >"$OUT" 2>&1
+  RC=$?
+}
+t_merge_token_on_side_branch_refused() {
+  local m
+  g checkout -q -b side
+  cf side.txt "side holds zorblax"
+  g checkout -q main
+  cf main.txt "main change"
+  m=$(H)
+  install_real_hook pre-merge-commit
+  hmerge --no-ff -m "merge side" side
+  [ "$(H)" = "$m" ] || note_bad "the refused merge moved HEAD"
+  finish N
+}
+t_merge_clean_side_branch_allow() {
+  local m
+  g checkout -q -b side
+  cf side.txt "side change"
+  g checkout -q main
+  cf main.txt "main change"
+  m=$(H)
+  install_real_hook pre-merge-commit
+  hmerge --no-ff -m "merge side" side
+  [ "$(H)" != "$m" ] || note_bad "the clean merge did not move HEAD"
+  gs rev-parse -q --verify 'HEAD^2' >/dev/null || note_bad "HEAD is not a merge commit"
+  finish 0
+}
+
+# Self-overlapping matches: the masked line is checked exactly.
+expect_line() {
+  grep -q -x -F -- "$1" "$OUT" || note_bad "expected the exact masked line: $1"
+}
+overlap_blob() {   # list line, text line, expected masked text
+  printf '%s\n' "$1" >"$L_CI"
+  cf a.txt "$2"
+  run_sweep --show-redacted --range origin/main..HEAD
+  expect_line "  line 1: $3"
+  finish 1
+}
+overlap_message() {
+  printf '%s\n' "$1" >"$L_CI"
+  put a.txt "clean"
+  cmm "tidy up\n\n$2\n"
+  run_sweep --show-redacted --range origin/main..HEAD
+  expect_line "  line 3: $3"
+  finish 1
+}
+t_redacted_self_overlap_aba_blob()      { overlap_blob 'aba' 'xababa y' 'x##### y'; }
+t_redacted_self_overlap_aa_blob()       { overlap_blob 'aa' 'caaac' 'c###c'; }
+t_redacted_self_overlap_xyxy_blob()     { overlap_blob 'xyxy' 'xyxyxy' '######'; }
+t_redacted_self_overlap_alternation_blob() { overlap_blob 'foo|oob' 'xfoob y' 'x#### y'; }
+t_redacted_self_overlap_chain_blob()    { overlap_blob 'abc|bcd|cde' 'abcde' '#####'; }
+t_redacted_self_overlap_aba_message()   { overlap_message 'aba' 'xababa y' 'x##### y'; }
+t_redacted_self_overlap_aa_message()    { overlap_message 'aa' 'caaac' 'c###c'; }
+t_redacted_self_overlap_xyxy_message()  { overlap_message 'xyxy' 'xyxyxy' '######'; }
+t_redacted_self_overlap_alternation_message() { overlap_message 'foo|oob' 'xfoob y' 'x#### y'; }
+t_redacted_self_overlap_chain_message() { overlap_message 'abc|bcd|cde' 'abcde' '#####'; }
+
+no_control_bytes() {
+  if grep -q "$(printf '\033')" "$OUT"; then note_bad "the output holds a raw ESC byte"; fi
+  if grep -q "$(printf '\007')" "$OUT"; then note_bad "the output holds a raw BEL byte"; fi
+}
+t_redacted_control_bytes_in_blob_line_become_question_marks() {
+  putf a.txt 'zorblax \033[31m red \007 bell\n'
+  cm "control bytes"
+  OUTMATCH='line 1: #+ \?\[31m red \? bell'
+  run_sweep --show-redacted --range origin/main..HEAD
+  no_control_bytes
+  finish 1
+}
+t_redacted_control_bytes_in_message_line_become_question_marks() {
+  forge_commit "" 'zorblax \033[31m red \007 bell'
+  OUTMATCH='line 1: #+ \?\[31m red \? bell'
+  run_sweep --show-redacted --range origin/main..forged
+  no_control_bytes
+  finish 1
+}
+
+run_sweep_limited() {   # seconds, then the script arguments; a run past the limit is killed
+  local lim=$1 pid killer
+  shift
+  ( cd "$W" && apply_env && exec "$SWEEP_BASH" "$W/memento/tools/confidentiality-sweep.sh" "$@" ) \
+    <"$STDIN" >"$OUT" 2>&1 &
+  pid=$!
+  ( sleep "$lim"; kill -9 "$pid" ) >/dev/null 2>&1 &
+  killer=$!
+  wait "$pid" 2>/dev/null
+  RC=$?
+  kill "$killer" >/dev/null 2>&1
+  wait "$killer" >/dev/null 2>&1
+}
+t_redacted_two_megabyte_line_finishes_in_time() {
+  { head -c 2097152 /dev/zero | tr '\0' 'a'; printf ' zorblax\n'; } >"$W/big.txt"
+  g add big.txt
+  cm "a very long line"
+  run_sweep_limited 60 --show-redacted --range HEAD
+  finish 1
+}
+
+t_published_republished_copy_under_new_path_block() {
+  local c2
+  cf leak.txt "residue: zorblax"
+  run_sweep --published --update-baseline HEAD
+  [ "$RC" -eq 0 ] || note_bad "--update-baseline exited $RC, expected 0"
+  cp "$W/leak.txt" "$W/copy.txt"
+  g add copy.txt
+  cm "copy of the known file"
+  c2=$(H)
+  run_sweep --published HEAD
+  finish 1 "$c2"
+}
+t_published_list_change_makes_old_hits_new() {
+  local bad n
+  cf leak.txt "residue: zorblax"
+  run_sweep --published --update-baseline HEAD
+  [ "$RC" -eq 0 ] || note_bad "--update-baseline exited $RC, expected 0"
+  printf '%s\n' quuxwidget >>"$L_CI"
+  OUTMATCH='lists'
+  run_sweep --published HEAD
+  if [ -f "$BASELINE" ]; then
+    bad=$(grep -v -c -E '^[0-9a-f]{64}$' "$BASELINE")
+    n=$(grep -c -E '^[0-9a-f]{64}$' "$BASELINE")
+    [ "$bad" = 0 ] || note_bad "the baseline holds a line that is not a 64-hex hash"
+    [ "$n" -ge 1 ] || note_bad "the baseline holds no hashes"
+  else
+    note_bad "no baseline file"
+  fi
+  finish 1
+}
+t_published_baseline_target_directory_exit2() {
+  mkdir "$C/adir"
+  BASELINE=$C/adir
+  cf leak.txt "residue: zorblax"
+  run_sweep --published --update-baseline HEAD
+  finish 2
+}
+t_published_baseline_symlink_kept_and_target_updated() {
+  local junk bad n
+  junk=$(printf '%064d' 0)
+  printf '%s\n' "$junk" >"$C/real-baseline.txt"
+  ln -s "$C/real-baseline.txt" "$C/baseline-link"
+  BASELINE=$C/baseline-link
+  cf leak.txt "residue: zorblax"
+  OUTMATCH='previously'
+  run_sweep --published --update-baseline HEAD
+  [ -L "$BASELINE" ] || note_bad "the baseline path is no longer a symlink"
+  bad=$(grep -v -c -E '^[0-9a-f]{64}$' "$C/real-baseline.txt")
+  n=$(grep -c -E '^[0-9a-f]{64}$' "$C/real-baseline.txt")
+  [ "$bad" = 0 ] || note_bad "the target holds a line that is not a 64-hex hash"
+  [ "$n" -ge 1 ] || note_bad "the target holds no hashes"
+  if grep -q -F "$junk" "$C/real-baseline.txt"; then note_bad "the old entry survived in the target"; fi
+  finish 0
+}
+
+SCISSORS='# ------------------------ >8 ------------------------'
+# git keeps text below a scissors line under -m and -F, so the hook sweeps it.
+t_commitmsg_token_below_scissors_line_block() {
+  printf 'subject\n\n%s\ndiff --git a/x b/x\nzorblax below the line\n' "$SCISSORS" >"$(MSG_FILE)"
+  run_sweep --commit-msg "$(MSG_FILE)"
+  finish 1
+}
+t_commitmsg_token_above_scissors_line_block() {
+  printf 'subject zorblax\n\n%s\nbelow the line\n' "$SCISSORS" >"$(MSG_FILE)"
+  run_sweep --commit-msg "$(MSG_FILE)"
+  finish 1
+}
+
+t_precommit_extra_argument_exit2() {
+  put docs/a.txt "clean"
+  run_sweep --pre-commit extra
+  finish 2
+}
+t_commitmsg_extra_argument_exit2() {
+  printf 'subject\n' >"$(MSG_FILE)"
+  run_sweep --commit-msg "$(MSG_FILE)" extra
+  finish 2
+}
+
+
+t_commitmsg_real_commit_scissors_in_m_message_refused() {
+  install_real_hook commit-msg
+  put docs/a.txt "clean"
+  hcommit -q -m "$(printf 'subject\n%s\nbody zorblax' "$SCISSORS")"
+  [ "$(H)" = "$BASE" ] || note_bad "the refused commit moved HEAD"
+  finish N
+}
+t_commitmsg_hint_absent_when_hit_is_not_in_a_comment_line() {
+  printf 'subject zorblax\n\nplain body\n' >"$(MSG_FILE)"
+  run_sweep --commit-msg "$(MSG_FILE)"
+  if grep -q -F "'#' line" "$OUT"; then note_bad "the comment-line hint was printed for a non-comment hit"; fi
+  finish 1
+}
+t_commitmsg_hint_present_when_hit_is_in_a_comment_line() {
+  printf 'subject\n\n# a comment line holding zorblax\n' >"$(MSG_FILE)"
+  OUTMATCH="'#' line"
+  run_sweep --commit-msg "$(MSG_FILE)"
+  finish 1
+}
+t_redacted_chained_alternation_short_blob()    { overlap_blob 'ab|bcde|de' 'abcde' '#####'; }
+t_redacted_chained_alternation_short_message() { overlap_message 'ab|bcde|de' 'abcde' '#####'; }
+t_redacted_chained_alternation_long_blob()     { overlap_blob 'ab|bcdefg|fg' 'q abcdefg q' 'q ####### q'; }
+t_redacted_chained_alternation_long_message()  { overlap_message 'ab|bcdefg|fg' 'q abcdefg q' 'q ####### q'; }
+t_redacted_non_word_boundary_context_blob() {
+  forbid foo
+  forbid '\Bfoo'
+  overlap_blob '\Bfoo' 'xfoo yfoo' 'x### y###'
+}
+t_redacted_non_word_boundary_context_message() {
+  forbid foo
+  forbid '\Bfoo'
+  overlap_message '\Bfoo' 'xfoo yfoo' 'x### y###'
 }
 
 # ---------------------------------------------------------------- runner

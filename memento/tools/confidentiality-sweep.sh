@@ -31,8 +31,9 @@ set +x
 # in a blob. A blob holding a NUL byte is binary too. Binary blobs block unless
 # their exact path is listed in memento/tools/sweep-binary-allow.txt.
 #
-# Output carries no matched token, pattern or line of content. A hit is
-# reported by location: commit, header or message line, path and line number.
+# By default, output carries no matched token, pattern or line of content. A
+# hit is reported by location: commit, header or message line, path and line
+# number. (--show-redacted, below, adds masked hit lines on request.)
 # A path that matches, or holds a non-printable character, is shown as path#N
 # (the Nth entry of that commit's diff-tree listing). Patterns reach grep
 # through process substitution, so they stay off the command line and off disk.
@@ -40,6 +41,34 @@ set +x
 # Modes (one is required):
 #   --pre-push <remote> <url>   called by .githooks/pre-push, with git's ref lines on stdin
 #   --range <rev-list args>     standalone, e.g. --range origin/main..HEAD, or --range HEAD
+#   --pre-commit                called by .githooks/pre-commit and
+#                               .githooks/pre-merge-commit: the staged changes
+#                               (the index against HEAD). cherry-pick, revert,
+#                               rebase and amend run no such check on what they
+#                               carry over. The pre-push sweep covers them.
+#   --commit-msg <file>         called by .githooks/commit-msg: the whole message
+#                               file and the author and committer identities
+#   --published [--update-baseline] <rev-list args>
+#                               every commit reachable from the arguments (run
+#                               after a fetch, e.g. --published origin/main; tag
+#                               objects and ref names are outside this mode),
+#                               compared with a baseline of known hits held outside
+#                               the repository ($MEMENTO_SWEEP_BASELINE, default
+#                               ~/.memento/sweep-baseline.txt). Each baseline line
+#                               is the sha256 of the lists' digest and one hit
+#                               line, so the file holds no path or token text, and
+#                               a change to either list brings every hit back for
+#                               review. Known hits are counted. New hits are
+#                               printed, and the run exits 1. --update-baseline
+#                               records the current hits as known.
+# Modifier, placed first:
+#   --show-redacted             with each hit in scanned text, also prints the hit
+#                               lines with every matched span masked by '#'. The
+#                               masked text is checked again before it is printed,
+#                               and a line that still matches, or is not valid
+#                               UTF-8, is withheld. The mask keeps each span's
+#                               length in bytes. Applies to every mode except
+#                               --published.
 #
 # Lists (one extended regex per line; a leading BOM, '#' comments, blank lines,
 # CR and trailing space are stripped):
@@ -89,11 +118,24 @@ done
 export LC_ALL=$LOC
 
 # ---- mode ----------------------------------------------------------------
+SHOW_REDACTED=0
+if [ "${1:-}" = --show-redacted ]; then SHOW_REDACTED=1; shift; fi
 MODE=${1:-}
+UPDATE_BASELINE=0
 case $MODE in
-  --pre-push) [ $# -ge 3 ] || cannot "--pre-push needs <remote> <url>"; URL=$3 ;;
-  --range)    shift; [ $# -ge 1 ] || cannot "--range needs rev-list arguments"; RANGE_ARGS=("$@") ;;
-  *)          cannot "usage: $ME --pre-push <remote> <url> | --range <rev-list args>" ;;
+  --pre-push)   [ $# -ge 3 ] || cannot "--pre-push needs <remote> <url>"; URL=$3 ;;
+  --range)      shift; [ $# -ge 1 ] || cannot "--range needs rev-list arguments"; RANGE_ARGS=("$@") ;;
+  --pre-commit) [ $# -eq 1 ] || cannot "--pre-commit takes no arguments" ;;
+  --commit-msg)
+    [ $# -eq 2 ] || cannot "--commit-msg takes exactly one argument, the message file"
+    MSG_FILE=$2
+    case $MSG_FILE in /*) ;; *) MSG_FILE="$PWD/$MSG_FILE" ;; esac ;;
+  --published)
+    [ "$SHOW_REDACTED" = 0 ] || cannot "--show-redacted applies to --range, --pre-push, --pre-commit and --commit-msg"
+    shift
+    if [ "${1:-}" = --update-baseline ]; then UPDATE_BASELINE=1; shift; fi
+    [ $# -ge 1 ] || cannot "--published needs rev-list arguments"; RANGE_ARGS=("$@") ;;
+  *) cannot "usage: $ME [--show-redacted] --pre-push <remote> <url> | --range <rev-list args> | --pre-commit | --commit-msg <file> | --published [--update-baseline] <rev-list args>" ;;
 esac
 
 TOP=$(git rev-parse --show-toplevel 2>/dev/null) || cannot "not inside a git repository"
@@ -157,8 +199,10 @@ if [ -f "$ALLOW" ]; then load_list "$ALLOW" > "$WORK/allow" || cannot "could not
 
 # ---- matching ------------------------------------------------------------
 # Functions below that return 1 for "no" are always called from an if, where
-# errexit is suspended, so every failure inside them is handled explicitly,
-# pipelines included (through PIPESTATUS).
+# errexit is suspended, so every failure inside them is handled explicitly.
+# Pipelines whose first command may exit 1 for "no match" run with errexit off
+# for that one line and are judged through PIPESTATUS, so they behave the same
+# whether or not the caller is an if.
 
 # valid_lines FILE: writes the numbers of lines that are not valid UTF-8 to
 # $WORK/inv. Returns 0 when every line is valid. grep is the judge, because a
@@ -166,8 +210,10 @@ if [ -f "$ALLOW" ]; then load_list "$ALLOW" > "$WORK/allow" || cannot "could not
 # and if it alone objects, every line is marked.
 valid_lines() {
   local st
+  set +e
   "$GREP" -n -v -E '^.*$' "$1" 2>/dev/null | LC_ALL=C cut -d: -f1 > "$WORK/inv"
   st=("${PIPESTATUS[@]}")
+  set -e
   case ${st[0]} in 0|1) ;; *) cannot "grep failed on a validity check" ;; esac
   [ "${st[1]}" = 0 ] || cannot "cut failed"
   [ -s "$WORK/inv" ] && return 1
@@ -187,8 +233,10 @@ valid_lines() {
 SCAN_HITS="" SCAN_BAD=""
 grep_list() { # $1 case flag, $2 patterns, $3 file, $4 label: appends hit line numbers to $WORK/m
   local st
+  set +e
   "$GREP" -n $1 -E -f <(printf '%s\n' "$2") "$3" 2>/dev/null | LC_ALL=C cut -d: -f1 >> "$WORK/m"
   st=("${PIPESTATUS[@]}")
+  set -e
   case ${st[0]} in 0|1) ;; *) cannot "grep failed on the $4 list" ;; esac
   [ "${st[1]}" = 0 ] || cannot "cut failed"
 }
@@ -208,9 +256,186 @@ lines_desc() { # describes SCAN_HITS and SCAN_BAD as "3,5" plus a validity note
   printf '%s' "$d"
 }
 
+# show_redacted FILE: with --show-redacted, prints the lines named in
+# SCAN_HITS with every matched span masked.
+#   1. The hit lines (valid UTF-8 only) are copied out. Each pattern is run on
+#      its own with grep -o -b, so spans from different patterns that overlap
+#      are all found.
+#   2. grep -o reports a pattern's matches without overlap, so the first
+#      character of every span found is replaced by \001 and grep runs again,
+#      until no new span appears. That finds overlapping matches of one
+#      pattern (aba in ababa). After 64 passes the lines are withheld.
+#   3. redact_enumerate adds every match start position, pattern by
+#      pattern, so a match whose interior held an earlier span's replaced
+#      first character is still found.
+#   4. awk masks the union of the spans with '#', segment by segment.
+#   5. The masked lines are checked against both lists again; a line that
+#      still matches is withheld. Control bytes are shown as '?'.
+# Lines that are not valid UTF-8 are withheld throughout.
+redact_spans_raw() { # $1 file: every pattern's matches as "line:offset:text", one grep per pattern
+  local pat
+  printf '%s\n' "$CI_PATS" | while IFS= read -r pat; do
+    "$GREP" -n -b -o -i -E -f <(printf '%s\n' "$pat") "$1" 2>/dev/null || true
+  done
+  if [ -n "$CS_PATS" ]; then
+    printf '%s\n' "$CS_PATS" | while IFS= read -r pat; do
+      "$GREP" -n -b -o -E -f <(printf '%s\n' "$pat") "$1" 2>/dev/null || true
+    done
+  fi
+}
+# redact_enumerate: for each pattern that matched a hit line, finds every
+# start position that begins a match: the leftmost match at or after k is
+# taken, then k moves one character past that match's start, until no match
+# remains. It runs on suffixes of each line, which can only add spans (a
+# suffix may satisfy ^ or \b where the full line does not). Appends
+# "line offset length" to $WORK/spans; returns 1 if a line did not settle.
+redact_enumerate() {
+  local idx=0 pat flag pass
+  REDACT_PATS=() REDACT_FLAGS=()
+  while IFS= read -r pat; do REDACT_PATS[$idx]=$pat; REDACT_FLAGS[$idx]=-i; idx=$((idx + 1)); done < <(printf '%s\n' "$CI_PATS")
+  if [ -n "$CS_PATS" ]; then
+    while IFS= read -r pat; do REDACT_PATS[$idx]=$pat; REDACT_FLAGS[$idx]=""; idx=$((idx + 1)); done < <(printf '%s\n' "$CS_PATS")
+  fi
+  local j=0
+  while [ $j -lt $idx ]; do
+    pat=${REDACT_PATS[$j]}; flag=${REDACT_FLAGS[$j]}
+    # Lines this pattern matches at all start active at k = 0.
+    "$GREP" -n $flag -E -f <(printf '%s\n' "$pat") "$WORK/hl" 2>/dev/null | LC_ALL=C cut -d: -f1 \
+      | LC_ALL=C awk '{ print $1, 0 }' > "$WORK/en-k" || true
+    pass=0
+    while [ -s "$WORK/en-k" ]; do
+      pass=$((pass + 1))
+      [ $pass -le 256 ] || return 1
+      LC_ALL=C awk '
+        FILENAME == ARGV[1] { k[$1] = $2; next }
+        { if (FNR in k) print substr($0, k[FNR] + 1); else print "" }' "$WORK/en-k" "$WORK/hl" > "$WORK/en-suf" \
+        || cannot "redaction failed"
+      LC_ALL=C awk -v SP="$WORK/en-spans" '
+        BEGIN { for (c = 1; c < 256; c++) ord[sprintf("%c", c)] = c }
+        FILENAME == ARGV[1] { k[$1] = $2; next }
+        FILENAME == ARGV[2] { st[FNR] = pos; pos += length($0) + 1; line[FNR] = $0; next }
+        {
+          i = index($0, ":"); n = substr($0, 1, i - 1) + 0; r = substr($0, i + 1)
+          q = index(r, ":"); a = substr(r, 1, q - 1) + 0; m = substr(r, q + 1)
+          if (m == "" || !(n in k) || (n in done)) next
+          done[n] = 1
+          rel = a - st[n]; o = k[n] + rel
+          print n, o, length(m) > SP
+          b = ord[substr(line[n], rel + 1, 1)] + 0
+          cl = (b >= 240) ? 4 : (b >= 224) ? 3 : (b >= 192) ? 2 : 1
+          print n, o + cl
+        }' "$WORK/en-k" "$WORK/en-suf" \
+        <("$GREP" -n -b -o $flag -E -f <(printf '%s\n' "$pat") "$WORK/en-suf" 2>/dev/null || true) \
+        > "$WORK/en-k2" || cannot "redaction failed"
+      if [ -f "$WORK/en-spans" ]; then cat "$WORK/en-spans" >> "$WORK/spans" || cannot "redaction failed"; rm -f "$WORK/en-spans"; fi
+      mv "$WORK/en-k2" "$WORK/en-k" || cannot "redaction failed"
+    done
+    j=$((j + 1))
+  done
+  return 0
+}
+show_redacted() {
+  local f=$1 want bad l pass settled=1
+  [ "$SHOW_REDACTED" = 1 ] || return 0
+  want=$(printf '%s\n' $SCAN_HITS | tr '\n' ',') || cannot "redaction failed"
+  bad=$(printf '%s\n' $SCAN_BAD | tr '\n' ',') || cannot "redaction failed"
+  LC_ALL=C awk -v want=",$want" -v bad=",$bad" -v M="$WORK/red-map" '
+    index(want, "," FNR ",") && !index(bad, "," FNR ",") { print FNR > M; print }' "$f" > "$WORK/hl" \
+    || cannot "redaction failed"
+  : > "$WORK/spans"; : > "$WORK/red"
+  if [ -s "$WORK/hl" ]; then
+    cp "$WORK/hl" "$WORK/hl-cur" || cannot "redaction failed"
+    pass=0
+    while :; do
+      pass=$((pass + 1))
+      if [ $pass -gt 64 ]; then settled=0; break; fi
+      LC_ALL=C awk '
+        FILENAME == ARGV[1] { st[FNR] = pos; pos += length($0) + 1; next }
+        FILENAME == ARGV[2] { known[$0] = 1; next }
+        {
+          i = index($0, ":"); n = substr($0, 1, i - 1) + 0; r = substr($0, i + 1)
+          j = index(r, ":"); a = substr(r, 1, j - 1) + 0; m = substr(r, j + 1)
+          if (m == "") next
+          k = n " " (a - st[n]) " " length(m)
+          if (!(k in known)) { known[k] = 1; print k }
+        }' "$WORK/hl-cur" "$WORK/spans" <(redact_spans_raw "$WORK/hl-cur") > "$WORK/spans-new" \
+        || cannot "redaction failed"
+      [ -s "$WORK/spans-new" ] || break
+      cat "$WORK/spans-new" >> "$WORK/spans" || cannot "redaction failed"
+      LC_ALL=C awk '
+        BEGIN { for (c = 1; c < 256; c++) ord[sprintf("%c", c)] = c; ph = sprintf("%c", 1) }
+        FILENAME == ARGV[1] { R[$1] = R[$1] " " ($2 + 1) ":" $3; next }
+        {
+          s = $0
+          if (FNR in R) {
+            nr = split(substr(R[FNR], 2), parts, " ")
+            for (q = 1; q <= nr; q++) {
+              split(parts[q], ol, ":"); o = ol[1] + 0; len = ol[2] + 0
+              b = ord[substr(s, o, 1)] + 0
+              cl = (b >= 240) ? 4 : (b >= 224) ? 3 : (b >= 192) ? 2 : 1
+              if (cl > len) cl = len
+              rp = ""; for (z = 0; z < cl; z++) rp = rp ph
+              s = substr(s, 1, o - 1) rp substr(s, o + cl)
+            }
+          }
+          print s
+        }' "$WORK/spans-new" "$WORK/hl-cur" > "$WORK/hl-next" || cannot "redaction failed"
+      mv "$WORK/hl-next" "$WORK/hl-cur" || cannot "redaction failed"
+    done
+    if [ $settled = 1 ] && ! redact_enumerate; then settled=0; fi
+    LC_ALL=C awk -v settled="$settled" '
+      function hashes(n,  r) { r = ""; while (n-- > 0) r = r "#"; return r }
+      FILENAME == ARGV[1] { orig[FNR] = $0; next }
+      FILENAME == ARGV[2] { c = ++cnt[$1]; S[$1, c] = $2 + 1; E[$1, c] = $2 + $3; next }
+      {
+        i = FNR; s = $0; n = cnt[i]
+        if (settled != 1) { print orig[i] "\t(not shown: masking did not settle)"; next }
+        for (a = 2; a <= n; a++) {
+          ts = S[i, a]; te = E[i, a]; b = a - 1
+          while (b >= 1 && S[i, b] > ts) { S[i, b + 1] = S[i, b]; E[i, b + 1] = E[i, b]; b-- }
+          S[i, b + 1] = ts; E[i, b + 1] = te
+        }
+        out = ""; cur = 1; a = 1
+        while (a <= n) {
+          ms = S[i, a]; me = E[i, a]
+          while (a + 1 <= n && S[i, a + 1] <= me + 1) { a++; if (E[i, a] > me) me = E[i, a] }
+          if (ms < cur) ms = cur
+          if (ms > cur) out = out substr(s, cur, ms - cur)
+          if (me >= ms) out = out hashes(me - ms + 1)
+          if (me + 1 > cur) cur = me + 1
+          a++
+        }
+        out = out substr(s, cur)
+        print orig[i] "\t" out
+      }' "$WORK/red-map" "$WORK/spans" "$WORK/hl" > "$WORK/red" || cannot "redaction failed"
+  fi
+  # Re-check the masked text: a line that still matches is withheld.
+  LC_ALL=C cut -f2- "$WORK/red" > "$WORK/red-text" || cannot "redaction failed"
+  : > "$WORK/m"
+  if [ -s "$WORK/red-text" ]; then
+    grep_list -i "$CI_PATS" "$WORK/red-text" case-insensitive
+    if [ -n "$CS_PATS" ]; then grep_list "" "$CS_PATS" "$WORK/red-text" case-sensitive; fi
+  fi
+  LC_ALL=C awk -v bad=",$bad" '
+    FILENAME == ARGV[1] { still[$0] = 1; next }
+    {
+      t = index($0, "\t"); n = substr($0, 1, t - 1); s = substr($0, t + 1)
+      if (index(bad, "," n ",")) next
+      if (FNR in still) s = "(not shown: masking incomplete)"
+      gsub(/[\001-\010\013-\037\177]/, "?", s); gsub(/\302[\200-\237]/, "?", s)
+      print "  line " n ": " s
+    }' "$WORK/m" "$WORK/red" >&2 || cannot "redaction failed"
+  for l in $SCAN_BAD; do echo "  line $l: (not valid UTF-8; not shown)" >&2; done
+  rm -f "$WORK/red" "$WORK/red-text" "$WORK/hl" "$WORK/hl-cur" "$WORK/red-map" || cannot "rm failed"
+}
+
 # ---- state ---------------------------------------------------------------
 HITS=0 N_COMMITS=0 N_BLOBS=0 N_BIN=0 N_PATHS=0 N_FIELDS=0 N_REFLINES=0
-hit() { echo "$ME: HIT: $1" >&2; HITS=$((HITS + 1)); }
+hit() { # $1 location; under --published hits are collected and compared with the baseline
+  HITS=$((HITS + 1))
+  if [ "$MODE" = --published ]; then printf '%s\n' "$1" >> "$WORK/hits" || cannot "write failed"
+  else echo "$ME: HIT: $1" >&2; fi
+}
 
 has_nul() { # $1 file: returns 0 when it holds a NUL byte
   local n
@@ -248,7 +473,7 @@ sweep_blob() { # $1 context, $2 blob sha, $3 display, $4 real path ("" if none)
   fi
   if seen "$WORK/seen-blobs" "$sha"; then return 0; fi
   N_BLOBS=$((N_BLOBS + 1))
-  if scan_file "$WORK/blob"; then hit "$ctx $disp line(s) $(lines_desc)"; fi
+  if scan_file "$WORK/blob"; then hit "$ctx $disp line(s) $(lines_desc)"; show_redacted "$WORK/blob"; fi
 }
 
 # sweep_entries CONTEXT FILE KIND: KIND "diff" reads git diff-tree -r -z
@@ -275,7 +500,7 @@ sweep_entries() {
     while IFS= read -r -d '' meta && IFS= read -r -d '' p; do
       i=$((i + 1))
       set -f; set -- $meta; set +f          # :oldmode newmode oldsha newsha status
-      case ${5:-} in D*) continue ;; esac
+      case ${5:-} in D*|U*) continue ;; esac
       add_entry "$p" "$2" "$4" "$i"
     done < "$f"
   else
@@ -288,6 +513,10 @@ sweep_entries() {
   fi
   if [ -s "$WORK/paths" ] && scan_file "$WORK/paths"; then
     for l in $SCAN_HITS $SCAN_BAD; do E_FLAG[${LMAP[$l]}]=1; done
+    if [ "$SHOW_REDACTED" = 1 ]; then
+      echo "$ME: redacted path names for $ctx (line N is the Nth path listed without a newline):" >&2
+      show_redacted "$WORK/paths"
+    fi
   fi
   j=0
   while [ $j -lt $n ]; do
@@ -299,7 +528,7 @@ sweep_entries() {
       disp="path#${E_IDX[$j]}"
       hit "$ctx $disp: the path name matches a pattern or is not valid UTF-8"
     fi
-    if [ "${E_MODE[$j]}" != 160000 ]; then sweep_blob "$ctx" "${E_SHA[$j]}" "$disp" "$p"; fi
+    if [ "${E_MODE[$j]}" != 160000 ] && ! is_zero "${E_SHA[$j]}"; then sweep_blob "$ctx" "${E_SHA[$j]}" "$disp" "$p"; fi
     j=$((j + 1))
   done
 }
@@ -308,6 +537,9 @@ sweep_commit() { # $1 commit sha
   local c=$1
   if seen "$WORK/seen-commits" "$c"; then return 0; fi
   N_COMMITS=$((N_COMMITS + 1))
+  # Under --published every (commit, path) is judged against the baseline, so
+  # a known leak copied to a new place shows as new: blob dedupe is per commit.
+  if [ "$MODE" = --published ]; then : > "$WORK/seen-blobs"; fi
   git cat-file commit "$c" > "$WORK/obj" 2>/dev/null || cannot "could not read commit $c"
   if has_nul "$WORK/obj"; then hit "commit $c holds a NUL byte, so its text is not checkable"; fi
   : > "$WORK/h"; : > "$WORK/b"
@@ -321,8 +553,9 @@ sweep_commit() { # $1 commit sha
   N_FIELDS=$((N_FIELDS + 2))
   if scan_file "$WORK/h"; then
     if [ -n "$SCAN_BAD" ]; then hit "commit $c header (not valid UTF-8, so not fully checkable)"; else hit "commit $c header"; fi
+    show_redacted "$WORK/h"
   fi
-  if scan_file "$WORK/b"; then hit "commit $c message:$(lines_desc)"; fi
+  if scan_file "$WORK/b"; then hit "commit $c message:$(lines_desc)"; show_redacted "$WORK/b"; fi
   git diff-tree -r -m --root --no-renames --no-commit-id -z "$c" > "$WORK/dt" 2>/dev/null || cannot "git diff-tree failed on $c"
   sweep_entries "commit $c" "$WORK/dt" diff
 }
@@ -350,12 +583,12 @@ sweep_pushed() {
         git cat-file tag "$obj" > "$WORK/obj" 2>/dev/null || cannot "could not read tag $obj"
         if has_nul "$WORK/obj"; then hit "tag object $obj holds a NUL byte, so its text is not checkable"; fi
         N_FIELDS=$((N_FIELDS + 1))
-        if scan_file "$WORK/obj"; then hit "tag object $obj line(s) $(lines_desc)"; fi
+        if scan_file "$WORK/obj"; then hit "tag object $obj line(s) $(lines_desc)"; show_redacted "$WORK/obj"; fi
         obj=$(LC_ALL=C awk 'NR == 1 && $1 == "object" { print $2 }' "$WORK/obj") || cannot "could not parse tag"
         is_sha "$obj" || cannot "could not parse tag"
         ;;
       commit)
-        { printf '%s\n' "$obj"; cat "$WORK/excl"; } | git rev-list --reverse --stdin > "$WORK/commits" 2>/dev/null \
+        { printf '%s\n' "$obj"; cat "$WORK/excl"; } | git rev-list --topo-order --reverse --stdin > "$WORK/commits" 2>/dev/null \
           || cannot "git rev-list failed for $obj"
         sweep_commit_list "$WORK/commits"
         return 0 ;;
@@ -372,9 +605,32 @@ sweep_pushed() {
 }
 
 # ---- modes ---------------------------------------------------------------
-if [ "$MODE" = --range ]; then
-  git rev-list --reverse "${RANGE_ARGS[@]}" > "$WORK/commits" 2>/dev/null || cannot "git rev-list rejected the range"
+if [ "$MODE" = --range ] || [ "$MODE" = --published ]; then
+  : > "$WORK/hits"
+  git rev-list --topo-order --reverse "${RANGE_ARGS[@]}" > "$WORK/commits" 2>/dev/null || cannot "git rev-list rejected the range"
   sweep_commit_list "$WORK/commits"
+elif [ "$MODE" = --pre-commit ]; then
+  if git rev-parse --verify -q HEAD >/dev/null 2>&1; then BASE=HEAD
+  else BASE=$(git hash-object -t tree /dev/null 2>/dev/null) || cannot "could not compute the empty tree"; fi
+  git diff-index --cached -r --no-renames -z "$BASE" > "$WORK/dt" 2>/dev/null || cannot "git diff-index failed"
+  sweep_entries "staged" "$WORK/dt" diff
+elif [ "$MODE" = --commit-msg ]; then
+  [ -f "$MSG_FILE" ] && [ -r "$MSG_FILE" ] || cannot "the commit message file is not readable"
+  # The whole file is swept, comment lines and any scissors section included:
+  # git keeps text below a scissors line unless -v or --cleanup=scissors is in
+  # play, and the hook cannot tell which.
+  cat "$MSG_FILE" > "$WORK/msg" 2>/dev/null || cannot "the commit message file is not readable"
+  N_FIELDS=$((N_FIELDS + 2))
+  if has_nul "$MSG_FILE"; then hit "commit message holds a NUL byte, so it is not checkable"
+  elif scan_file "$WORK/msg"; then
+    hit "commit message line(s) $(lines_desc)"
+    show_redacted "$WORK/msg"
+    if printf '%s\n' $SCAN_HITS | LC_ALL=C awk 'FILENAME == ARGV[1] { w[$1] = 1; next } (FNR in w) && /^#/ { f = 1 } END { exit f ? 0 : 1 }' - "$WORK/msg" 2>/dev/null; then
+      echo "$ME: a hit in a '#' line can come from git's own status text or a commit -v diff (a path, a branch, a removed line). Fix the source, or commit with -m." >&2
+    fi
+  fi
+  { git var GIT_AUTHOR_IDENT && git var GIT_COMMITTER_IDENT; } > "$WORK/one" 2>/dev/null || cannot "git var failed"
+  if scan_file "$WORK/one"; then hit "commit identity"; show_redacted "$WORK/one"; fi
 else
   # Read every ref line first: later git commands must not consume stdin.
   cat > "$WORK/stdin" || cannot "could not read the push lines"
@@ -402,6 +658,60 @@ fi
 
 SUMMARY="$N_CI case-insensitive and $N_CS case-sensitive patterns loaded; swept $N_COMMITS commits, $N_BLOBS text blobs, $N_BIN binary, $N_PATHS paths, $N_FIELDS text fields"
 if [ "$MODE" = --pre-push ]; then SUMMARY="$SUMMARY, $N_REFLINES push lines"; fi
+
+if [ "$MODE" = --published ]; then
+  BASELINE=${MEMENTO_SWEEP_BASELINE:-$HOME/.memento/sweep-baseline.txt}
+  if command -v sha256sum >/dev/null 2>&1; then SHA256="sha256sum"
+  elif command -v shasum >/dev/null 2>&1; then SHA256="shasum -a 256"
+  else cannot "no sha256 tool found"; fi
+  LISTS_DIGEST=$(printf '%s\n--\n%s\n' "$CI_PATS" "$CS_PATS" | $SHA256 | cut -d' ' -f1) || cannot "hashing failed"
+  [ ${#LISTS_DIGEST} -eq 64 ] || cannot "hashing failed"
+  : > "$WORK/hit-hashes"
+  while IFS= read -r h || [ -n "$h" ]; do
+    printf '%s\n%s' "$LISTS_DIGEST" "$h" | $SHA256 | cut -d' ' -f1 >> "$WORK/hit-hashes" || cannot "hashing failed"
+  done < "$WORK/hits"
+  [ ! -d "$BASELINE" ] || cannot "the baseline path is a directory: $BASELINE"
+  if [ "$UPDATE_BASELINE" = 1 ]; then
+    PREV=0
+    if [ -f "$BASELINE" ]; then PREV=$(wc -l < "$BASELINE" | tr -d ' ') || cannot "could not read the baseline"; fi
+    mkdir -p "$(dirname "$BASELINE")" || cannot "could not create the baseline directory"
+    sort -u "$WORK/hit-hashes" > "$WORK/baseline-new" || cannot "sort failed"
+    # Written through cat so a symlinked baseline keeps its link.
+    cat "$WORK/baseline-new" > "$BASELINE" || cannot "could not write the baseline"
+    NOW=$(wc -l < "$BASELINE" | tr -d ' ') || cannot "could not read the baseline back"
+    echo "$ME: baseline written: $NOW known hit(s) recorded at $BASELINE (previously $PREV). $SUMMARY"
+    FINISHED=1
+    exit 0
+  fi
+  KNOWN=0 NEW=0
+  if [ -f "$BASELINE" ]; then
+    exec 3< "$WORK/hits"
+    while IFS= read -r hh; do
+      IFS= read -r h <&3 || h=""
+      rc=0; "$GREP" -Fx -e "$hh" "$BASELINE" >/dev/null 2>&1 || rc=$?
+      case $rc in
+        0) KNOWN=$((KNOWN + 1)) ;;
+        1) NEW=$((NEW + 1)); echo "$ME: HIT (new): $h" >&2 ;;
+        *) cannot "baseline lookup failed" ;;
+      esac
+    done < "$WORK/hit-hashes"
+    exec 3<&-
+  else
+    echo "$ME: no baseline at $BASELINE: every hit counts as new (record known hits with --update-baseline)" >&2
+    while IFS= read -r h || [ -n "$h" ]; do NEW=$((NEW + 1)); echo "$ME: HIT (new): $h" >&2; done < "$WORK/hits"
+  fi
+  if [ "$NEW" -gt 0 ]; then
+    if [ "$KNOWN" -eq 0 ] && [ -s "$BASELINE" ]; then
+      echo "$ME: none of the baseline's hits matched: if the lists changed since it was recorded, review the hits with --range, then run --update-baseline" >&2
+    fi
+    echo "$ME: BLOCKED: $KNOWN known hits, $NEW new. $SUMMARY" >&2
+    FINISHED=1
+    exit 1
+  fi
+  echo "$ME: clean against the baseline: $KNOWN known hits, 0 new. $SUMMARY"
+  FINISHED=1
+  exit 0
+fi
 if [ "$HITS" -gt 0 ]; then
   echo "$ME: BLOCKED: $HITS hit(s). $SUMMARY" >&2
   echo "$ME: hits are reported by location. Open a hit location in redacted form." >&2
