@@ -13,7 +13,7 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 
 ## Active Playbook and plan
 
-**Plan: leak hardening** (`../evidence-archive/plan-leak-hardening-2026-10-03.md`), APPROVED 2026-10-03. Slices 1a (the push gate) and 1b (commit-time sweeps, the sweep of what is published, the redacted view) complete and validated, slice 1c (the documents) complete, and slice 2 (CD #4e amended, § Imports procedure) complete on the User's rulings. All slices done; the plan awaits the User's word to close. PLANNING governs; slices run WIP of one, each to the User's eyeball.
+**Plan: the Bitter Lesson sort** (`../evidence-archive/plan-bitter-lesson-sort-2026-10-03.md`), APPROVED 2026-10-03, slice 0 (alternatives to the sort) in progress. **Plan: leak hardening** (`../evidence-archive/plan-leak-hardening-2026-10-03.md`), APPROVED 2026-10-03. Slices 1a (the push gate) and 1b (commit-time sweeps, the sweep of what is published, the redacted view) complete and validated, slice 1c (the documents) complete, and slice 2 (CD #4e amended, § Imports procedure) complete on the User's rulings. All slices done; the plan awaits the User's word to close. PLANNING governs; slices run WIP of one, each to the User's eyeball.
 
 ## Current state
 
@@ -36,7 +36,7 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 
 - **Tier map and Rooms tool copies:** awaiting the User's answer on who does which (proposal: this session edits the canon tier map; rooms/dev copies in the `1addabb` tools). rooms/dev reports the live-dispatch witness passed on Claude Code 2.1.286 (2026-09-30); the canon edit of `verified_against` (2.1.271 to 2.1.286) and `policy.last_verified` awaits his go. Also raised: the judgement role's rank 0 against the main thread's rank 1 model, and the haiku alias trailing a generation. The script's default `--map` path does not resolve in this repository.
 - **Tool copies in Rooms and Proportion:** `generate_agents.py` and `tier-map-check.py` changed here (`1addabb`); Rooms' doctor CHECK 9 fails on the drift. Whether, when and who copies in is his call.
-- **The Bitter Lesson sort** (build-protocols, 2026-10-02): the evidence is banked (`finding-exercise-census-2026-10-03.md`): step-by-step playbooks fading, planning, routing, review, restart and the working context heavily exercised in product work, eight parts beyond the method's reach. Next: the sort as its own decision plan (3C), the User deciding.
+- **The Bitter Lesson sort** (build-protocols, 2026-10-02): the evidence is banked (`finding-exercise-census-2026-10-03.md`): step-by-step playbooks fading, planning, routing, review, restart and the working context heavily exercised in product work, eight parts beyond the method's reach. The sort is the active decision plan.
 - **Build-protocols** re-syncs the explainer page's quotes from the canon commits once they are public (derive publication from git).
 - **Six inherited adoption gaps** (plain-language plan, slice 4 record): SPIRIT.md's links after copying, pointing the agent at SPIRIT.md, STATUS in set-up step 3, the advance-build exception, the founding plan's timing, a link to the writing rules. Not taken up.
 - **Spawn-tier eyeball items** (that plan's §15): the tier map's role efforts, the slice-4 canon passages, the register row.

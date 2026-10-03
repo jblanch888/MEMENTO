@@ -19,7 +19,7 @@ status: live
 ## Next
 
 1. The User's word to close the leak-hardening plan.
-2. The Bitter Lesson sort as a decision plan, on the census evidence.
+2. The Bitter Lesson sort (plan approved): slice 0, the alternatives, for the User's choice.
 3. The tier map and Rooms tool copies (who does which).
 
 ## Unwitnessed arms (the register is the source of truth)
