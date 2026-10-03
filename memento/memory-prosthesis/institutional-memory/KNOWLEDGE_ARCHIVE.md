@@ -25,9 +25,11 @@ Entries graduate through the pre-compact consolidation gate (CD #9), maximum thr
 
 ## Publication discipline
 
-### The sweep runs last, on the final tree {#the-sweep-runs-last}
+### The sweep runs last, on everything a push publishes {#the-sweep-runs-last}
 
 *(Graduated 2026-07-21.)* A confidentiality check is a property of the final tracked tree, so it runs as the last act before exposure. Receipted the hard way: the publication-readiness memo introduced banned literals AFTER the full-tree sweep had run, and the fix of the first leak introduced a second, caught only at bench by the mechanised sweep. Now enforced by the pre-push hook; the discipline is to trust nothing swept earlier than the final state.
+
+*(Widened 2026-10-03.)* The final tree is one part of what a push publishes. History, commit and tag messages, author names, paths and ref names go out too, and a token removed in a later commit still ships in the earlier one. Receipted: the July tool read the working copy, so history and commit messages went unswept (the July memo's leak and earlier commit messages sat in published history), and it reported clean on a list it could not parse. The rebuilt sweep (`plan-leak-hardening-2026-10-03.md`) checks everything a push sends, each commit as it is made, and the published history against a baseline at restart. A check that cannot run blocks.
 
 ### Committed working context cannot assert publication state {#working-context-cannot-assert-push-state}
 

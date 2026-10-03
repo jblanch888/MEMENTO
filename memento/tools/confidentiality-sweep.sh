@@ -7,8 +7,8 @@ set +x
 # Earned 2026-07-21 by incident (banned literals published inside the memo that
 # documented their banning). Rebuilt 2026-10-03 under the leak-hardening plan
 # (evidence archive: plan-leak-hardening-2026-10-03.md, slice 1a), after the
-# first version was found to read only the working copy, skip history and
-# commit messages, and report clean on a list it could not parse.
+# first version was found to read the working copy, leave history and commit
+# messages unswept, and report clean on a list it could not parse.
 #
 # What a push publishes, and what this sweeps:
 #   - every blob an outgoing commit adds or changes, in full (merges and root
@@ -228,8 +228,8 @@ valid_lines() {
 # scan_file FILE: sets SCAN_HITS (line numbers matching a pattern) and
 # SCAN_BAD (line numbers that are not valid UTF-8). Returns 0 when either is
 # non-empty. grep's matched lines go straight down a pipe to cut, which runs
-# byte-wise (LC_ALL=C) so a line holding invalid UTF-8 keeps its number; only
-# line numbers are written to disk.
+# byte-wise (LC_ALL=C) so a line holding invalid UTF-8 keeps its number. The
+# lines written to disk are line numbers.
 SCAN_HITS="" SCAN_BAD=""
 grep_list() { # $1 case flag, $2 patterns, $3 file, $4 label: appends hit line numbers to $WORK/m
   local st
@@ -258,7 +258,7 @@ lines_desc() { # describes SCAN_HITS and SCAN_BAD as "3,5" plus a validity note
 
 # show_redacted FILE: with --show-redacted, prints the lines named in
 # SCAN_HITS with every matched span masked.
-#   1. The hit lines (valid UTF-8 only) are copied out. Each pattern is run on
+#   1. The hit lines (valid UTF-8 lines) are copied out. Each pattern is run on
 #      its own with grep -o -b, so spans from different patterns that overlap
 #      are all found.
 #   2. grep -o reports a pattern's matches without overlap, so the first
@@ -286,8 +286,8 @@ redact_spans_raw() { # $1 file: every pattern's matches as "line:offset:text", o
 # redact_enumerate: for each pattern that matched a hit line, finds every
 # start position that begins a match: the leftmost match at or after k is
 # taken, then k moves one character past that match's start, until no match
-# remains. It runs on suffixes of each line, which can only add spans (a
-# suffix may satisfy ^ or \b where the full line does not). Appends
+# remains. It runs on suffixes of each line, which adds spans, a safe
+# over-masking, because a suffix may satisfy ^ or \b where the full line does not. Appends
 # "line offset length" to $WORK/spans; returns 1 if a line did not settle.
 redact_enumerate() {
   local idx=0 pat flag pass

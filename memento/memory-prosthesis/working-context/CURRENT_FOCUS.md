@@ -13,7 +13,7 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 
 ## Active Playbook and plan
 
-**Plan: leak hardening** (`../evidence-archive/plan-leak-hardening-2026-10-03.md`), APPROVED 2026-10-03. Slices 1a (the push gate) and 1b (commit-time sweeps, the sweep of what is published, the redacted view) complete and validated; slice 1c (the documents: register row, tools README, knowledge-archive entry) next, then slice 2 (the directive). PLANNING governs; slices run WIP of one, each to the User's eyeball.
+**Plan: leak hardening** (`../evidence-archive/plan-leak-hardening-2026-10-03.md`), APPROVED 2026-10-03. Slices 1a (the push gate) and 1b (commit-time sweeps, the sweep of what is published, the redacted view) complete and validated, and slice 1c (the documents) complete; slice 2 (the directive, CD #4e) next, the User choosing the option and ruling the wording. PLANNING governs; slices run WIP of one, each to the User's eyeball.
 
 ## Current state
 

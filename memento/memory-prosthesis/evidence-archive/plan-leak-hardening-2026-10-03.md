@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-03
 genre: build/change (3A) with a design/decision step (3C) for the directive
 size: L (four slices: 1a, 1b, 1c, 2)
-status: APPROVED 2026-10-03; slices 1a and 1b complete (validated by the User 2026-10-03); slice 1c next
+status: APPROVED 2026-10-03; slices 1a, 1b and 1c complete (validated by the User 2026-10-03); slice 2 next
 related: [CORE_DIRECTIVES, PLANNING_PLAYBOOK, TOOLING_TRIGGERS, KNOWLEDGE_ARCHIVE, CURRENT_FOCUS, finding-publication-readiness-2026-07-20, handover-publication-and-hardening-2026-07-21, plan-truth-and-presentation-2026-07-21]
 ---
 
@@ -212,6 +212,8 @@ Estate only: `memento/tools/`, `memento/protocols/`, `memento/memory-prosthesis/
 - **Review round 2:** a scissors cut added in round 1 let `git commit -m` publish text below a scissors line unswept, and a test had enshrined it; chained alternation inside one list line could leave a middle fragment unmasked. Fixes: the whole message file is swept (the `-v` false positive stays, with a hint that now prints only for hits in `#` lines); an exhaustive pass enumerates every match start, pattern by pattern, on line suffixes (over-masking only), alongside the fixed point.
 - **Known limits:** amend, cherry-pick, revert and rebase are covered by pre-push only; the mask keeps each span's byte length; a long line built from one repeated character against a short pattern takes about 20 s per 100 KB in the redacted view and is then withheld; bidi control characters (such as U+202E) pass through the redacted view.
 - **Evidence:** suite 248 of 248, verified first-hand; slice 1b mutants each killed (21 across the rounds), with one equivalent (the baseline directory check: the write fails and exits 2 regardless); the real baseline holds 25 known hits, each traced (the 20 of slice 1a, plus per-commit republications in an archive copy and two merges); `--published origin/main` reads clean against it.
+
+**Slice 1c (2026-10-03):** the sweep's register row replaced (the October firing, the rebuild, the live witnesses, the unwitnessed arms, a new falsifier); the tools README entry rewritten and its em dashes turned to colons; the knowledge-archive entry retitled *The sweep runs last, on everything a push publishes* (anchor kept) and widened; STATUS's unwitnessed-arms line updated. CURRENT_FOCUS's constraint was already replaced in slice 1b. No instance holds a copy of the sweep (Rooms has its own `token-sweep.py`), so the rebuild leaves no copy to refresh. Review (smart tier): 6 findings, all accepted: two overstatements (two equivalent mutants claimed where the record has one; the 2025 count reintroduced into public text against the r2 ruling), three contrast frames in new text and script comments, a duplicated phrase in the README. Six contrast frames that pre-dated this slice in the README's spawn-tier text, and two "commit only on exit 0" lines, were restated on the User's ruling ("restate them").
 
 ## Review record (draft r1, 2026-10-03)
 
