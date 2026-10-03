@@ -25,12 +25,12 @@ Produce the **mid-2026 open-source version of Memento** in this repository: supe
 
 - **Repo root = canon** — the published product of this endeavour. **`memento/` = estate** — the live instance governing the sessions that produce it. They must never blur (CD #1).
 - Canon is edited only under a plan and the User's approval; every commit declares its seam side; a commit mixing sides needs explicit approval (CD #10).
-- Reading the deployment estates is free; **importing is gated** — de-identification pass + the User's clearance (CD #4e). Two of the three source estates contain client-confidential material; imports are de-identified by construction and say so in their provenance.
+- Reading other Memento instances and other sources is free. Importing from them is gated by a de-identification pass and the User's clearance (CD #4e; procedure in `memento/tools/README.md`, § Imports). Imports are de-identified by construction, and their provenance records the clearance.
 - This estate contains no client material by construction, and the User has ruled it **publishes with the canon** (P2, posture (i), 2026-07-20): a live instance in the framework's own repo, its evidence archive the receipted story of the modernisation. Consequence: **every estate document is public at the next push, permanently.** Deployment codenames (trv3-temporal, cartographer, rooms) and private commit hashes are cleared for publication by the User's ruling; actual client identifiers are banned absolutely, everywhere, forever. The publication-depth sweep is now standing discipline for every estate write. The push itself remains the User's alone.
 
 ## Gates (restated from CD #4)
 
-Pushes to origin (publication) · running `/compact` (pre-compact protocol first) · canon content and epoch narrative · Core Directive changes · deletion of evidence or of the Aug 2025 canon (banner-and-archive instead) · estate imports (clearance) · API spend. All User-only.
+Pushes to origin (publication) · running `/compact` (pre-compact protocol first) · canon content and epoch narrative · Core Directive changes · deletion of evidence or of the Aug 2025 canon (superseded by banner-and-archive) · imports (the CD #4e clearance) · API spend. All User-only.
 
 ## Named pivot points (from the founding plan)
 

@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-03
 genre: build/change (3A) with a design/decision step (3C) for the directive
 size: L (four slices: 1a, 1b, 1c, 2)
-status: APPROVED 2026-10-03; slices 1a, 1b and 1c complete (validated by the User 2026-10-03); slice 2 next
+status: APPROVED 2026-10-03; all slices implemented and validated by the User 2026-10-03; awaiting the User's word to close
 related: [CORE_DIRECTIVES, PLANNING_PLAYBOOK, TOOLING_TRIGGERS, KNOWLEDGE_ARCHIVE, CURRENT_FOCUS, finding-publication-readiness-2026-07-20, handover-publication-and-hardening-2026-07-21, plan-truth-and-presentation-2026-07-21]
 ---
 
@@ -214,6 +214,10 @@ Estate only: `memento/tools/`, `memento/protocols/`, `memento/memory-prosthesis/
 - **Evidence:** suite 248 of 248, verified first-hand; slice 1b mutants each killed (21 across the rounds), with one equivalent (the baseline directory check: the write fails and exits 2 regardless); the real baseline holds 25 known hits, each traced (the 20 of slice 1a, plus per-commit republications in an archive copy and two merges); `--published origin/main` reads clean against it.
 
 **Slice 1c (2026-10-03):** the sweep's register row replaced (the October firing, the rebuild, the live witnesses, the unwitnessed arms, a new falsifier); the tools README entry rewritten and its em dashes turned to colons; the knowledge-archive entry retitled *The sweep runs last, on everything a push publishes* (anchor kept) and widened; STATUS's unwitnessed-arms line updated. CURRENT_FOCUS's constraint was already replaced in slice 1b. No instance holds a copy of the sweep (Rooms has its own `token-sweep.py`), so the rebuild leaves no copy to refresh. Review (smart tier): 6 findings, all accepted: two overstatements (two equivalent mutants claimed where the record has one; the 2025 count reintroduced into public text against the r2 ruling), three contrast frames in new text and script comments, a duplicated phrase in the README. Six contrast frames that pre-dated this slice in the README's spawn-tier text, and two "commit only on exit 0" lines, were restated on the User's ruling ("restate them").
+
+**Slice 2 (2026-10-03):** CD #4e replaced, CD #13's import bullet replaced, a § Imports procedure added to `memento/tools/README.md`, the CHARTER's import doctrine and gates line and the estate PLANNING_PLAYBOOK's §1 bullet brought into line. The User's rulings: option A with C (D5); scope widened to any confidential source; every import cleared, with no standing clearance; the procedure in the tools README with changes to it the User's; the r3 wording approved ("approve").
+- Drafted outside the working tree (the quarantine it introduces), reviewed in two rounds (smart tier): 14 findings, then 4 new and 2 wording, all accepted. Main changes from the plan's sketch: the destination list widened to everything a commit, a push or a shared document carries; the clearance recorded in the provenance line, which makes option A's falsifier testable; the trigger defined (instance material always, other material when confidential or of unknown status); a lower bound on "lesson"; reading and replying free; the long policy moved out of the directive into § Imports.
+- Remediation of a sweep hit, listed in this plan's risks and scope as a directive line, lives in § Imports, which the directive points to.
 
 ## Review record (draft r1, 2026-10-03)
 

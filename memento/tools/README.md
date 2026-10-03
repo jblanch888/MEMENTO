@@ -49,3 +49,19 @@ logic. Whether the runtime still delivers that field is a separate question. If 
 witness would stay green while every real spawn was denied as "no model". A live-dispatch witness
 (one real Agent call on haiku whose log line must appear) is the check that catches that, and it is
 owed in each estate that wires the gate.
+
+## Imports: the de-identification pass (CD #4e)
+
+The procedure CD #4e points to. Changes to it are the User's.
+
+**When it applies.** To material from another Memento instance, and to material from any other source that is confidential or of unknown status. When unsure, apply it. At first contact with a new source, ask the User to add its identifiers to the banned lists before drafting (see *Refreshing the lists*).
+
+1. **Read freely, and draft outside the tree.** Draft in the session scratchpad, at the level of mechanism, in this repository's own words, quoting nothing from the source. Anyone the main thread delegates to works from the cleared draft.
+2. **De-identify.** Remove or generalise anything that identifies the source: people, organisations, clients, products, projects, places, figures, dates, quotations. When unsure, remove it.
+3. **Review.** An independent reviewer (CD #14) reads the draft for paraphrase and unlisted names that survived step 2. The reviewer receives the draft, and sees the source when it cannot judge without it.
+4. **Clear.** The main thread shows the User the draft and the kinds of thing removed, as categories with no tokens. The User's approval is the clearance, and the clearance stays with the User.
+5. **Write it in with its provenance.** The provenance line names the source in de-identified form, the date, the fitting changes, and "de-identified; cleared by the User, <date>". The User holds the key from a de-identified name to the real source, outside the repository. The pre-commit, commit-msg and pre-push sweeps then run as the backstop. They match listed words; paraphrase, unlisted names, figures and images rest on steps 2 to 4. A binary file or an image needs its exact path on `memento/tools/sweep-binary-allow.txt`, added after step 4.
+
+**Fixing a sweep hit.** Read it in redacted form, with the modifier first: `confidentiality-sweep.sh --show-redacted --pre-commit` for staged work, or `--show-redacted --range origin/main..HEAD` for unpushed commits. The raw location is opened on the User's clearance. The fix removes the token from the content. The User decides what happens to a token already in published history.
+
+**Refreshing the lists.** Before the first import from a new source, the User adds its identifiers to the banned lists (`~/.memento/banned-tokens.txt`, and `banned-tokens-cs.txt` for case-sensitive entries). After any list change, `--published origin/main` reports old hits as new: read them with `--show-redacted --range origin/main`, then record them with `--published --update-baseline origin/main`.

@@ -3,7 +3,7 @@ description: immutable foundation — minimal always-active rules governing agen
 type: governing
 date: 2026-07-20
 governs: [agent-conduct, sovereignty, routing, working-context, canon-estate-seam]
-last_verified: 2026-07-20
+last_verified: 2026-10-03
 status: governing
 ---
 
@@ -48,7 +48,8 @@ a. **Any push to origin.** This repository is public; a push is publication — 
 b. Running `/compact` (gated behind the pre-compact protocol, CD #9).
 c. Git merges and history rewrites; changes to the canon's epoch narrative; changes to these Core Directives.
 d. Deletion of evidence-archive content or of the existing (Aug 2025) canon — the old canon is lineage evidence: supersede with provenance (banner-and-archive), never delete or silently rewrite.
-e. **Any import of material from the deployment estates** (trv3-temporal, cartographer, rooms) into this repository without a de-identification pass and the User's clearance — rooms and cartographer contain client-confidential material; trv3 is the default safe source but still passes review.
+e. **Any import into this repository, or into anything shared from it, without a de-identification pass and the User's clearance.** Material from another Memento instance always counts: the deployment estates trv3-temporal, cartographer and rooms, and any other instance. Material from any other source counts when it is confidential or its status is unknown. Public material, the User's own instructions about this repository, and material already in this repository and already cleared are outside the rule. An import can arrive by any route: an agent-messaging message, a lesson relayed by an agent or by the User, pasted text, a document or file read in the session, or a tool, passage or design carried across. A lesson counts once its specifics (names, figures, incidents, wording or a design) come from the source. Reading such material, and replying to its sender, are free. Text built from an import is drafted outside the repository's working tree (the session scratchpad). It enters a tracked file, an evidence-archive memo, a commit or tag message, a ref name, a Claude Docs document, an artifact, a message to another instance or any published text after the pass and the User's clearance. The User's approval of the de-identified draft is the clearance, and the import's provenance line records it (CD #13). The procedure is in `memento/tools/README.md`, § Imports, and changes to it are the User's.
+   *(Amended 2026-10-03 under `plan-leak-hardening-2026-10-03.md`, slice 2: imports defined by source and route, drafting held outside the working tree until cleared, the clearance recorded in provenance, the procedure in the tools README. The User's rulings: option A with C, any confidential source, every import cleared.)*
 f. API spend beyond an explicitly agreed envelope. (Default engine: in-session on the User's plan.)
 
 ---
@@ -133,7 +134,7 @@ Full discipline and routing table: `../memory-prosthesis/active-knowledge/RESOUR
 
 - Every claim published in the mid-2026 canon traces to lineage evidence (the deployment estates' receipts); no invented history — the lineage is the story.
 - Honest maturity labels: early-days findings are presented as early-days; open questions stay open; killed mechanisms are shown with why they died.
-- Imports from deployment estates carry transplant provenance (source estate, date, fitting changes) and are de-identified by construction (CD #4e).
+- Imports (CD #4e) carry transplant provenance: the source in de-identified form, the date, the fitting changes, and the record of the de-identification pass and the User's clearance. They are de-identified by construction.
 - The Aug 2025 canon is history, not error: superseded with provenance, never silently rewritten (CD #4d).
 - The machine proposes; the User decides what the framework claims.
 

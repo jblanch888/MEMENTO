@@ -13,7 +13,7 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 
 ## Active Playbook and plan
 
-**Plan: leak hardening** (`../evidence-archive/plan-leak-hardening-2026-10-03.md`), APPROVED 2026-10-03. Slices 1a (the push gate) and 1b (commit-time sweeps, the sweep of what is published, the redacted view) complete and validated, and slice 1c (the documents) complete; slice 2 (the directive, CD #4e) next, the User choosing the option and ruling the wording. PLANNING governs; slices run WIP of one, each to the User's eyeball.
+**Plan: leak hardening** (`../evidence-archive/plan-leak-hardening-2026-10-03.md`), APPROVED 2026-10-03. Slices 1a (the push gate) and 1b (commit-time sweeps, the sweep of what is published, the redacted view) complete and validated, slice 1c (the documents) complete, and slice 2 (CD #4e amended, § Imports procedure) complete on the User's rulings. All slices done; the plan awaits the User's word to close. PLANNING governs; slices run WIP of one, each to the User's eyeball.
 
 ## Current state
 
@@ -28,7 +28,7 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 - **Writing rules (CD #5):** no em dashes in prose; no contrast framing in any form; reviewers hunt the pattern.
 - **Canon wording:** new canon text follows the ruled term table and the glossary. Astra (`agent-messaging/astra-reviewer`) reviews wording changes; the User rules final wording.
 - **The confidentiality sweep runs LAST, on the final tracked tree, before any ready-to-push claim** (`memento/tools/confidentiality-sweep.sh`, pre-push hook; token list outside the repo). It sweeps everything a push publishes (outgoing blobs, paths, commit and tag objects, ref names) and fails closed; the pre-commit, pre-merge-commit and commit-msg hooks sweep each commit as it is made. Uncommitted and untracked files get a direct grep. At restart, after `git fetch`, run `memento/tools/confidentiality-sweep.sh --published origin/main`: known hits are counted against `~/.memento/sweep-baseline.txt`, and any new hit is a finding for the User. Inspect a hit only with `--show-redacted`. Never print a matched token or pattern into the session; report counts, paths and hashes.
-- **Material from other instances** (agent-messaging, relayed lessons, tool copies) is an import under CD #4e: de-identified and cleared by the User before it reaches any tracked file. Slice 2 of the active plan writes this into the directive.
+- **Imports (CD #4e):** material from another Memento instance, and confidential material from any source, is drafted outside the working tree and enters the repository, a commit, a shared document or a message after a de-identification pass and the User's clearance. Procedure: `memento/tools/README.md`, § Imports.
 - **Text published through `gh`** is swept by hand first (plan decision D3, until a guard exists).
 - Canon self-claims re-ground with the User; generic naming; private hashes stay out of canon text, and hashes of published residue stay out of every tracked file.
 

@@ -44,7 +44,7 @@ status: governing
 
 - **this estate** — evidence archive, active knowledge, institutional memory;
 - **the canon** at repo root — the Aug 2025 framework content being superseded;
-- **the three deployment estates, read-only, as reference corpora** — trv3-temporal, cartographer, rooms. They are this endeavour's knowledge base; anything IMPORTED from them crosses the de-identification and provenance gates (CD #4e, CD #13). Reading is free; importing is gated.
+- **the deployment estates and other Memento instances, read-only, as reference corpora**: trv3-temporal, cartographer and rooms, and other instances as the User makes them available. They are this endeavour's knowledge base. Anything imported from them crosses the de-identification and provenance gates (CD #4e, CD #13; procedure in `memento/tools/README.md`, § Imports). Reading them is free.
 
 State: `Pattern Search Results: [summary]`, citing the hits acted on or ruled out.
 
