@@ -12,11 +12,12 @@ status: live
 - **Restart (CD #8)** run on the User's prompting, after the session first took the role without it. Live state adopted: Claude Code 2.1.286 (the working context said 2.1.280); `main` level with `origin/main`.
 - **Messaging:** this session holds `memento/dev`. Three messages waited: two from rooms/dev (tier-map version; Rooms behind on two tools) and one from build-protocols (the Bitter Lesson audit sort). All three are recorded under Open with the User in CURRENT_FOCUS.
 - **Posture (i) reaffirmed** by the User, with a standing instruction to guard against confidential material from other instances reaching the public repository.
-- **Leak-hardening plan** drafted, reviewed adversarially in two rounds (16 and 8 findings, all accepted, load-bearing ones re-checked first-hand) and approved at r3. Slice 1a built, reviewed in two adversarial rounds (17 and 2 findings, all fixed), tested (167 cases, 26 mutants killed) and validated by the User.
+- **Leak-hardening plan** drafted, reviewed adversarially in two rounds (16 and 8 findings, all accepted, load-bearing ones re-checked first-hand) and approved at r3. Slice 1a built, reviewed in two adversarial rounds (17 and 2 findings, all fixed), tested (167 cases, 26 mutants killed) and validated by the User; committed and pushed (`291d5ec`, `1c8adfc`), the push itself the gate's first live witness. Slice 1b built (commit-time hooks, `--published` with its baseline, `--show-redacted`), reviewed in two rounds (12 and 2 findings, all fixed), tested (248 cases) and validated by the User.
 
 ## Next
 
-1. Slice 1b: commit-time sweeps (D1), the sweep of what is published with its baseline (D2), the redacted view.
+1. Slice 1c: the documents (register row with the live witnesses, tools README, knowledge-archive entry).
+2. Slice 2: the directive (CD #4e), the User choosing the option.
 
 ## Unwitnessed arms (the register is the source of truth)
 

@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-03
 genre: build/change (3A) with a design/decision step (3C) for the directive
 size: L (four slices: 1a, 1b, 1c, 2)
-status: APPROVED 2026-10-03; slice 1a complete (validated by the User 2026-10-03); slice 1b next
+status: APPROVED 2026-10-03; slices 1a and 1b complete (validated by the User 2026-10-03); slice 1c next
 related: [CORE_DIRECTIVES, PLANNING_PLAYBOOK, TOOLING_TRIGGERS, KNOWLEDGE_ARCHIVE, CURRENT_FOCUS, finding-publication-readiness-2026-07-20, handover-publication-and-hardening-2026-07-21, plan-truth-and-presentation-2026-07-21]
 ---
 
@@ -204,6 +204,14 @@ Estate only: `memento/tools/`, `memento/protocols/`, `memento/memory-prosthesis/
 **Slice 1a validated** by the User, 2026-10-03 ("commit ad push").
 
 **Slice 1a evidence at hand-over to the User:** suite 167 of 167, verified first-hand; 26 mutants, each killed; positive control over all published history recalls the 9 known commits, with 11 extras traced (later versions of a file already carrying a known hit, and the 2025 images at earlier paths); a simulated pre-push against the real remote is clean.
+
+**Slice 1b validated** by the User, 2026-10-03 ("approve all").
+
+**Slice 1b (2026-10-03):** `--pre-commit` (wired as `.githooks/pre-commit` and, after review, `.githooks/pre-merge-commit`), `--commit-msg` (`.githooks/commit-msg`), `--published` with a baseline in `~/.memento/sweep-baseline.txt`, and the `--show-redacted` view.
+- **Review round 1** (fresh smart-tier reviewer): 12 findings, all accepted. Majors: overlapping matches of one pattern left a token tail unmasked; a known leak copied to a new path read as known; a list change left the baseline blind; merges, cherry-picks and reverts ran no content check; the suite never ran the real hook files. Fixes: per-pattern spans found to a fixed point, per-commit dedupe under `--published` with `--topo-order`, baseline keys that include a digest of both lists, a `pre-merge-commit` hook with the remaining gaps named in the hook comments, real hook files in the suite, control bytes shown as `?`, segment-built masks, baseline writes that keep a symlink and refuse a directory.
+- **Review round 2:** a scissors cut added in round 1 let `git commit -m` publish text below a scissors line unswept, and a test had enshrined it; chained alternation inside one list line could leave a middle fragment unmasked. Fixes: the whole message file is swept (the `-v` false positive stays, with a hint that now prints only for hits in `#` lines); an exhaustive pass enumerates every match start, pattern by pattern, on line suffixes (over-masking only), alongside the fixed point.
+- **Known limits:** amend, cherry-pick, revert and rebase are covered by pre-push only; the mask keeps each span's byte length; a long line built from one repeated character against a short pattern takes about 20 s per 100 KB in the redacted view and is then withheld; bidi control characters (such as U+202E) pass through the redacted view.
+- **Evidence:** suite 248 of 248, verified first-hand; slice 1b mutants each killed (21 across the rounds), with one equivalent (the baseline directory check: the write fails and exits 2 regardless); the real baseline holds 25 known hits, each traced (the 20 of slice 1a, plus per-commit republications in an archive copy and two merges); `--published origin/main` reads clean against it.
 
 ## Review record (draft r1, 2026-10-03)
 
