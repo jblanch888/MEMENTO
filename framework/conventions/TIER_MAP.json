@@ -46,7 +46,7 @@
       "inherits": ["fork"],
       "effort_levels": ["low", "medium", "high", "xhigh", "max"],
       "hook_fields": "PreToolUse. Agent: tool_input.model, tool_input.subagent_type, tool_input.prompt. Workflow: tool_input.script | scriptPath | name.",
-      "runtime_dependency": "tool_input.model on the Agent tool is not listed in hooks.md. The synthetic witness builds its own payloads and CANNOT detect the live runtime ceasing to deliver the field; that needs a separate live-dispatch witness (a real Agent call with model=haiku whose log line must appear). Until one exists, this dependency is unverified at runtime after any harness upgrade.",
+      "runtime_dependency": "tool_input.model on the Agent tool is not listed in hooks.md. The synthetic witness builds its own payloads, so it cannot detect the live runtime ceasing to deliver the field. A live-dispatch witness checks that: a real Agent call with model=haiku whose log line must appear. It is re-run after every harness upgrade before verified_against moves; last passed on CLI 2.1.286, 2026-10-05.",
       "aliases_source": "model-config.md: aliases point to the recommended version for the provider and update over time",
       "agents": {
         "memento-scout":       { "tools": ["Read", "Grep", "Glob", "WebFetch"] },
