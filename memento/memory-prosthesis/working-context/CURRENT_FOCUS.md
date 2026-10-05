@@ -39,7 +39,7 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 ## Open with the User
 
 - **The sort, slice 1:** the kinds and the unit, on F with G.
-- **Tier map leftovers:** the haiku alias trails the other aliases by a generation; the map's `runtime_dependency` text still says no live-dispatch witness exists, though rooms has run two.
+- **Tier map leftover:** the map's `runtime_dependency` text still says no live-dispatch witness exists, though rooms has run two. (The haiku point is settled, the User 2026-10-06: no Haiku 5.5 exists yet, and recon spawns default to the latest Haiku available, which the bare `haiku` alias on the ladder already gives.)
 - **Build-protocols** re-syncs the explainer page's quotes from the canon commits once they are public.
 - **Six inherited adoption gaps** (plain-language plan, slice 4 record). Not taken up.
 - **Spawn-tier eyeball items** (that plan's §15).
