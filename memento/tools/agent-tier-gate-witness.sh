@@ -10,7 +10,13 @@ GEN="$HERE/generate_agents.py"
 CANON_MAP="$HERE/../../framework/conventions/TIER_MAP.json"
 [ -f "$CANON_MAP" ] || CANON_MAP="$HERE/../TIER_MAP.json"   # estate copy when run inside an instance
 BODIES="$HERE/../../framework/conventions/agents"; [ -d "$BODIES" ] || BODIES="$HERE/../agents"   # estate copy of the charters
-TMP="$(mktemp -d)"; trap 'rm -rf "$TMP"' EXIT
+# Scratch lives inside the repository: the generator and the detectors refuse any path outside it
+# (path-traversal guard). The folder ignores itself, so git never sees it.
+ROOT="$(cd "$HERE/../.." && pwd)"
+TMP="$(mktemp -d "$ROOT/.witness-tmp.XXXXXX")" || { echo "agent-tier-gate witness: cannot make a scratch folder under $ROOT" >&2; exit 2; }
+trap 'rm -rf "$TMP"' EXIT
+printf '*\n' > "$TMP/.gitignore"
+export PYTHONDONTWRITEBYTECODE=1   # no __pycache__ left in an instance that does not ignore it
 export AGENT_TIER_LOG="$TMP/gate.log"
 export TIER_MAP="$TMP/TIER_MAP.json"; cp "$CANON_MAP" "$TIER_MAP"
 PASS=0; FAIL=0

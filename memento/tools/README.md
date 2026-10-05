@@ -28,13 +28,18 @@ its copies against this canon.
     with the estate copy of the map at `memento/TIER_MAP.json` (or `$TIER_MAP`).
   - `generate_agents.py`: derives `.claude/agents/<name>.md` frontmatter (model = ladder[rank],
     effort per role, tools) from the map; the charter body is preserved, or seeded from
-    `framework/conventions/agents/<name>.md`. `--check` exits 1 on drift (doctor use).
+    `framework/conventions/agents/<name>.md`. `--check` exits 1 on drift (doctor use). Its default map and
+    charter paths are an instance's `memento/TIER_MAP.json` and `memento/agents`, falling back to the
+    canon's `framework/conventions/` copies in this repository; it and `tier-map-check.py` refuse any
+    path outside the repository.
   - `tier-map-check.py`: the release-cadence detectors: model identifiers in the machine-wide Loki
     telemetry whose family matches no ladder alias (fails open with a WARN if Loki is down); the
     interactive CLI version against the binding's `verified_against`; the map's age. It prints OWED lines for
     John, and every re-tiering is his to make. Prints the LogQL for a dashboard panel.
   - `agent-tier-gate-witness.sh`: 82 cases across both matchers, the map, the generator and the detectors, plus
-    three mutants that must be killed. Run it before any swap, and commit when it exits 0.
+    three mutants that must be killed. Its fixtures go in a scratch folder inside the repository that
+    ignores itself and is removed on exit (a killed run can leave one behind; delete it by hand). Run it
+    before any swap, and commit when it exits 0.
 
 **Shape of the map (schema 2).** `policy` is agent-agnostic: ranks, frontier ranks, the
 justification rule, roles (rank + effort), and named agents with their role, description and

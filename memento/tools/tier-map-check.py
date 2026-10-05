@@ -29,6 +29,15 @@ def confined(path):
     if real != base and not real.startswith(base + os.sep):
         sys.exit(f"refusing a path outside the repository: {path}")
     return real
+
+
+def default_path(*candidates):
+    """The first candidate (relative to ROOT) that exists: an instance carries memento/..., the canon
+    repository framework/conventions/... . Falls back to the first."""
+    for c in candidates:
+        p = os.path.join(ROOT, *c.split("/"))
+        if os.path.exists(p): return p
+    return os.path.join(ROOT, *candidates[0].split("/"))
 LOKI = os.environ.get("MEMENTO_LOKI", "http://localhost:3100")
 
 
@@ -55,7 +64,7 @@ def family_of(model_id, ladder):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--map", default=os.environ.get("TIER_MAP") or os.path.join(ROOT, "memento", "TIER_MAP.json"))
+    ap.add_argument("--map", default=os.environ.get("TIER_MAP") or default_path("memento/TIER_MAP.json", "framework/conventions/TIER_MAP.json"))
     ap.add_argument("--binding", default=os.environ.get("TIER_BINDING", "claude-code"))
     ap.add_argument("--days", type=int, default=7)
     ap.add_argument("--max-age", type=int, default=90)

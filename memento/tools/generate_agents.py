@@ -9,6 +9,8 @@ canon body from --bodies/<name>.md; else a one-line placeholder. Standard librar
 Usage:
   python3 memento/tools/generate_agents.py [--map memento/TIER_MAP.json] [--out .claude/agents]
                                            [--bodies memento/agents] [--check]
+In the canon repository, where memento/TIER_MAP.json and memento/agents do not exist, the defaults
+fall back to framework/conventions/TIER_MAP.json and framework/conventions/agents.
 --check writes nothing and exits 1 if any target differs from what would be generated (doctor use).
 """
 import argparse, json, os, re, sys
@@ -23,6 +25,15 @@ def confined(path):
     if real != base and not real.startswith(base + os.sep):
         sys.exit(f"refusing a path outside the repository: {path}")
     return real
+
+
+def default_path(*candidates):
+    """The first candidate (relative to ROOT) that exists: an instance carries memento/..., the canon
+    repository framework/conventions/... . Falls back to the first."""
+    for c in candidates:
+        p = os.path.join(ROOT, *c.split("/"))
+        if os.path.exists(p): return p
+    return os.path.join(ROOT, *candidates[0].split("/"))
 
 
 def split_frontmatter(text):
@@ -49,9 +60,9 @@ def render(name, spec, m, body):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--map", default=os.environ.get("TIER_MAP") or os.path.join(ROOT, "memento", "TIER_MAP.json"))
+    ap.add_argument("--map", default=os.environ.get("TIER_MAP") or default_path("memento/TIER_MAP.json", "framework/conventions/TIER_MAP.json"))
     ap.add_argument("--out", default=os.path.join(ROOT, ".claude", "agents"))
-    ap.add_argument("--bodies", default=os.path.join(ROOT, "memento", "agents"))
+    ap.add_argument("--bodies", default=default_path("memento/agents", "framework/conventions/agents"))
     ap.add_argument("--check", action="store_true")
     a = ap.parse_args()
     a.map, a.out, a.bodies = confined(a.map), confined(a.out), confined(a.bodies)
