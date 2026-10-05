@@ -13,7 +13,7 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 
 ## Active Playbook and plan
 
-**Plan: the Bitter Lesson sort** (`../evidence-archive/plan-bitter-lesson-sort-2026-10-03.md`), APPROVED 2026-10-03. Slice 0 is DONE: the User chose **F with G** on 2026-10-06 (an assumption register keyed to model releases; each unit marked as prescribed procedure or judgement practice, with prescribed procedure expected to fade at a model change). Slice 1 is DONE (2026-10-06): three kinds (prescribed procedure, judgement practice, independent of the model), assumptions typed as capability or setting, the registry part as unit (part 4 split; held tools attached), review at a main-thread model generation change or a harness change. **Next: slice 2**, first half (parts 1 to 16). The lean's first test, a without-the-part trial on the planning playbook, is its own undertaking. PLANNING governs; slices run WIP of one.
+**Plan: the Bitter Lesson sort** (`../evidence-archive/plan-bitter-lesson-sort-2026-10-03.md`), APPROVED 2026-10-03. Slice 0 is DONE: the User chose **F with G** on 2026-10-06 (an assumption register keyed to model releases; each unit marked as prescribed procedure or judgement practice, with prescribed procedure expected to fade at a model change). Slice 1 is DONE (2026-10-06): three kinds (prescribed procedure, judgement practice, independent of the model), assumptions typed as capability or setting, the registry part as unit (part 4 split; held tools attached), review at a main-thread model generation change or a harness change. Slice 2 is banked (`../evidence-archive/design-sort-slice2a-2026-10-06.md`, `design-sort-slice2b-2026-10-06.md`); engineering practice is a fourth basis of *independent of the model*. **Now: slice 3**, the User's ruling per unit in batches of about ten. The lean's first test, a without-the-part trial on the planning playbook, is its own undertaking. PLANNING governs; slices run WIP of one.
 
 ## Current state
 
@@ -38,7 +38,7 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 
 ## Open with the User
 
-- **The sort, slice 2:** the first half (parts 1 to 16), reviewed before it reaches the User.
+- **The sort, slice 3:** his ruling per unit, in batches of about ten with the session's reading of each.
 - **Build-protocols** re-syncs the explainer page's quotes from the canon commits once they are public.
 - **Six inherited adoption gaps** (plain-language plan, slice 4 record). Not taken up.
 - **Spawn-tier eyeball items** (that plan's §15). Proportion is dormant (the User, 2026-10-06), so its gate trial (9 of 20 spawns, no denies) and its owed items wait for its next session.

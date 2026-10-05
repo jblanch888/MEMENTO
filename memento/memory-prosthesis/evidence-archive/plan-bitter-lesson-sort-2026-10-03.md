@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-03
 genre: design/decision (3C)
 size: L (four slices; slice 2 in two halves)
-status: APPROVED 2026-10-03 (the User: "approve plan"); slice 0 DONE 2026-10-06, the User chose F with G; slice 1 DONE 2026-10-06; slice 2 next
+status: APPROVED 2026-10-03 (the User: "approve plan"); slice 0 DONE 2026-10-06, the User chose F with G; slice 1 DONE 2026-10-06; slice 2 banked 2026-10-06 (2a and 2b); slice 3 in progress
 related: [finding-exercise-census-2026-10-03, finding-lineage-verdicts-2026-07-20, ORGAN_REGISTRY, KILLED_MECHANISMS, THE_STORY]
 ---
 
@@ -105,3 +105,7 @@ Estate side. Commits `docs(estate)`.
 - optionally, its rung on the controls ladder.
 
 Next: slice 2, first half (parts 1 to 16), reviewed before the User sees it.
+
+**Slice 2a (2026-10-06).** Banked as `design-sort-slice2a-2026-10-06.md` after two adversarial reviews (r1 and r2, NEEDS-CHANGES, every finding accepted). Each unit carries one discriminating test with instrument, time and threshold; parts 6, 9 and 11 split. The User ruled that parts turning on delegated agents take the delegate tier's generation as their clock, and kept the threshold (a half against baseline, ten sessions a side). Next: slice 2b, parts 17 to 32.
+
+**Slice 2b (2026-10-06).** Banked as `design-sort-slice2b-2026-10-06.md` after two adversarial reviews (r1 and r2, NEEDS-CHANGES, every finding accepted). Part 19 split into authority hooks and compliance hooks; trials that remove safety, approval or confidentiality controls confined to a scratch copy; hooks tested one by one in shadow. Before publication, slice 2a's exact per-session rates were brought to the shapes the cleared findings publish, the exact readings kept in the private receipts index. The User added engineering practice as a fourth basis of *independent of the model* ("2 your lean"). Next: slice 3, the User's ruling per unit, in batches of about ten with the session's reading of each ("3 your lean").
