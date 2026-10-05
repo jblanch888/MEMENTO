@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-03
 genre: design/decision (3C)
 size: L (four slices; slice 2 in two halves)
-status: APPROVED 2026-10-03 (the User: "approve plan"); slice 0 DONE 2026-10-06, the User chose F with G; slice 1 DONE 2026-10-06; slice 2 banked 2026-10-06 (2a and 2b); slice 3 DONE 2026-10-06 (decision record banked); awaiting the User's word to close
+status: APPROVED 2026-10-03 (the User: "approve plan"); slice 0 DONE 2026-10-06, the User chose F with G; slice 1 DONE 2026-10-06; slice 2 banked 2026-10-06 (2a and 2b); CLOSED 2026-10-06 on the User's word ("1 ok"); all slices done, decision record banked
 related: [finding-exercise-census-2026-10-03, finding-lineage-verdicts-2026-07-20, ORGAN_REGISTRY, KILLED_MECHANISMS, THE_STORY]
 ---
 
