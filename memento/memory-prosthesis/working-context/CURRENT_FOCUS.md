@@ -19,7 +19,7 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 
 - **Evidence for the sort is banked:** `finding-exercise-census-2026-10-03.md` and `finding-longitudinal-evidence-2026-10-03.md`, with receipts, scripts and scout reports held privately at `~/.memento/census/` (receipts index `receipts-2026-10-03.md`). build-protocols/dev has the findings (thread `t-20261003-190701-f9facd`).
 - **Leak hardening is CLOSED** (the User, 2026-10-06).
-- **Tier map, 2026-10-06 (canon):** verified against CLI 2.1.286; judgement role at rank 1 (the User's main thread is Opus 5.5); the scout carries no agent memory, so its no-write guarantee is enforced; the reviewer keeps memory, and with it the runtime's Write and Edit, so its no-write guarantee is behavioural. The tier-gate witness runs 82 of 82 again after 1addabb's path guard. Rooms/dev copies the map and tools in and regenerates, on the User's ruling.
+- **Tier map, 2026-10-06 (canon):** verified against CLI 2.1.286; judgement role at rank 1 (the User's main thread is Opus 5.5); the scout carries no agent memory, so its no-write guarantee is enforced; the reviewer keeps memory, and with it the runtime's Write and Edit, so its no-write guarantee is behavioural. The tier-gate witness runs 82 of 82 again after 1addabb's path guard. Rooms/dev copies the map and tools in and regenerates, on the User's ruling. Haiku, the User 2026-10-06: recon spawns default to the latest Haiku available, which the bare `haiku` alias gives.
 - **Posture (i) reaffirmed by the User, 2026-10-03:** the estate stays published with the canon.
 - The canon reads in plain language; the estate keeps its own vocabulary (D3).
 - **Publication state is never asserted in this file: derive it live from git (`git status -sb`, `git log @{u}..`, `git log ..@{u}`) per CD #8d.**
@@ -39,7 +39,6 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 ## Open with the User
 
 - **The sort, slice 1:** the kinds and the unit, on F with G.
-- **Tier map leftover:** the map's `runtime_dependency` text still says no live-dispatch witness exists, though rooms has run two. (The haiku point is settled, the User 2026-10-06: no Haiku 5.5 exists yet, and recon spawns default to the latest Haiku available, which the bare `haiku` alias on the ladder already gives.)
 - **Build-protocols** re-syncs the explainer page's quotes from the canon commits once they are public.
 - **Six inherited adoption gaps** (plain-language plan, slice 4 record). Not taken up.
 - **Spawn-tier eyeball items** (that plan's §15).
