@@ -2,7 +2,7 @@
 description: slice 0 of the Bitter Lesson sort plan: the alternatives to the sort, each at its strongest with its evidence and falsifier, and the session's lean; prepared for the User's choice
 type: design
 date: 2026-10-03
-status: awaiting the User's choice
+status: chosen 2026-10-06, the User: F with G ("f w g")
 related: [plan-bitter-lesson-sort-2026-10-03, finding-exercise-census-2026-10-03, finding-longitudinal-evidence-2026-10-03]
 ---
 

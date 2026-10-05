@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-03
 genre: design/decision (3C)
 size: L (four slices; slice 2 in two halves)
-status: APPROVED 2026-10-03 (the User: "approve plan"); slice 0 in progress
+status: APPROVED 2026-10-03 (the User: "approve plan"); slice 0 DONE 2026-10-06, the User chose F with G; slice 1 next
 related: [finding-exercise-census-2026-10-03, finding-lineage-verdicts-2026-07-20, ORGAN_REGISTRY, KILLED_MECHANISMS, THE_STORY]
 ---
 
@@ -76,4 +76,6 @@ Slice 0: S. Slice 1: S. Slice 2: L in two halves (32 units, options and dated fa
 
 Estate side. Commits `docs(estate)`.
 
-Awaiting user approval of this plan before detailed design or implementation.
+## Slice record
+
+**Slice 0 (2026-10-03 to 2026-10-06).** The alternatives widened from A to D to A to G after the longitudinal evidence (`design-sort-alternatives-2026-10-03.md`), reviewed before presentation. The User chose **F with G** ("f w g", 2026-10-06), the session's lean: each unit records the model behaviour it assumes and whether it prescribes steps or calls for judgement; review fires at each model change, expecting prescribed procedure to fade and judgement practice to hold or grow. The lean aims a without-the-part trial (E) at the planning playbook as the first test; that trial is its own undertaking. Next: slice 1, the kinds and the unit with the User.

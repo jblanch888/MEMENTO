@@ -13,15 +13,15 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 
 ## Active Playbook and plan
 
-**Plan: the Bitter Lesson sort** (`../evidence-archive/plan-bitter-lesson-sort-2026-10-03.md`), APPROVED 2026-10-03. Slice 0 (alternatives to the sort) is banked as `../evidence-archive/design-sort-alternatives-2026-10-03.md` and awaits the User's choice; the session's lean is F with G (an assumption register keyed to model releases, sorted by prescribed procedure or judgement practice), with a without-the-part trial aimed at the planning playbook. **Plan: leak hardening** (`../evidence-archive/plan-leak-hardening-2026-10-03.md`): all slices done and validated; awaits the User's word to close. PLANNING governs; slices run WIP of one.
+**Plan: the Bitter Lesson sort** (`../evidence-archive/plan-bitter-lesson-sort-2026-10-03.md`), APPROVED 2026-10-03. Slice 0 is DONE: the User chose **F with G** on 2026-10-06 (an assumption register keyed to model releases; each unit marked as prescribed procedure or judgement practice, with prescribed procedure expected to fade at a model change). **Next: slice 1**, the kinds and the unit with the User. The lean's first test, a without-the-part trial on the planning playbook, is its own undertaking. PLANNING governs; slices run WIP of one.
 
 ## Current state
 
-- **Evidence for the sort is banked:** `finding-exercise-census-2026-10-03.md` (use, content-free) and `finding-longitudinal-evidence-2026-10-03.md` (the 2025 founding to October 2026 across model generations). Receipts, scripts and scout reports are held privately at `~/.memento/census/` (receipts index `receipts-2026-10-03.md`); the census can be re-run from there. build-protocols/dev has the findings (thread `t-20261003-190701-f9facd`) and raised whether its explainer figure of the plan rule is affected; the answer given: the rule is unaffected, the playbook's step sequence is what a trial could retire.
+- **Evidence for the sort is banked:** `finding-exercise-census-2026-10-03.md` and `finding-longitudinal-evidence-2026-10-03.md`, with receipts, scripts and scout reports held privately at `~/.memento/census/` (receipts index `receipts-2026-10-03.md`). build-protocols/dev has the findings (thread `t-20261003-190701-f9facd`).
+- **Leak hardening is CLOSED** (the User, 2026-10-06).
+- **Tier map, 2026-10-06 (canon):** verified against CLI 2.1.286; judgement role at rank 1 (the User's main thread is Opus 5.5); the scout carries no agent memory, so its no-write guarantee is enforced; the reviewer keeps memory, and with it the runtime's Write and Edit, so its no-write guarantee is behavioural. The tier-gate witness runs 82 of 82 again after 1addabb's path guard. Rooms/dev copies the map and tools in and regenerates, on the User's ruling.
 - **Posture (i) reaffirmed by the User, 2026-10-03:** the estate stays published with the canon.
-- **Restart:** SessionStart and "restart" prompts put CD #8 into context (`memento/tools/restart-trigger.sh`); the session-start arm is unwitnessed.
 - The canon reads in plain language; the estate keeps its own vocabulary (D3).
-- The spawn-tier control plan is DONE in this estate bar Proportion's owed items and the User's eyeball passes in its §15.
 - **Publication state is never asserted in this file: derive it live from git (`git status -sb`, `git log @{u}..`, `git log ..@{u}`) per CD #8d.**
 
 ## Constraints
@@ -34,12 +34,12 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 - **Text published through `gh`** is swept by hand first (`gh` is not logged in on this machine; the User runs `gh auth login`).
 - Canon self-claims re-ground with the User; generic naming; private hashes stay out of canon text, and hashes of published residue stay out of every tracked file.
 - **Decisions go to the User in plain prose with leans.**
+- **Agent-messaging threads cap at ten exchanges;** a reply past the cap is held for the User. Open a new thread on his word when a topic runs on.
 
 ## Open with the User
 
-- **The sort, slice 0:** his choice among A to G (lean: F with G).
-- **Leak hardening:** his word to close the plan.
-- **Tier map and Rooms tool copies:** who does which (proposal: this session edits the canon tier map, `verified_against` 2.1.271 to 2.1.286 and `policy.last_verified`; rooms/dev copies in the `1addabb` tools). Also raised by rooms/dev: the judgement role's rank against the main thread's model, and the haiku alias trailing a generation. The script's default `--map` path does not resolve in this repository.
+- **The sort, slice 1:** the kinds and the unit, on F with G.
+- **Tier map leftovers:** the haiku alias trails the other aliases by a generation; the map's `runtime_dependency` text still says no live-dispatch witness exists, though rooms has run two.
 - **Build-protocols** re-syncs the explainer page's quotes from the canon commits once they are public.
 - **Six inherited adoption gaps** (plain-language plan, slice 4 record). Not taken up.
 - **Spawn-tier eyeball items** (that plan's §15).

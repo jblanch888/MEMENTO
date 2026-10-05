@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-03
 genre: build/change (3A) with a design/decision step (3C) for the directive
 size: L (four slices: 1a, 1b, 1c, 2)
-status: APPROVED 2026-10-03; all slices implemented and validated by the User 2026-10-03; awaiting the User's word to close
+status: CLOSED 2026-10-06 on the User's word ("close"); APPROVED 2026-10-03; all slices implemented and validated by the User 2026-10-03
 related: [CORE_DIRECTIVES, PLANNING_PLAYBOOK, TOOLING_TRIGGERS, KNOWLEDGE_ARCHIVE, CURRENT_FOCUS, finding-publication-readiness-2026-07-20, handover-publication-and-hardening-2026-07-21, plan-truth-and-presentation-2026-07-21]
 ---
 
