@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-06
 genre: investigation (3B) with a decision step (3C); the template build follows 3A's debt/excision variant
 size: L (five slices)
-status: APPROVED 2026-10-06 (the User: "approve"); slice 0 next
+status: APPROVED 2026-10-06 (the User: "approve"); slice 0 DONE; slice 1 with the first feature as pilot, awaiting the User's judging
 related: [decision-bitter-lesson-sort-2026-10-06, design-sort-slice2a-2026-10-06, finding-exercise-census-2026-10-03, finding-longitudinal-evidence-2026-10-03, plan-spawn-tier-control-across-estates-2026-09-06]
 ---
 
@@ -291,3 +291,17 @@ Estate side only: this plan and the findings memo are `docs(estate)`. Nothing to
 - **Writing:** the four contrast constructions restated.
 
 Approved by the User, 2026-10-06.
+
+## Slice record
+
+**Slice 0 (2026-10-06).** The User chose six features (named in the private trial folder only), approved their briefs, and took the session's leans on the criteria, the decision rule, the definition of "no Memento" (the governance surface; product code untouched) and a pilot cap of three runs at $5 each.
+
+**Slice 1 and the first feature (2026-10-06).** Pivots, on the record:
+
+- **Pilot.** On the User's word, the first real feature replaces the dummy pilot, one run per arm, judged before more runs.
+- **Bash.** Every arm runs without Bash, web tools or MCP servers. Tools are Read, Grep, Glob, Agent and TodoWrite, plus Edit confined to the run's clone. This replaces the planned sandbox.
+- **Who ran what.** The permission system refused the session's edits to the templates' settings and hooks, and its deletions in the templates. Those steps ran as scripts the User read and ran himself. The build itself excluded every `.env*` file and the git pointer at copy time. A name-only scan found no live credentials.
+- **The isolation witness passed on both runs.** The hook-fires log, `/tmp`, and Proportion's git state and HEAD were unchanged before and after.
+- **Contamination found and fixed.** In the first no-Memento run, the README still carried Memento framing and the trial root's path named Memento. The README was cleaned, the root was moved to a neutral path, and the arm was re-run. The superseded run is kept on record.
+- **The clean re-run read no Memento path.**
+- **Cost.** Four runs cost about $7.80 in all, within the $15 pilot cap.
