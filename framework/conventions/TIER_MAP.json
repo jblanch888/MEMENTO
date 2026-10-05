@@ -17,8 +17,8 @@
         "role": "recon",
         "description": "Read-only evidence gatherer for Memento-governed work. Use for multi-file recon, large log/test-output scanning, repo pattern searches, and doc/capability extraction. Returns concise cited findings; never edits, never decides.",
         "guarantees": {
-          "enforced": ["no edit or write tools", "no shell"],
-          "behavioural": ["never decides; returns evidence and declines verdicts"]
+          "enforced": ["no shell"],
+          "behavioural": ["never decides; returns evidence and declines verdicts", "edits and writes nothing (the runtime adds Write and Edit to its tools, probably for agent memory: seen on CLI 2.1.270 and 2.1.286, cause untested)"]
         }
       },
       "memento-implementer": {
@@ -33,8 +33,8 @@
         "role": "review",
         "description": "Adversarial reviewer for Memento-governed work. Use before presenting an artefact or diff to John. Isolated context, assumes failure, demands forensic evidence; reviews against spec and Memento principles; PASS/NEEDS-CHANGES verdict with evidence.",
         "guarantees": {
-          "enforced": ["no edit or write tools"],
-          "behavioural": ["read-only via the shell (it has Bash to run witnesses and tests; a shell can write, so this is compliance, not a boundary)", "never a fork of the presenting session (the spawner's discipline; the gate treats forks as inherits)"]
+          "enforced": [],
+          "behavioural": ["edits and writes nothing (the runtime adds Write and Edit to its tools, probably for agent memory: seen on CLI 2.1.286, cause untested)", "read-only via the shell (it has Bash to run witnesses and tests; a shell can write, so this is compliance, not a boundary)", "never a fork of the presenting session (the spawner's discipline; the gate treats forks as inherits)"]
         }
       }
     }
