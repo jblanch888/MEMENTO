@@ -305,3 +305,13 @@ Approved by the User, 2026-10-06.
 - **Contamination found and fixed.** In the first no-Memento run, the README still carried Memento framing and the trial root's path named Memento. The README was cleaned, the root was moved to a neutral path, and the arm was re-run. The superseded run is kept on record.
 - **The clean re-run read no Memento path.**
 - **Cost.** Four runs cost about $7.80 in all, within the $15 pilot cap.
+
+**Judging pivot (2026-10-06, the User: "do it").** The plans are too long for the User to score by hand, so agents judge them under a protocol he approved:
+
+- **Yardsticks, built blind to the plans and frozen before judging.** For each feature: requirements from the brief and the code; the regression surface computed from the code; product conformance (the value statement, the design system, the architectural patterns) from the product's own sources; and recorded decisions from Memento's record, scored and reported separately.
+- **Neutralisation.** Each plan is rewritten into a fixed neutral form, and a second agent checks the rewrite for fidelity.
+- **Judges.** Two blind judges per plan, Opus 5.5 and Fable 5.1, score each checklist item met, partial or missing, with the plan's words quoted and codebase claims checked in the clone. Plans are judged one at a time, in two orders. A third judge settles disagreements, and the disagreement rate is reported.
+- **Headline score.** Weights: requirements 30%, regression surface covered by tests or verification 30%, product conformance 20%, sequencing and migration soundness 10%, factual accuracy 10%. The headline score replaces the User's overall mark in the decision rule.
+- **Calibration.** Before the scores are trusted, the rubric is run on past Proportion plans with known outcomes.
+- **Outcome test for the two small features.** Each plan is implemented by an identical implementer with no Memento, then the type check, the test suite, the end-to-end tests and acceptance tests fixed in advance are run.
+- **The User's blind guesses** for feature 1 are recorded privately: he identified the no-Memento plan confidently, and was unsure between the other two.
