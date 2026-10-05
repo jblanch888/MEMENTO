@@ -17,8 +17,8 @@
         "role": "recon",
         "description": "Read-only evidence gatherer for Memento-governed work. Use for multi-file recon, large log/test-output scanning, repo pattern searches, and doc/capability extraction. Returns concise cited findings; never edits, never decides.",
         "guarantees": {
-          "enforced": ["no shell"],
-          "behavioural": ["never decides; returns evidence and declines verdicts", "edits and writes nothing (the runtime adds Write and Edit to its tools, probably for agent memory: seen on CLI 2.1.270 and 2.1.286, cause untested)"]
+          "enforced": ["no edit or write tools (it carries no agent memory, which would add Write and Edit)", "no shell"],
+          "behavioural": ["never decides; returns evidence and declines verdicts"]
         }
       },
       "memento-implementer": {
@@ -34,7 +34,7 @@
         "description": "Adversarial reviewer for Memento-governed work. Use before presenting an artefact or diff to John. Isolated context, assumes failure, demands forensic evidence; reviews against spec and Memento principles; PASS/NEEDS-CHANGES verdict with evidence.",
         "guarantees": {
           "enforced": [],
-          "behavioural": ["edits and writes nothing (the runtime adds Write and Edit to its tools, probably for agent memory: seen on CLI 2.1.286, cause untested)", "read-only via the shell (it has Bash to run witnesses and tests; a shell can write, so this is compliance, not a boundary)", "never a fork of the presenting session (the spawner's discipline; the gate treats forks as inherits)"]
+          "behavioural": ["edits and writes nothing (its agent memory makes the runtime add Write and Edit to its tools: toggle test on CLI 2.1.286, 2026-10-06)", "read-only via the shell (it has Bash to run witnesses and tests; a shell can write, so this is compliance, not a boundary)", "never a fork of the presenting session (the spawner's discipline; the gate treats forks as inherits)"]
         }
       }
     }
@@ -49,7 +49,7 @@
       "runtime_dependency": "tool_input.model on the Agent tool is not listed in hooks.md. The synthetic witness builds its own payloads and CANNOT detect the live runtime ceasing to deliver the field; that needs a separate live-dispatch witness (a real Agent call with model=haiku whose log line must appear). Until one exists, this dependency is unverified at runtime after any harness upgrade.",
       "aliases_source": "model-config.md: aliases point to the recommended version for the provider and update over time",
       "agents": {
-        "memento-scout":       { "tools": ["Read", "Grep", "Glob", "WebFetch"],                  "extra": { "memory": "local" } },
+        "memento-scout":       { "tools": ["Read", "Grep", "Glob", "WebFetch"] },
         "memento-implementer": { "tools": ["Read", "Edit", "Write", "Bash", "Grep", "Glob"],     "extra": { "memory": "local" } },
         "memento-reviewer":    { "tools": ["Read", "Grep", "Glob", "Bash"],                      "extra": { "memory": "local" } }
       }
