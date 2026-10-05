@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-03
 genre: design/decision (3C)
 size: L (four slices; slice 2 in two halves)
-status: APPROVED 2026-10-03 (the User: "approve plan"); slice 0 DONE 2026-10-06, the User chose F with G; slice 1 DONE 2026-10-06; slice 2 banked 2026-10-06 (2a and 2b); slice 3 in progress
+status: APPROVED 2026-10-03 (the User: "approve plan"); slice 0 DONE 2026-10-06, the User chose F with G; slice 1 DONE 2026-10-06; slice 2 banked 2026-10-06 (2a and 2b); slice 3 DONE 2026-10-06 (decision record banked); awaiting the User's word to close
 related: [finding-exercise-census-2026-10-03, finding-lineage-verdicts-2026-07-20, ORGAN_REGISTRY, KILLED_MECHANISMS, THE_STORY]
 ---
 
@@ -110,7 +110,7 @@ Next: slice 2, first half (parts 1 to 16), reviewed before the User sees it.
 
 **Slice 2b (2026-10-06).** Banked as `design-sort-slice2b-2026-10-06.md` after two adversarial reviews (r1 and r2, NEEDS-CHANGES, every finding accepted). Part 19 split into authority hooks and compliance hooks; trials that remove safety, approval or confidentiality controls confined to a scratch copy; hooks tested one by one in shadow. Before publication, slice 2a's exact per-session rates were brought to the shapes the cleared findings publish, the exact readings kept in the private receipts index. The User added engineering practice as a fourth basis of *independent of the model* ("2 your lean"). Next: slice 3, the User's ruling per unit, in batches of about ten with the session's reading of each ("3 your lean").
 
-**Slice 3 (2026-10-06, in progress).** The User accepted the session's reading of each unit in batches 1 and 2 ("i accept readings"; "accept all"):
+**Slice 3 (2026-10-06, DONE).** The decision record is `decision-bitter-lesson-sort-2026-10-06.md`. The User accepted the session's reading of each unit in all four batches ("i accept readings"; "accept all"; "accept"; "accept"):
 
 | Unit | Kind | Basis or assumption |
 |---|---|---|
@@ -134,5 +134,22 @@ Next: slice 2, first half (parts 1 to 16), reviewed before the User sees it.
 | 14 Evidence-archive conventions | Independent of the model | Record |
 | 15 File metadata and generated maps | Prescribed procedure | Capability; expected to fade (untestable now) |
 | 16 Doctor health checks | Independent of the model | Engineering |
+| 17 Validation ledger | Independent of the model | Record (untestable now) |
+| 18 Controls model | Judgement practice | Capability (assigned by reason; no test separates its options) |
+| 19a Hooks that guard the User's authority | Independent of the model | Authority |
+| 19b Hooks that enforce compliance | Independent of the model, provisionally | Engineering; a hook whose shadow rate falls to near zero is reassigned to prescribed procedure |
+| 20 Shadow-first development | Independent of the model | Engineering |
+| 21 Governance telemetry | Independent of the model | Engineering (revisited at ten recorded silent failures) |
+| 22 Test harnesses | Independent of the model | Engineering |
+| 23 Confidentiality checks | Independent of the model | Confidentiality |
+| 24 Git discipline | Independent of the model | Record; the explicit-file-list rule splits off as prescribed procedure if its trial shows it fading |
+| 25 Tools added on evidence | Independent of the model | Engineering (revisited at ten tools) |
+| 26 Safety charter | Independent of the model | Engineering |
+| 27 Economic doctrine | Judgement practice | Capability |
+| 28 Founding charter | Independent of the model | Authority |
+| 29 Dual-thread governance | Deferred | One host, two governance sessions, options not separable |
+| 30 Proportionate confidentiality | Independent of the model | Confidentiality |
+| 31 Language standard | Independent of the model | Language standard |
+| 32 Evidence constitution | Independent of the model | Authority and record |
 
 Evidence noted at 6b, cleared by the User: he reported a live deny on 2026-10-06 in another estate, in which an unjustified frontier-tier spawn was blocked and then allowed once a justification line was given.
