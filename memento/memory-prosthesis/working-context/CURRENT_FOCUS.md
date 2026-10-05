@@ -41,5 +41,6 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 - **The sort, slice 1:** the kinds and the unit, on F with G.
 - **Build-protocols** re-syncs the explainer page's quotes from the canon commits once they are public.
 - **Six inherited adoption gaps** (plain-language plan, slice 4 record). Not taken up.
-- **Spawn-tier eyeball items** (that plan's §15).
+- **Spawn-tier eyeball items** (that plan's §15). Proportion is dormant (the User, 2026-10-06), so its gate trial (9 of 20 spawns, no denies) and its owed items wait for its next session.
+- **Fired build triggers held for the sort** (the User, 2026-10-06): doctor, pattern-search probe, restart-diff and generated indexes, each a unit for slice 1 (register rows).
 - **Untracked leftovers:** `.tmp-agents-after/` and `framework/conventions/TIER_MAP.json.bak-20260919`; deletion is his call.

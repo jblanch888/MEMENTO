@@ -367,3 +367,5 @@ Slices 0, 1, 2, 4 and 5 COMPLETE; slice 3 WIRED with four items owed at Proporti
 owed on: the tier map's role efforts, CD #6's pointer text (Rooms), the three canon passages (slice
 4), RESOURCE_ROUTING's new paragraph (Proportion), and the register row. The plan's own falsifier for
 Proportion stays open until its window closes. Nothing else outstanding.
+
+*Note, 2026-10-06 (the User):* Proportion has been dormant for weeks. Its gate log holds 9 spawns, all allowed, all on 18 and 19 September; the window needs 20, so the falsifier gathers no evidence while the estate is inactive, and the owed items wait for its next session.
