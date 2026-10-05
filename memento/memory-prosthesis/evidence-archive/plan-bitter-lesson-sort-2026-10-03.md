@@ -109,3 +109,30 @@ Next: slice 2, first half (parts 1 to 16), reviewed before the User sees it.
 **Slice 2a (2026-10-06).** Banked as `design-sort-slice2a-2026-10-06.md` after two adversarial reviews (r1 and r2, NEEDS-CHANGES, every finding accepted). Each unit carries one discriminating test with instrument, time and threshold; parts 6, 9 and 11 split. The User ruled that parts turning on delegated agents take the delegate tier's generation as their clock, and kept the threshold (a half against baseline, ten sessions a side). Next: slice 2b, parts 17 to 32.
 
 **Slice 2b (2026-10-06).** Banked as `design-sort-slice2b-2026-10-06.md` after two adversarial reviews (r1 and r2, NEEDS-CHANGES, every finding accepted). Part 19 split into authority hooks and compliance hooks; trials that remove safety, approval or confidentiality controls confined to a scratch copy; hooks tested one by one in shadow. Before publication, slice 2a's exact per-session rates were brought to the shapes the cleared findings publish, the exact readings kept in the private receipts index. The User added engineering practice as a fourth basis of *independent of the model* ("2 your lean"). Next: slice 3, the User's ruling per unit, in batches of about ten with the session's reading of each ("3 your lean").
+
+**Slice 3 (2026-10-06, in progress).** The User accepted the session's reading of each unit in batches 1 and 2 ("i accept readings"; "accept all"):
+
+| Unit | Kind | Basis or assumption |
+|---|---|---|
+| 1 The User decides when work is done | Independent of the model | Authority |
+| 2 Protected-operations list | Independent of the model | Authority |
+| 3 Core directives form | Independent of the model | The project's constitution (untestable now) |
+| 4a Step-by-step playbooks | Prescribed procedure | Capability; expected to fade |
+| 4b Planning playbook | Prescribed procedure | Capability; expected to fade, pending the trial |
+| 5 Planning rules | Judgement practice | Capability |
+| 6a Routing rule: fit | Judgement practice | Capability |
+| 6b Routing rule: the tier pin | Independent of the model | Authority over spend (CD #4f) |
+| 7 Adversarial review | Judgement practice | Capability (delegate-tier clock) |
+| 8 Claim-status discipline | Judgement practice | Capability (delegate-tier clock; untestable now) |
+| 9a Working-context tier | Judgement practice | Setting |
+| 9b Archive tiers | Independent of the model | Record |
+| 10 Working-context discipline | Judgement practice | Setting |
+| 11a Compaction approval and marker | Independent of the model | Authority |
+| 11b Consolidation steps | Prescribed procedure | Setting |
+| 12 Session restart protocol | Prescribed procedure | Setting |
+| 13 Lesson selection | Judgement practice | Capability |
+| 14 Evidence-archive conventions | Independent of the model | Record |
+| 15 File metadata and generated maps | Prescribed procedure | Capability; expected to fade (untestable now) |
+| 16 Doctor health checks | Independent of the model | Engineering |
+
+Evidence noted at 6b, cleared by the User: he reported a live deny on 2026-10-06 in another estate, in which an unjustified frontier-tier spawn was blocked and then allowed once a justification line was given.
