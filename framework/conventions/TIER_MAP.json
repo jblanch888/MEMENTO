@@ -2,12 +2,12 @@
   "_about": "Memento tier map. `policy` is the agent-agnostic contract: ranks, roles, named agents and the justification rule. `bindings` hold what each agent runtime needs to enforce it (today: claude-code). Owned by the framework canon; each instance carries a byte-identical copy that its doctor hash-checks. Human-edited, John-verified. Read by memento/tools/agent-tier-gate.py and memento/tools/generate_agents.py. Nothing outside a binding's ladder is ever allowed. See plan-spawn-tier-control-across-estates-2026-09-06.",
   "schema": 2,
   "policy": {
-    "last_verified": "2026-09-06",
+    "last_verified": "2026-10-06",
     "ladder_depth": 4,
     "frontier_ranks": [0, 1],
     "justification": { "marker": "TIER-JUSTIFICATION:", "min_chars": 40 },
     "roles": {
-      "judgement": { "rank": 0, "effort": null, "note": "the main thread; any spawn resolving to a frontier rank, named agent or not, needs a justification line" },
+      "judgement": { "rank": 1, "effort": null, "note": "the main thread; any spawn resolving to a frontier rank, named agent or not, needs a justification line" },
       "review":    { "rank": 2, "effort": "medium" },
       "build":     { "rank": 2, "effort": "medium" },
       "recon":     { "rank": 3, "effort": "low" }
@@ -41,7 +41,7 @@
   },
   "bindings": {
     "claude-code": {
-      "verified_against": "2.1.271",
+      "verified_against": "2.1.286",
       "ladder": ["fable", "opus", "sonnet", "haiku"],
       "inherits": ["fork"],
       "effort_levels": ["low", "medium", "high", "xhigh", "max"],
