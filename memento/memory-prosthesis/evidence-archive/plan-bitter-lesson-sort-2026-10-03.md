@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-03
 genre: design/decision (3C)
 size: L (four slices; slice 2 in two halves)
-status: APPROVED 2026-10-03 (the User: "approve plan"); slice 0 DONE 2026-10-06, the User chose F with G; slice 1 next
+status: APPROVED 2026-10-03 (the User: "approve plan"); slice 0 DONE 2026-10-06, the User chose F with G; slice 1 DONE 2026-10-06; slice 2 next
 related: [finding-exercise-census-2026-10-03, finding-lineage-verdicts-2026-07-20, ORGAN_REGISTRY, KILLED_MECHANISMS, THE_STORY]
 ---
 
@@ -79,3 +79,29 @@ Estate side. Commits `docs(estate)`.
 ## Slice record
 
 **Slice 0 (2026-10-03 to 2026-10-06).** The alternatives widened from A to D to A to G after the longitudinal evidence (`design-sort-alternatives-2026-10-03.md`), reviewed before presentation. The User chose **F with G** ("f w g", 2026-10-06), the session's lean: each unit records the model behaviour it assumes and whether it prescribes steps or calls for judgement; review fires at each model change, expecting prescribed procedure to fade and judgement practice to hold or grow. The lean aims a without-the-part trial (E) at the planning playbook as the first test; that trial is its own undertaking. Next: slice 1, the kinds and the unit with the User.
+
+**Slice 1 (2026-10-06).** The User agreed all four proposals ("ok agree to 4"):
+
+1. **Kinds.** Three:
+   - **prescribed procedure:** the part fixes the steps; expected to fade at a model change;
+   - **judgement practice:** the part names an outcome and leaves the form to the model; expected to hold or grow;
+   - **independent of the model:** the record, the User's authority, confidentiality and the language standard; expected to stay steady, and not reviewed at a model change.
+2. **Assumptions carry a type.** A *capability* assumption (what the model does unprompted) is reviewed at a model change. A *setting* assumption (sessions start without memory, context is lost at compaction) is reviewed when the harness changes. Restart and compaction answer to the setting, which their steady use reflects.
+3. **Unit.** The unit is the registry part (`story/ORGAN_REGISTRY.md`), refined as follows:
+   - part 4 is split into the step-by-step playbooks and the planning playbook;
+   - the four held tools attach to their parts: the doctor to 16, generated indexes to 15, restart-diff to 12, and the pattern-search probe to 5;
+   - any further split is made in slice 2 with its evidence;
+   - estates enter as evidence within a unit.
+
+   This gives about 33 units.
+4. **Review triggers.** For capability assumptions, a change of main-thread model generation, dated by telemetry; point releases do not count. For setting assumptions, a harness change touching the assumption. The census re-run on 2027-01-03 stands.
+
+**Each unit's record in slice 2:**
+- kind;
+- assumption and its type;
+- expected direction at a model change;
+- census signal, or "untestable now";
+- test type (census re-run, or a trial without the part);
+- optionally, its rung on the controls ladder.
+
+Next: slice 2, first half (parts 1 to 16), reviewed before the User sees it.
