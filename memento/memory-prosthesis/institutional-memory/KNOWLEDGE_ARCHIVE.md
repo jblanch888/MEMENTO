@@ -40,3 +40,15 @@ Entries graduate through the pre-compact consolidation gate (CD #9), maximum thr
 ### Pathspec commits take working-tree state {#pathspec-commits-take-worktree-state}
 
 *(Graduated 2026-07-21.)* `git commit -- <path>` commits the working-tree content of the named paths, silently reversing a staged deletion of a file that still exists on disk. Receipted: the settings untrack failed invisibly and republished the file with broader content. For index-only operations, commit with the file absent from the worktree, or commit a controlled index without pathspec. Sharpens CD #10's pathspec rule with its one sharp edge.
+
+## Tooling craft
+
+### A check fails open in its plumbing, so test the gate by breaking it {#check-fails-open-in-plumbing}
+
+*(Graduated 2026-10-06.)* The rebuilt confidentiality sweep went through five rounds in which a hit read as clean for reasons unrelated to its logic: errexit is suspended inside an `if`; `cut` under a UTF-8 locale drops lines that hold invalid bytes; grep stops matching at an invalid byte; awk stops reading a line at a NUL; macOS `git grep -E` has no `\b`; a hook that always exits 0 fails silently when its script breaks. Each was found by an adversarial reviewer or a deliberate mutation, none by the happy-path tests. Receipted: `plan-leak-hardening-2026-10-03.md` (implementation and review records). The discipline: a gate ships with a suite that a set of mutants must fail, and a check that cannot run blocks.
+
+## Evidence craft
+
+### Measure use without reading content, and treat scouts as leads {#measure-use-without-content}
+
+*(Graduated 2026-10-06.)* Session transcripts, prompt history, telemetry, hook logs, git file effects and co-author trailers answer "which parts are used, under which model" as counts, identifiers and dates, with no content leaving a script; that kept confidential estates out of the session while still dating the playbook decline across model generations. Recon scouts found the sources, and several of their figures were wrong (dates, coverage, a shell-history count with no timestamps), so the load-bearing ones were re-grounded first-hand and every public claim carries a receipt code to a private index. Receipted: `finding-exercise-census-2026-10-03.md`, `finding-longitudinal-evidence-2026-10-03.md`.

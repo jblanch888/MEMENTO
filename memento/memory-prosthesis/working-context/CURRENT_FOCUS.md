@@ -1,7 +1,7 @@
 ---
 description: active mission and task for the MEMENTO estate: working context, replaced coherently per CD #11
 type: working-context
-date: 2026-10-03
+date: 2026-10-06
 status: live
 ---
 
@@ -13,13 +13,15 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 
 ## Active Playbook and plan
 
-**Plan: the Bitter Lesson sort** (`../evidence-archive/plan-bitter-lesson-sort-2026-10-03.md`), APPROVED 2026-10-03, slice 0 (alternatives to the sort) in progress. **Plan: leak hardening** (`../evidence-archive/plan-leak-hardening-2026-10-03.md`), APPROVED 2026-10-03. Slices 1a (the push gate) and 1b (commit-time sweeps, the sweep of what is published, the redacted view) complete and validated, slice 1c (the documents) complete, and slice 2 (CD #4e amended, § Imports procedure) complete on the User's rulings. All slices done; the plan awaits the User's word to close. PLANNING governs; slices run WIP of one, each to the User's eyeball.
+**Plan: the Bitter Lesson sort** (`../evidence-archive/plan-bitter-lesson-sort-2026-10-03.md`), APPROVED 2026-10-03. Slice 0 (alternatives to the sort) is banked as `../evidence-archive/design-sort-alternatives-2026-10-03.md` and awaits the User's choice; the session's lean is F with G (an assumption register keyed to model releases, sorted by prescribed procedure or judgement practice), with a without-the-part trial aimed at the planning playbook. **Plan: leak hardening** (`../evidence-archive/plan-leak-hardening-2026-10-03.md`): all slices done and validated; awaits the User's word to close. PLANNING governs; slices run WIP of one.
 
 ## Current state
 
-- **Posture (i) reaffirmed by the User, 2026-10-03:** the estate stays published with the canon. Other Memento instances, some holding material that must stay private, now feed lessons and messages into these sessions; that is the reason for the active plan.
-- The canon reads in plain language across README, docs/index, story/, framework/ and adoption/; a "Words used here" glossary sits in `framework/README.md`. The estate (`memento/`) keeps its own vocabulary by ruling (D3 of the plain-language plan).
-- The spawn-tier control plan (`plan-spawn-tier-control-across-estates-2026-09-06.md`) is DONE in this estate bar Proportion's owed items and the User's eyeball passes in its §15.
+- **Evidence for the sort is banked:** `finding-exercise-census-2026-10-03.md` (use, content-free) and `finding-longitudinal-evidence-2026-10-03.md` (the 2025 founding to October 2026 across model generations). Receipts, scripts and scout reports are held privately at `~/.memento/census/` (receipts index `receipts-2026-10-03.md`); the census can be re-run from there. build-protocols/dev has the findings (thread `t-20261003-190701-f9facd`) and raised whether its explainer figure of the plan rule is affected; the answer given: the rule is unaffected, the playbook's step sequence is what a trial could retire.
+- **Posture (i) reaffirmed by the User, 2026-10-03:** the estate stays published with the canon.
+- **Restart:** SessionStart and "restart" prompts put CD #8 into context (`memento/tools/restart-trigger.sh`); the session-start arm is unwitnessed.
+- The canon reads in plain language; the estate keeps its own vocabulary (D3).
+- The spawn-tier control plan is DONE in this estate bar Proportion's owed items and the User's eyeball passes in its §15.
 - **Publication state is never asserted in this file: derive it live from git (`git status -sb`, `git log @{u}..`, `git log ..@{u}`) per CD #8d.**
 
 ## Constraints
@@ -27,17 +29,18 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 - **Seam:** root = canon, `memento/` = estate; commits declare their side (CD #10); pushes User-only (CD #4a). Commits use explicit file lists written out from the work's own files.
 - **Writing rules (CD #5):** no em dashes in prose; no contrast framing in any form; reviewers hunt the pattern.
 - **Canon wording:** new canon text follows the ruled term table and the glossary. Astra (`agent-messaging/astra-reviewer`) reviews wording changes; the User rules final wording.
-- **The confidentiality sweep runs LAST, on the final tracked tree, before any ready-to-push claim** (`memento/tools/confidentiality-sweep.sh`, pre-push hook; token list outside the repo). It sweeps everything a push publishes (outgoing blobs, paths, commit and tag objects, ref names) and fails closed; the pre-commit, pre-merge-commit and commit-msg hooks sweep each commit as it is made. Uncommitted and untracked files get a direct grep. At restart, after `git fetch`, run `memento/tools/confidentiality-sweep.sh --published origin/main`: known hits are counted against `~/.memento/sweep-baseline.txt`, and any new hit is a finding for the User. Inspect a hit only with `--show-redacted`. Never print a matched token or pattern into the session; report counts, paths and hashes.
+- **Confidentiality sweep:** it sweeps everything a push publishes and each commit as it is made, and fails closed. Uncommitted and untracked files get a direct grep. At restart, after `git fetch`, run `memento/tools/confidentiality-sweep.sh --published origin/main`: known hits are counted against `~/.memento/sweep-baseline.txt`, and any new hit is a finding for the User. Inspect a hit only with `--show-redacted`. Never print a matched token or pattern into the session; report counts, paths and hashes.
 - **Imports (CD #4e):** material from another Memento instance, and confidential material from any source, is drafted outside the working tree and enters the repository, a commit, a shared document or a message after a de-identification pass and the User's clearance. Procedure: `memento/tools/README.md`, § Imports.
-- **Text published through `gh`** is swept by hand first (plan decision D3, until a guard exists).
+- **Text published through `gh`** is swept by hand first (`gh` is not logged in on this machine; the User runs `gh auth login`).
 - Canon self-claims re-ground with the User; generic naming; private hashes stay out of canon text, and hashes of published residue stay out of every tracked file.
+- **Decisions go to the User in plain prose with leans.**
 
 ## Open with the User
 
-- **Tier map and Rooms tool copies:** awaiting the User's answer on who does which (proposal: this session edits the canon tier map; rooms/dev copies in the `1addabb` tools). rooms/dev reports the live-dispatch witness passed on Claude Code 2.1.286 (2026-09-30); the canon edit of `verified_against` (2.1.271 to 2.1.286) and `policy.last_verified` awaits his go. Also raised: the judgement role's rank 0 against the main thread's rank 1 model, and the haiku alias trailing a generation. The script's default `--map` path does not resolve in this repository.
-- **Tool copies in Rooms and Proportion:** `generate_agents.py` and `tier-map-check.py` changed here (`1addabb`); Rooms' doctor CHECK 9 fails on the drift. Whether, when and who copies in is his call.
-- **The Bitter Lesson sort** (build-protocols, 2026-10-02): the evidence is banked (`finding-exercise-census-2026-10-03.md`): step-by-step playbooks fading, planning, routing, review, restart and the working context heavily exercised in product work, eight parts beyond the method's reach. The sort is the active decision plan.
-- **Build-protocols** re-syncs the explainer page's quotes from the canon commits once they are public (derive publication from git).
-- **Six inherited adoption gaps** (plain-language plan, slice 4 record): SPIRIT.md's links after copying, pointing the agent at SPIRIT.md, STATUS in set-up step 3, the advance-build exception, the founding plan's timing, a link to the writing rules. Not taken up.
-- **Spawn-tier eyeball items** (that plan's §15): the tier map's role efforts, the slice-4 canon passages, the register row.
+- **The sort, slice 0:** his choice among A to G (lean: F with G).
+- **Leak hardening:** his word to close the plan.
+- **Tier map and Rooms tool copies:** who does which (proposal: this session edits the canon tier map, `verified_against` 2.1.271 to 2.1.286 and `policy.last_verified`; rooms/dev copies in the `1addabb` tools). Also raised by rooms/dev: the judgement role's rank against the main thread's model, and the haiku alias trailing a generation. The script's default `--map` path does not resolve in this repository.
+- **Build-protocols** re-syncs the explainer page's quotes from the canon commits once they are public.
+- **Six inherited adoption gaps** (plain-language plan, slice 4 record). Not taken up.
+- **Spawn-tier eyeball items** (that plan's §15).
 - **Untracked leftovers:** `.tmp-agents-after/` and `framework/conventions/TIER_MAP.json.bak-20260919`; deletion is his call.
