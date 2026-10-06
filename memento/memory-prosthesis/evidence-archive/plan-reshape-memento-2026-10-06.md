@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-06
 genre: decision (3C) on an investigation (3B), executed as build/change (3A, debt/excision variant)
 size: L (six slices)
-status: APPROVED 2026-10-06 (the User: "approve"); slice 0 DONE 2026-10-07; slice 1 in progress
+status: APPROVED 2026-10-06 (the User: "approve"); slices 0 and 1 DONE 2026-10-07; slice 2 in progress
 related: [decision-bitter-lesson-sort-2026-10-06, plan-memento-ablation-trial-2026-10-06, finding-exercise-census-2026-10-03, finding-longitudinal-evidence-2026-10-03, finding-lineage-verdicts-2026-07-20, ORGAN_REGISTRY, KILLED_MECHANISMS, TOOLING_TRIGGERS]
 ---
 
@@ -220,4 +220,23 @@ Approved by the User, 2026-10-06.
 - **One genuine stale reference** found in passing: the working context named the wording reviewer's role wrongly. It was fixed as a refinement.
 
 The canon carries no dangling-reference debt. Next: grades on about ten elements the User chooses.
+
+**Slice 1, pilot grades (2026-10-07).**
+- **The grades.** Ten elements were graded:
+  - no STRONG grades;
+  - MODERATE for the git-operations, incremental-execution and documentation playbooks, for CD #9's marker clause, and for the four held trigger rows (consolidate or slim);
+  - WEAK or NO-EVIDENCE, and keep, for knowledge gardening, the planning playbook, CD #8, the estate spine and resource routing.
+- **The User's verdict:** "basically ok". No grade was overturned, so the grading stands.
+- **The standards rule (the User, "yes"):** where an element carries a standard, the standard moves somewhere permanent, and only the procedure around it goes. The git and documentation playbooks are, in the User's words, "basically standards manuals".
+
+**The User's guidance for slice 2 (2026-10-07).**
+- **The history.** Playbooks began, about eighteen months earlier, as behavioural and procedural guard rails for less predictable models, with a playbook always loaded in a governed session. As models misbehaved less, they became rarely invoked.
+- **Three homes for what remains:**
+  - standards and conventions (always true);
+  - skills (procedures used when the task fits);
+  - directives or hooks (rules that must always hold).
+
+  Each slice 2 proposal names which home its remaining content goes to.
+- **Skills** are a feature of both Claude Code and Codex. Memento ought to work with Codex as well. The User has used Codex little inside Memento: he holds a Plus licence, and its automatic compaction is less predictable and harder to manage. So the canon describes on-demand procedures in neutral terms, with a binding per agent, as the tier map does. Compaction-related parts carry a setting assumption that differs between harnesses.
+- **A trial of the planning playbook packaged as a skill** (alongside the playbook, nothing removed) is an option for the User's ruling and has not been started.
 
