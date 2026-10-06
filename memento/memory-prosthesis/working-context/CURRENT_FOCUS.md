@@ -13,15 +13,27 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 
 ## Active Playbook and plan
 
-**Plan: the Bitter Lesson sort** (`../evidence-archive/plan-bitter-lesson-sort-2026-10-03.md`), APPROVED 2026-10-03. Slice 0 is DONE: the User chose **F with G** on 2026-10-06 (an assumption register keyed to model releases; each unit marked as prescribed procedure or judgement practice, with prescribed procedure expected to fade at a model change). Slice 1 is DONE (2026-10-06): three kinds (prescribed procedure, judgement practice, independent of the model), assumptions typed as capability or setting, the registry part as unit (part 4 split; held tools attached), review at a main-thread model generation change or a harness change. Slice 2 is banked (`../evidence-archive/design-sort-slice2a-2026-10-06.md`, `design-sort-slice2b-2026-10-06.md`); engineering practice is a fourth basis of *independent of the model*. Slice 3 is DONE: the User ruled all 37 units on 2026-10-06; decision record `../evidence-archive/decision-bitter-lesson-sort-2026-10-06.md`. The plan is CLOSED (the User, 2026-10-06). The lean's first test, a without-the-part trial on the planning playbook, is its own undertaking. PLANNING governs; slices run WIP of one.
+**No active plan.** The next undertaking is the User's choice. The candidates:
+- the sort's canon follow-through;
+- resuming the ablation trial as an implementation test;
+- the six inherited adoption gaps.
+
+The session's lean is the adoption gaps: they are the oldest open debt on the canon, and they do not depend on the trial's unresolved playbook question. PLANNING governs whichever is chosen; slices run WIP of one.
 
 ## Current state
 
-- **Evidence for the sort is banked:** `finding-exercise-census-2026-10-03.md` and `finding-longitudinal-evidence-2026-10-03.md`, with receipts, scripts and scout reports held privately at `~/.memento/census/` (receipts index `receipts-2026-10-03.md`). build-protocols/dev has the findings (thread `t-20261003-190701-f9facd`).
-- **Leak hardening is CLOSED** (the User, 2026-10-06).
-- **Tier map, 2026-10-06 (canon):** verified against CLI 2.1.286; judgement role at rank 1 (the User's main thread is Opus 5.5); the scout carries no agent memory, so its no-write guarantee is enforced; the reviewer keeps memory, and with it the runtime's Write and Edit, so its no-write guarantee is behavioural. The tier-gate witness runs 82 of 82 again after 1addabb's path guard. Rooms/dev copies the map and tools in and regenerates, on the User's ruling. Haiku, the User 2026-10-06: recon spawns default to the latest Haiku available, which the bare `haiku` alias gives.
-- **Posture (i) reaffirmed by the User, 2026-10-03:** the estate stays published with the canon.
-- The canon reads in plain language; the estate keeps its own vocabulary (D3).
+- **The Bitter Lesson sort is CLOSED** (`../evidence-archive/decision-bitter-lesson-sort-2026-10-06.md`). Of 37 units, 5 are prescribed procedure, 9 judgement practice, 22 independent of the model and 1 deferred. Each unit carries its review clock and its test. Evidence is banked in `finding-exercise-census-2026-10-03.md` and `finding-longitudinal-evidence-2026-10-03.md`. Receipts are held privately at `~/.memento/census/`.
+- **The ablation trial is CLOSED at the pilot stage** (`../evidence-archive/plan-memento-ablation-trial-2026-10-06.md`). Two features were run. Full Memento ranked first on the mean both times, and the playbook's effect is unresolved. The trial is resumable after a recorded revision.
+- **Record counts are in place** (`../evidence-archive/plan-record-counts-2026-10-06.md`). Each review and slice record ends with its counts line (`memento/tools/README.md`, § Record counts; planning playbook spine item 6). The first live use is on the next plan.
+- **Leak hardening is CLOSED.** The confidentiality sweep covers everything a push publishes.
+- **Tier map (canon):**
+  - verified against CLI 2.1.286;
+  - the judgement role at rank 1;
+  - the scout carries no agent memory, so its no-write guarantee is enforced;
+  - the reviewer's guarantee is behavioural;
+  - recon spawns use the latest Haiku through the bare alias.
+- **Fired build triggers** (doctor, pattern-search probe, restart-diff, generated indexes) stay held. Each is a unit in the sort's decision record.
+- **Posture (i), reaffirmed 2026-10-03:** the estate stays published with the canon. The canon reads in plain language; the estate keeps its own vocabulary (D3).
 - **Publication state is never asserted in this file: derive it live from git (`git status -sb`, `git log @{u}..`, `git log ..@{u}`) per CD #8d.**
 
 ## Constraints
@@ -34,15 +46,13 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 - **Text published through `gh`** is swept by hand first (`gh` is not logged in on this machine; the User runs `gh auth login`).
 - Canon self-claims re-ground with the User; generic naming; private hashes stay out of canon text, and hashes of published residue stay out of every tracked file.
 - **Decisions go to the User in plain prose with leans.**
+- **Agent work runs in sequence by default.** Many frontier agents in parallel spent a large share of the User's session allowance in minutes (2026-10-06).
 - **Agent-messaging threads cap at ten exchanges;** a reply past the cap is held for the User. Open a new thread on his word when a topic runs on.
 
 ## Open with the User
 
-- **The ablation trial is CLOSED at the pilot stage** (`../evidence-archive/plan-memento-ablation-trial-2026-10-06.md`). Two features run. Full Memento ranked first on the mean both times. The playbook's effect is unresolved. The trial is resumable after a recorded revision, and the User's implementation test is the candidate. The trial folder `~/abl-trial` and its review copies are kept, as product work outside both repositories, until the User rules on them.
-- **Record counts** (`../evidence-archive/plan-record-counts-2026-10-06.md`, APPROVED 2026-10-06): slice 1 is done, with the counts-line definitions in `memento/tools/README.md`, § Record counts, and two register rows. Slice 2 is done: the planning playbook's spine item 6 asks for the lines. They start with the next plan's records, and every review prompt asks the reviewer for the counts.
-- **Canon follow-through of the sort** (which parts are expected to fade) is not started. The trial's playbook hint argues for patience.
+- **The next undertaking** (see Active Playbook and plan).
+- **The trial folder** `~/abl-trial` holds product work outside both repositories. It is kept until the User rules on it; the review copies are already deleted.
 - **Build-protocols** re-syncs the explainer page's quotes from the canon commits once they are public.
-- **Six inherited adoption gaps** (plain-language plan, slice 4 record). Not taken up.
-- **Spawn-tier eyeball items** (that plan's §15). Proportion is dormant (the User, 2026-10-06), so its gate trial (9 of 20 spawns, no denies) and its owed items wait for its next session.
-- **Fired build triggers held for the sort** (the User, 2026-10-06): doctor, pattern-search probe, restart-diff and generated indexes, each a unit for slice 1 (register rows).
+- **Spawn-tier eyeball items** (that plan's §15). Proportion is dormant, so its gate trial (9 of 20 spawns, no denies) and its owed items wait for its next session.
 - **Untracked leftovers:** `.tmp-agents-after/` and `framework/conventions/TIER_MAP.json.bak-20260919`; deletion is his call.
