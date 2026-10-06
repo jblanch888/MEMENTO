@@ -336,3 +336,21 @@ Approved by the User, 2026-10-06.
 - **Limits.** One feature, one run per arm, one pass per judge, ten-claim samples. This is a direction, not a verdict, and the decision rule does not apply until more features are run.
 
 **Next (the User, 2026-10-06):** a second feature, chosen to differ from the first, run the same way.
+
+**Pilot result, second feature (banked on the User's word, 2026-10-06).** A small bug fix, chosen to contrast with the first feature's large build. The bug turned out to be absent from the current code. The session chose it from a stale backlog entry without checking the code first. That made it a test of whether each arm checks the real state of the code.
+
+| Arm | Opus 5.5 | Fable 5.1 | Mean |
+|---|---|---|---|
+| Full Memento | 0.57 | 0.63 | 0.60 |
+| No Memento | 0.61 | 0.43 | 0.52 |
+| Memento without the planning playbook | 0.52 | 0.46 | 0.49 |
+
+- **All three arms found the bug absent** and stopped for the User's ruling instead of inventing a fix.
+- **All three missed the deeper reason the bug cannot exist:** a data store was retired earlier.
+- **Recorded-decisions scores were identical** across arms.
+- **The judges disagreed sharply on No Memento.** Opus scored it first; Fable scored it last, with four errors in ten sampled claims. Item agreement ranged from 12 to 17 of 19.
+- **Across both features,** Full Memento ranked first on the mean (0.78 and 0.60), about 8 to 9 points above No Memento. The no-playbook arm did no better than No Memento in either feature. That hints the playbook carries more planning value than the sort's slice 2a assumed, and it is not yet separable from noise.
+- **Limits** as for the first feature, plus wider disagreement between the judges.
+- **Cost.** The second feature's three planning runs cost $1.37.
+
+**The User's idea for a stronger test (2026-10-06, not yet planned):** each arm carries out its own plan in its own copy, measured by type check, build, existing tests and acceptance tests. The User is not ready to start it.
