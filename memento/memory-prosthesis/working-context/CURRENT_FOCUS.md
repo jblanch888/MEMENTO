@@ -13,12 +13,7 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 
 ## Active Playbook and plan
 
-**No active plan.** The next undertaking is the User's choice. The candidates:
-- the sort's canon follow-through;
-- resuming the ablation trial as an implementation test;
-- the six inherited adoption gaps.
-
-The session's lean is the adoption gaps: they are the oldest open debt on the canon, and they do not depend on the trial's unresolved playbook question. PLANNING governs whichever is chosen; slices run WIP of one.
+**Plan: reshape Memento on evidence** (`../evidence-archive/plan-reshape-memento-2026-10-06.md`), APPROVED 2026-10-06. It reshapes the canon, this estate and every live instance, with action proportionate to the strength of evidence (the User: "strong evidence strong action, weak evidence restraint"). STRONG needs a test or two independent criteria. Records and the authority, confidentiality and safety parts are protected. The planning playbook is kept. **Now: slice 0** with the User: the grade table, the two repositories of unknown status, and the owner roles. Then a cheap pilot on the canon and this estate. Instance repository names beyond those already public are held privately at `~/.memento/reshape/`. PLANNING governs; slices run WIP of one.
 
 ## Current state
 
@@ -51,7 +46,6 @@ The session's lean is the adoption gaps: they are the oldest open debt on the ca
 
 ## Open with the User
 
-- **The next undertaking** (see Active Playbook and plan).
 - **The trial folder** `~/abl-trial` holds product work outside both repositories. It is kept until the User rules on it; the review copies are already deleted.
 - **Build-protocols** re-syncs the explainer page's quotes from the canon commits once they are public.
 - **Spawn-tier eyeball items** (that plan's §15). Proportion is dormant, so its gate trial (9 of 20 spawns, no denies) and its owed items wait for its next session.
