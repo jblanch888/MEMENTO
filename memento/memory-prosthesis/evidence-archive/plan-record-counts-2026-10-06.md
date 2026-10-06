@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-06
 genre: build/change (3A)
 size: S (two slices)
-status: APPROVED 2026-10-06 (the User: "approve"); slice 1 DONE 2026-10-06; slice 2 (the playbook sentence) awaits the User's word
+status: APPROVED 2026-10-06 (the User: "approve"); slices 1 and 2 DONE 2026-10-06; first live use on the next plan
 related: [decision-bitter-lesson-sort-2026-10-06, design-sort-slice2a-2026-10-06, design-sort-slice2b-2026-10-06, TOOLING_TRIGGERS, PLANNING_PLAYBOOK, KILLED_MECHANISMS]
 ---
 
@@ -157,3 +157,5 @@ Approved by the User, 2026-10-06.
 ## Slice record
 
 **Slice 1 (2026-10-06).** The definitions are in `memento/tools/README.md`, § Record counts. Two register rows were added: the counts lines, built on the User's approval with the kill condition above, and the tally script, with its trigger. The lines start with the next plan's records.
+
+**Slice 2 (2026-10-06).** On the User's word ("yes"), the planning playbook's spine item 6 now asks each review record and plan slice record to end with its counts line. The first live use is on the next plan.

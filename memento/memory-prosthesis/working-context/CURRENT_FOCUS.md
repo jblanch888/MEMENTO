@@ -39,7 +39,7 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 ## Open with the User
 
 - **The ablation trial is CLOSED at the pilot stage** (`../evidence-archive/plan-memento-ablation-trial-2026-10-06.md`). Two features run. Full Memento ranked first on the mean both times. The playbook's effect is unresolved. The trial is resumable after a recorded revision, and the User's implementation test is the candidate. The trial folder `~/abl-trial` and its review copies are kept, as product work outside both repositories, until the User rules on them.
-- **Record counts** (`../evidence-archive/plan-record-counts-2026-10-06.md`, APPROVED 2026-10-06): slice 1 is done, with the counts-line definitions in `memento/tools/README.md`, § Record counts, and two register rows. The lines start with the next plan's records. **Slice 2, a sentence in the planning playbook, awaits the User's word.**
+- **Record counts** (`../evidence-archive/plan-record-counts-2026-10-06.md`, APPROVED 2026-10-06): slice 1 is done, with the counts-line definitions in `memento/tools/README.md`, § Record counts, and two register rows. Slice 2 is done: the planning playbook's spine item 6 asks for the lines. They start with the next plan's records, and every review prompt asks the reviewer for the counts.
 - **Canon follow-through of the sort** (which parts are expected to fade) is not started. The trial's playbook hint argues for patience.
 - **Build-protocols** re-syncs the explainer page's quotes from the canon commits once they are public.
 - **Six inherited adoption gaps** (plain-language plan, slice 4 record). Not taken up.

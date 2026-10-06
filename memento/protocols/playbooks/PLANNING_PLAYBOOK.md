@@ -59,7 +59,7 @@ State: `Pattern Search Results: [summary]`, citing the hits acted on or ruled ou
 3. **Posture** (§0-bis — position on the spectrum + the named feedback/pivot points);
 4. **Scope and slices** — what's in, what's consciously out, WIP-of-one ordering;
 5. **Risks** — what could go wrong, dependencies, reversibility;
-6. **Verification discipline** — how each part gets witnessed (receipts, review, the User's eyeball — per genre);
+6. **Verification discipline** — how each part gets witnessed (receipts, review, the User's eyeball — per genre); each review record and each plan slice record ends with its counts line (`memento/tools/README.md`, § Record counts; added 2026-10-06 under `plan-record-counts-2026-10-06.md`, on the User's word);
 7. **Estimated Effort — relative sizing only (§2.5)**;
 8. **the User's approval gate (§5).**
 
