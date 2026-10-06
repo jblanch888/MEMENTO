@@ -13,8 +13,6 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 
 ## Active Playbook and plan
 
-**Plan: the Memento ablation trial** (`../evidence-archive/plan-memento-ablation-trial-2026-10-06.md`), APPROVED 2026-10-06: three isolated copies of Proportion (full Memento, no planning playbook, no Memento), fresh headless sessions plan the same six features, the User judges blind. **Now: slice 0** (features, briefs, criteria, decision rule, the definition of "no Memento", spend envelope). Trial materials live in `~/.memento/trials/ablation/`, outside both repositories.
-
 **Plan: the Bitter Lesson sort** (`../evidence-archive/plan-bitter-lesson-sort-2026-10-03.md`), APPROVED 2026-10-03. Slice 0 is DONE: the User chose **F with G** on 2026-10-06 (an assumption register keyed to model releases; each unit marked as prescribed procedure or judgement practice, with prescribed procedure expected to fade at a model change). Slice 1 is DONE (2026-10-06): three kinds (prescribed procedure, judgement practice, independent of the model), assumptions typed as capability or setting, the registry part as unit (part 4 split; held tools attached), review at a main-thread model generation change or a harness change. Slice 2 is banked (`../evidence-archive/design-sort-slice2a-2026-10-06.md`, `design-sort-slice2b-2026-10-06.md`); engineering practice is a fourth basis of *independent of the model*. Slice 3 is DONE: the User ruled all 37 units on 2026-10-06; decision record `../evidence-archive/decision-bitter-lesson-sort-2026-10-06.md`. The plan is CLOSED (the User, 2026-10-06). The lean's first test, a without-the-part trial on the planning playbook, is its own undertaking. PLANNING governs; slices run WIP of one.
 
 ## Current state
@@ -40,7 +38,9 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 
 ## Open with the User
 
-- **Next undertakings from the sort, each under its own plan:** the ablation trial (`../evidence-archive/plan-memento-ablation-trial-2026-10-06.md`, APPROVED 2026-10-06, slice 0 with the User), then the shared review-and-plan-record counter that eight owed instruments need (approved in principle, 2026-10-06; needs a pre-registered kill condition, register).
+- **The ablation trial is CLOSED at the pilot stage** (`../evidence-archive/plan-memento-ablation-trial-2026-10-06.md`). Two features run. Full Memento ranked first on the mean both times. The playbook's effect is unresolved. The trial is resumable after a recorded revision, and the User's implementation test is the candidate. The trial folder `~/abl-trial` and its review copies are kept, as product work outside both repositories, until the User rules on them.
+- **Next undertaking:** the shared review-and-plan-record counter that eight owed instruments need (approved in principle, 2026-10-06; needs its own plan and a pre-registered kill condition, register).
+- **Canon follow-through of the sort** (which parts are expected to fade) is not started. The trial's playbook hint argues for patience.
 - **Build-protocols** re-syncs the explainer page's quotes from the canon commits once they are public.
 - **Six inherited adoption gaps** (plain-language plan, slice 4 record). Not taken up.
 - **Spawn-tier eyeball items** (that plan's §15). Proportion is dormant (the User, 2026-10-06), so its gate trial (9 of 20 spawns, no denies) and its owed items wait for its next session.

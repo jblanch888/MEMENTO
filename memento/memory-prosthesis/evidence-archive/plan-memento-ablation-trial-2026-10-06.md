@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-06
 genre: investigation (3B) with a decision step (3C); the template build follows 3A's debt/excision variant
 size: L (five slices)
-status: APPROVED 2026-10-06 (the User: "approve"); slice 0 DONE; slice 1 with the first feature as pilot, awaiting the User's judging
+status: CLOSED at the pilot stage 2026-10-06 on the User's word ("3. we can pick it up later if it seems like a good idea"); two features run and judged, results banked; resumable
 related: [decision-bitter-lesson-sort-2026-10-06, design-sort-slice2a-2026-10-06, finding-exercise-census-2026-10-03, finding-longitudinal-evidence-2026-10-03, plan-spawn-tier-control-across-estates-2026-09-06]
 ---
 
@@ -354,3 +354,11 @@ Approved by the User, 2026-10-06.
 - **Cost.** The second feature's three planning runs cost $1.37.
 
 **The User's idea for a stronger test (2026-10-06, not yet planned):** each arm carries out its own plan in its own copy, measured by type check, build, existing tests and acceptance tests. The User is not ready to start it.
+
+**Closure (2026-10-06).** After two features the User reassessed the plan and chose to stop the trial at the pilot stage, to be picked up later if it seems worthwhile. The reassessment found that practice had moved from the approved design in four ways:
+- one run per arm, not two;
+- agent judging against frozen yardsticks on a 0 to 1 scale, not the User's 1 to 5 scores, which leaves the decision rule unusable as written;
+- features need checking against the code before they are chosen;
+- the judging pipeline costs several times the planning runs.
+
+Judge disagreement was about the size of the effects being measured. A resumed trial needs a recorded revision first. The User's implementation test is the leading candidate for that revision. The trial folder (`~/abl-trial`) and the review copies are kept outside both repositories until the User rules on them; they hold product work and stay out of any synced or shared location.

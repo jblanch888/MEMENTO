@@ -9,20 +9,20 @@ status: live
 
 ## This session
 
-- **Restart (CD #8)** run on the User's prompting; a restart trigger now loads it (`d5e0103`), and both its arms are live-witnessed.
-- **Leak hardening:** the confidentiality sweep rebuilt to cover everything a push publishes and each commit; CD #4e amended with a § Imports procedure. CLOSED by the User 2026-10-06.
-- **Exercise census and longitudinal evidence** banked on the User's clearance (`cf19127`, `1793382`); the Bitter Lesson sort plan (`8cab1ac`) reached its slice 0 choice, F with G.
-- **Tier map and tools, after rooms/dev's findings** (`7d0eb70`, `6ea1801`, `a7f629e`, `a912425`):
-  - The witness was failing 7 of 82 under 1addabb's path guard; it now passes all 82.
-  - The default paths now resolve in this repository.
-  - The map is verified against 2.1.286, with judgement at rank 1.
-  - The scout's agent memory is dropped. A toggle test showed that memory adds Write and Edit.
-- **Messaging:** this session holds `memento/dev`.
+- **Restart (CD #8):** run on the User's prompting. A restart trigger now loads it, and both of its arms are live-witnessed.
+- **Leak hardening:** CLOSED. The confidentiality sweep covers everything a push publishes, and CD #4e carries a § Imports procedure.
+- **Tier map and tools:** fixed after rooms/dev's findings (pushed):
+  - the witness passes 82 of 82;
+  - the map is verified on CLI 2.1.286, with judgement at rank 1;
+  - the scout carries no agent memory.
+- **The Bitter Lesson sort:** decided and CLOSED. Of 37 units, 5 are prescribed procedure, 9 judgement practice, 22 independent of the model and 1 deferred. The decision record is `decision-bitter-lesson-sort-2026-10-06.md`.
+- **The ablation trial:** CLOSED at the pilot stage, after two features run in three isolated copies of Proportion and judged blind by Opus 5.5 and Fable 5.1. Full Memento ranked first on the mean both times, and the playbook's effect is unresolved. Lesson: running many frontier agents in parallel spent a large share of the User's session allowance in minutes, so judging runs in sequence.
+- **Messaging:** this session holds `memento/dev`. The thread with rooms/dev is at its cap.
 
 ## Next
 
-1. Sort slice 1: the kinds and the unit with the User.
-2. Rooms/dev's copy-in of `a912425` (its thread is at the exchange cap; the "on origin" reply awaits the User's release).
+1. The shared review-and-plan-record counter, under its own plan.
+2. The User's ruling on the trial folder (`~/abl-trial` and its review copies).
 
 ## Unwitnessed arms (the register is the source of truth)
 
