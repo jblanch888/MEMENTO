@@ -315,3 +315,24 @@ Approved by the User, 2026-10-06.
 - **Calibration.** Before the scores are trusted, the rubric is run on past Proportion plans with known outcomes.
 - **Outcome test for the two small features.** Each plan is implemented by an identical implementer with no Memento, then the type check, the test suite, the end-to-end tests and acceptance tests fixed in advance are run.
 - **The User's blind guesses** for feature 1 are recorded privately: he identified the no-Memento plan confidently, and was unsure between the other two.
+
+**Scope correction (2026-10-06).** The User asked only for an impartial scoring of the first feature's three plans. Calibration on past plans was dropped. Its yardsticks and rewrites are parked, and five of its six judges were stopped unfinished. Six parallel frontier judges were stopped for cost and replaced by two sequential passes: one Opus 5.5 judge, then one Fable 5.1 judge, each scoring all three plans with a sample of ten code claims per plan. *Lesson for the knowledge archive:* running many frontier agents in parallel spent a large share of the User's session allowance in minutes. Judging runs in sequence, one agent per model family.
+
+**Pilot result, first feature (banked on the User's word, 2026-10-06).** De-identified; product content stays in the private trial folder.
+
+| Arm | Opus 5.5 | Fable 5.1 | Mean |
+|---|---|---|---|
+| Full Memento | 0.79 | 0.77 | 0.78 |
+| Memento without the planning playbook | 0.70 | 0.77 | 0.73 |
+| No Memento | 0.71 | 0.68 | 0.69 |
+
+- **Headline score.** Weighted: requirements 30%, regression surface 30%, conformance 20%, sequencing 10%, factual accuracy 10%.
+- **Judge agreement.** The two judges agreed on 71 to 82 percent of checklist items and never split as far as MET against MISSING.
+- **Full Memento ranked first with both judges.** Its lead came from regression-surface coverage and factual accuracy, with no errors in twenty sampled claims, and from dealing with the product's real current state.
+- **No Memento ranked last with both judges.** It had the weakest regression coverage and two errors in each judge's sample.
+- **The no-playbook arm is split.** Opus put it level with No Memento, mainly on sequencing; Fable put it near Full. The playbook's effect is unresolved on one feature.
+- **Recorded-decisions scores barely separated the arms.** A no-Memento session recovered most of those decisions from the code.
+- **The User's blind guesses of arm were all correct,** so the blinding was partial.
+- **Limits.** One feature, one run per arm, one pass per judge, ten-claim samples. This is a direction, not a verdict, and the decision rule does not apply until more features are run.
+
+**Next (the User, 2026-10-06):** a second feature, chosen to differ from the first, run the same way.
