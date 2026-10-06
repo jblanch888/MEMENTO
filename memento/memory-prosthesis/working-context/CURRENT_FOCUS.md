@@ -35,7 +35,7 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 
 - **Seam:** root = canon, `memento/` = estate; commits declare their side (CD #10); pushes User-only (CD #4a). Commits use explicit file lists written out from the work's own files.
 - **Writing rules (CD #5):** no em dashes in prose; no contrast framing in any form; reviewers hunt the pattern.
-- **Canon wording:** new canon text follows the ruled term table and the glossary. Astra (`agent-messaging/astra-reviewer`) reviews wording changes; the User rules final wording.
+- **Canon wording:** new canon text follows the ruled term table and the glossary. Astra (role `astra/reviewer`) reviews wording changes; the User rules final wording.
 - **Confidentiality sweep:** it sweeps everything a push publishes and each commit as it is made, and fails closed. Uncommitted and untracked files get a direct grep. At restart, after `git fetch`, run `memento/tools/confidentiality-sweep.sh --published origin/main`: known hits are counted against `~/.memento/sweep-baseline.txt`, and any new hit is a finding for the User. Inspect a hit only with `--show-redacted`. Never print a matched token or pattern into the session; report counts, paths and hashes.
 - **Imports (CD #4e):** material from another Memento instance, and confidential material from any source, is drafted outside the working tree and enters the repository, a commit, a shared document or a message after a de-identification pass and the User's clearance. Procedure: `memento/tools/README.md`, § Imports.
 - **Text published through `gh`** is swept by hand first (`gh` is not logged in on this machine; the User runs `gh auth login`).

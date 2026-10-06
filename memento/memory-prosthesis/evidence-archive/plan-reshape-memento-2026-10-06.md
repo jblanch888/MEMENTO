@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-06
 genre: decision (3C) on an investigation (3B), executed as build/change (3A, debt/excision variant)
 size: L (six slices)
-status: APPROVED 2026-10-06 (the User: "approve"); slice 0 in progress
+status: APPROVED 2026-10-06 (the User: "approve"); slice 0 DONE 2026-10-07; slice 1 in progress
 related: [decision-bitter-lesson-sort-2026-10-06, plan-memento-ablation-trial-2026-10-06, finding-exercise-census-2026-10-03, finding-longitudinal-evidence-2026-10-03, finding-lineage-verdicts-2026-07-20, ORGAN_REGISTRY, KILLED_MECHANISMS, TOOLING_TRIGGERS]
 ---
 
@@ -198,3 +198,26 @@ The canon (slice 3) and the estate (slices 1, 2 and 4) are committed separately,
 - **Writing:** the contrast constructions restated.
 
 Approved by the User, 2026-10-06.
+
+## Slice record
+
+**Slice 0 (2026-10-07).** The User took the session's leans and added one ruling.
+
+- **Live estates.** One repository of unknown status is a live, dormant estate, owned by the writing workstream. The other is a retired predecessor product, excluded as lineage evidence. The names are held privately.
+- **The User's slash commands** are inventoried and graded. Any change to them is his own act.
+- **The grade table** is kept as written, for the pilot to test.
+- **Ownership (the User):** "ultimately i am owner of all". He assigns assistants per estate:
+  - **rooms:** rooms/dev holds Memento there. Other Rooms sessions are product and content threads and receive no reshape messages.
+  - **build-protocols and agent-messaging:** their dev roles.
+  - **Proportion:** a Memento governance thread the User runs alongside its dev thread, which acts when he next opens it.
+  - **cartographer and the writing estate:** the User, while they are dormant.
+
+**Slice 1, sweep (2026-10-07).** A read-only script swept 77 Markdown files in the canon and this estate for references that resolve to nothing; its output is held at `~/.memento/reshape/`.
+- **Banked memos:** 11 hits in 4 files. These are records and are not graded.
+- **Living files:** 13 hits in 9 files, none of them a real dangling path.
+  - The template paths in the framework are written relative to their installed place, which the canon's README states.
+  - The rest are false positives (a branch-name pattern, role names, an instance's map path).
+- **One genuine stale reference** found in passing: the working context named the wording reviewer's role wrongly. It was fixed as a refinement.
+
+The canon carries no dangling-reference debt. Next: grades on about ten elements the User chooses.
+
