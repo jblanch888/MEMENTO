@@ -70,3 +70,34 @@ The procedure CD #4e points to. Changes to it are the User's.
 **Fixing a sweep hit.** Read it in redacted form, with the modifier first: `confidentiality-sweep.sh --show-redacted --pre-commit` for staged work, or `--show-redacted --range origin/main..HEAD` for unpushed commits. The raw location is opened on the User's clearance. The fix removes the token from the content. The User decides what happens to a token already in published history.
 
 **Refreshing the lists.** Before the first import from a new source, the User adds its identifiers to the banned lists (`~/.memento/banned-tokens.txt`, and `banned-tokens-cs.txt` for case-sensitive entries). After any list change, `--published origin/main` reports old hits as new: read them with `--show-redacted --range origin/main`, then record them with `--published --update-baseline origin/main`.
+
+## Record counts (plan-record-counts-2026-10-06)
+
+Two plain-text lines that make review and slice outcomes countable by model generation, for the Bitter Lesson sort's owed instruments (units 7, 8, 20, 22, 28, 31, 32). They are written at the end of each review record and each plan slice record.
+
+**Review line**
+
+`Review counts (r<N>, <date>, author <model>, reviewer <model>): material findings M · accepted A · refuted R · unsupported claims U · writing-rule breaches W`
+
+- **Material finding:** an accepted finding that changed substance. A finding that changed wording only is not material.
+- **Unsupported claim:** a claim the reviewer found no record or source for.
+- **Writing-rule breach:** an em dash or a contrast frame in new text (CD #5).
+- **Who supplies the counts:** the reviewer reports these fields in its own output, and the line copies them unchanged. Every review prompt asks for them.
+
+**Slice line**
+
+`Slice counts (<date>, author <model>, scout <model or ->): new controls N · faults by suite or mutants F · defects in shadow D · unsanctioned scope changes P · scout reports S · scout reports corrected C`
+
+- **New control:** a gate, hook, check or script that enforces or detects something.
+- **Unsanctioned scope change:** a change of scope the User did not rule on at a feedback point or by an explicit word.
+- **Scout report corrected:** a scout report with at least one figure or claim the main thread found wrong on re-grounding.
+- **Fields that do not apply** are written as `-`.
+
+**Model normal form:** `opus-5.5`, `sonnet-5.5`, `fable-5.1`, `haiku-4.5`, and the same pattern for later releases.
+
+**Tally:** until the tally script is earned, use `grep -h "^Review counts\|^Slice counts" memento/memory-prosthesis/evidence-archive/*.md` and sum by hand or with `awk`.
+
+**Limits:**
+- Breach and unsupported-claim counts reflect the reviewer's sharpness as well as the author's work, so comparisons are made within one reviewer model.
+- At each census re-run, the main thread re-grounds one line in five against its record, first-hand.
+
