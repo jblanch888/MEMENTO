@@ -11,9 +11,9 @@ status: template   # becomes `live` on install
 
 [The work's standing objective, in one short paragraph. Point to the charter or governing document that holds the full statement.]
 
-## Active Playbook
+## Active plan
 
-[`../../protocols/playbooks/<PLAYBOOK>.md`, and the saved plan being carried out: `../evidence-archive/plan-<topic>-<date>.md` (note slice progress here).]
+[The saved plan being carried out: `../evidence-archive/plan-<topic>-<date>.md` (note slice progress here), and any playbook or skill the current work calls for.]
 
 ## Current task
 

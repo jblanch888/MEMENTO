@@ -13,14 +13,14 @@ Copy [`THE_SPIRIT.md`](THE_SPIRIT.md) into your repository as `SPIRIT.md`, fill 
 The triggers seen in real projects: state lost at a context reset that mattered · the same lesson learned twice · a claim relied on without review · parallel streams of work getting mixed up. When one occurs, set up `memento/` in your repository from [`framework/`](../framework/):
 
 1. **Core directives:** copy `framework/directives/CORE_DIRECTIVES_TEMPLATE.md` to `memento/protocols/CORE_DIRECTIVES.md`, fill the slots, and write your fitting note.
-2. **Playbooks:** copy the playbooks you will actually use to `memento/protocols/playbooks/` and fit them (planning and git operations first; the rest as their kind of work arrives).
+2. **Playbooks:** copy the planning playbook to `memento/protocols/playbooks/` and fit it; add knowledge gardening when the notes grow. A playbook is used when the work calls for it.
 3. **Memory prosthesis:** copy the tier structure from `framework/memory-prosthesis/`, drop the `_TEMPLATE` suffixes, and write your first CURRENT_FOCUS.
-4. **Conventions:** install the estate spine (file metadata and naming rules) and the routing rule into `memento/memory-prosthesis/active-knowledge/`, and give every Memento file its frontmatter from the start. It costs one block per document and makes every later tool possible.
+4. **Conventions:** install the estate spine (file metadata and naming rules), the routing rule and the git, documentation and change standards into `memento/memory-prosthesis/active-knowledge/`, and give every Memento file its frontmatter from the start. It costs one block per document and makes every later tool possible.
 5. **Save your founding record:** a dated plan in the evidence archive recording what you installed, what you fitted, and what you deliberately left out. It is the first piece of evidence in your project's Memento files.
 
 ## The rhythm of a session
 
-In each session: the restart protocol reads the rules, current task and status (CORE_DIRECTIVES.md, CURRENT_FOCUS.md and STATUS.md) and checks their claims against the live files and git state · work proceeds in small steps, each with its check or approval, under the Active Playbook · substantial sessions save dated records whose bodies are kept as written · before compaction, the pre-compact protocol proposes at most three lessons for institutional memory, for your approval, and rewrites the working context clean.
+In each session: the restart protocol reads the rules, current task and status (CORE_DIRECTIVES.md, CURRENT_FOCUS.md and STATUS.md) and checks their claims against the live files and git state · work proceeds in small steps, each with its check or approval, under the active plan · substantial sessions save dated records whose bodies are kept as written · before compaction, the pre-compact protocol proposes at most three lessons for institutional memory, for your approval, and rewrites the working context clean.
 
 ## Automate only on evidence
 

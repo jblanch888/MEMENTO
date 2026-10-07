@@ -1,13 +1,15 @@
 ---
-description: governs writing documentation and fitting it into the memory prosthesis, including the frozen-memo convention (the pattern the original project reports using most)
-type: governing
-date: 2026-07-20
-governs: [documentation, evidence-memos, cross-references]
-last_verified: 2026-07-20
+description: the project's documentation standards; style, purposeful updates, knowledge-capture proposals, cross-referencing, tidiness, quality standards, and the frozen-memo convention for dated records
+type: convention
+date: 2026-10-07
+governs: [documentation, frozen-memo-convention]
+last_verified: 2026-10-07
 status: template
 ---
 
-# DOCUMENTATION_PLAYBOOK.md
+# DOCUMENTATION_STANDARDS.md
+
+> **Moved here on 2026-10-07** from `framework/playbooks/DOCUMENTATION_PLAYBOOK.md`, under the reshape plan recorded in this repository's own Memento files (`memento/memory-prosthesis/evidence-archive/plan-reshape-memento-2026-10-06.md`, batch 1). A playbook is put in front of the assistant when the work calls for it. This content is a standard, which holds whatever model does the work, so it lives with the conventions. Nothing of substance was dropped: the former section on pre-compact documentation pointed to CD #9, which owns that step, so section 5 is now that pointer alone.
 
 > **Where this comes from:** the original project's 2026-07-04 form (a roadmapping tool for team capacity), whose §8 convention for discovery records is, by that project's account, the pattern it uses most. The commit-level evidence is in the projects' private histories. Changes on this import: the discovery-record convention widened into the frozen-memo convention, which covers every substantial kind of record; examples from the project's own product removed; the pre-compact section cut to a pointer (CD #9 owns it); phrasing fitted to this repository's writing rules.
 
@@ -35,13 +37,13 @@ status: template
 
 ## 4. Cross-Referencing
 
-**Rule:** Link to the relevant Memento documents and sections: playbooks by name and anchor, the knowledge archive for lasting patterns, the working context for the current task, the evidence archive for history. Keep the paths between memory tiers navigable. Avoid hard-coding paths and line numbers for implementation files (code, prompts, configuration, schemas) in Memento documents; those belong in code comments, which move with the code, or in commit messages, which record them at that point in history.
+**Rule:** Link to the relevant Memento documents and sections: playbooks, standards and skills by name and anchor, the knowledge archive for lasting patterns, the working context for the current task, the evidence archive for history. Keep the paths between memory tiers navigable. Avoid hard-coding paths and line numbers for implementation files (code, prompts, configuration, schemas) in Memento documents; those belong in code comments, which move with the code, or in commit messages, which record them at that point in history.
 
 ---
 
 ## 5. Pre-Compact Documentation
 
-**Rule:** CD #9 owns pre-compact consolidation (reviewing the session's lessons, resetting the working context, finalising the status). This playbook adds one thing: all pre-compact drafts are presented for the User's review before any write.
+CD #9 owns pre-compact consolidation, including the User's review of every draft before any write.
 
 ---
 
@@ -65,11 +67,11 @@ Use this as a checklist when creating or reviewing Memento documents:
 
 ## 8. The Frozen-Memo Convention {#frozen-memo-convention}
 
-**Rule:** Every substantial session (a discovery, an investigation, a design decision, a completed slice) saves a dated record in `../../memory-prosthesis/evidence-archive/{type}-{topic}-{YYYY-MM-DD}.md`. Lasting insights are proposed for the right active-knowledge or institutional-memory document, following the selection and approval rules for that tier. **The record itself stays as written**, as evidence of how the insight was reached, and it is left unrewritten as understanding changes. New sessions produce new records that refer to earlier ones.
+**Rule:** Every substantial session (a discovery, an investigation, a design decision, a completed slice) saves a dated record in `../evidence-archive/{type}-{topic}-{YYYY-MM-DD}.md`. Lasting insights are proposed for the right active-knowledge or institutional-memory document, following the selection and approval rules for that tier. **The record itself stays as written**, as evidence of how the insight was reached, and it is left unrewritten as understanding changes. New sessions produce new records that refer to earlier ones.
 
 **Why this exists:** insights that emerge in the middle of a conversation (reframings, corrections, market evidence, the reasons for decisions) are lost at compaction unless they are written down. The convention began in the original project in May 2026, when a discovery session produced three insights that substantially changed the product's direction, and it became the pattern that project uses most.
 
-**Sections of a record** (fitted to its type): header (date, mode, active playbooks) · the question, and the view held going in · the approach, and why · what emerged · the options considered and rejected · the decision and the reasoning · pointers to the evidence · open questions and next steps · status (open / converged / superseded).
+**Sections of a record** (fitted to its type): header (date, mode, the plan or playbook in use) · the question, and the view held going in · the approach, and why · what emerged · the options considered and rejected · the decision and the reasoning · pointers to the evidence · open questions and next steps · status (open / converged / superseded).
 
 **Where insights go:** lasting insights → active knowledge · facts tied to the current moment → working context · work items that follow from it → the backlog, cross-referenced to the record. An ERRATUM note may be ADDED to a saved record when a claim in it is later disproved (so no one inherits the error); that is the one permitted addition to the body.
 

@@ -27,7 +27,7 @@ You operate within the Memento framework:
 - **memento/protocols/**: the core directives and playbooks
 - **memento/memory-prosthesis/**: the project's notes in four tiers (working-context → active-knowledge → institutional-memory → evidence-archive)
 
-**Rule:** Your current mission, success criteria and **Active Playbook** are defined in `../memory-prosthesis/working-context/CURRENT_FOCUS.md`. Put its contents above all other guidance except these core directives. Follow the playbook it names as active, strictly. If a request implies a change of mode that does not fit the Active Playbook, confirm the change before proceeding.
+**Rule:** Your current mission, success criteria and **active plan** are defined in `../memory-prosthesis/working-context/CURRENT_FOCUS.md`. Put its contents above all other guidance except these core directives. Bring in a playbook or skill when the current work calls for one. If a request implies a change of mode that does not fit the active plan, confirm the change before proceeding. *(Refined 2026-10-07 on the User's ruling.)*
 
 **[Your project's defining hazard.]** Name the structural risk this project must keep under control, and the rule that holds it. Examples from the projects where Memento developed: two concurrent threads of work sharing one working copy (held by declaring which thread owns each change, and by committing with explicit file lists); client-confidential material in the repository (held by an automated confidentiality check and an approval step before any import); the published framework and a project's own private Memento files in one repository (held by commits that each touch only one side of that boundary).
 
@@ -55,7 +55,7 @@ You operate within the Memento framework:
 
 **Rule:** The following are for the User alone, or need the User's explicit prior approval:
 
-a. **[Your one-way doors: actions that are irreversible or costly to undo.]** Any push to a branch that deploys or is public: a deploy exposes the product, and a public push publishes it. Pushes to a private backup branch may be allowed without approval (see GIT_OPERATIONS_PLAYBOOK on when to push, by type of repository).
+a. **[Your one-way doors: actions that are irreversible or costly to undo.]** Any push to a branch that deploys or is public: a deploy exposes the product, and a public push publishes it. Pushes to a private backup branch may be allowed without approval (see `GIT_STANDARDS.md` on when to push, by type of repository).
 b. Running `/compact` (only after the pre-compact protocol, CD #9).
 c. Git merges and history rewrites; changes to these core directives.
 d. Deletion of evidence-archive content: mark a superseded record with a banner that says where its replacement is, and never delete it or silently rewrite it.

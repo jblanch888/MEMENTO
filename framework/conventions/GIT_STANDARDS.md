@@ -1,13 +1,15 @@
 ---
-description: governs git operations; one branch as the single home, when to push by type of repository, confirming the branch, commit standards, merges carried out by the User, and dated notes on corrections
-type: governing
-date: 2026-07-20
+description: the project's git standards; one branch as the single home, when to push by type of repository, confirming the branch, commit standards, merges carried out by the User, stashing, recovery, and dated notes on corrections
+type: convention
+date: 2026-10-07
 governs: [git-operations, push-posture, commit-discipline]
-last_verified: 2026-07-20
+last_verified: 2026-10-07
 status: template
 ---
 
-# GIT_OPERATIONS_PLAYBOOK.md
+# GIT_STANDARDS.md
+
+> **Moved here on 2026-10-07** from `framework/playbooks/GIT_OPERATIONS_PLAYBOOK.md`, under the reshape plan recorded in this repository's own Memento files (`memento/memory-prosthesis/evidence-archive/plan-reshape-memento-2026-10-06.md`, batch 1). A playbook is put in front of the assistant when the work calls for it. This content is a standard, which holds whatever model does the work, so it lives with the conventions. Nothing of substance was dropped.
 
 > **Where this comes from:** the original project's 2026-07-04 form (a roadmapping tool for team capacity), whose branch conventions carry lessons learned from real incidents, by way of a newly started project's compact fitting on 2026-07-06, which adopted those lessons from its founding. The commit-level evidence is in the projects' private histories. Changes on this import: identifiers generalised; when to push restated as a decision by type of repository (the three types are backed by evidence from three projects and this public repository); dated notes on corrections given their own section; filler sections from 2025 (a glossary of branch types, boilerplate on coordinating with CI) dropped for the compact form.
 
@@ -42,7 +44,7 @@ The rule of thumb underneath: push the safe branch freely, and require approval 
 - **Stage with an explicit file list (pathspec) built from the work's own files.** Never a bare `git commit -a`, and never a list derived from `git status`: the projects' near-miss was a pattern matching the working tree's changed files, which swept another thread's files into a commit.
 - [Your pre-commit checks here: confidentiality check, type-check, test suite, whatever your project's evidence constitution (CD #13) names. Any failure stops the commit.]
 
-## 4. Merges Carried Out by the User
+## 4. Merges Carried Out by the User (the User's operations, CD #4)
 
 The assistant prepares branches for merging: a clean history, passing checks, a proposed strategy. **The User runs `git merge`.** History rewrites (rebase, amending pushed commits, force-push) are for the User alone (CD #4).
 
@@ -50,10 +52,10 @@ The assistant prepares branches for merging: a clean history, passing checks, a 
 
 When switching context in the middle of work, run `git stash push -m "[description]"`; say what was stashed and why, and mention it again on return.
 
-## 6. Emergency Recovery
+## 6. Emergency Recovery (the User's operations, CD #4)
 
 Never attempt destructive git operations on your own. Present the recovery options with their risks; the User decides.
 
 ## 7. Dated Notes on Corrections
 
-When a rule in this playbook is found to be wrong or out of date, correct it **in place, with the date and the reason**: *"(§N corrected YYYY-MM-DD: the old wording predated convention X and contradicted §M.)"* The original project's git rules carry several such notes, and they are why its history of correcting itself can be checked at all. A rule rewritten silently reads as if it had always been right, and a governance document must never give that false impression.
+When a rule in these standards is found to be wrong or out of date, correct it **in place, with the date and the reason**: *"(§N corrected YYYY-MM-DD: the old wording predated convention X and contradicted §M.)"* The original project's git rules carry several such notes, and they are why its history of correcting itself can be checked at all. A rule rewritten silently reads as if it had always been right, and a governing document must never give that false impression.

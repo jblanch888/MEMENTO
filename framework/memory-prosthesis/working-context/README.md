@@ -2,7 +2,7 @@
 
 The top tier: what the assistant reads first, every session. Two files, split by time so they do not repeat each other:
 
-- **CURRENT_FOCUS.md**, what to do now: the mission, the Active Playbook, the current task, constraints, and questions open with the User.
+- **CURRENT_FOCUS.md**, what to do now: the mission, the active plan, the current task, constraints, and questions open with the User.
 - **STATUS.md**, what happened: this session's record of commits, the state of the working tree, and what waits on the User.
 
 ## Rules

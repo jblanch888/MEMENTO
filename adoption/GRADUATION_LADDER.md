@@ -10,7 +10,7 @@ This step is a real way of working, with a dated example. One project started in
 
 ## Rung 2: the full Memento files (the estate)
 
-Set up `memento/` inside the repository: core directives fitted from the 14-directive template, the four memory-prosthesis tiers, frontmatter on every file from the start, playbooks that apply by kind of work, dated records kept as written as the trail of evidence, and the pre-compact and restart protocols followed by discipline.
+Set up `memento/` inside the repository: core directives fitted from the 14-directive template, the four memory-prosthesis tiers, frontmatter on every file from the start, the planning playbook and the standards for git, documentation and changes, dated records kept as written as the trail of evidence, and the pre-compact and restart protocols followed by discipline.
 
 Examples, each a different honest route onto this step:
 

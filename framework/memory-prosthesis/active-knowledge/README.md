@@ -7,6 +7,7 @@ Project rules and reference material used across tasks: the project's governing 
 - **CHARTER.md**: what the work is for, its standing positions, and the changes of direction still open.
 - **RESOURCE_ROUTING.md**: the routing rule, for choosing who or what does each part of the work (template in `framework/conventions/`).
 - **ESTATE_SPINE.md**: the file metadata and naming conventions (template in `framework/conventions/`).
+- **GIT_STANDARDS.md**, **DOCUMENTATION_STANDARDS.md**, **CHANGE_STANDARDS.md**: the project's standards for git, documentation and changes (templates in `framework/conventions/`).
 - **BACKLOG.md**: prioritised work, and the NOTE_FOR_LATER collection.
 - **Principles and system-context files**: architecture principles and overviews of the domain.
 

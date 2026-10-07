@@ -2,7 +2,7 @@
 
 This directory holds what you install in a project: the operational protocols (core directives and playbooks), the templates for the four memory tiers, and the conventions that connect them. Memento's own terms are explained in [Words used here](#words-used-here) at the end of this page.
 
-**A note on paths:** relative paths inside these documents (`../../memory-prosthesis/…`, `../CORE_DIRECTIVES.md`) are written for where the documents sit once installed in a project (`memento/protocols/`, `memento/protocols/playbooks/`), which differs from their place in this directory. Install first, then follow the links.
+**A note on paths:** relative paths inside these documents (`../../memory-prosthesis/…`, `../CORE_DIRECTIVES.md`) are written for where the documents sit once installed in a project (`memento/protocols/`, `memento/protocols/playbooks/`, and `memento/memory-prosthesis/active-knowledge/` for the conventions and standards), which differs from their place in this directory. Install first, then follow the links.
 
 Everything here is a **2026 transplant**: a form tested in real projects and imported from them, with a note recording where it came from (the source project, named generically), the source date, and the changes made to fit it on import. These are the forms that survived a year of use in the projects and their practice of removing what fails. The 2025 documents that did not survive were ruled out of date and remain only in the preserved [2025 version](../archive/canon-2025/).
 
@@ -17,8 +17,8 @@ On install, files take their usual names and locations in a project: `CORE_DIREC
 | Path | Contents |
 |---|---|
 | [`directives/`](directives/) | The 14-directive core directives template |
-| [`playbooks/`](playbooks/) | Planning, git operations, small implementation steps (incremental execution), maintaining project notes (knowledge gardening), documentation |
-| [`conventions/`](conventions/) | The routing rule, the estate spine (file metadata, naming rules and generated indexes), and a template for the register of tools to add on evidence |
+| [`playbooks/`](playbooks/) | Planning, and maintaining project notes (knowledge gardening): procedures used when the work calls for them |
+| [`conventions/`](conventions/) | The routing rule, the estate spine (file metadata, naming rules and generated indexes), the git, documentation and change standards, and a template for the register of tools to add on evidence |
 | [`memory-prosthesis/`](memory-prosthesis/) | The four tiers: a README for each, working-context templates, a knowledge-archive template with a mature example, and the evidence-archive conventions |
 
 ## Words used here
@@ -32,9 +32,12 @@ Memento names some of its parts. These are the names you will meet across the re
 | **active knowledge** | The second tier: project rules and reference material used across tasks. |
 | **institutional memory** | The third tier: lessons from past work, selected because they will help future work. A lesson is added once the User approves it. |
 | **evidence archive** | The fourth tier: dated records of plans, findings, decisions and handovers, with their supporting evidence. A record's body is kept as written; its status field is updated when its status changes. |
-| **operational protocols** | Rules for how the assistant works: the core directives, which always apply, and the playbooks, for particular tasks. |
+| **operational protocols** | Rules for how the assistant works: the core directives, which always apply; the playbooks, put in front of the assistant when a particular kind of work calls for them; and the standards in the conventions. |
 | **core directives** | The short set of rules that applies throughout the work. "CD #8" means core directive 8, the Session Restart Protocol, which tells the assistant how to resume from the current project records. |
-| **playbook** | Steps for a particular kind of work, such as planning or committing. |
+| **playbook** | A procedure for a particular kind of work, such as planning, put in front of the assistant when the work calls for it. |
+| **conventions** | Shared rules for how the Memento files and the work are organised: file metadata and naming, the routing rule, and the standards. Installed in active knowledge. |
+| **standard** | A rule about how the project does something (commits, documentation, changes) that holds whatever model does the work. Standards are part of the conventions. |
+| **skill** | A way some assistants (Claude Code, Codex) package a procedure so it comes into play when a task fits its description. |
 | **undertaking** | A piece of work; the [planning playbook](playbooks/PLANNING_PLAYBOOK.md) states when one needs a saved plan. |
 | **the User** | The person in charge of the project. The User alone decides the task's scope and quality and confirms when it is complete. |
 | **governing document** | A document that sets rules for work on the project. |

@@ -42,7 +42,7 @@ The historical account draws on records in the projects' private repositories, w
 | [The organ registry](https://github.com/jblanch888/MEMENTO/blob/main/story/ORGAN_REGISTRY.md) | Memento's 32 parts, each traced through the projects where it developed |
 | [Killed mechanisms](https://github.com/jblanch888/MEMENTO/blob/main/story/KILLED_MECHANISMS.md) | Controls that were removed, and the lesson from each |
 | [The enforcement surface](https://github.com/jblanch888/MEMENTO/blob/main/adoption/THE_ENFORCEMENT_SURFACE.md) | What automated enforcement has shown it can do, as of mid-2026 |
-| [The framework](https://github.com/jblanch888/MEMENTO/tree/main/framework) | The templates you install: rules, playbooks, the four tiers of project notes, conventions |
+| [The framework](https://github.com/jblanch888/MEMENTO/tree/main/framework) | The templates you install: rules, playbooks, the four tiers of project notes, conventions and standards |
 | [The 2025 version](https://github.com/jblanch888/MEMENTO/tree/main/archive/canon-2025) | The original framework, preserved unchanged |
 
 ---

@@ -11,7 +11,7 @@ status: template
 
 > **Where this comes from:** the four-tier structure comes from the 2025 version. This 2026 form keeps the structure and updates the practice to what the projects actually run: standard metadata (frontmatter) at the top of every file, dated records kept as written as the evidence discipline, and the tier rules carried by directives (CD #8, #9, #11). The notes at the end record what a year of use changed.
 
-**Purpose:** the project's saved notes and evidence, organised into four tiers by how often the assistant needs them. The assistant starts each session with a short account of the current work and reads more detailed material when the task requires it, so knowledge survives context resets and builds up across hundreds of sessions without crowding the assistant's context. The other part of Memento, the operational protocols, installs from `directives/` and `playbooks/` into a project's `memento/protocols/`. The two are designed together: the working context names the Active Playbook, and the pre-compact directive sets the steps for proposing lessons and obtaining the User's approval before adding them to institutional memory.
+**Purpose:** the project's saved notes and evidence, organised into four tiers by how often the assistant needs them. The assistant starts each session with a short account of the current work and reads more detailed material when the task requires it, so knowledge survives context resets and builds up across hundreds of sessions without crowding the assistant's context. The other part of Memento, the operational protocols, installs from `directives/` and `playbooks/` into a project's `memento/protocols/`. The two are designed together: the working context names the active plan, and the pre-compact directive sets the steps for proposing lessons and obtaining the User's approval before adding them to institutional memory.
 
 ## The structure
 
@@ -39,7 +39,7 @@ The assistant's context is limited, so the most-used information comes first. Ea
 ## How information moves (the disciplines that keep it useful)
 
 - **Session start:** the restart protocol (CD #8) reads the rules, current task and status (CORE_DIRECTIVES.md, CURRENT_FOCUS.md and STATUS.md) and checks their claims against the live files and git state.
-- **During work:** substantial sessions save dated records in the evidence archive (DOCUMENTATION_PLAYBOOK §8, the frozen-memo convention: a record's body is kept as written). The record is the evidence; verdicts and plans cite it.
+- **During work:** substantial sessions save dated records in the evidence archive (DOCUMENTATION_STANDARDS §8, the frozen-memo convention: a record's body is kept as written). The record is the evidence; verdicts and plans cite it.
 - **Pre-compact (CD #9):** at most three genuinely reusable lessons are added to institutional memory once the User approves them; the working context is rewritten clean; everything specific to the session stays out of active knowledge and institutional memory.
 - **Every working-context edit** rewrites the file as a whole (CD #11): the whole file re-read, and stale content removed from every section.
 

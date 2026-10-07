@@ -36,7 +36,7 @@ One limit, stated plainly: the historical account draws on records in the projec
 | Where | What |
 |---|---|
 | [`story/`](story/) | **History and lessons:** how Memento developed in six stages, a catalogue of its 32 parts and where each came from, and the controls that were tried and removed |
-| [`framework/`](framework/) | **Use it in a project:** templates for the rules, the playbooks, the four tiers of project notes, and the conventions that connect them |
+| [`framework/`](framework/) | **Use it in a project:** templates for the rules, the playbooks, the four tiers of project notes, and the conventions and standards that connect them |
 | [`adoption/`](adoption/) | **How to start:** begin with a few practices and add structure as the project needs it |
 | [`archive/canon-2025/`](archive/canon-2025/) | **The original 2025 version,** preserved unchanged |
 | `memento/` | **Memento's own project notes:** the rules and records used to maintain this repository, including this rewrite |
@@ -45,7 +45,7 @@ One limit, stated plainly: the historical account draws on records in the projec
 
 - **The memory prosthesis.** Four tiers of saved notes, from short working-context files for the current task to an evidence archive of dated records whose bodies are kept as written. The assistant does not reliably carry memory from one session to the next, and its performance can vary between tasks; together, the notes and the working rules help it continue the project consistently.
 - **Core directives.** A short set of rules that always apply, including your authority to decide what counts as done.
-- **Playbooks.** Steps for particular kinds of work, such as planning, committing or maintaining the project notes. The working context names the playbook for the current task.
+- **Playbooks and standards.** Playbooks are procedures for particular kinds of work, such as planning, used when the work calls for them. Standards for commits, documentation and changes sit with the conventions. Assistants that support skills can bring a procedure in that way.
 - **Approval and evidence.** Actions that publish or deploy the project need your approval; claims come with evidence; work handed to another agent is checked before anyone relies on it.
 - **Falsifiable governance.** The rule of the current stage: before relying on a control, record the result that would show it is failing its purpose and when it will be checked; retire the control when that result occurs, and record the lesson. See [`story/KILLED_MECHANISMS.md`](story/KILLED_MECHANISMS.md).
 
