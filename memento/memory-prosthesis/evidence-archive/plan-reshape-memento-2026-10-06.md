@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-06
 genre: decision (3C) on an investigation (3B), executed as build/change (3A, debt/excision variant)
 size: L (six slices)
-status: APPROVED 2026-10-06 (the User: "approve"); slices 0 to 4 DONE 2026-10-08; slice 5 (live instances) next
+status: APPROVED 2026-10-06 (the User: "approve"); CLOSED for the active estates 2026-10-08 on the User's word ("ok all three"); the three dormant estates are picked up when each is reopened (see handover-memento-instances-2026-10-08.md)
 related: [decision-bitter-lesson-sort-2026-10-06, plan-memento-ablation-trial-2026-10-06, finding-exercise-census-2026-10-03, finding-longitudinal-evidence-2026-10-03, finding-lineage-verdicts-2026-07-20, ORGAN_REGISTRY, KILLED_MECHANISMS, TOOLING_TRIGGERS]
 ---
 
@@ -317,4 +317,10 @@ Re-syncing Rooms' fitted copy from the canon's text was not part of the ruling.
   Committed as the canon commit that follows `f37b049`.
 
 **Slice 5, Rooms drift check (2026-10-08).** Rooms' operating rules were compared with the canon. Rooms was level in substance and ahead in six practices, which are now imported. It was behind in four directives, which the User ruled to adopt after Rooms' own review: Rooms `4e43bce`. A slip was caught: the record-counts sentence (estate-only) had entered the proposal and was dropped.
+
+**Closure (2026-10-08).**
+- **The User's slash commands** were looked at read-only. All three are Memento procedures already packaged as skills (evidence-first debugging, a hygiene check, a test-intent gate). They carry no outdated references, so they are kept unchanged. They are further evidence for the canon's skills direction.
+- **rooms/dev** was told that change sets 2 and 2b are public. Re-syncing CD #4g, the approval gate in CD #9a and the governing-stale wording is the User's call in its session.
+- **The plan is closed for the active estates.** The canon, this estate, Rooms, build-protocols and agent-messaging are done. Proportion, cartographer and the writing estate wait, and each is picked up when it is reopened, with a drift check against the canon as the first step.
+- **The instance-by-instance state** is in `handover-memento-instances-2026-10-08.md`.
 
