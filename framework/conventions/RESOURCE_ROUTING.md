@@ -23,7 +23,7 @@ status: template
 2. **First question:** does this start an undertaking that is large, likely to span sessions, many-stepped or consequential? If so, a saved plan comes first (PLANNING §0); if not, say the fixed exemption phrase: "No plan: small, well-specified, reversible".
 3. **Assess** how much judgement each part actually needs.
 4. **Choose** the worker by type AND tier, for fit first and then for cost.
-5. **State the reason before acting.** Keeping work in the main session is a legitimate outcome. The failure is skipping the loop, in either direction: delegating without thinking and keeping everything without thinking both count.
+5. **State the reason before acting.** Keeping work in the main session is a valid result of the loop. Run the loop on every turn.
 
 ## Routing table (fit the kinds of work to your project)
 

@@ -52,9 +52,9 @@ The assistant prepares branches for merging: a clean history, passing checks, a 
 
 When switching context in the middle of work, run `git stash push -m "[description]"`; say what was stashed and why, and mention it again on return.
 
-## 6. Emergency Recovery (the User's operations, CD #4)
+## 6. Emergency Recovery (the User's operations, CD #4g)
 
-Never attempt destructive git operations on your own. Present the recovery options with their risks; the User decides.
+Destructive git operations are the User's (CD #4g). Present the recovery options with their risks, and the User decides.
 
 ## 7. Dated Notes on Corrections
 

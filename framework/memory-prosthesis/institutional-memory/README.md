@@ -14,9 +14,9 @@ Entries arrive through the pre-compact step (CD #9): **at most three per session
 
 ## Retiring lessons
 
-When the project sets a size limit for the knowledge archive and the archive nears it, a graduation names its offset in the same change. Prefer merging two related lessons into one shorter entry. Save the full text of the merged lessons in the evidence archive as `retired-lesson-<slug>-<date>.md`, and link it from the shorter entry. The User sees the graduation and its offset together. A retired lesson moves to the evidence archive, one link away.
+When the knowledge archive approaches the project's size limit, each proposed new lesson includes a proposal for making room. Prefer combining related lessons into a shorter entry. Preserve their full text in a dated evidence-archive record named `retired-lesson-<slug>-<date>.md`, and link to it from the shorter entry. Present the new lesson and the proposed consolidation or retirement together for the User's approval.
 
-*(Practices imported 2026-10-08 from the workstream project: precedence, find-before-creating, health checks and gardening in pre-compact, one list of the User's operations, verification fields, the retirement of lessons. De-identified; cleared by the User, 2026-10-08.)*
+*(Practices imported 2026-10-08 from the workstream project, in this file: the retirement of lessons. De-identified; cleared by the User, 2026-10-08. The whole set is recorded in this repository's reshape plan.)*
 
 ## Stewardship
 
