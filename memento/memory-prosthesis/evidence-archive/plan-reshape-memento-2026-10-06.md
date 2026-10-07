@@ -240,3 +240,13 @@ The canon carries no dangling-reference debt. Next: grades on about ten elements
 - **Skills** are a feature of both Claude Code and Codex. Memento ought to work with Codex as well. The User has used Codex little inside Memento: he holds a Plus licence, and its automatic compaction is less predictable and harder to manage. So the canon describes on-demand procedures in neutral terms, with a binding per agent, as the tier map does. Compaction-related parts carry a setting assumption that differs between harnesses.
 - **A trial of the planning playbook packaged as a skill** (alongside the playbook, nothing removed) is an option for the User's ruling and has not been started.
 
+**Slice 2, batch 1: the canon's framework folder (2026-10-07).** Banked as `design-reshape-batch1-2026-10-07.md` after one adversarial review (NEEDS-CHANGES, every finding accepted).
+- **The proposals:**
+  - CD #1 refined: a playbook is loaded only when the work needs one;
+  - the git, documentation and incremental-execution playbooks consolidated, every section to a named home in `framework/conventions/`, then banner-and-archived;
+  - the READMEs updated.
+
+  Thirty-three elements are kept, CD #9 among them.
+- **The User approved all five rows,** and ruled that his statement supersedes the clause, so the CD #1 change is permanent.
+- **Execution:** with the canon's other batches as one change set in slice 3.
+
