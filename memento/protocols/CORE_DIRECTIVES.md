@@ -1,5 +1,5 @@
 ---
-description: immutable foundation — minimal always-active rules governing agent conduct in the MEMENTO estate; fitted 2026-07-20 from the trv3-temporal 15-directive standard via cartographer's 2026-07-06 fresh-estate form
+description: the foundation: minimal always-active rules governing agent conduct in the MEMENTO estate; fitted 2026-07-20 from the trv3-temporal 15-directive standard via cartographer's 2026-07-06 fresh-estate form
 type: governing
 date: 2026-07-20
 governs: [agent-conduct, sovereignty, routing, working-context, canon-estate-seam]
@@ -7,7 +7,7 @@ last_verified: 2026-10-03
 status: governing
 ---
 
-# CORE_DIRECTIVES.md (Immutable Foundation)
+# CORE_DIRECTIVES.md (Foundation)
 
 **Objective:** Minimal, foundational rules always active, forming the base of the agent's operational context. Fitted from the lineage's current-era standard (trv3-temporal 2026 form, via cartographer's fresh-estate fitting); provenance and fitting rationale live in the founding plan (evidence archive).
 
@@ -148,6 +148,6 @@ Full discipline and routing table: `../memory-prosthesis/active-knowledge/RESOUR
 
 ---
 
-**These Core Directives form the immutable foundation. All playbooks and guidance operate within these constraints. Enforcement is prose discipline by founding decision — teeth are earned by incident, not installed up front (the lineage's evidence: mechanisms that never earned their keep died as theatre).**
+**These Core Directives form the foundation. They are dated and revisable by the User (CD #4c; matched to the canon 2026-10-08). All playbooks and guidance operate within these constraints. Enforcement is prose discipline by founding decision: teeth are earned by incident, not installed up front (the lineage's evidence: mechanisms that never earned their keep died as theatre).**
 
 *Fitting notes (founding review 2026-07-20): CD #2's output template reads "Please review" where the lineage reads "Please test" — deliberate; this estate's product is text, not a test-suited codebase. CD #8 carries the lineage's restart discipline in behavioural form; the mechanised restart-diff is earned tooling.*
