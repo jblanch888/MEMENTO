@@ -1,28 +1,28 @@
 ---
 description: current-session state snapshot for the MEMENTO estate: session-scoped only, replaced coherently per CD #11
 type: working-context
-date: 2026-10-06
+date: 2026-10-08
 status: live
 ---
 
-# STATUS: session of 2026-10-03 to 2026-10-06
+# STATUS: session of 2026-10-03 to 2026-10-08
 
 ## This session
 
-- **Restart (CD #8):** run on the User's prompting. A restart trigger now loads it, and both of its arms are live-witnessed.
-- **Leak hardening:** CLOSED. The confidentiality sweep covers everything a push publishes, and CD #4e carries a § Imports procedure.
-- **Tier map and tools:** fixed after rooms/dev's findings (pushed):
-  - the witness passes 82 of 82;
-  - the map is verified on CLI 2.1.286, with judgement at rank 1;
-  - the scout carries no agent memory.
-- **The Bitter Lesson sort:** decided and CLOSED. Of 37 units, 5 are prescribed procedure, 9 judgement practice, 22 independent of the model and 1 deferred. The decision record is `decision-bitter-lesson-sort-2026-10-06.md`.
-- **The ablation trial:** CLOSED at the pilot stage, after two features run in three isolated copies of Proportion and judged blind by Opus 5.5 and Fable 5.1. Full Memento ranked first on the mean both times, and the playbook's effect is unresolved. Lesson: running many frontier agents in parallel spent a large share of the User's session allowance in minutes, so judging runs in sequence.
-- **Messaging:** this session holds `memento/dev`. The thread with rooms/dev is at its cap.
+- **Closed this session:**
+  - leak hardening;
+  - the Bitter Lesson sort (37 units ruled);
+  - the ablation trial (pilot, two features);
+  - record counts (in place);
+  - the reshape plan (for the active estates).
+- **Canon** change sets 1, 1b, 2 and 2b are pushed. Rooms is level with the canon (Rooms `d16ea55`, `4e43bce`).
+- **Handover of every instance:** `handover-memento-instances-2026-10-08.md`.
+- **Messaging:** this session holds `memento/dev`.
 
 ## Next
 
-1. The shared review-and-plan-record counter, under its own plan.
-2. The User's ruling on the trial folder (`~/abl-trial` and its review copies).
+1. The User's choice of the next undertaking.
+2. The first live counts lines, on the next plan.
 
 ## Unwitnessed arms (the register is the source of truth)
 

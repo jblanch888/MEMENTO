@@ -47,8 +47,17 @@ Entries graduate through the pre-compact consolidation gate (CD #9), maximum thr
 
 *(Graduated 2026-10-06.)* The rebuilt confidentiality sweep went through five rounds in which a hit read as clean for reasons unrelated to its logic: errexit is suspended inside an `if`; `cut` under a UTF-8 locale drops lines that hold invalid bytes; grep stops matching at an invalid byte; awk stops reading a line at a NUL; macOS `git grep -E` has no `\b`; a hook that always exits 0 fails silently when its script breaks. Each was found by an adversarial reviewer or a deliberate mutation, none by the happy-path tests. Receipted: `plan-leak-hardening-2026-10-03.md` (implementation and review records). The discipline: a gate ships with a suite that a set of mutants must fail, and a check that cannot run blocks.
 
+### Run agents in sequence by default; parallel frontier work spends the allowance in minutes {#sequential-agents-by-default}
+
+*(Graduated 2026-10-08.)* On 2026-10-06 about eleven frontier agents overlapped (judges, calibration judges, yardstick builders) and used roughly a fifth of the User's session allowance within minutes; most of their output was stopped unused. The same scoring as two sequential single-agent passes cost a fraction and gave the same judgement. Default to one agent at a time, frontier only where judgement needs it, and say the cost before a fan-out. Receipt: `plan-memento-ablation-trial-2026-10-06.md` (scope correction).
+
 ## Evidence craft
 
 ### Measure use without reading content, and treat scouts as leads {#measure-use-without-content}
 
 *(Graduated 2026-10-06.)* Session transcripts, prompt history, telemetry, hook logs, git file effects and co-author trailers answer "which parts are used, under which model" as counts, identifiers and dates, with no content leaving a script; that kept confidential estates out of the session while still dating the playbook decline across model generations. Recon scouts found the sources, and several of their figures were wrong (dates, coverage, a shell-history count with no timestamps), so the load-bearing ones were re-grounded first-hand and every public claim carries a receipt code to a private index. Receipted: `finding-exercise-census-2026-10-03.md`, `finding-longitudinal-evidence-2026-10-03.md`.
+
+### Read counts understate habitual use; non-use alone never justifies removal {#read-counts-understate-use}
+
+*(Graduated 2026-10-08.)* In one estate a git standard read in 4 of 94 sessions was used at every push through a fixed pre-push command set, without the file being opened. Transcript read counts measure opening a file, and habits, hooks and command sets use rules without opening them. Non-use is MODERATE evidence at most and needs a second, independent source before it supports any action. Receipt: `plan-reshape-memento-2026-10-06.md` (slice 5).
+
