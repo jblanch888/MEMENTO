@@ -7,11 +7,11 @@ last_verified: 2026-07-20
 status: template
 ---
 
-# CORE_DIRECTIVES.md (Immutable Foundation)
+# CORE_DIRECTIVES.md (Foundation)
 
-> **Where this comes from:** the current directive standard from the projects where Memento developed. Chain: the original project's 15-directive form (a roadmapping tool for team capacity, 2026-07-04 version) → a newly started project's 14-directive fitting (a tool for mapping an organisation, 2026-07-06) → the fitted set in this repository's own Memento files (2026-07-20), condensed here into a template. Changes on import: project-specific content replaced with `[slots]`; punctuation and phrasing fitted to this repository's writing rules; each directive's notes on its own history trimmed to the lasting rule. The commit-level evidence for the chain is in the projects' private histories.
+> **Where this comes from:** the current directive standard from the projects where Memento developed. Chain: the original project's 15-directive form (a roadmapping tool for team capacity, 2026-07-04 version) → a newly started project's 14-directive fitting (a tool for mapping an organisation, 2026-07-06) → the fitted set in this repository's own Memento files (2026-07-20), condensed here into a template. Changes on import: project-specific content replaced with `[slots]`; punctuation and phrasing fitted to this repository's writing rules; each directive's notes on its own history trimmed to the lasting rule. The commit-level evidence for the chain is in the projects' private histories. Practices imported 2026-10-08 from the workstream project: precedence, find-before-creating, health checks and gardening in pre-compact, one list of the User's operations, verification fields, the retirement of lessons. De-identified; cleared by the User, 2026-10-08.
 
-**Objective:** a short set of rules that applies throughout the work. Everything else (playbooks, guidance, project-specific knowledge) must respect these rules.
+**Objective:** a short set of rules that applies throughout the work. Everything else (playbooks, guidance, project-specific knowledge) must respect these rules. These directives are dated and revisable, and changes are the User's (CD #4). A directive that stops earning its place is revised or retired with a dated note. A governing document's authority is its jurisdiction, and its trust is kept current by re-checking.
 
 **How to fit this template:** replace every `[slot]`, delete any directive that genuinely cannot apply (record why in your fitting note), and add at most one or two directives specific to your project. The projects that ran this form kept it under fifteen entries; a set that grows past that stops being followed as always-active in practice.
 
@@ -28,6 +28,8 @@ You operate within the Memento framework:
 - **memento/memory-prosthesis/**: the project's notes in four tiers (working-context → active-knowledge → institutional-memory → evidence-archive)
 
 **Rule:** Your current mission, success criteria and **active plan** are defined in `../memory-prosthesis/working-context/CURRENT_FOCUS.md`. Put its contents above all other guidance except these core directives. Bring in a playbook or skill when the current work calls for one. If a request implies a change of mode that does not fit the active plan, confirm the change before proceeding. *(Refined 2026-10-07 on the User's ruling.)*
+
+**Precedence.** These directives come first. The working context decides what to work on. Then, where the project has them: charters that set limits on how changes are made (the working context does not waive a charter without the User), architecture principles for the product, and the estate spine. Then the playbooks, the standards and the governing registers. Then runbooks, which are step-by-step guides for single tasks. When two levels conflict, the higher level governs, and the assistant names the conflict to the User at once, before acting on either.
 
 **[Your project's defining hazard.]** Name the structural risk this project must keep under control, and the rule that holds it. Examples from the projects where Memento developed: two concurrent threads of work sharing one working copy (held by declaring which thread owns each change, and by committing with explicit file lists); client-confidential material in the repository (held by an automated confidentiality check and an approval step before any import); the published framework and a project's own private Memento files in one repository (held by commits that each touch only one side of that boundary).
 
@@ -61,6 +63,8 @@ c. Git merges and history rewrites; changes to these core directives.
 d. Deletion of evidence-archive content: mark a superseded record with a banner that says where its replacement is, and never delete it or silently rewrite it.
 e. **[Your confidentiality check.]** Any import of material from a confidential source without first removing identifying details and getting the User's clearance.
 f. API spending beyond an explicitly agreed budget.
+
+This is the canonical list of the User's operations, and playbooks and standards point to it, because separate copies drift apart. The git standards add a further list of git operations of their own (`GIT_STANDARDS.md` §4 and §6).
 
 ---
 
@@ -98,6 +102,7 @@ a. **Check the notes against the live project:** the live project files and git 
 b. **Read the required set:** CORE_DIRECTIVES.md, CURRENT_FOCUS.md, STATUS.md. Do not recite them back.
 c. **Resolve each mismatch:** for each one found, state the live value adopted and the stale claim discarded. A clean state needs no commentary.
 d. Work out the branch and working state from git; confirm with the User only if something does not match or is ambiguous.
+e. **Find before creating.** Where the project generates an index of its Memento files, search it before searching the tree for a document or creating a new one, and use it only to look things up. A new living document (working context, active knowledge, protocols) whose job an existing indexed document already does is merged into that document. Dated records in the evidence archive are kept as written.
 
 *(An earlier restart protocol, in which the assistant recited rules and ticked its own checklist, was removed on evidence, and the checking was automated as a comparison of recorded claims against the live project; see the Killed mechanisms page in the Memento repository. Adopt the behavioural form first, and build the automation when a recorded trigger calls for it.)*
 
@@ -109,7 +114,7 @@ d. Work out the branch and working state from git; confirm with the User only if
 
 **Trigger:** the User signals `/pre-compact` (or equivalent).
 
-a. **Review the session's lessons:** at most 3 genuinely reusable ones.
+a. **Review the session's lessons:** at most 3 genuinely reusable ones. Where the project runs scripted health checks of its Memento files (a doctor), run them first and repair what they find. Include a light pass of knowledge gardening (`KNOWLEDGE_GARDENING_PLAYBOOK.md`): refresh the indexes built from file metadata, and check the working context for staleness. When the health checks say a full gardening pass is due, propose one; the User approves its list of moves before anything moves.
 b. **Select lessons for institutional memory:** propose additions only where long-term value is justified; session detail stays out.
 c. **Reset the working context:** draft a clean CURRENT_FOCUS.md: current task, constraints and immediate next actions only.
 d. **Finalise the status:** STATUS.md covers the current session only; no history builds up in it.
@@ -168,4 +173,4 @@ Full discipline and routing table: `../memory-prosthesis/active-knowledge/RESOUR
 
 ---
 
-**These core directives are the fixed foundation. All playbooks and guidance work within them. Enforcement starts as written discipline, and automated enforcement is added when an incident shows it is needed. The evidence for that approach is the list of killed mechanisms: controls installed before anyone needed them were removed once their protection proved unsupported.**
+**These core directives are the foundation. All playbooks and guidance work within them. Enforcement starts as written discipline, and automated enforcement is added when an incident shows it is needed. The evidence for that approach is the list of killed mechanisms: controls installed before anyone needed them were removed once their protection proved unsupported.**

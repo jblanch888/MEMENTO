@@ -12,6 +12,12 @@ Entries arrive through the pre-compact step (CD #9): **at most three per session
 - **Entry shape:** a dated headline claim, the evidence behind it, and what it changes about future behaviour. See [`KNOWLEDGE_ARCHIVE_TEMPLATE.md`](KNOWLEDGE_ARCHIVE_TEMPLATE.md) and [`KNOWLEDGE_ARCHIVE_MATURE_EXAMPLE.md`](KNOWLEDGE_ARCHIVE_MATURE_EXAMPLE.md).
 - **Let categories emerge.** Start flat, and add headings when a real cluster appears.
 
+## Retiring lessons
+
+When the project sets a size limit for the knowledge archive and the archive nears it, a graduation names its offset in the same change. Prefer merging two related lessons into one shorter entry. Save the full text of the merged lessons in the evidence archive as `retired-lesson-<slug>-<date>.md`, and link it from the shorter entry. The User sees the graduation and its offset together. A retired lesson moves to the evidence archive, one link away.
+
+*(Practices imported 2026-10-08 from the workstream project: precedence, find-before-creating, health checks and gardening in pre-compact, one list of the User's operations, verification fields, the retirement of lessons. De-identified; cleared by the User, 2026-10-08.)*
+
 ## Stewardship
 
 This file holds the project's distilled judgement, and poor upkeep turns it into noise. Triggers for tidying it (KNOWLEDGE_GARDENING_PLAYBOOK): session-specific detail creeping into entries, duplicated or contradictory guidance, broken anchors, search getting worse. Cut each entry back to its principle, repair the links, and never let an entry's claim outlive its evidence.
