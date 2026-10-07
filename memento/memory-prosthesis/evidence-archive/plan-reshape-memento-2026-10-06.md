@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-06
 genre: decision (3C) on an investigation (3B), executed as build/change (3A, debt/excision variant)
 size: L (six slices)
-status: APPROVED 2026-10-06 (the User: "approve"); slices 0 and 1 DONE 2026-10-07; slice 2 in progress
+status: APPROVED 2026-10-06 (the User: "approve"); slices 0 to 2 DONE 2026-10-07; slice 3 (canon change set) in progress
 related: [decision-bitter-lesson-sort-2026-10-06, plan-memento-ablation-trial-2026-10-06, finding-exercise-census-2026-10-03, finding-longitudinal-evidence-2026-10-03, finding-lineage-verdicts-2026-07-20, ORGAN_REGISTRY, KILLED_MECHANISMS, TOOLING_TRIGGERS]
 ---
 
@@ -249,4 +249,19 @@ The canon carries no dangling-reference debt. Next: grades on about ten elements
   Thirty-three elements are kept, CD #9 among them.
 - **The User approved all five rows,** and ruled that his statement supersedes the clause, so the CD #1 change is permanent.
 - **Execution:** with the canon's other batches as one change set in slice 3.
+
+**Slice 2, batch 2: the rest of the canon (2026-10-07).** The User ruled "your leans are fine". The changes follow from batch 1:
+- the README's playbook line and framework row;
+- the site page, kept as a mirror and synced;
+- a dated note on row 4 of the part register (annotated, since the register records the July audit);
+- getting started, step 2;
+- the graduation ladder, rung 2.
+
+Kept: the story, the epochs, the spirit page, the enforcement-surface note and CONTRIBUTING. The killed-mechanisms page is a record, not graded. Adding the sort's and the trial's findings to the public story is deferred to the sort's own follow-through. The batch's adversarial review is folded into slice 3's review of the canon change set, as stated to the User.
+
+**Slice 2, batch 3: this estate (2026-10-07).** The User ruled "they are good":
+- CD #1 refined to match the canon, with CURRENT_FOCUS's heading becoming "Active plan";
+- the four held-trigger rows in the register slimmed to one line pointing to the sort's decision record.
+
+Everything else is kept: CD #2 to #14 (CD #9f whole, since this estate ships the gate), the planning playbook, the charter, resource routing, the knowledge archive, the READMEs, the working context and every tool. **Slice 2 is complete;** slice 3 writes the canon change set.
 
