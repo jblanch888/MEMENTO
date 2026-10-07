@@ -1,6 +1,6 @@
 # The framework
 
-This directory holds what you install in a project: the operational protocols (core directives and playbooks), the templates for the four memory tiers, and the conventions that connect them. Memento's own terms are explained in [Words used here](#words-used-here) at the end of this page.
+This directory holds what you install in a project: the operational protocols (core directives and playbooks, installed in `memento/protocols/`, plus standards installed in active knowledge), the templates for the four memory tiers, and the conventions that connect them. Memento's own terms are explained in [Words used here](#words-used-here) at the end of this page.
 
 **A note on paths:** relative paths inside these documents (`../../memory-prosthesis/…`, `../CORE_DIRECTIVES.md`) are written for where the documents sit once installed in a project (`memento/protocols/`, `memento/protocols/playbooks/`, and `memento/memory-prosthesis/active-knowledge/` for the conventions and standards), which differs from their place in this directory. Install first, then follow the links.
 
@@ -32,12 +32,12 @@ Memento names some of its parts. These are the names you will meet across the re
 | **active knowledge** | The second tier: project rules and reference material used across tasks. |
 | **institutional memory** | The third tier: lessons from past work, selected because they will help future work. A lesson is added once the User approves it. |
 | **evidence archive** | The fourth tier: dated records of plans, findings, decisions and handovers, with their supporting evidence. A record's body is kept as written; its status field is updated when its status changes. |
-| **operational protocols** | Rules for how the assistant works: the core directives, which always apply; the playbooks, put in front of the assistant when a particular kind of work calls for them; and the standards in the conventions. |
+| **operational protocols** | Rules for how the assistant works: the core directives, which always apply; the playbooks, which the assistant reads and follows when that kind of work begins; and the standards in the conventions. |
 | **core directives** | The short set of rules that applies throughout the work. "CD #8" means core directive 8, the Session Restart Protocol, which tells the assistant how to resume from the current project records. |
-| **playbook** | A procedure for a particular kind of work, such as planning, put in front of the assistant when the work calls for it. |
+| **playbook** | A procedure the assistant follows for a particular task, such as preparing a plan. The assistant reads and follows the relevant playbook when that kind of work begins. |
 | **conventions** | Shared rules for how the Memento files and the work are organised: file metadata and naming, the routing rule, and the standards. Installed in active knowledge. |
-| **standard** | A rule about how the project does something (commits, documentation, changes) that holds whatever model does the work. Standards are part of the conventions. |
-| **skill** | A way some assistants (Claude Code, Codex) package a procedure so it comes into play when a task fits its description. |
+| **standard** | A standing rule for how the project handles work such as commits, documentation or changes. It applies whenever that activity occurs, whichever assistant or model performs it. Standards sit with the conventions. |
+| **skill** | A package of task instructions, sometimes with scripts or reference files, that a supporting assistant (Claude Code, Codex) can load when relevant. A playbook can be packaged as a skill. |
 | **undertaking** | A piece of work; the [planning playbook](playbooks/PLANNING_PLAYBOOK.md) states when one needs a saved plan. |
 | **the User** | The person in charge of the project. The User alone decides the task's scope and quality and confirms when it is complete. |
 | **governing document** | A document that sets rules for work on the project. |

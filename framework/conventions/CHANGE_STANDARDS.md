@@ -9,7 +9,7 @@ status: template
 
 # CHANGE_STANDARDS.md
 
-> **Moved here on 2026-10-07** from `framework/playbooks/INCREMENTAL_EXECUTION_PLAYBOOK.md`, under the reshape plan recorded in this repository's own Memento files (`memento/memory-prosthesis/evidence-archive/plan-reshape-memento-2026-10-06.md`, batch 1). A playbook is put in front of the assistant when the work calls for it. This content is a standard, which holds whatever model does the work, so it lives with the conventions. Nothing of substance was dropped: the former sections 3, 3-bis and 4 restated core directives, so section 3 now points to them.
+> **Moved here on 2026-10-07** from `framework/playbooks/INCREMENTAL_EXECUTION_PLAYBOOK.md`, under the reshape plan recorded in this repository's own Memento files (`memento/memory-prosthesis/evidence-archive/plan-reshape-memento-2026-10-06.md`, batch 1). The assistant reads and follows a playbook when that kind of work begins. This content is a standard: a standing rule that applies whenever the activity occurs, whichever assistant or model performs it, so it sits with the conventions. Nothing of substance was dropped: the former sections 3, 3-bis and 4 restated core directives, so section 3 now points to them.
 
 > **Where this comes from:** the original project's 2026-07-04 form (a roadmapping tool for team capacity), by way of a newly started project's fitting (a tool for mapping an organisation, 2026-07-09 form), which contributed the adversarial-review step in its settled form (now CD #14, pointed to from §3). The commit-level evidence is in the projects' private histories. Changes on this import: the project's own verification checklist (§6) turned into a slot, showing the two shapes proven in use; project-specific sections (a protocol for restarting the development server) dropped; phrasing fitted to this repository's writing rules.
 
@@ -32,7 +32,7 @@ Scope: [which files/components, what change]
 
 ## 2. Theory & Test Plan First (for non-trivial changes)
 
-This is a procedure for a particular moment. Where your assistant supports skills (Claude Code and Codex both do), it suits packaging as a skill that comes into play when a non-trivial change begins.
+This is a procedure for a particular moment. Where your assistant supports skills (Claude Code and Codex both do), it can be packaged as a skill, which a supporting assistant can load when a non-trivial change begins.
 
 **Rule:** Before implementing a sub-task, state: `HYPOTHESIS: [brief theory of change] based on EVIDENCE: [plan approval/requirement]`. Then: `TEST_PLAN: Change [X] in [File Y] should result in [Observable Outcome Z]. The User to verify by [Action W]`.
 
@@ -40,7 +40,15 @@ This is a procedure for a particular moment. Where your assistant supports skill
 
 ## 3. Checking, Review and Commit
 
-These steps are set by the core directives: the User confirms before anything is called done (CD #2); non-trivial work goes through an independent adversarial review first (CD #14); each confirmed logical unit is committed straight away with an explicit file list (CD #10 and `GIT_STANDARDS.md`), after the pre-commit checks your project names (`GIT_STANDARDS.md` §3, where any failure stops the commit), and the working context is kept coherent (CD #11). After the commit, state: "Logical change committed. Safe to proceed to next increment." **Why:** each commit is a restore point for safe step-by-step work; it protects the work against context loss, and makes rollback possible.
+These steps are set by the core directives. In order:
+
+1. Non-trivial work goes through an independent adversarial review first (CD #14).
+2. Present the change for the User's confirmation; nothing is called done before it (CD #2).
+3. Run the pre-commit checks your project names (`GIT_STANDARDS.md` §3; any failure stops the commit), then commit the confirmed logical unit straight away with an explicit file list (CD #10).
+4. Keep the working context coherent (CD #11).
+5. After the commit, state: "Logical change committed. Safe to proceed to next increment."
+
+**Why:** each commit is a restore point for safe step-by-step work; it protects the work against context loss, and makes rollback possible.
 
 *(Section 4 is retired: it restated CD #10, and its content is in §3 above.)*
 

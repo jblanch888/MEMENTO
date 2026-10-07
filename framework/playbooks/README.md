@@ -1,6 +1,6 @@
 # Playbooks
 
-Procedures for particular kinds of work. The core directives always apply. A playbook is put in front of the assistant when the work calls for it, and the working context names the active plan.
+Procedures for particular kinds of work. The core directives always apply. The assistant reads and follows the relevant playbook when that kind of work begins, and the working context names the active plan.
 
 | Playbook | What it helps with |
 |---|---|

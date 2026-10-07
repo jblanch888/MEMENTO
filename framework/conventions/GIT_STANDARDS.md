@@ -9,7 +9,7 @@ status: template
 
 # GIT_STANDARDS.md
 
-> **Moved here on 2026-10-07** from `framework/playbooks/GIT_OPERATIONS_PLAYBOOK.md`, under the reshape plan recorded in this repository's own Memento files (`memento/memory-prosthesis/evidence-archive/plan-reshape-memento-2026-10-06.md`, batch 1). A playbook is put in front of the assistant when the work calls for it. This content is a standard, which holds whatever model does the work, so it lives with the conventions. Nothing of substance was dropped.
+> **Moved here on 2026-10-07** from `framework/playbooks/GIT_OPERATIONS_PLAYBOOK.md`, under the reshape plan recorded in this repository's own Memento files (`memento/memory-prosthesis/evidence-archive/plan-reshape-memento-2026-10-06.md`, batch 1). The assistant reads and follows a playbook when that kind of work begins. This content is a standard: a standing rule that applies whenever the activity occurs, whichever assistant or model performs it, so it sits with the conventions. Nothing of substance was dropped.
 
 > **Where this comes from:** the original project's 2026-07-04 form (a roadmapping tool for team capacity), whose branch conventions carry lessons learned from real incidents, by way of a newly started project's compact fitting on 2026-07-06, which adopted those lessons from its founding. The commit-level evidence is in the projects' private histories. Changes on this import: identifiers generalised; when to push restated as a decision by type of repository (the three types are backed by evidence from three projects and this public repository); dated notes on corrections given their own section; filler sections from 2025 (a glossary of branch types, boilerplate on coordinating with CI) dropped for the compact form.
 
