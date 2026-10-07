@@ -72,7 +72,7 @@ c. Git merges and history rewrites; changes to these core directives.
 d. Deletion of evidence-archive content: mark a superseded record with a banner that says where its replacement is, and never delete it or silently rewrite it.
 e. **[Your confidentiality check.]** Any import of material from a confidential source without first removing identifying details and getting the User's clearance.
 f. API spending beyond an explicitly agreed budget.
-g. Other destructive git operations, such as a hard reset or deleting a branch.
+g. Destructive git operations beyond those in c, such as a hard reset or deleting a branch.
 
 Keep the list of operations reserved for the User, or needing the User's explicit approval, here. Playbooks and standards refer to this list, because separate copies drift apart. `GIT_STANDARDS.md` §4 and §6 explain how it applies to merges, history rewrites and recovery.
 
