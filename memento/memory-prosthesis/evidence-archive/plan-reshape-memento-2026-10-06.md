@@ -276,3 +276,16 @@ Everything else is kept: CD #2 to #14 (CD #9f whole, since this estate ships the
 - CURRENT_FOCUS's heading is "Active plan", and the working-context README is aligned.
 - The four held-trigger rows in the register are slimmed to one row pointing to the sort's decision record.
 
+**Change set 1b (2026-10-08).** Astra's wording review of change set 1 (no breaches; five clarity points and one optional point) was accepted by the User and committed as `66498c0`:
+- clearer definitions of playbook, standard and skill;
+- the install locations of the operating rules stated consistently;
+- CHANGE_STANDARDS §3 as an ordered list;
+- frontmatter glossed in getting started.
+
+**Slice 5, first instance: Rooms, level 1 (2026-10-08).** Rooms' copies were re-graded on its own evidence, read-only and counts only; the counts are held at `~/.memento/reshape/`. Rooms already delivers gardening and two Memento procedures as skills. A proposal went to rooms/dev for John's ruling in its session (message `m-20261008-100404-8d8a2c`):
+- CD #1 refined as in the canon;
+- Rooms' git operations playbook becomes a git standards file, with its fitted content kept whole;
+- no other change.
+
+The next instances are build-protocols and agent-messaging. The dormant estates wait.
+
