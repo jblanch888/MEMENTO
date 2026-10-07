@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-06
 genre: decision (3C) on an investigation (3B), executed as build/change (3A, debt/excision variant)
 size: L (six slices)
-status: APPROVED 2026-10-06 (the User: "approve"); slices 0 to 2 DONE 2026-10-07; slice 3 (canon change set) in progress
+status: APPROVED 2026-10-06 (the User: "approve"); slices 0 to 4 DONE 2026-10-08; slice 5 (live instances) next
 related: [decision-bitter-lesson-sort-2026-10-06, plan-memento-ablation-trial-2026-10-06, finding-exercise-census-2026-10-03, finding-longitudinal-evidence-2026-10-03, finding-lineage-verdicts-2026-07-20, ORGAN_REGISTRY, KILLED_MECHANISMS, TOOLING_TRIGGERS]
 ---
 
@@ -264,4 +264,15 @@ Kept: the story, the epochs, the spirit page, the enforcement-surface note and C
 - the four held-trigger rows in the register slimmed to one line pointing to the sort's decision record.
 
 Everything else is kept: CD #2 to #14 (CD #9f whole, since this estate ships the gate), the planning playbook, the charter, resource routing, the knowledge archive, the READMEs, the working context and every tool. **Slice 2 is complete;** slice 3 writes the canon change set.
+
+**Slice 3: canon change set 1 (2026-10-08).** Committed and pushed as `113be89` on the User's approval ("approve, push"), after one adversarial review (NEEDS-CHANGES, every finding accepted).
+- **The playbooks moved with their history.** The three playbooks were moved with `git mv` into `framework/conventions/`, each with a dated provenance note, and were not archived as copies. This was flagged to the User before approval.
+- **The error-handling line in the change standards was kept,** because no other home exists in the canon.
+- **Three small additions followed from the rulings** and were stated to the User.
+- **Astra (`astra/reviewer`) has the diff for a wording review.** Any change comes back as a follow-up.
+
+**Slice 4: this estate (2026-10-08).**
+- CD #1 is refined to match the canon.
+- CURRENT_FOCUS's heading is "Active plan", and the working-context README is aligned.
+- The four held-trigger rows in the register are slimmed to one row pointing to the sort's decision record.
 

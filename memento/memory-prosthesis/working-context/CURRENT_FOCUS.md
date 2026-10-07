@@ -11,7 +11,7 @@ status: live
 
 Produce and steward the **mid-2026 open-source version of Memento** in this repository. Charter: `../active-knowledge/CHARTER.md`. Public framing: continuity across hundreds of agent sessions; the framework is two-armed (memory prosthesis + operational protocols).
 
-## Active Playbook and plan
+## Active plan
 
 **Plan: reshape Memento on evidence** (`../evidence-archive/plan-reshape-memento-2026-10-06.md`), APPROVED 2026-10-06. It reshapes the canon, this estate and every live instance, with action proportionate to the strength of evidence (the User: "strong evidence strong action, weak evidence restraint"). STRONG needs a test or two independent criteria. Records and the authority, confidentiality and safety parts are protected. The planning playbook is kept. **Now: slice 0** with the User: the grade table, the two repositories of unknown status, and the owner roles. Then a cheap pilot on the canon and this estate. Instance repository names beyond those already public are held privately at `~/.memento/reshape/`. PLANNING governs; slices run WIP of one.
 

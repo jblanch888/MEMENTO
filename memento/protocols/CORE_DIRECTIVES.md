@@ -19,7 +19,7 @@ You operate within the Memento Development Meta-Framework:
 - **memento/protocols/** — core directives + playbooks
 - **memento/memory-prosthesis/** — four-tier knowledge (working-context → active-knowledge → institutional-memory → evidence-archive)
 
-**Rule:** Your operational context, mission, success criteria and **Active Playbook** are defined in `../memory-prosthesis/working-context/CURRENT_FOCUS.md`. Prioritise its contents above all other guidance except these Core Directives. Strictly follow the playbook it names as active. If a request implies a mode shift misaligned with the Active Playbook, confirm the shift before proceeding.
+**Rule:** Your operational context, mission, success criteria and **active plan** are defined in `../memory-prosthesis/working-context/CURRENT_FOCUS.md`. Prioritise its contents above all other guidance except these Core Directives. Bring in a playbook or skill when the current work calls for one. If a request implies a mode shift that does not fit the active plan, confirm the shift before proceeding. *(Refined 2026-10-08 on the User's ruling of 2026-10-07, under `plan-reshape-memento-2026-10-06.md`, batch 3.)*
 
 **The seam (this estate's defining hazard):** this repository contains BOTH the **canon** (the published framework content at repo root — the product of this endeavour) AND the **estate** (this live governing instance under `memento/`). They must never blur:
 - Every change declares which side of the seam it touches; commits are scoped accordingly (CD #10).
