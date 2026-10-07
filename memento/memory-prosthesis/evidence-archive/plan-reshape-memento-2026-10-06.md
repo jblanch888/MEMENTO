@@ -305,3 +305,16 @@ Re-syncing Rooms' fitted copy from the canon's text was not part of the ruling.
 
 **Level 1 is complete** for every active estate. The dormant estates wait. The next decision is the User's: a level 2 reshape of Rooms' own elements, or closing the plan.
 
+**Slice 3, canon change set 2 (2026-10-08): practices imported from the workstream project.**
+- **The import:** under CD #4e, drafted outside the working tree, reviewed (r1 NEEDS-CHANGES, every finding accepted) and cleared by the User. The practices: precedence, find before creating, health checks and gardening in pre-compact, one list of the User's operations, verification fields with a governing-stale status, and the retirement of lessons. The directives are now the "Foundation", dated and revisable. Committed as `51eac0c`, with the estate's directives matched in `f37b049`.
+- **Change set 2b:** Astra's wording review, accepted by the User, plus contrast fixes found by rooms/dev and the reviewers:
+  - a numbered precedence list;
+  - CD #4g, other destructive git operations;
+  - checks report and propose, and are applied after the User's review, with no exemption for index refreshes, on the User's ruling;
+  - plainer verification wording and lesson retirement;
+  - per-file provenance.
+
+  Committed as the canon commit that follows `f37b049`.
+
+**Slice 5, Rooms drift check (2026-10-08).** Rooms' operating rules were compared with the canon. Rooms was level in substance and ahead in six practices, which are now imported. It was behind in four directives, which the User ruled to adopt after Rooms' own review: Rooms `4e43bce`. A slip was caught: the record-counts sentence (estate-only) had entered the proposal and was dropped.
+

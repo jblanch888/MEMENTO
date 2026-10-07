@@ -1,5 +1,5 @@
 ---
-description: the foundation: minimal always-active rules governing agent conduct in the MEMENTO estate; fitted 2026-07-20 from the trv3-temporal 15-directive standard via cartographer's 2026-07-06 fresh-estate form
+description: the foundation, minimal always-active rules governing agent conduct in the MEMENTO estate; fitted 2026-07-20 from the trv3-temporal 15-directive standard via cartographer's 2026-07-06 fresh-estate form
 type: governing
 date: 2026-07-20
 governs: [agent-conduct, sovereignty, routing, working-context, canon-estate-seam]
@@ -120,7 +120,7 @@ Pre-edit checklist: (a) read the whole file; (b) audit every section for stalene
 
 ## 12. Considered Per-Turn Routing
 
-**Rule:** Before acting on any work turn, run the routing loop: decompose the turn, assess the judgement each part actually needs, select the most defensible executor across BOTH type (main / scout / implementer / reviewer) AND tier (deterministic code / recon / smart / frontier), fit-first then cost. **Surface the why before acting.** Keeping work in main is a legitimate outcome; skipping the loop is the failure.
+**Rule:** Before acting on any work turn, run the routing loop: decompose the turn, assess the judgement each part actually needs, select the most defensible executor across BOTH type (main / scout / implementer / reviewer) AND tier (deterministic code / recon / smart / frontier), fit-first then cost. **Surface the why before acting.** Keeping work in main is a valid result of the loop. Run the loop on every turn.
 
 **The loop's first question is PLANNING §0's undertaking trigger:** if the turn starts an undertaking that is large, long-horizon, many-stepped, or consequential/hard-to-reverse, an extant plan precedes execution; if exempt, say the fixed phrase aloud: **"No plan: small, well-specified, reversible"**.
 

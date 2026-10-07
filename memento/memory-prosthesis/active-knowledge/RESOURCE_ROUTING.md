@@ -21,7 +21,7 @@ status: governing
 2. **First question:** does this start an undertaking that is large / long-horizon / many-stepped / consequential? → extant plan first (PLANNING §0), or say the fixed exemption phrase: "No plan: small, well-specified, reversible".
 3. **Assess** the judgement each part actually needs.
 4. **Select** executor across type AND tier, fit-first then cost.
-5. **Surface the why before acting.** Keeping work in main is legitimate; skipping the loop is the failure — in either direction (blind delegation AND blind self-reliance).
+5. **Surface the why before acting.** Keeping work in main is a valid result of the loop. Run the loop on every turn.
 
 ## Routing table (fitted to this endeavour)
 
