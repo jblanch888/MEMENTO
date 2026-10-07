@@ -289,3 +289,9 @@ Everything else is kept: CD #2 to #14 (CD #9f whole, since this estate ships the
 
 The next instances are build-protocols and agent-messaging. The dormant estates wait.
 
+**Slice 5: build-protocols and agent-messaging, level 1 (2026-10-08).** Both are light estates, holding working context, active knowledge and an evidence archive, with no directives file and no playbooks. Change set 1 has nothing to act on in either.
+- **build-protocols:** its "Active playbook" heading names its own product method, which counts as record. No change is proposed; a rename for consistency is the User's choice. build-protocols/dev was told, for its explainer page's re-sync.
+- **agent-messaging:** its planning follows Rooms' planning playbook by reference, and that playbook stays. No change is proposed, and it has no live role to message.
+
+**Remaining at level 1:** Rooms awaits the User's ruling in its own session. Proportion, cartographer and the writing estate wait while they are dormant.
+
