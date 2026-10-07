@@ -295,3 +295,13 @@ The next instances are build-protocols and agent-messaging. The dormant estates 
 
 **Remaining at level 1:** Rooms awaits the User's ruling in its own session. Proportion, cartographer and the writing estate wait while they are dormant.
 
+**Slice 5: Rooms, level 1, done (2026-10-08).** The User ruled "both" in rooms/dev's session, and Rooms committed `d16ea55`:
+- CD #1 refined, as in the canon;
+- Rooms' git operations playbook moved by `git mv` to `protocols/GIT_STANDARDS.md` (Rooms keeps standards in `protocols/`), with its content unchanged and its live references updated. Rooms' doctor passes.
+
+Re-syncing Rooms' fitted copy from the canon's text was not part of the ruling.
+
+**Method lesson from Rooms:** its git standard is used at every push through a fixed pre-push command set, without the file being opened. So transcript read counts understated its use. This confirms the plan's rule that non-use from read counts is at most MODERATE, needs a second, independent source, and is never grounds for removal alone.
+
+**Level 1 is complete** for every active estate. The dormant estates wait. The next decision is the User's: a level 2 reshape of Rooms' own elements, or closing the plan.
+
