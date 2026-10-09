@@ -101,3 +101,10 @@ Two plain-text lines that make review and slice outcomes countable by model gene
 - Breach and unsupported-claim counts reflect the reviewer's sharpness as well as the author's work, so comparisons are made within one reviewer model.
 - At each census re-run, the main thread re-grounds one line in five against its record, first-hand.
 
+
+## Skill trial counting (plan-planning-skill-trial-2026-10-09)
+
+`skill-trial-count.py` counts for the planning skill trial. It belongs to this estate alone, and instances do not copy it.
+
+- **Baseline mode** reports the required plan sections present as headings in plans dated before a cut-off. The frozen baseline rows are kept outside the repository, at `~/.memento/skill-trial/`.
+- **Trial mode** (slice 3) reads transcripts to find whether the skill loaded before each plan was written. It is added when the trial starts counting.
