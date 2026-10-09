@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-09
 genre: build/change (3A), with an investigation annex (3B) for the measures
 size: M (four slices, the trial itself spans weeks)
-status: APPROVED 2026-10-09 (the User: "all ok", covering the plan, the criteria and asking Rooms); slice 1 in progress
+status: APPROVED 2026-10-09 (the User: "all ok", covering the plan, the criteria and asking Rooms); slices 1 and 2 done, Codex smoke test pending; slice 3 counting
 related: [plan-reshape-memento-2026-10-06, decision-bitter-lesson-sort-2026-10-06, plan-memento-ablation-trial-2026-10-06, PLANNING_PLAYBOOK, KILLED_MECHANISMS]
 ---
 
@@ -167,3 +167,14 @@ Slice counts (2026-10-09, author claude-opus-5-5, scout -): new controls 0 · fa
 - **Rooms usage figures** in this plan are given as shapes.
 
 Review counts (r1, 2026-10-09, author claude-opus-5-5, reviewer claude-sonnet-5-5): material findings 4 · accepted 9 · refuted 0 · unsupported claims 3 · writing-rule breaches 0
+
+### Slice 2 (2026-10-09)
+
+- **This estate:** installed at `.claude/skills/memento-planning/SKILL.md` (961a97a). It is the canon template with the path slot removed.
+- **Rooms:** the User ruled yes in Rooms' session. rooms/dev installed the skill verbatim (Rooms a0af26c, pushed), with Rooms' playbook path, and confirmed it appears in that session's skill list.
+  - **Checked read-only here:** one file, identical to this estate's copy apart from the path.
+  - **The trial is not mentioned** in Rooms' working context or prompts.
+- **Codex smoke test:** with the User. He installs the skill under `~/.codex/skills/` and gives Codex one plan-sized request in this repository.
+- **The trial counts from 2026-10-09.**
+
+Slice counts (2026-10-09, author claude-opus-5-5, scout -): new controls 0 · faults by suite or mutants - · defects in shadow - · unsanctioned scope changes 0 · scout reports 0 · scout reports corrected 0
