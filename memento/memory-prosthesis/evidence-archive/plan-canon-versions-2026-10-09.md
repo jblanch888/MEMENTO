@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-09
 genre: build/change (3A)
 size: S (three slices)
-status: APPROVED 2026-10-09 (the User: "approve"); in progress
+status: DONE 2026-10-09 (approved by the User: "approve"); v2026.10 pushed by the User
 related: [plan-reshape-memento-2026-10-06, handover-memento-instances-2026-10-08, GIT_STANDARDS, PLANNING_PLAYBOOK]
 ---
 
@@ -123,3 +123,13 @@ Slice counts (2026-10-09, author claude-opus-5-5, scout -): new controls 0 · fa
 - **Contrast frames:** three in new text, restated.
 
 Review counts (r1, 2026-10-09, author claude-opus-5-5, reviewer claude-sonnet-5-5): material findings 5 · accepted 14 · refuted 0 · unsupported claims 2 · writing-rule breaches 3
+
+### Slices 2 and 3 (2026-10-09)
+
+- **The tag:** annotated `v2026.10` made on 7200c20, with the message "v2026.10: the first version tag; see CHANGES.md".
+- **The push:** the User pushed `main` and the tag (`4c82779..7200c20`); the pre-push sweep was clean.
+- **Checked on the remote:** `git ls-remote` shows the tag object 6b1c193 resolving to 7200c20, matching local.
+- **Build-protocols:** told on thread t-20261009-154928-c3c255, and asked to confirm the tag resolves for them.
+- **CURRENT_FOCUS:** records the rule as a constraint.
+
+Slice counts (2026-10-09, author claude-opus-5-5, scout -): new controls 0 · faults by suite or mutants - · defects in shadow - · unsanctioned scope changes 0 · scout reports 0 · scout reports corrected 0

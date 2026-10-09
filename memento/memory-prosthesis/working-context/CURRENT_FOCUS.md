@@ -1,7 +1,7 @@
 ---
 description: active mission and task for the MEMENTO estate: working context, replaced coherently per CD #11
 type: working-context
-date: 2026-10-08
+date: 2026-10-09
 status: live
 ---
 
@@ -30,7 +30,8 @@ PLANNING governs whichever is chosen. A playbook or skill is brought in when the
   - six practices were imported from Rooms;
   - CD #4g was added;
   - the directives are now "Foundation", dated and revisable.
-- **Rooms** is level with the canon. Re-syncing 2b is the User's call in its session.
+- **Rooms** is level with the canon. It has adopted 2b in part (CD #4g and governing-stale; it declined CD #9a's approval step for index refreshes). Its knowledge-archive limit is now 900 lines.
+- **Canon version tags** (`plan-canon-versions-2026-10-09.md`, DONE). `v2026.10` was pushed on 7200c20, with the rule in `GIT_STANDARDS.md` §8 and the change note in `CHANGES.md`. The site and build-protocols build against tags.
 - **The Bitter Lesson sort** is CLOSED (`decision-bitter-lesson-sort-2026-10-06.md`). The ablation trial is CLOSED at the pilot stage and can be resumed (`plan-memento-ablation-trial-2026-10-06.md`). Record counts are in place; the first live lines come with the next plan.
 - **Posture (i):** the estate stays published with the canon. The canon reads in plain language; the estate keeps its own vocabulary.
 - **Publication state is never asserted in this file: derive it live from git (`git status -sb`, `git log @{u}..`, `git log ..@{u}`) per CD #8d.**
@@ -44,12 +45,14 @@ PLANNING governs whichever is chosen. A playbook or skill is brought in when the
 - **Imports (CD #4e):** material from another instance, or confidential material, is drafted outside the working tree, de-identified, reviewed and cleared by the User (`memento/tools/README.md`, § Imports).
 - **Agent work runs in sequence by default.** Frontier agents only where judgement needs them, one at a time.
 - **The permission system refuses deletions and edits to agent settings in other folders.** Hand such steps to the User as a script he runs (`! bash <path>`).
+- **Version tags:** a tag is made at the close of a change set, on the User's word, with a `CHANGES.md` entry, and the User pushes it. A tag is final, and only the User may move or delete one (CD #4g).
 - **Decisions go to the User in plain prose with leans.** Agent-messaging threads cap at ten exchanges.
 
 ## Open with the User
 
 - **The next undertaking** (see Active plan).
 - **The trial folder** `~/abl-trial` (product work, outside both repositories), kept until he rules.
-- **Build-protocols** re-syncs its explainer page from the canon commits.
+- **Build-protocols**, on the User's approval in its session: the links check compares against the newest tag; the page is re-synced from `1c8adfc` to `v2026.10`. Still open there: the User's `adoption/` ruling and the dual-thread unit.
+- **The messaging service's hold change** (applied by the User on 2026-10-08, 133 tests pass) awaits a commit by that repository's own thread.
 - **Spawn-tier eyeball items** (that plan's §15), and Proportion's owed items when it wakes.
 - **Untracked leftovers:** `.tmp-agents-after/` and `framework/conventions/TIER_MAP.json.bak-20260919`; deletion is his call.
