@@ -133,3 +133,11 @@ Review counts (r1, 2026-10-09, author claude-opus-5-5, reviewer claude-sonnet-5-
 - **CURRENT_FOCUS:** records the rule as a constraint.
 
 Slice counts (2026-10-09, author claude-opus-5-5, scout -): new controls 0 · faults by suite or mutants - · defects in shadow - · unsanctioned scope changes 0 · scout reports 0 · scout reports corrected 0
+
+## v2026.10.1 (2026-10-10, on the User's word: "both")
+
+- **Why now:** a change set closed after `v2026.10`. It brought the governed optimisation playbook (canon 562f10f) and the skills folder with the planning skill on trial (0faa211).
+- **The change note:** its `CHANGES.md` entry was checked against the diff by an independent recon-tier pass: PASS, with no findings.
+- **The tag:** made on the commit that follows it, under `GIT_STANDARDS.md` §8. The User pushes it.
+
+Review counts (r1, 2026-10-10, author claude-opus-5-5, reviewer claude-haiku-4-5): material findings 0 · accepted 0 · refuted 0 · unsupported claims 0 · writing-rule breaches 0
