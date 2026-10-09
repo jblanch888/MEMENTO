@@ -130,3 +130,48 @@ M overall:
 3. the 60-day falsifier.
 
 Awaiting user approval of this plan before detailed design or implementation.
+
+## Implementation record
+
+### Slice 1: evidence (2026-10-10)
+
+**Script and output:** both private, at `~/.memento/reshape/rooms-l2/`.
+- **The current run (r1):** `evidence.py` r1, sha256 prefix 3a737b2cc3afaf5f, and output `evidence-2026-10-10-r1.tsv`, prefix 90a9d4ea5bfc40fc.
+- **Coverage:** about 70 elements, from governing documents, playbooks and runbooks, tools, doctor checks and hooks.
+
+**First-hand re-grounding** of a sample of elements found two faults, both fixed before grading:
+- references undercounted by link form;
+- doctor checks 12 to 16 missed because of their output format.
+
+**The review then found three more,** fixed in r1:
+- three README files collided under one name;
+- references were searched in `memento/` only, which leaned the data towards removal;
+- reads of the doctor's source were counted as doctor runs.
+
+The r0 data is kept, superseded.
+
+### Slice 2: grades (2026-10-10)
+
+**Review r1 (smart tier, read-only): NEEDS-CHANGES, every finding accepted.**
+- **The data:** the three script faults above.
+- **Grades:**
+  - a removal graded STRONG on one fact counted twice;
+  - a gardening item resting on a trigger that does not fire for those files;
+  - two grades raised above their single criterion;
+  - doctor "catches" that came from one bare-checkout run.
+- **Gaps:** elements missing from both tables; unsupported figures; two contrast frames.
+
+**The grades (r1), held privately:**
+- **Removals on strong evidence:** none.
+- **Proposed:**
+  - one housekeeping removal;
+  - one file for Rooms' own gardening pass, which its idle trigger already flags;
+  - one instrument, a summary line per doctor run;
+  - two questions: whether to arm a notifier that has never been armed, and whether items owed to the User reach him.
+- **Kept:** every other element, each with its home named.
+
+Review counts (r1, 2026-10-10, author claude-opus-5-5, reviewer claude-sonnet-5-5): material findings 7 · accepted 11 · refuted 0 · unsupported claims 9 · writing-rule breaches 2
+
+Slice counts (2026-10-10, author claude-opus-5-5, scout -): new controls 0 · faults by suite or mutants - · defects in shadow - · unsanctioned scope changes 0 · scout reports 0 · scout reports corrected 0
+
+**Feedback point:** the grades go to the User before anything goes to Rooms.
