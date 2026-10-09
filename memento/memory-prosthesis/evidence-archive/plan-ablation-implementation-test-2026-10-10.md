@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-10
 genre: investigation (3B), with build/change (3A) for the harness
 size: M (four slices)
-status: APPROVED 2026-10-10 (the User: "yes to all but lets make sure we are not doing any fable calls and we use frontier agents only when strictly necessary"); slice 0
+status: APPROVED 2026-10-10 (the User: "yes to all but lets make sure we are not doing any fable calls and we use frontier agents only when strictly necessary"); feature 1 DONE 2026-10-10, result inconclusive by the rule; the next step is the User's
 related: [plan-memento-ablation-trial-2026-10-06, decision-bitter-lesson-sort-2026-10-06, plan-planning-skill-trial-2026-10-09]
 ---
 
@@ -233,3 +233,53 @@ Awaiting user approval of this plan before detailed design or implementation.
     - **Half for the function:** the mean pass share across its six behaviour groups.
     - **Half for the canvas:** the pass share of marking not-to-scale blocks, multiplied by the pass share of to-scale blocks left unmarked.
   - **The thresholds are unchanged:** Full at least 20 points above the comparison means it helps; the same or lower means no measurable help; anything between is inconclusive.
+
+### Slice 2: the runs (2026-10-10)
+
+**Two void runs, recorded.**
+- **i01:** never started. The prompt was swallowed by a tool-list flag. No model was called and nothing was spent.
+- **i11:** cost $1.35 and is void. The main thread wrote the permission rule with a single slash. Absolute paths need `//`, and file-path rules apply through `Edit(...)` to every writing tool. So every write was refused.
+  - **The arm's behaviour:** it stopped and reported the refusal. It declined to work around it through the shell.
+  - **The fix:** witnessed with a recon-tier agent ($0.03) before re-running.
+
+**Valid runs,** each a plan then a build in the same session. Every run used Opus 5.5 only, had no permission refusals, and left the isolation witness unchanged.
+
+| Run | Arm | Plan | Build | Cost |
+|---|---|---|---|---|
+| i21 | without the playbook | 23 turns | 26 turns | $2.20 |
+| i22 | no Memento | 11 turns | 29 turns | $1.95 |
+| i23 | full Memento | 13 turns | 23 turns | $2.15 |
+
+### Slice 3: judging (2026-10-10)
+
+**Scores, by the frozen scorer.** Every gate passed in every arm: tsc clean, 1,146 of 1,146 existing tests, and the regression group 30 of 30.
+
+| Arm | Function (U1 to U6) | C1 | C2 | Score |
+|---|---|---|---|---|
+| Full Memento | 33/33 | 12/13 | 5/5 | 94.4 |
+| Without the playbook | 33/33 | 11/13 | 5/5 | 89.5 |
+| No Memento | 33/33 | 11/13 | 5/5 | 89.5 |
+
+**The decision rule, applied as written:** Full leads both comparisons by 4.9 points. That is under 20 and above zero, so both comparisons are **inconclusive**.
+
+**What the difference is.** Every C1 miss concerns the rebaseline R-pill, which the contract left ambiguous; the fairness review flagged it beforehand.
+- **What all three arms did:** each put the marker and a title on the rebaseline rectangle, and none marked the pill.
+- **What separated them:** the two other arms also wrote the note into the pill's tooltip, and that is what the accounting test penalised.
+- **With the two pill tests set aside,** the three arms are level.
+
+**The single smart-tier review** (blind: unlabelled, in random order, unblinded after):
+- **Full Memento: 3 of 5.** A material defect: its rebaseline note sits on a rectangle that cannot receive hover, so mouse users never see it. This is the same choice that won it the extra test.
+- **Without the playbook: 4 of 5.** The best structure (one source of truth for height) and the strongest tests. It cites the project's August finding on the area invariant. The reviewer took that for a dangling path because it looked in the no-Memento template; the record exists in the Memento arms. Project memory showed up in the code.
+- **No Memento: 4 of 5.** Correct and minimal, with weaker library tests and one comment edited outside scope.
+- **Shared by all three:** the signal is a tooltip only, with nothing for keyboard or screen-reader users; no arm tested start-side clipping.
+
+**The reading.** On a feature with a specified contract, Memento made no measurable difference to working software. Taking the review into account, full Memento did no better. This is the limit recorded in advance: a stated contract narrows how much planning can matter. One feature and one run per arm, so this is a direction and not a verdict.
+
+**Spend:** $6.30 for the valid runs and $1.35 void. The recon-tier witnesses cost $0.14; the smart-tier agents' cost is unmetered here. Total frontier spend is about $8, against a $70 cap.
+
+**Next:** the User's choice.
+- stop here;
+- a second feature with a less-specified design, scored by tests on behaviour plus a blind review;
+- more runs of this feature, to measure run-to-run noise.
+
+Slice counts (2026-10-10, author claude-opus-5-5, scout claude-sonnet-5-5): new controls 1 · faults by suite or mutants 2 · defects in shadow - · unsanctioned scope changes 0 · scout reports 1 · scout reports corrected 0
