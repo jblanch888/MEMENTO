@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-10
 genre: investigation (3B), then design/decision (3C)
 size: M (four slices)
-status: APPROVED 2026-10-10 (the User: "1 approve 2 fine 3 ok": the plan, the runbook scope boundary, the 60-day falsifier); slice 1 in progress
+status: APPROVED 2026-10-10 (the User: "1 approve 2 fine 3 ok": the plan, the runbook scope boundary, the 60-day falsifier); DONE 2026-10-10 (slices 1 to 4; Rooms 4ffef5f); falsifier date 2026-12-09
 related: [plan-reshape-memento-2026-10-06, design-reshape-batch1-2026-10-07, handover-memento-instances-2026-10-08, decision-bitter-lesson-sort-2026-10-06, plan-planning-skill-trial-2026-10-09]
 ---
 
@@ -186,3 +186,24 @@ Slice counts (2026-10-10, author claude-opus-5-5, scout -): new controls 0 · fa
 **Sent to rooms/dev:** thread t-20261010-081207-f967e5. Slice 3 waits on its commits, then the read-only check here.
 
 **The User also asked** whether the playbooks were covered. They were, for home and staleness, under ruling 2. A review of their content is offered as a separate phase, and he has not ruled on it.
+
+### Slices 3 and 4 (2026-10-10)
+
+**Rooms 4ffef5f (pushed),** on the User's confirmation in Rooms' session ("1-4 ok 5 agent"):
+- the notifier that was never armed is retired to a private attic, and the ledger is amended in place with a dated note;
+- the placeholder file is removed;
+- the full gardening pass ran on the User's approval of its census, and one overview moved to the evidence archive;
+- a doctor run log was added, outside the repository, with one line per run and each check recording its own result.
+- **Item 5:** the User's answer is that owed items reach him through the agent's read-outs. No change.
+
+**Checked read-only here:**
+- the log's latest line shows all sixteen checks passing;
+- the garden check fires nothing;
+- no reference dangles;
+- the ledger note is present.
+
+**The falsifier for the grading:** an element removed or slimmed here is found needed by 2026-12-09.
+
+**Follow-on from the User's "dig deeper" into the playbooks:** five insights, held privately. The first, whether the state layer has superseded the record consolidation ritual whose tripwire fires without action, has gone to rooms/dev as a question. Any change is the User's ruling in Rooms' session.
+
+Slice counts (2026-10-10, author claude-opus-5-5, scout -): new controls 1 · faults by suite or mutants - · defects in shadow - · unsanctioned scope changes 0 · scout reports 0 · scout reports corrected 0
