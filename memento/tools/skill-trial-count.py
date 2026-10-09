@@ -18,7 +18,9 @@ SINCE (ISO time, the install commit) and reports, per plan file first written in
   sections  the eight required sections present as headings in the plan file as it stands in REPO now;
   aware     the session had seen the trial before the first write (any transcript line naming it: "skill trial",
             "skills trial" or the trial plan's filename). Such cases are reported apart and kept out of the count
-            (the User's ruling, 2026-10-09).
+            (the User's ruling, 2026-10-09). Awareness lapses at a compaction: after one, a session is aware
+            again only if the trial is named after it, in its summary, or in a message the compaction preserved
+            (refinement 2026-10-10, delegated by the User).
 Then: exemption phrases spoken, and loads with no plan file first written later in the same session and no exemption
 phrase after them (false firing). Only facts found in the transcripts are reported.
 """
@@ -76,7 +78,8 @@ def _events(tdir: Path, since: str):
     for f in tdir.rglob("*.jsonl"):
         for line in open(f, errors="replace"):
             aware = bool(AWARE.search(line))
-            if not aware and SKILL not in line and "plan-" not in line and "lanning" not in line and PHRASE not in line:
+            compact = '"compact_boundary"' in line
+            if not aware and not compact and SKILL not in line and "plan-" not in line and "lanning" not in line and PHRASE not in line:
                 continue
             try:
                 d = json.loads(line)
@@ -90,7 +93,10 @@ def _events(tdir: Path, since: str):
                 continue
             sid = d.get("sessionId") or f.stem
             if aware:
-                out.append((t, sid, "aware", ""))
+                out.append((t, sid, "aware", d.get("uuid", "")))
+            if d.get("subtype") == "compact_boundary":
+                keep = (d.get("compactMetadata") or {}).get("preservedMessages", {}).get("allUuids", [])
+                out.append((t, sid, "compact", ",".join(keep)))
             m = d.get("message") if isinstance(d.get("message"), dict) else {}
             cont = m.get("content")
             if d.get("type") == "user" and isinstance(cont, str) and f"<command-name>/{SKILL}</command-name>" in cont:
@@ -115,14 +121,38 @@ def _events(tdir: Path, since: str):
     return sorted(out)
 
 
+def _blind_fn(ev):
+    """A session is aware from a line naming the trial until its next compaction, unless the compaction preserved
+    that line; after a compaction it is aware again only from a later line naming the trial."""
+    aware_uuids = {u for (_, _, k, u) in ev if k == "aware" and u}
+    marks = {}
+    for t, sid, k, x in ev:
+        if k == "aware":
+            marks.setdefault(sid, []).append((t, "on"))
+        elif k == "compact":
+            kept = set(x.split(",")) & aware_uuids if x else set()
+            marks.setdefault(sid, []).append((t, "on" if kept else "off"))
+    def blind(sid, t):
+        state = "off"
+        for t2, m in marks.get(sid, []):
+            if t2 > t:
+                break
+            state = m
+        return state == "off"
+    return blind
+
+
 def trial(tdir: Path, repo: Path, since: str) -> None:
     ev = _events(tdir, since)
+    blind = _blind_fn(ev)
     seen, rows = set(), []
     for t, sid, kind, fp in ev:
         if kind != "write" or fp in seen:
             continue
         seen.add(fp)
-        before = [k for (t2, s2, k, _) in ev if s2 == sid and t2 <= t]
+        before = [k for (t2, s2, k, _) in ev if s2 == sid and t2 <= t and k != "aware"]
+        if not blind(sid, t):
+            before.append("aware")
         f = Path(fp) if Path(fp).is_absolute() else repo / fp
         sec = sections(f.read_text(errors="replace")) if f.exists() else None
         rows.append((Path(fp).name, "fired" in before, "invoked" in before, "read" in before,
@@ -130,11 +160,6 @@ def trial(tdir: Path, repo: Path, since: str) -> None:
     print("plan\tfired\tinvoked\tread\tsections(of 8)\taware")
     for r in rows:
         print("\t".join(str(x) for x in r))
-    aware_at = {}
-    for t, sid, kind, _ in ev:
-        if kind == "aware":
-            aware_at.setdefault(sid, t)
-    blind = lambda sid, t: sid not in aware_at or t < aware_at[sid]
     phrases = sum(1 for (t, sid, k, _) in ev if k == "phrase" and blind(sid, t))
     false = 0
     for t, sid, kind, _ in ev:

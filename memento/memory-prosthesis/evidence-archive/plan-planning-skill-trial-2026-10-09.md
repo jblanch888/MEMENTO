@@ -201,3 +201,12 @@ Slice counts (2026-10-09, author claude-opus-5-5, scout -): new controls 0 · fa
 - **Both real cases** were marked aware, which agrees with the first-hand checks.
 
 **The tally:** 0 of 8 counted; 2 apart. So far every Rooms plan since the install came from the one aware session, so counting starts when Rooms works in a fresh session.
+
+**Awareness lapses at a compaction (2026-10-10).** The User delegated this to the main thread to resolve with rooms/dev, routing anything tricky to him.
+- **The rule:** after a compaction, a session counts as aware only if a later line names the trial, its compaction summary does, or a message the compaction preserved does.
+- **Why:** compaction is when the model loses what it was told. The counter can check this mechanically from the transcript, using the compaction boundary and its preserved message list.
+- **Synthetic test:** four sessions, all correct. A blind session was counted. A clean compaction was counted. A summary that names the trial kept the session apart. A preserved message that names it kept the session apart.
+- **Real data:** three Rooms cases, all apart (the session has not compacted cleanly since its last trial message). The skill loaded before each one, and the playbook was read.
+- **Practice from here:** messages to Rooms leave the trial unnamed, unless the User asks otherwise.
+
+**The tally:** 0 of 8 counted; 4 apart (three in Rooms, one in this estate).
