@@ -2,6 +2,34 @@
 
 Each version tag of this repository, newest first, with what changed outside `memento/` since the previous tag. A tag is final, and only the User may move or delete one (`framework/conventions/GIT_STANDARDS.md` §8). For changes to this repository's own Memento files in `memento/`, see the git history.
 
+## v2026.10.1 (2026-10-10)
+
+Changes since `v2026.10`.
+
+### Summary
+
+- **A new playbook for improving a working system:** `GOVERNED_OPTIMISATION_PLAYBOOK.md`. It covers cutting cost or running time, or replacing a mechanism, while proving the quality holds. It was imported from a live project, de-identified, and cleared by the User.
+- **Skills, with planning on trial:**
+  - **A new `framework/skills/` folder** holds procedures packaged as skills, for assistants that support them (Claude Code and Codex).
+  - **The first skill,** `memento-planning`, brings in the planning playbook when an undertaking may need a saved plan. It repeats only the playbook's trigger and its fixed exemption phrase.
+  - **It is on trial,** with criteria set in advance. The trial decides whether the framework recommends delivering procedures as skills.
+
+### Changed files
+
+**Playbooks**
+- `framework/playbooks/GOVERNED_OPTIMISATION_PLAYBOOK.md`: new. It covers the records, four gated phases, the disciplines, five learning loops, a checklist of traps, and the verdict words.
+- `framework/playbooks/README.md`: lists the new playbook, points to the skills folder, and counts three transplanted playbooks.
+
+**Skills**
+- `framework/skills/README.md`: new. What a skill is here, the single-source rule, installing, and the trial's status.
+- `framework/skills/memento-planning/SKILL.md`: new. The planning skill template.
+
+**Framework overview**
+- `framework/README.md`: the directory table gains a skills row, and the playbooks row names governed optimisation.
+
+**This repository's own tooling**
+- `.claude/skills/memento-planning/SKILL.md`: the planning skill, installed in this repository for the trial.
+
 ## v2026.10 (2026-10-09)
 
 The first tag. It lists changes since commit `1c8adfc` (2026-10-03).
