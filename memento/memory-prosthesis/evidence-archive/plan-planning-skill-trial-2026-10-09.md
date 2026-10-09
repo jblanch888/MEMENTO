@@ -182,3 +182,14 @@ Review counts (r1, 2026-10-09, author claude-opus-5-5, reviewer claude-sonnet-5-
 - **The trial counts from 2026-10-09.**
 
 Slice counts (2026-10-09, author claude-opus-5-5, scout -): new controls 0 · faults by suite or mutants - · defects in shadow - · unsanctioned scope changes 0 · scout reports 0 · scout reports corrected 0
+
+### Slice 3: counting (from 2026-10-09)
+
+**The counter.** Trial mode was added to `memento/tools/skill-trial-count.py`. Its start points are the install commits: this estate 2026-10-09T16:31:01+13:00, Rooms 2026-10-09T16:31:51+13:00.
+
+**Case 1: Rooms, `plan-dispatch-rename-2026-10-09.md`.** Fired, and the playbook was read. Six of eight sections are present as headings: scope and verification have no headings.
+- **Checked against the transcript first-hand:** the skill loaded at 03:52:49Z, the playbook was read at 03:52:51Z, and the plan was written at 03:53:44Z.
+- **Flagged: the session knew about the trial.** It was rooms/dev's session, which had received the trial invitation. The criteria did not foresee this.
+- **The main thread's lean:** keep any session that has seen trial messages out of the 8, and report it apart. This awaits the User's word.
+
+**The tally:** 0 of 8 counted; 1 flagged apart.
