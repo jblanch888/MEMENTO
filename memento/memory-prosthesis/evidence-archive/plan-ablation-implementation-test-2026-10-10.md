@@ -181,3 +181,40 @@ M:
 4. that I propose three feature candidates, checked against the code, for slice 0.
 
 Awaiting user approval of this plan before detailed design or implementation.
+
+## Implementation record
+
+### Slice 0 (2026-10-10)
+
+- **The feature:** U-007 part (a), marking roadmap blocks that are not drawn to scale. It is a priority-1 defect.
+  - **Chosen by the User** from three candidates. A smart-tier scout proposed them, and the main thread re-checked them against the code first-hand.
+- **Brief and contract:** approved by the User. They are held privately at `~/abl-trial/impl/brief-u007a.md` (sha256 33d80b74).
+
+### Slice 1 (2026-10-10, in progress)
+
+- **The templates:** the product code is identical to Proportion's current working tree in all three.
+- **The baseline:** 101 suites and 1,146 tests pass, the type check has no errors, and lint has warnings only.
+- **The sandbox witness** (a recon-tier agent on a scratch copy, $0.06), confirmed on disk first-hand:
+  - writes inside the copy were allowed;
+  - writes to the parent folder, to `/tmp` and to Proportion were blocked;
+  - the network was blocked;
+  - Jest and tsc ran;
+  - Proportion's git state was unchanged.
+  - **Settings:** `~/abl-trial/impl/trial-settings.json`.
+- **The acceptance tests** were written by a smart-tier agent working from the brief alone.
+  - **First proof:** they fail on today's code and pass on its reference implementation.
+  - **Fairness review r1 (smart tier): NEEDS-CHANGES, every finding accepted.**
+    - **Weighting:** an arm that never touches the canvas would score 88%.
+    - **Over-strict:** some checks would fail a legend or a reworded title.
+    - **The gap:** no fixture block sits near the 24-pixel boundary.
+    - **Five minor loosenings.**
+  - **The revision** is in progress.
+- **The scoring rule, revised before any arm runs** (the User, 2026-10-10: "ok your lean on the scoring"):
+  - **Gates (any failure scores 0):**
+    - the type check is clean;
+    - the existing suite has no regressions;
+    - the regression group passes (nothing moves, key title facts kept).
+  - **The score out of 100:**
+    - **Half for the function:** the mean pass share across its six behaviour groups.
+    - **Half for the canvas:** the pass share of marking not-to-scale blocks, multiplied by the pass share of to-scale blocks left unmarked.
+  - **The thresholds are unchanged:** Full at least 20 points above the comparison means it helps; the same or lower means no measurable help; anything between is inconclusive.
