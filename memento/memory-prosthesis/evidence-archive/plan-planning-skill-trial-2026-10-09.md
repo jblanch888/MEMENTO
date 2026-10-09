@@ -193,3 +193,11 @@ Slice counts (2026-10-09, author claude-opus-5-5, scout -): new controls 0 · fa
 - **The rule for such cases, ruled by the User on 2026-10-09 ("your lean"):** a case from a session that has seen trial messages is reported apart and kept out of the 8. The rule adds to the pre-registered criteria and leaves them otherwise unchanged.
 
 **The tally:** 0 of 8 counted; 1 flagged apart.
+
+**Case 2 (2026-10-10 count): Rooms, `plan-dispatch-change-requests-and-trigger-2026-10-09.md`.** Fired, playbook read, 7 of 8 sections. It came from the same rooms/dev session as case 1, which had seen the trial, so it is apart.
+
+**The counter marks awareness itself (2026-10-10, on the User's word).** A session is aware once any transcript line names the trial: "skill trial", "skills trial" or the plan's filename. Its later cases are reported apart, and its loads are left out of the false-firing count.
+- **Synthetic test:** a blind session was counted, and an aware session was reported apart, with its later load excluded.
+- **Both real cases** were marked aware, which agrees with the first-hand checks.
+
+**The tally:** 0 of 8 counted; 2 apart. So far every Rooms plan since the install came from the one aware session, so counting starts when Rooms works in a fresh session.

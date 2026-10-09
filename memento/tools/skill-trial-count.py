@@ -15,7 +15,10 @@ SINCE (ISO time, the install commit) and reports, per plan file first written in
   fired     the memento-planning skill loaded by the assistant (Skill tool) in that session before the first write;
   invoked   the User typed /memento-planning in that session before the first write (reported apart from fired);
   read      the planning playbook was read in that session before the first write;
-  sections  the eight required sections present as headings in the plan file as it stands in REPO now.
+  sections  the eight required sections present as headings in the plan file as it stands in REPO now;
+  aware     the session had seen the trial before the first write (any transcript line naming it: "skill trial",
+            "skills trial" or the trial plan's filename). Such cases are reported apart and kept out of the count
+            (the User's ruling, 2026-10-09).
 Then: exemption phrases spoken, and loads with no plan file first written later in the same session and no exemption
 phrase after them (false firing). Only facts found in the transcripts are reported.
 """
@@ -61,6 +64,7 @@ def baseline(d: Path, before: str, n: int | None) -> None:
 
 
 SKILL = "memento-planning"
+AWARE = re.compile(r"skills? trial|plan-planning-skill-trial", re.I)
 PHRASE = "No plan: small, well-specified, reversible"
 
 
@@ -71,7 +75,8 @@ def _events(tdir: Path, since: str):
     out = []
     for f in tdir.rglob("*.jsonl"):
         for line in open(f, errors="replace"):
-            if SKILL not in line and "plan-" not in line and "lanning" not in line and PHRASE not in line:
+            aware = bool(AWARE.search(line))
+            if not aware and SKILL not in line and "plan-" not in line and "lanning" not in line and PHRASE not in line:
                 continue
             try:
                 d = json.loads(line)
@@ -84,6 +89,8 @@ def _events(tdir: Path, since: str):
             if t < cut:
                 continue
             sid = d.get("sessionId") or f.stem
+            if aware:
+                out.append((t, sid, "aware", ""))
             m = d.get("message") if isinstance(d.get("message"), dict) else {}
             cont = m.get("content")
             if d.get("type") == "user" and isinstance(cont, str) and f"<command-name>/{SKILL}</command-name>" in cont:
@@ -119,19 +126,26 @@ def trial(tdir: Path, repo: Path, since: str) -> None:
         f = Path(fp) if Path(fp).is_absolute() else repo / fp
         sec = sections(f.read_text(errors="replace")) if f.exists() else None
         rows.append((Path(fp).name, "fired" in before, "invoked" in before, "read" in before,
-                     "-" if sec is None else sum(sec.values())))
-    print("plan\tfired\tinvoked\tread\tsections(of 8)")
+                     "-" if sec is None else sum(sec.values()), "aware" in before))
+    print("plan\tfired\tinvoked\tread\tsections(of 8)\taware")
     for r in rows:
         print("\t".join(str(x) for x in r))
-    phrases = sum(1 for e in ev if e[2] == "phrase")
+    aware_at = {}
+    for t, sid, kind, _ in ev:
+        if kind == "aware":
+            aware_at.setdefault(sid, t)
+    blind = lambda sid, t: sid not in aware_at or t < aware_at[sid]
+    phrases = sum(1 for (t, sid, k, _) in ev if k == "phrase" and blind(sid, t))
     false = 0
     for t, sid, kind, _ in ev:
-        if kind != "fired":
+        if kind != "fired" or not blind(sid, t):
             continue
         later = [k for (t2, s2, k, _) in ev if s2 == sid and t2 > t]
         false += not ("write" in later or "phrase" in later)
-    print(f"summary: {len(rows)} plans first written; fired {sum(r[1] for r in rows)}; invoked {sum(r[2] for r in rows)}; "
-          f"exemption phrases {phrases}; loads with no plan or phrase after them {false}")
+    counted = [r for r in rows if not r[5]]
+    print(f"summary: {len(rows)} plans first written, {len(counted)} counted and {len(rows) - len(counted)} apart (aware); "
+          f"counted: fired {sum(r[1] for r in counted)}, invoked {sum(r[2] for r in counted)}; "
+          f"exemption phrases {phrases}; loads with no plan or phrase after them {false} (unaware sessions only)")
 
 
 if __name__ == "__main__":

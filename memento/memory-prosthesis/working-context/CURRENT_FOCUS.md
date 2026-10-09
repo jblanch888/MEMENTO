@@ -1,7 +1,7 @@
 ---
 description: active mission and task for the MEMENTO estate: working context, replaced coherently per CD #11
 type: working-context
-date: 2026-10-09
+date: 2026-10-10
 status: live
 ---
 
@@ -17,7 +17,7 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 - **Status:** slices 1 and 2 are done. The skill is installed here and in Rooms; Codex lists it, and a real load is still to be seen.
 - **Slice 3:** counting runs until 8 undertakings or 2027-01-09. Run `memento/tools/skill-trial-count.py trial` for each estate (start times are in the plan). Check each case against its transcript first-hand.
 - **The interim count** goes to the User at 4 counted cases.
-- **Tally:** 0 of 8 counted, 1 flagged apart (the session had seen the trial invitation). Cases from sessions that have seen trial messages are kept out of the 8 (the User, 2026-10-09).
+- **Tally:** 0 of 8 counted, 2 apart (both from the rooms/dev session that saw the trial). The counter marks aware sessions itself. Cases from sessions that have seen trial messages are kept out of the 8 (the User, 2026-10-09).
 
 **Other candidates, at the User's choice:**
 - a dormant estate's drift check when it is reopened;
