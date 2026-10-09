@@ -98,6 +98,7 @@ Two plain-text lines that make review and slice outcomes countable by model gene
 **Tally:** until the tally script is earned, use `grep -h "^Review counts\|^Slice counts" memento/memory-prosthesis/evidence-archive/*.md` and sum by hand or with `awk`.
 
 **Limits:**
+- Counts are observations, never targets. Nobody is asked to raise or lower them, and no gate or verdict rests on one count alone. Quantified Compliance (Epoch 2) showed that measures become goals and the work bends to them; Kent Beck's account of Goodhart's law (Prodacity 2026) makes the same point. *(Added 2026-10-10 on the User's word.)*
 - Breach and unsupported-claim counts reflect the reviewer's sharpness as well as the author's work, so comparisons are made within one reviewer model.
 - At each census re-run, the main thread re-grounds one line in five against its record, first-hand.
 
