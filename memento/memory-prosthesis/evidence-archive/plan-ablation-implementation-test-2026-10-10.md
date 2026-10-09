@@ -4,7 +4,7 @@ type: plan
 date: 2026-10-10
 genre: investigation (3B), with build/change (3A) for the harness
 size: M (four slices)
-status: APPROVED 2026-10-10 (the User: "yes to all but lets make sure we are not doing any fable calls and we use frontier agents only when strictly necessary"); feature 1 DONE 2026-10-10, result inconclusive by the rule; the next step is the User's
+status: CLOSED 2026-10-10 on the User's word ("close it"); two features run; no measurable effect on working software at pilot scale
 related: [plan-memento-ablation-trial-2026-10-06, decision-bitter-lesson-sort-2026-10-06, plan-planning-skill-trial-2026-10-09]
 ---
 
@@ -340,3 +340,13 @@ Slice counts (2026-10-10, author claude-opus-5-5, scout claude-sonnet-5-5): new 
 **Spend for feature 2:** $7.08 for the arms. The smart-tier agents' cost is unmetered here.
 
 **Next:** the User's call.
+
+## Closure (2026-10-10, the User: "close it")
+
+**Closed after two features.**
+- **The finding:** no measurable effect of Memento, or of its planning playbook, on whether a single-session build produces working software. Design quality, as judged by one blind review per feature, varied in both directions.
+- **Bearing on the Bitter Lesson sort, unit 4b (the planning playbook):**
+  - **On outcome:** the arm without the playbook matched the full arm on both features. This leans towards the sort's reading that the playbook is procedure expected to fade.
+  - **Its limits:** pilot scale, with one run per arm. Any change to the playbook or the sort needs its own plan.
+- **What this test cannot see:** continuity across sessions, decisions that survive compaction, and solved problems that stay solved. Those are where Memento claims its value, and they would need a multi-session design.
+- **The trial folder** `~/abl-trial` (product work) stays outside every repository, unsynced, until the User rules on it.

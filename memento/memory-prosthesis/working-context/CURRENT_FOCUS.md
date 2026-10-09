@@ -19,7 +19,10 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 - **The interim count** goes to the User at 4 counted cases.
 - **Tally:** 0 of 8 counted, 2 apart (both from the rooms/dev session that saw the trial). The counter marks aware sessions itself. Cases from sessions that have seen trial messages are kept out of the 8 (the User, 2026-10-09).
 
-**Next undertaking (the User, 2026-10-10):** the ablation trial resumed as an implementation test. Each arm carries out its own plan in its own copy, and the result is judged on working software. It is the one outcome-level measure of Memento's claim (`~/.memento/kent/` analysis). It needs its own plan first: one feature, sequential runs, a fixed spending cap. The pilot record is `../evidence-archive/plan-memento-ablation-trial-2026-10-06.md`.
+**Closed 2026-10-10:** the ablation trial's implementation test (`../evidence-archive/plan-ablation-implementation-test-2026-10-10.md`).
+- **What it ran:** two features in Proportion, three arms each, Opus 5.5.
+- **The finding:** no measurable effect of Memento, or of the planning playbook, on working software from a single-session build. Design quality varied in both directions.
+- **What it could not measure:** the value across sessions; that would need a multi-session design.
 
 **Closed 2026-10-10:** the Rooms level 2 reshape (`../evidence-archive/plan-reshape-rooms-level2-2026-10-10.md`, falsifier date 2026-12-09). rooms/dev will put the consolidation-ritual question to the User with evidence in its next session.
 
