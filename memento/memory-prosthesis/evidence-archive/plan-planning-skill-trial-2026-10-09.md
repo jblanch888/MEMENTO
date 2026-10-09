@@ -190,6 +190,6 @@ Slice counts (2026-10-09, author claude-opus-5-5, scout -): new controls 0 · fa
 **Case 1: Rooms, `plan-dispatch-rename-2026-10-09.md`.** Fired, and the playbook was read. Six of eight sections are present as headings: scope and verification have no headings.
 - **Checked against the transcript first-hand:** the skill loaded at 03:52:49Z, the playbook was read at 03:52:51Z, and the plan was written at 03:53:44Z.
 - **Flagged: the session knew about the trial.** It was rooms/dev's session, which had received the trial invitation. The criteria did not foresee this.
-- **The main thread's lean:** keep any session that has seen trial messages out of the 8, and report it apart. This awaits the User's word.
+- **The rule for such cases, ruled by the User on 2026-10-09 ("your lean"):** a case from a session that has seen trial messages is reported apart and kept out of the 8. The rule adds to the pre-registered criteria and leaves them otherwise unchanged.
 
 **The tally:** 0 of 8 counted; 1 flagged apart.
