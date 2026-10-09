@@ -303,3 +303,40 @@ Slice counts (2026-10-10, author claude-opus-5-5, scout claude-sonnet-5-5): new 
   - **The blind smart-tier review:** 25%. A rating r of 5 contributes (r - 1)/4 × 25.
   - **The thresholds are unchanged.**
 - **The pipeline and caps are as for feature 1.** Opus 5.5 for the arms only, no Fable, smart tier for tests and reviews.
+
+### Feature 2 results (2026-10-10)
+
+**Tests:** 77 cases, revised after fairness review r1 (smart tier, NEEDS-CHANGES, every finding accepted).
+- **The material fix:** sprints that straddle a boundary are isolated, so a disputed period rule costs 4 tests, down from 42 under the old fixtures.
+- **Also:** label regexes loosened, empty-combination cases pruned, and fresh renders for the reset states.
+- **Re-proof:** the reference passes 77 of 77; the base fails 64 of 64 feature tests and passes the 13 gate tests; the mutants are all caught.
+- **Frozen:** sha256 a1af7d58 and d987eae0.
+- **The scorer** `score2.py` (c1ebba80): a clean reference scores 75 test points, and a fresh untouched copy scores 0. One fault was found and fixed: Add and Edit cases with identical names had collapsed into one key.
+
+**Runs, in sequence:**
+- **One launch failed on a shell quirk** and ran nothing.
+- **The three runs** used Opus 5.5 only, with no refusals, and left Proportion unchanged.
+- **The witness's `/tmp` count rose by one** in two runs. Every entry created in the window was a Rooms lab-test folder from a concurrent session; none came from an arm (whose shell cannot write to `/tmp`, as witnessed). The `/tmp` count is a noisy witness while other sessions run.
+
+| Arm | Tests (75) | Blind review (25) | Score | Cost |
+|---|---|---|---|---|
+| Full Memento | 75 | 5, giving 25 | 100 | $2.63 |
+| Without the playbook | 75 | 4, giving 18.75 | 93.75 | $2.33 |
+| No Memento | 75 | 4, giving 18.75 | 93.75 | $2.12 |
+
+**The decision rule:** Full leads both comparisons by 6.25 points. That is under 20 and above zero, so both are **inconclusive**.
+
+**What separated them** (the blind review, unblinded after):
+- **Common to all three:** each wired the page to the product's single anchor seam (`resolveTeamFYAnchor`), reused `deriveFYAndQuarter`, cleared a hidden selection, and left an empty period recoverable.
+- **Full Memento:** no duplication (a shared hook and component), logic in `lib/calendar`, a filter reset on close, and the most thorough tests.
+- **The other two:** about 20 lines duplicated in each window. The no-Memento arm also placed its helper outside `lib/calendar`, hand-rolled its labels, and did not reset the Edit filter on close.
+
+**Reading across both features.** All six builds produced working software that passed every gate and nearly every hidden test. The arms differed only in design quality, as judged by a single blind smart-tier review, and the direction split:
+- **feature 1:** full Memento was rated lowest, on a real defect;
+- **feature 2:** full Memento was rated highest, on structure.
+
+**The conclusion at pilot scale:** no measurable effect of Memento, or of its planning playbook, on whether the software works. Design quality varied in both directions. The run-to-run noise is unknown, and one review per feature is thin.
+
+**Spend for feature 2:** $7.08 for the arms. The smart-tier agents' cost is unmetered here.
+
+**Next:** the User's call.
