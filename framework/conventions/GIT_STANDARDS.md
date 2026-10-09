@@ -1,9 +1,9 @@
 ---
-description: the project's git standards; one branch as the single home, when to push by type of repository, confirming the branch, commit standards, merges carried out by the User, stashing, recovery, and dated notes on corrections
+description: the project's git standards; one branch as the single home, when to push by type of repository, confirming the branch, commit standards, merges carried out by the User, stashing, recovery, dated notes on corrections, and version tags
 type: convention
 date: 2026-10-07
-governs: [git-operations, push-posture, commit-discipline]
-last_verified: 2026-10-07
+governs: [git-operations, push-posture, commit-discipline, version-tags]
+last_verified: 2026-10-09
 status: template
 ---
 
@@ -59,3 +59,15 @@ Destructive git operations are the User's (CD #4g). Present the recovery options
 ## 7. Dated Notes on Corrections
 
 When a rule in these standards is found to be wrong or out of date, correct it **in place, with the date and the reason**: *"(§N corrected YYYY-MM-DD: the old wording predated convention X and contradicted §M.)"* The original project's git rules carry several such notes, and they are why its history of correcting itself can be checked at all. A rule rewritten silently reads as if it had always been right, and a governing document must never give that false impression.
+
+## 8. Version Tags
+
+A version tag gives anything built on the project (a website, documentation, another repository) a fixed point to build against, since the main branch keeps changing.
+
+- **Form:** an annotated tag named `vYYYY.MM`, with `.N` added for a second tag in the same month (`v2026.10.1`).
+- **When:** at the close of a change set (a group of related changes the User has approved as a whole), on the User's word.
+- **Change note:** each tag has an entry in `CHANGES.md` at the repository root, listing what changed since the previous tag.
+- **Push:** a tag follows the push rule for its repository (§2). In a public repository the User pushes it.
+- **A tag is final.** Anything built on a tag relies on it staying where it is. Moving or deleting one is the User's alone (CD #4g). A later tag, whose change note names the error, corrects a wrong one.
+
+*(Added 2026-10-09 on the User's approval.)*
