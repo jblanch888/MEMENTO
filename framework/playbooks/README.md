@@ -9,7 +9,7 @@ Procedures for particular kinds of work. The core directives always apply. The a
 
 **Where the others went (2026-10-07).** The git operations, documentation and incremental execution playbooks were mostly standards, which hold whatever model does the work. They moved to [`../conventions/`](../conventions/) as `GIT_STANDARDS.md`, `DOCUMENTATION_STANDARDS.md` and `CHANGE_STANDARDS.md`, with their history.
 
-**Skills.** A procedure needed at a particular moment, such as planning an undertaking or gardening the notes, suits packaging as a skill where the assistant supports skills (Claude Code and Codex both do). The playbook is the description that works with any assistant, and a skill is one way to deliver it.
+**Skills.** A procedure needed at a particular moment, such as planning an undertaking or gardening the notes, suits packaging as a skill where the assistant supports skills (Claude Code and Codex both do). The playbook is the description that works with any assistant, and a skill is one way to deliver it. The skills live in [`../skills/`](../skills/); planning is on trial there.
 
 Both are **2026 transplants**: forms tested in real projects and imported from them, each with a note recording its source, its date and the changes made to fit it.
 

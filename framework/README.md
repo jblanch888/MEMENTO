@@ -19,6 +19,7 @@ On install, files take their usual names and locations in a project: `CORE_DIREC
 | [`directives/`](directives/) | The 14-directive core directives template |
 | [`playbooks/`](playbooks/) | Planning, and maintaining project notes (knowledge gardening): procedures used when the work calls for them |
 | [`conventions/`](conventions/) | The routing rule, the estate spine (file metadata, naming rules and generated indexes), the git, documentation and change standards, and a template for the register of tools to add on evidence |
+| [`skills/`](skills/) | Procedures packaged as skills for assistants that support them; planning is on trial |
 | [`memory-prosthesis/`](memory-prosthesis/) | The four tiers: a README for each, working-context templates, a knowledge-archive template with a mature example, and the evidence-archive conventions |
 
 ## Words used here
