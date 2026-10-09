@@ -52,3 +52,13 @@ related: [plan-bitter-lesson-sort-2026-10-03, design-sort-alternatives-2026-10-0
 ## What the ruling changes
 
 Every part stays as it is. The sort sets what each part is expected to do as models and the harness change, and how that expectation will be checked. Retiring or changing a part follows a test result, under a plan of its own. Canon text describing the parts changes under a plan of its own (plan scope).
+
+---
+
+**AMENDMENT (2026-10-10): the first evidence on outcome for unit 4b, the planning playbook.** The ruling above is unchanged; this note records evidence for the unit's trial.
+- **The test:** `plan-ablation-implementation-test-2026-10-10.md` (closed). Two features in Proportion, three arms each, Opus 5.5, one run per arm. Each arm planned and then built in one session, and was judged on working software by hidden tests fixed in advance, plus a blind smart-tier review.
+- **The result:**
+  - **Outcome:** the arm without the playbook matched the full arm on both features. Every arm passed every gate.
+  - **Design quality:** it varied in both directions. The full arm was rated lowest on feature 1 and highest on feature 2.
+- **The reading:** this leans towards the unit's prescribed-procedure reading, a procedure expected to fade, at pilot scale. It neither meets the slice 2a clock's threshold nor settles the unit. The test cannot see value across sessions.
+- **The next step:** any change to the playbook goes through a plan of its own, under the ruling above.
