@@ -13,13 +13,16 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 
 ## Active plan
 
-**No active plan.** The next undertaking is the User's choice. The candidates:
-- a dormant estate's drift check and reshape, when Proportion, cartographer or the writing estate is reopened;
-- the skills trial (the planning playbook packaged as a skill, alongside the playbook);
-- resuming the ablation trial as an implementation test;
-- a level 2 reshape of Rooms' own files.
+**The planning skill trial** (`../evidence-archive/plan-planning-skill-trial-2026-10-09.md`).
+- **Status:** slices 1 and 2 are done. The skill is installed here and in Rooms; Codex lists it, and a real load is still to be seen.
+- **Slice 3:** counting runs until 8 undertakings or 2027-01-09. Run `memento/tools/skill-trial-count.py trial` for each estate (start times are in the plan). Check each case against its transcript first-hand.
+- **The interim count** goes to the User at 4 counted cases.
+- **Tally:** 0 of 8 counted, 1 flagged apart (the session had seen the trial invitation). The rule for flagged cases awaits the User's word.
 
-PLANNING governs whichever is chosen. A playbook or skill is brought in when the work calls for one (CD #1).
+**Other candidates, at the User's choice:**
+- a dormant estate's drift check when it is reopened;
+- the ablation trial resumed as an implementation test;
+- a level 2 reshape of Rooms.
 
 ## Current state
 
@@ -55,4 +58,4 @@ PLANNING governs whichever is chosen. A playbook or skill is brought in when the
 - **Build-protocols**, on the User's approval in its session: the links check compares against the newest tag; the page is re-synced from `1c8adfc` to `v2026.10`. Still open there: the User's `adoption/` ruling and the dual-thread unit.
 - **The messaging service's hold change** (applied by the User on 2026-10-08, 133 tests pass) awaits a commit by that repository's own thread.
 - **Spawn-tier eyeball items** (that plan's §15), and Proportion's owed items when it wakes.
-- **Untracked leftovers:** `.tmp-agents-after/` and `framework/conventions/TIER_MAP.json.bak-20260919`; deletion is his call.
+- **The tier map backup** `framework/conventions/TIER_MAP.json.bak-20260919` (byte-identical to commit 1937426) is to be deleted. The User runs the deletion, because the permission system refuses it.
