@@ -13,53 +13,66 @@ Produce and steward the **mid-2026 open-source version of Memento** in this repo
 
 ## Active plan
 
-**The planning skill trial** (`../evidence-archive/plan-planning-skill-trial-2026-10-09.md`).
-- **Status:** slices 1 and 2 are done. The skill is installed here and in Rooms; Codex lists it, and a real load is still to be seen.
-- **Slice 3:** counting runs until 8 undertakings or 2027-01-09. Run `memento/tools/skill-trial-count.py trial` for each estate (start times are in the plan). Check each case against its transcript first-hand.
+**The planning skill trial** (`../evidence-archive/plan-planning-skill-trial-2026-10-09.md`). It runs passively until 8 counted undertakings, or 2027-01-09.
+- **Installed:** here and in Rooms. Codex lists the skill; a real load is still to be seen, in the User's next significant Codex undertaking.
+- **Counting:** run `memento/tools/skill-trial-count.py trial` for each estate. The start times are in the plan. Check each case against its transcript first-hand.
+- **Awareness:** sessions that have seen trial messages are kept apart. Awareness lapses at a clean compaction. Messages to Rooms leave the trial unnamed.
+- **Tally (2026-10-10):** 0 of 8 counted; 6 apart, all from sessions aware of the trial.
 - **The interim count** goes to the User at 4 counted cases.
-- **Tally:** 0 of 8 counted, 2 apart (both from the rooms/dev session that saw the trial). The counter marks aware sessions itself. Cases from sessions that have seen trial messages are kept out of the 8 (the User, 2026-10-09).
 
-**Closed 2026-10-10:** the ablation trial's implementation test (`../evidence-archive/plan-ablation-implementation-test-2026-10-10.md`).
-- **What it ran:** two features in Proportion, three arms each, Opus 5.5.
-- **The finding:** no measurable effect of Memento, or of the planning playbook, on working software from a single-session build. Design quality varied in both directions.
-- **What it could not measure:** the value across sessions; that would need a multi-session design.
-
-**Closed 2026-10-10:** the Rooms level 2 reshape (`../evidence-archive/plan-reshape-rooms-level2-2026-10-10.md`, falsifier date 2026-12-09). rooms/dev will put the consolidation-ritual question to the User with evidence in its next session.
-
-**Other candidates:** a dormant estate's drift check when it is reopened.
+**Other candidates, at the User's choice:**
+- a multi-session test of continuity, where Memento claims its value;
+- a dormant estate's drift check when it is reopened.
 
 ## Current state
 
-- **Every known Memento instance and its state:** `../evidence-archive/handover-memento-instances-2026-10-08.md`. The full private table is at `~/.memento/reshape/`.
-- **The reshape plan is CLOSED for the active estates** (`plan-reshape-memento-2026-10-06.md`). In the canon (change sets 1, 1b, 2 and 2b, pushed):
-  - three playbooks became standards in `framework/conventions/`;
-  - CD #1 brings in a playbook or skill when the work calls for one;
-  - six practices were imported from Rooms;
-  - CD #4g was added;
-  - the directives are now "Foundation", dated and revisable.
-- **Rooms** is level with the canon. It has adopted 2b in part (CD #4g and governing-stale; it declined CD #9a's approval step for index refreshes). Its knowledge-archive limit is now 900 lines.
-- **Canon version tags** (`plan-canon-versions-2026-10-09.md`, DONE). `v2026.10` was pushed on 7200c20, with the rule in `GIT_STANDARDS.md` §8 and the change note in `CHANGES.md`. The site and build-protocols build against tags.
-- **The Bitter Lesson sort** is CLOSED (`decision-bitter-lesson-sort-2026-10-06.md`). The ablation trial is CLOSED at the pilot stage and can be resumed (`plan-memento-ablation-trial-2026-10-06.md`). Record counts are in place; the first live lines come with the next plan.
-- **Posture (i):** the estate stays published with the canon. The canon reads in plain language; the estate keeps its own vocabulary.
-- **Publication state is never asserted in this file: derive it live from git (`git status -sb`, `git log @{u}..`, `git log ..@{u}`) per CD #8d.**
+**Closed on 2026-10-10:**
+- **The implementation test** (`plan-ablation-implementation-test-2026-10-10.md`). Two features in Proportion, three arms each. The finding: no measurable effect of Memento, or of the planning playbook, on working software from a single-session build. Design quality varied in both directions. The sort's decision record carries a dated amendment noting this for unit 4b.
+- **The Rooms level 2 reshape** (`plan-reshape-rooms-level2-2026-10-10.md`). No removal qualified on strong evidence. Five small items were done in Rooms. The falsifier date is 2026-12-09.
+- **The governed optimisation playbook import** (`plan-import-optimisation-playbook-2026-10-10.md`). The playbook is in the canon.
+
+**Canon version tags** (`plan-canon-versions-2026-10-09.md`):
+- `v2026.10` is on 7200c20, and `v2026.10.1` on 195c249.
+- **The rule:** `GIT_STANDARDS.md` §8. The change notes are in `CHANGES.md`.
+- **The site** builds against a tag. Moving it to `v2026.10.1` is the User's call.
+
+**Earlier and still true:**
+- **The instances:** `handover-memento-instances-2026-10-08.md`.
+- **The reshape** is closed for the active estates.
+- **Rooms** is level with the canon.
+- **The Bitter Lesson sort** is closed.
+- **Record counts** are in use. They are observations, never targets (`memento/tools/README.md`).
+
+**Posture (i):** the estate stays published with the canon.
+
+**Publication state is never asserted in this file:** derive it live from git (`git status -sb`, `git log @{u}..`, `git log ..@{u}`) per CD #8d.
 
 ## Constraints
 
-- **Seam:** root = canon, `memento/` = estate; commits declare their side (CD #10); pushes User-only (CD #4a). Commits use explicit file lists written out from the work's own files. Never use a directory-wide `git add`.
-- **Writing rules (CD #5):** no em dashes in prose; no contrast framing in any form; reviewers hunt the pattern.
-- **Canon wording:** follows the ruled term table and glossary. Astra (role `astra/reviewer`) reviews wording; the User rules final wording.
-- **Confidentiality sweep:** it sweeps everything a push publishes and each commit as it is made. At restart, after `git fetch`, run `memento/tools/confidentiality-sweep.sh --published origin/main`, and report any new hit. Never print a matched token or pattern.
-- **Imports (CD #4e):** material from another instance, or confidential material, is drafted outside the working tree, de-identified, reviewed and cleared by the User (`memento/tools/README.md`, § Imports).
-- **Agent work runs in sequence by default.** Frontier agents only where judgement needs them, one at a time.
-- **The permission system refuses deletions and edits to agent settings in other folders.** Hand such steps to the User as a script he runs (`! bash <path>`).
-- **Version tags:** a tag is made at the close of a change set, on the User's word, with a `CHANGES.md` entry, and the User pushes it. A tag is final, and only the User may move or delete one (CD #4g).
-- **Decisions go to the User in plain prose with leans.** Agent-messaging threads cap at ten exchanges.
+- **Seam:** root = canon, `memento/` = estate.
+  - Commits declare their side (CD #10).
+  - Pushes need the User's word (CD #4a). When he gives it, the assistant runs the push itself.
+  - Commits use explicit file lists. Never use a directory-wide `git add`.
+- **Writing rules (CD #5):** no em dashes in prose; no contrast framing in any form.
+- **Canon wording** follows the ruled term table and glossary. The User rules final wording.
+- **Confidentiality sweep:** at restart, after `git fetch`, run `memento/tools/confidentiality-sweep.sh --published origin/main`, and report any new hit. Never print a matched token or pattern.
+- **Imports (CD #4e):** draft outside the tree, de-identify, review, then the User's clearance.
+- **Agents:**
+  - **Run in sequence.** Frontier only where judgement needs it.
+  - **No Fable** in trials (the User, 2026-10-10).
+  - **Witness harnesses** with the cheapest model first.
+- **The permission system refuses deletions.** Say so, and only then hand the User the command.
+- **Version tags:** made at the close of a change set, on the User's word, with a `CHANGES.md` entry. A tag is final (CD #4g).
+- **Decisions go to the User in plain prose with leans.** Threads cap at ten exchanges.
 
 ## Open with the User
 
-- **The next undertaking** (see Active plan).
-- **The trial folder** `~/abl-trial` (product work, outside both repositories), kept until he rules.
-- **Build-protocols**, on the User's approval in its session: the links check compares against the newest tag; the page is re-synced from `1c8adfc` to `v2026.10`. Still open there: the User's `adoption/` ruling and the dual-thread unit.
-- **The messaging service's hold change** (applied by the User on 2026-10-08, 133 tests pass) awaits a commit by that repository's own thread.
-- **Spawn-tier eyeball items** (that plan's §15), and Proportion's owed items when it wakes.
-- **The tier map backup** `framework/conventions/TIER_MAP.json.bak-20260919` (byte-identical to commit 1937426) is to be deleted. The User runs the deletion, because the permission system refuses it.
+- **Rooms, in its session:** rulings on the consolidation ritual (retire the tripwire's action and archive the runbook, rooms/dev's lean) and on a CHECK 13 ratchet.
+- **build-protocols:**
+  - moving the page to `v2026.10.1`;
+  - the `adoption/` ruling;
+  - the epoch comparison: the two opinions are with him.
+- **The messaging service's thread:** commit the User's hold change, and fix the Codex SessionStart hook, which prints plain text where JSON is expected.
+- **The trial folder** `~/abl-trial` (product work), kept until he rules.
+- **Spawn-tier eyeball items,** and Proportion's owed items when it wakes.
+- **The tier map backup file:** the User runs `rm framework/conventions/TIER_MAP.json.bak-20260919`. It is byte-identical to 1937426.

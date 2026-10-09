@@ -51,6 +51,10 @@ Entries graduate through the pre-compact consolidation gate (CD #9), maximum thr
 
 *(Graduated 2026-10-08.)* On 2026-10-06 about eleven frontier agents overlapped (judges, calibration judges, yardstick builders) and used roughly a fifth of the User's session allowance within minutes; most of their output was stopped unused. The same scoring as two sequential single-agent passes cost a fraction and gave the same judgement. Default to one agent at a time, frontier only where judgement needs it, and say the cost before a fan-out. Receipt: `plan-memento-ablation-trial-2026-10-06.md` (scope correction).
 
+### Witness a harness with a cheap model before spending frontier runs on it {#witness-harness-cheaply}
+
+*(Graduated 2026-10-10.)* The implementation test's harness failed in ways only a real run could show: a tool-list flag swallowed the prompt; an absolute path in a permission rule needs `//`, and file rules apply through `Edit(...)` to every writing tool; the shell does not split a variable into words; a test key collapsed same-named cases. One Opus run was void ($1.35). Recon-tier probes at $0.03 to $0.06 each then proved the sandbox, the Fable block and the write rule before the real runs. Before a frontier run, witness each control with the cheapest model on a scratch copy, and check the result on disk first-hand, never only from the agent's account. Receipt: `plan-ablation-implementation-test-2026-10-10.md` (slices 1 and 2).
+
 ## Evidence craft
 
 ### Measure use without reading content, and treat scouts as leads {#measure-use-without-content}
@@ -61,3 +65,10 @@ Entries graduate through the pre-compact consolidation gate (CD #9), maximum thr
 
 *(Graduated 2026-10-08.)* In one estate a git standard read in 4 of 94 sessions was used at every push through a fixed pre-push command set, without the file being opened. Transcript read counts measure opening a file, and habits, hooks and command sets use rules without opening them. Non-use is MODERATE evidence at most and needs a second, independent source before it supports any action. Receipt: `plan-reshape-memento-2026-10-06.md` (slice 5).
 
+### A cheap evidence script leans towards removal until it is reviewed {#evidence-scripts-lean-to-removal}
+
+*(Graduated 2026-10-10.)* The Rooms level 2 grading script searched for references only in `memento/`, keyed reads by file name so three README files collided, and counted reads of the doctor's source as doctor runs. Every fault undercounted use, so the first-draft grades proposed removing elements in use. First-hand re-grounding found two of the faults and an independent review three more; after the fixes no element qualified for removal. Before a removal grade rests on scripted counts, re-ground a sample first-hand and have the script reviewed: its blind spots fall on the side of removal. Receipt: `plan-reshape-rooms-level2-2026-10-10.md` (slices 1 and 2).
+
+### Count an alarm's firings against the actions it caused {#count-alarm-firings-against-actions}
+
+*(Graduated 2026-10-10.)* Rooms' consolidation tripwire fired about 38 times across 9 sessions with its action taken zero times, and CHECK 13's "owed" state could not tell a rise from a standing count, so one regression sat unseen for a day. An alarm whose action never runs decides nothing, as the killed commit prompt did, and trains people to ignore it. When reviewing a control, count firings against the actions that followed: a standing alarm needs a decision (act, quieten or retire), and a count that must only fall needs a ratchet. Receipts: the Rooms playbook review of 2026-10-10 and rooms/dev's answer on thread t-20261010-090951-ddc840.
