@@ -283,3 +283,23 @@ Awaiting user approval of this plan before detailed design or implementation.
 - more runs of this feature, to measure run-to-run noise.
 
 Slice counts (2026-10-10, author claude-opus-5-5, scout claude-sonnet-5-5): new controls 1 · faults by suite or mutants 2 · defects in shadow - · unsanctioned scope changes 0 · scout reports 1 · scout reports corrected 0
+
+## Feature 2 (approved by the User, 2026-10-10: "push and a second feature test, one that touches more parts of the code"; then "approve both")
+
+- **The feature:** H-040, a fiscal-year and quarter filter on the Start Sprint dropdowns in the Add and Edit Initiative windows.
+  - **Parts it touches:** the two windows, the team page (which must supply the fiscal-year anchor from its time-period framework), and the calendar logic.
+  - **The brief:** held privately at `~/abl-trial/impl/brief-h040.md` (sha256 586ec8d9).
+- **Less specified by design.** The tests rely only on:
+  - an optional `fyAnchor` input on both windows;
+  - two selects labelled "Fiscal year" and "Quarter", each defaulting to "All", with FY labels in the product's format and quarters Q1 to Q4;
+  - filtering to the chosen period;
+  - no change when the anchor is absent;
+  - the team page passing the anchor.
+
+  Where the logic lives, and how the anchor reaches the page, are each arm's own design.
+- **Scoring for feature 2, approved before any run:**
+  - **The gates are unchanged.**
+  - **Hidden tests:** 75%, as the mean pass share across behaviour groups.
+  - **The blind smart-tier review:** 25%. A rating r of 5 contributes (r - 1)/4 × 25.
+  - **The thresholds are unchanged.**
+- **The pipeline and caps are as for feature 1.** Opus 5.5 for the arms only, no Fable, smart tier for tests and reviews.
