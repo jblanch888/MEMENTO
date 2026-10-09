@@ -175,3 +175,14 @@ Review counts (r1, 2026-10-10, author claude-opus-5-5, reviewer claude-sonnet-5-
 Slice counts (2026-10-10, author claude-opus-5-5, scout -): new controls 0 · faults by suite or mutants - · defects in shadow - · unsanctioned scope changes 0 · scout reports 0 · scout reports corrected 0
 
 **Feedback point:** the grades go to the User before anything goes to Rooms.
+
+**The User's rulings (2026-10-10):** "1 retire 2 ok 3 ok but needs to be triggered soon i think 4 ok 5 ok".
+- **Retire** the notifier that was never armed.
+- **Remove** the placeholder file.
+- **Run Rooms' full gardening pass soon.**
+- **Add a doctor run log.**
+- **Ask rooms/dev** whether items owed to the User reach him.
+
+**Sent to rooms/dev:** thread t-20261010-081207-f967e5. Slice 3 waits on its commits, then the read-only check here.
+
+**The User also asked** whether the playbooks were covered. They were, for home and staleness, under ruling 2. A review of their content is offered as a separate phase, and he has not ruled on it.
