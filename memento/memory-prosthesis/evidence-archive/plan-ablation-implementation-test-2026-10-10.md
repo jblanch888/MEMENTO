@@ -208,7 +208,22 @@ Awaiting user approval of this plan before detailed design or implementation.
     - **Over-strict:** some checks would fail a legend or a reworded title.
     - **The gap:** no fixture block sits near the 24-pixel boundary.
     - **Five minor loosenings.**
-  - **The revision** is in progress.
+  - **Revision r2:** 81 cases in nine named groups. U1 to U6 cover the function. C1 covers canvas marking, including probes at the 24-pixel boundary. C2 covers to-scale blocks left unmarked. G is the regression gate.
+  - **Re-proof (re-run first-hand):**
+    - the reference implementation passes 81 of 81, the full suite passes, and tsc is clean;
+    - on the base, the function suite cannot load, and 9 C1 cases fail;
+    - the stub fails the U groups and C1;
+    - two mutants are caught: a halved scale, and a floor tested with `<=`.
+  - **Frozen:** test sha256 f149decd and d546a0e7.
+- **The scorer** (`~/abl-trial/impl/score.py`, sha256 c90172b1) runs by script.
+  - **Check:** a clean reference copy scores 100, and an untouched copy scores 0, with all gates passing on both.
+  - **One bug, found and fixed:** a test-path flag overrode the project's ignore list.
+- **No Fable:** a PreToolUse hook in the run settings refuses any Agent call naming Fable, identically for every arm. Witnessed with a recon-tier agent ($0.05): it was refused at the gate. The arms' named agents use only Haiku and Sonnet. The Workflow tool is disallowed.
+- **The run script** (`run-arm.sh`) runs each arm in a fresh copy:
+  - **Plan:** Opus 5.5, no shell, a $5 cap.
+  - **Build:** the same session continued, with sandboxed Bash and a $15 cap.
+  - **Isolation check:** before and after.
+- **Slice 1 is complete.** Slice 2 started with run i01.
 - **The scoring rule, revised before any arm runs** (the User, 2026-10-10: "ok your lean on the scoring"):
   - **Gates (any failure scores 0):**
     - the type check is clean;
